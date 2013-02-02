@@ -102,7 +102,7 @@ legend {
   margin-bottom: 10px;
 }
 
-.rojo{  
+.redtext{  
 color:#b71234;  
 }
 
@@ -388,7 +388,7 @@ li.link_default:last-child {
 
 .link-url { width: 580px; }
 
-.image_handle { cursor: move; display: block; float: left; padding: 7px 5px; }
+.image_handle { cursor: move; display: block; float: left; width:11px; height:11px; }
 
 
 /* -----------------------------------------
@@ -397,9 +397,12 @@ li.link_default:last-child {
 
 
 .top-sombra{
-  
 position:relative;
-bottom:21px;  
+bottom:25px;
+z-index:-1;
+display:block;
+margin:0 auto;
+
 }
 
 .perfil-data {

@@ -6102,7 +6102,7 @@ legend {
 }
 
 /* line 105, ../sass/app.scss */
-.rojo {
+.redtext {
   color: #b71234;
 }
 
@@ -6500,7 +6500,8 @@ li.link_default:last-child {
   cursor: move;
   display: block;
   float: left;
-  padding: 7px 5px;
+  width: 11px;
+  height: 11px;
 }
 
 /* -----------------------------------------
@@ -6509,16 +6510,19 @@ li.link_default:last-child {
 /* line 399, ../sass/app.scss */
 .top-sombra {
   position: relative;
-  bottom: 21px;
+  bottom: 25px;
+  z-index: -1;
+  display: block;
+  margin: 0 auto;
 }
 
-/* line 405, ../sass/app.scss */
+/* line 408, ../sass/app.scss */
 .perfil-data {
   float: right;
   min-width: 162px;
 }
 
-/* line 410, ../sass/app.scss */
+/* line 413, ../sass/app.scss */
 .idiomas {
   float: left;
   width: 110px;
@@ -6529,13 +6533,13 @@ li.link_default:last-child {
   padding-left: 10px;
 }
 
-/* line 420, ../sass/app.scss */
+/* line 423, ../sass/app.scss */
 .perfil {
   padding-right: 10px;
   border-right: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-/* line 427, ../sass/app.scss */
+/* line 430, ../sass/app.scss */
 li#2 {
   background-image: url(../images/resources/nav-bgGray.png);
   background-color: #ff36a4;
