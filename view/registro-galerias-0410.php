@@ -11,11 +11,11 @@ include_once('menu.php'); ?>
 					<h2>Galería: <?php echo $user->__get('user_name');?></h2>
 				</div><!--/title-->
 				
-				<div class="four columns mini-nav">
+				<div class="four columns mini-nav-header">
 					<dl class="sub-nav">
-						<dd><a href="<?php echo APPLICATION_URL?>registro-inicio-0400.html" class="back"></a></dd>
-						<dd><a href="javascript:void(0);" onClick="document.getElementById('validable').submit();" class="save"></a></dd>
-						<dd><a href="<?php echo APPLICATION_URL?>registro-exposiciones-0420.html" class="forward"></a></dd>
+						<dd><a href="<?php echo APPLICATION_URL?>registro-inicio-0400.html">Anterior</a></dd>
+						<dd><a href="javascript:void(0);" onClick="document.getElementById('validable').submit();">Guardar</a></dd>
+						<dd><a href="<?php echo APPLICATION_URL?>registro-exposiciones-0420.html">Siguiente</a></dd>
 					</dl>	
 				</div>
 			</div><!--/row inner-header-->
@@ -23,12 +23,14 @@ include_once('menu.php'); ?>
 			<hr />
 			
 			<div class="row form-data">	
-				<form action="<?php echo APPLICATION_URL?>user.controller/first.html" id="validable" class="" method="post" enctype="multipart/form-data">
-					
-					<?php include_once('registro-galeria-1.php'); ?>
-					<?php include_once('registro-galeria-2.php'); ?>
+				<div class="twelve columns">
+					<form action="<?php echo APPLICATION_URL?>user.controller/first.html" id="validable" class="" method="post" enctype="multipart/form-data">
 						
-				</form>	
+						<?php include_once('registro-galeria-1.php'); ?>
+						<?php include_once('registro-galeria-2.php'); ?>
+							
+					</form>
+				</div>
 			</div>
 				
 			<hr />
@@ -38,11 +40,11 @@ include_once('menu.php'); ?>
 					<span><strong><span class="asterix">*</span>Datos requeridos</strong></span>
 				</div><!--/note-->
 				
-				<div class="four columns mini-nav">
+				<div class="four columns mini-nav-footer">
 					<dl class="sub-nav">
-						<dd class="prev"><a href="<?php echo APPLICATION_URL?>registro-inicio-0400.html">Anterior</a></dd>
-						<dd class="save"><a href="javascript:void(0);" onClick="document.getElementById('validable').submit();" class="guardar">Guardar</a></dd>
-						<dd class="next"><a href="<?php echo APPLICATION_URL?>registro-exposiciones-0420.html">Siguiente</a></dd>
+						<dd><a href="<?php echo APPLICATION_URL?>registro-inicio-0400.html">Anterior</a></dd>
+						<dd><a href="javascript:void(0);" onClick="document.getElementById('validable').submit();" class="guardar">Guardar</a></dd>
+						<dd><a href="<?php echo APPLICATION_URL?>registro-exposiciones-0420.html">Siguiente</a></dd>
 					</dl>
 				<?php 
 					if (isset($_GET[0]))

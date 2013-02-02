@@ -11,11 +11,10 @@ include_once('menu.php');
 <!-- 2. End menu -->
 			
 	<!--3. Row main-->
-	<div class="row">	
-		<!-- panel -->
+	<div class="row main-row">	
 		<div class="panel">
-			<div class="row"><!-- titulo row -->
-				<div class="eight columns">
+			<div class="row inner-header">
+				<div class="eight columns title">
 					<span class="rojo">Registro</span>
 					<h2><span class="quitarH2">Ferias:</span>  <?php echo $user->__get('user_name');?> </h2>	
 				</div>
