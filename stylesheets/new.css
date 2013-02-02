@@ -18,17 +18,26 @@
   margin-left: 20px;
 }
 /* line 23, ../sass/new.scss */
+.link_default ul.fairs li {
+  width: 16%;
+  margin-left: 20px;
+}
+/* line 26, ../sass/new.scss */
+.link_default ul.fairs li.name {
+  width: 35%;
+}
+/* line 31, ../sass/new.scss */
 .link_default ul li {
   float: left;
 }
-/* line 25, ../sass/new.scss */
+/* line 33, ../sass/new.scss */
 .link_default ul li.handler {
   width: 2%;
   height: auto;
   margin: 0 auto;
   padding: 31px 0;
 }
-/* line 31, ../sass/new.scss */
+/* line 39, ../sass/new.scss */
 .link_default ul li:last-child {
   margin-left: 20px;
 }
