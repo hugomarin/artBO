@@ -18,7 +18,7 @@
 						El registro de <strong>Galerías </strong> vence en <span class="red label round"><?php echo $days?> días</span>
 					</div>
 				</div>
-			</div>
+			</div>	
 			<hr />
 			<!--/vencimiento -->
 	

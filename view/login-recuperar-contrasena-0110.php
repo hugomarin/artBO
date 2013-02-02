@@ -27,12 +27,12 @@
 				    
 				    	<div class="mid-input-div"><!-- Div Input -->
 				    		<label>Correo electrónico</label>
-				        	<input type="text" class="expand input-text" name="user_email">
+				        	<input type="text" class="expand input-text" name="user_email" title="Digite el correo electrónico">
 				    	</div>
 				    
 				    	<!--  Input Button & Recuperar Contrase&ntilde;a-->
-				    		<input type="submit" class="button round" value="Restablecer contraseña">
-				    		<a href="<?php echo APPLICATION_URL?>home.html" title="Restablecer contraseña">Cancelar</a>	
+				    		<input type="submit" class="button radius" value="Restablecer clave">
+				    		<a href="<?php echo APPLICATION_URL?>home.html" title="Volver al inicio">Volver al inicio</a>	
 				    	<!--  END Input Button & Recuperar Contrase&ntilde;a-->		
 				</form>
 				<!-- END login form -->
