@@ -17,7 +17,7 @@ include_once('menu.php');
 			
 				<div class="four columns mini-nav-header">
 					<dl class="sub-nav">
-						<dd><a title="Registro Exposiciones" href="<?php echo APPLICATION_URL?>registro-ferias-0430.html">Anterior</a></dd>
+						<dd><a title="Registro Ferias" href="<?php echo APPLICATION_URL?>registro-ferias-0430.html">Anterior</a></dd>
 						<dd><a title="Guardar" href="javascript:void(0);" onClick="document.getElementById('validable').submit();" >Guardar</a></dd>
 						<dd><a title="Registro espacio" href="<?php echo APPLICATION_URL?>registro-espacio-0450.html" >Siguiente</a></dd>
 					</dl>	
