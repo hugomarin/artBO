@@ -1,7 +1,6 @@
 
 *.espressostorage
 *.project
-sass*
 .sass-cache
 
 # Compiled source #
