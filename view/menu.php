@@ -11,7 +11,6 @@
 <!-- 2. Navigation -->
 <div class="row"><!-- Row -->	
 			
-			<!-- vencimiento -->
 			<div class="row">
 				<div class="twelve columns">
 					<div class="right">
@@ -19,8 +18,6 @@
 					</div>
 				</div>
 			</div>	
-			<hr />
-			<!--/vencimiento -->
 	
 			<ul class="nav-bar">
 				<li id="0">

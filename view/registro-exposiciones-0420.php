@@ -21,7 +21,6 @@ include_once('menu.php');
 					</dl>	
 				</div>
 			</div>	<!-- END titulo row -->
-			<hr />
 			<div class="row form-data">	
 				<div class="twelve columns">
 					<p><em>*Registrar las exposiciones realizadas entre el 2011 y el 2013 en orden cronológico, incluyendo las exposiciones que tiene planeadas para el próximo año</em></p>

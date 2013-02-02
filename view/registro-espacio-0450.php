@@ -21,7 +21,6 @@ include_once('menu.php'); ?>
 				</div>
 			</div><!--/row inner-header-->
 			
-			<hr />
 			
 			<div class="row form-data">	
 

@@ -36,7 +36,6 @@ include_once('menu.php');
 				
 				
 			</div>	<!-- END titulo row -->
-			<hr />
 			
 				<!-- formulario -->
 				<form action="<?php echo APPLICATION_URL?>user.controller/createFeria.html" id="validable" class="" method="post">
