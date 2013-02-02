@@ -10,7 +10,7 @@ $mobile		= explode("-", $user->__get('user_mobile'));
 			<div class="mid-input gallery-image">
 				<label title="Cargue la imagen correspondiente a su galería">Imagen de la Galería</label>
 				<i>Imagen del espacio expositivo</i>
-				<img src="http://placehold.it/480x360" class="image" title="Imagen de la Galería">
+				<img src="http://placehold.it/480x360" class="images" title="Imagen de la Galería">
 				<input type="file" name="user_director_image" /><br />
 				<caption>Puede subir imagen de la última exposición realizada en su galería en .jpg, .png o .gif. El archivo no debe superar los 1000 Kb.</caption>
 			</div><!--/gallery-image-->
@@ -208,7 +208,7 @@ $mobile		= explode("-", $user->__get('user_mobile'));
 							<?php
 						}
 					?>
-					<img src="http://placehold.it/480x360" class="image" title="Imagen del director">
+					<img src="http://placehold.it/480x360" class="images" title="Imagen del director">
 					<input type="file" name="user_director_image" title="Cargue la foto correspondiente a su director" /><br />
 					<caption>Puede subir imagen de la última exposición realizada en su galería en .jpg, .png o .gif. El archivo no debe superar los 1000 Kb.</caption>
 				</div><!--/gallery-image-->
