@@ -23,15 +23,17 @@ include_once('menu.php'); ?>
 			<hr />
 			
 			<div class="row form-data">	
+
 				<div class="twelve columns">
 					<form action="<?php echo APPLICATION_URL?>user.controller/first.html" id="validable" class="" method="post" enctype="multipart/form-data">
+
+					
+					<?php include_once('inc-galeria-1.php'); ?>
 						
-						<?php include_once('registro-galeria-1.php'); ?>
-						<?php include_once('registro-galeria-2.php'); ?>
-							
+
 					</form>
-				</div>
-			</div>
+				</div><!--/twelve columns-->
+			</div><!--/form-data-->
 				
 			<hr />
 				
