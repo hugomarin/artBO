@@ -25,7 +25,7 @@ include_once('menu.php');
 				<div class="twelve columns">
 					<p><em>*Registrar las exposiciones realizadas entre el 2011 y el 2013 en orden cronológico, incluyendo las exposiciones que tiene planeadas para el próximo año</em></p>
 					<!-- formulario -->
-					<form action="<?php echo APPLICATION_URL?>user.controller/createExpo.html" id="validable" class="" method="post">		
+					<form action="<?php echo APPLICATION_URL?>user.controller/createExpo.html" id="validable" class="custom" method="post">		
 						<?php include_once('inc-exposiciones-1.php'); ?>
 					</form>
 					<!-- /formulario -->

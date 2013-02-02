@@ -24,7 +24,7 @@ include_once('menu.php'); ?>
 			<div class="row form-data">	
 
 				<div class="twelve columns">
-					<form action="<?php echo APPLICATION_URL?>user.controller/first.html" id="validable" class="" method="post" enctype="multipart/form-data">
+					<form action="<?php echo APPLICATION_URL?>user.controller/first.html" id="validable" class="custom" method="post" enctype="multipart/form-data">
 
 					
 					<?php include_once('inc-galeria-1.php'); ?>
