@@ -10,8 +10,8 @@ include_once('menu.php');
 			
 			<div class="row inner-header">
 				<div class="eight columns title">
-					<span class="rojo">Registro</span>
-					<h2><span class="quitarH2"> Exposiciones:</span> <?php echo $user->__get('user_name');?></h2>
+					<span class="redtext">Registro</span>
+					<h2><span>Exposiciones:</span> <?php echo $user->__get('user_name');?></h2>
 				</div>
 				<div class="four columns mini-nav-header">
 					<dl class="sub-nav">

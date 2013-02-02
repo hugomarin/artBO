@@ -1,0 +1,38 @@
+@import "compass";
+
+
+.link_default{
+  ul{
+     @include clearfix; 
+    &.expo{
+      li{
+       width:50%;
+       margin-left:20px;
+       &.date{
+         width:18%;
+       }
+      }
+    }
+     &.artist{
+      li{
+       width:28%;
+       margin-left:20px;
+      }
+    }
+    
+    li{
+      float:left;
+      &.handler{
+        width:2%;
+        height:auto;
+        margin:0 auto;
+        padding:31px 0; 
+      }
+      &:last-child{
+        margin-left:20px;
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,9 @@
+/* line 1, ../sass/foundation-overrides.scss */
+select {
+  margin-top: 7px;
+}
+
+/* line 6, ../sass/foundation-overrides.scss */
+input[type="text"] {
+  margin: 0;
+}
