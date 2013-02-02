@@ -57,7 +57,7 @@ include_once('menu.php');
                                 <!-- checkboxes -->
                                 <div class="six columns">
                                     <!-- nacionalidad -->
-                                    <label>Nacionalidad*</label><br />	
+                                    <label>*Nacionalidad</label><br />	
                                     <input type="text" name="artist_nationality_<?php echo $i;?>" value="<?php echo $artist->__get('artist_nationality');?>" />
                                     <!-- END nacionalidad -->
                                     
@@ -96,7 +96,7 @@ include_once('menu.php');
                                 <!-- checkboxes -->
                                 <div class="six columns">
                                     <!-- nacionalidad -->
-                                    <label>Nacionalidad*</label><br />	
+                                    <label>*Nacionalidad</label><br />	
                                     <input type="text" name="artist_nationality_1" />
                                     <!-- END nacionalidad -->
                                     

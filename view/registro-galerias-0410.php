@@ -112,7 +112,6 @@ include_once('menu.php'); ?>
 					</table>
 					</div>	
 					<!-- END botones anterior guardar siguiente -->
-				
 				</div>	
 				<!-- END row -->
 			</div>  <!-- End Panel -->
