@@ -8,14 +8,14 @@ include_once('menu.php'); ?>
 			<div class="row inner-header">
 				<div class="eight columns title">
 					<span class="redtext">Registro</span>
-					<h2>Galería: <?php echo $user->__get('user_name');?></h2>
+					<h2>Nombre de la Sección</h2>
 				</div><!--/title-->
 				
 				<div class="four columns mini-nav">
 					<dl class="sub-nav">
-						<dd><a href="<?php echo APPLICATION_URL?>registro-inicio-0400.html" class="back"></a></dd>
+						<dd><a href="<?php echo APPLICATION_URL?" class="back"></a></dd>
 						<dd><a href="javascript:void(0);" onClick="document.getElementById('validable').submit();" class="save"></a></dd>
-						<dd><a href="<?php echo APPLICATION_URL?>registro-exposiciones-0420.html" class="forward"></a></dd>
+						<dd><a href="<?php echo APPLICATION_URL?>" class="forward"></a></dd>
 					</dl>	
 				</div>
 			</div><!--/row inner-header-->
@@ -23,10 +23,9 @@ include_once('menu.php'); ?>
 			<hr />
 			
 			<div class="row form-data">	
-				<form action="<?php echo APPLICATION_URL?>user.controller/first.html" id="validable" class="" method="post" enctype="multipart/form-data">
+				<form action="" id="" class="" method="post" enctype="">
 					
-					<?php include_once('registro-galeria-1.php'); ?>
-					<?php include_once('registro-galeria-2.php'); ?>
+
 						
 				</form>	
 			</div>
@@ -40,9 +39,9 @@ include_once('menu.php'); ?>
 				
 				<div class="four columns mini-nav">
 					<dl class="sub-nav">
-						<dd class="prev"><a href="<?php echo APPLICATION_URL?>registro-inicio-0400.html">Anterior</a></dd>
+						<dd class="prev"><a href="<?php echo APPLICATION_URL?>">Anterior</a></dd>
 						<dd class="save"><a href="javascript:void(0);" onClick="document.getElementById('validable').submit();" class="guardar">Guardar</a></dd>
-						<dd class="next"><a href="<?php echo APPLICATION_URL?>registro-exposiciones-0420.html">Siguiente</a></dd>
+						<dd class="next"><a href="<?php echo APPLICATION_URL?>">Siguiente</a></dd>
 					</dl>
 				<?php 
 					if (isset($_GET[0]))
