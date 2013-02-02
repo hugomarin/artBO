@@ -14,10 +14,10 @@
 			<!-- vencimiento -->
 			<div class="row">
 				<div class="six columns">
-					<span> Tu registro en <strong> artBO</strong> </span>
+					<!--<span> Tu registro en <strong> artBO</strong> </span>-->
 				</div>
-				<div class="four columns offset-by-two text-right">
-					el registro de <strong>Galerías </strong> vence en <span class="red label round"><?php echo $days?> días</span>
+				<div class="four columns offset-by-eight text-right">
+					El registro de <strong>Galerías </strong> vence en <span class="red label round"><?php echo $days?> días</span>
 				</div>
 			</div>
 			<hr />
@@ -25,7 +25,7 @@
 	
 			<ul class="nav-bar">
 				<li id="0">
-					<a href="<?php echo APPLICATION_URL?>registro-inicio-0400.html" class="main" title="Inicio"><img src="<?php echo APPLICATION_URL?>images/resources/casa.png" alt="home" > </a>
+					<a href="<?php echo APPLICATION_URL?>registro-inicio-0400.html" class="main" title="Inicio">Instrucciones </a>
 				</li>
 				<li id="1" >
 					<a href="<?php echo APPLICATION_URL?>registro-galerias-0410.html" class="main" title="Galerías"><span class="number-menu">1</span>Galería </a>
