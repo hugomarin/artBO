@@ -5,7 +5,7 @@
 			<!-- vencimiento -->
 			<div class="row">
 				<div class="six columns">
-					<span>Your registration at <strong> Artbo</strong> </span>
+					<span>Your registration at <strong> artBO</strong> </span>
 				</div>
 				<div class="four columns offset-by-two text-right">
 					<strong>Galleries</strong> registration ends in <span class="red label round">29 days</span>

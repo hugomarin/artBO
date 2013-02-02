@@ -14,7 +14,7 @@
 				<div class="eight columns">
 					<span class="rojo">Registration</span>
 					<h2><span class="quitarH2"> Type of stand: </span><?php echo $user->__get('user_name');?> </h2>
-					<p>Download the PDF document with specifications on the <a href="documentos/stand.pdf" title="Documento Stands" target="_blank">stands at Artbo</a></p>
+					<p>Download the PDF document with specifications on the <a href="documentos/stand.pdf" title="Documento Stands" target="_blank">stands at artBO</a></p>
 	
 				</div>
 				<!-- button back save forward -->

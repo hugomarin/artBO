@@ -70,7 +70,7 @@
 				<div class="panel-2">
 				<p> I <input type="text" class="medium" placeholder="Representative" name="user_name_accept" value="<?php echo $user->__get('user_name_accept');?>" /> Identified with
 					<input type="text" class="small" placeholder="Number of identity" name="user_document_accept" value="<?php echo $user->__get('user_document_accept');?>"   /> 
-				declare to have knowledge and accept <a href="documentos/Reglamento.pdf" title="Reglamento de participación en Artbo" target="_blank">the conditions and participation regulations </a> of Artbo.
+				declare to have knowledge and accept <a href="documentos/Reglamento.pdf" title="Reglamento de participación en artBO" target="_blank">the conditions and participation regulations </a> of artBO.
 				</p>
 				
 				<input type="checkbox" name="user_accept" value="1" <?php if($user->__get('user_accept') == 1) { echo 'checked="checked"'; }?> /><span> Acepto</span>
@@ -125,7 +125,7 @@ if (isset($_GET[0]))
 {
 ?>
 <script language="JavaScript">
-	alert('You declare to have knowledge and accept the conditions and participation regulations of Artbo.You has finished registering your gallery. Thank you very much.');
+	alert('You declare to have knowledge and accept the conditions and participation regulations of artBO. You has finished registering your gallery. Thank you very much.');
 </script>
 <?php
 }

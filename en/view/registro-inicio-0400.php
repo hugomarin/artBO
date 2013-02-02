@@ -11,7 +11,7 @@
 			
 				<div class="row">
 				
- 				<h5>Welcome to the online application process for Artbo 2012.</h5>
+ 				<h5>Welcome to the online application process for artBO 2012.</h5>
 
 				<p><strong>Remember that the deadline to complete this process is June 12.<strong></p>
 
@@ -30,7 +30,7 @@
                     <li class="thin">1. <strong>Gallery</strong> Basic information about the gallery, about the director and a brief gallery review.</li> 
                     <li class="thin">2. <strong>Exhibitions</strong> List of the exhibitions held in 2011 and 2012.</li>
                     <li class="thin">3. <strong>Fairs</strong> Participation in international fairs.</li>
-                    <li class="thin">4. <strong>Artists</strong> The artists that you propose for Artbo 2012 and other artists represented by your gallery.  (Please remember that according to the size of the stand you select, you can propose an artist every 10 mt².  For every artist proposed you may upload three images.)</li>
+                    <li class="thin">4. <strong>Artists</strong> The artists that you propose for artBO 2012 and other artists represented by your gallery.  (Please remember that according to the size of the stand you select, you can propose an artist every 10 mt².  For every artist proposed you may upload three images.)</li>
                     <li class="thin">5. <strong>Type of Stand</strong> The available stands are Plus 63mt², 63mt², 45mt², 33.75mt², 31.50mt².  (In this section you will be able to download a pdf document with the specifications for each stand.)</li>
                     <li class="thin">6. <strong>Documents</strong> The accompanying documentation requested is:
                     	<ul>
@@ -47,7 +47,7 @@
 				</ul>
 				 
 				
-				<p>If you need more information please contact us: <a href="mailto:artbo@ccb.org.co" title="mail to artbo">artbo@ccb.org.co</a> or or +(57)(1)383 0300 ext. 2734.</p>
+				<p>If you need more information please contact us: <a href="mailto:artbo@ccb.org.co" title="mail to artBO">artbo@ccb.org.co</a> or or +(57)(1)383 0300 ext. 2734.</p>
 				
 				 
 				

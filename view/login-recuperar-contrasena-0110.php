@@ -10,7 +10,7 @@
 				<!-- login form -->
 				<form action="<?php echo APPLICATION_URL?>user.controller/recover_password.html" class="nice" method="post" id="validable"> 
 				    	
-						<p>Introduce el correo electrónico que utilizas para tu cuenta de Artbo y te enviaremos un enlace para restablecer tu contraseña.</p>
+						<p>Introduce el correo electrónico que utilizas para tu cuenta de artBO y te enviaremos un enlace para restablecer tu contraseña.</p>
 				    	
 				    	<!-- casilla de alerta -->
                         <?php

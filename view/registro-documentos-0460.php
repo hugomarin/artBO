@@ -74,7 +74,7 @@ include_once('menu.php');
 				<div class="panel-2">
 				<p> Yo <input type="text" class="medium" placeholder="Nombre del Director o Representante legal" name="user_name_accept" value="<?php echo $user->__get('user_name_accept');?>" /> Identificado con
 					<input type="text" class="small" placeholder="Número de Cédula" name="user_document_accept" value="<?php echo $user->__get('user_document_accept');?>"   /> 
-				declaro conocer y aceptar <a href="documentos/Reglamento.pdf" title="Reglamento de participación en Artbo" target="_blank">las condiciones y el reglamento de participación</a> en Artbo.
+				declaro conocer y aceptar <a href="documentos/Reglamento.pdf" title="Reglamento de participación en artBO" target="_blank">las condiciones y el reglamento de participación</a> en artBO.
 				</p>
 				
 				<input type="checkbox" name="user_accept" value="1" <?php if($user->__get('user_accept') == 1) { echo 'checked="checked"'; }?> /><span> Acepto</span>
@@ -129,7 +129,7 @@ if (isset($_GET[0]))
 {
 ?>
 <script language="JavaScript">
-	alert('Al hacer click declaro conocer y aceptar las condiciones y el reglamento de participaciónen Artbo. Ha terminado de registrar su galería. Muchas gracias.');
+	alert('Al hacer click declaro conocer y aceptar las condiciones y el reglamento de participaciónen artBO. Ha terminado de registrar su galería. Muchas gracias.');
 </script>
 <?php
 }
