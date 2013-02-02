@@ -52,7 +52,7 @@
 						<p>Copia del pago de los derechos de inscripción por USD $160</p>
 	            	</div>
 	            	<div class="three columns offset-by-two">
-	            		<img src="http://placehold.it/235x150" class="images" title="Imagen del director">
+	            		<img src="http://cambelt.co/icon/camera/235x150?color=b71632,fefefe" class="images" title="Registro de pago" />
 	            		<input type="file" name="user_payment">
 	            		 <?php if ($user->__get('user_payment') != '') { ?><p><a href="<?php echo APPLICATION_URL;?>resources/documents/<?php echo $user->__get('user_payment');?>">Documento actual</a></p><?php } ?>	
 	            	</div>
