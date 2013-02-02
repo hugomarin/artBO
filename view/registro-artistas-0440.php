@@ -24,7 +24,6 @@ include_once('menu.php');
 				</div>
 				
 			</div>	<!-- END titulo row -->
-				<hr />
 			<div class="row form-data">	
 				<div class="twelve columns">
 	                <p><em>Recuerde que su propuesta de artistas para Artbo 2013 debe ser acorde al tamaño del stand  que ha seleccionado. Por cada 10 mts², sólo podrá exhibir un artista.</em></p>

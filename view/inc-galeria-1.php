@@ -4,7 +4,6 @@ $phone		= explode("-", $user->__get('user_phone'));
 $mobile		= explode("-", $user->__get('user_mobile'));
 ?>
 
-<div class="twelve columns">
 	<div class="row">
 		<div class="six columns">
 			<div class="mid-input gallery-image">
@@ -50,9 +49,7 @@ $mobile		= explode("-", $user->__get('user_mobile'));
 			</div><!--/website-data-->
 		</div><!--/six columns-->
 	</div><!--/row-->
-</div><!--/twelve columns-->
 
-<div class="twelve columns">
 	<div class="row">
 		<div class="six columns">
 			
@@ -131,10 +128,8 @@ $mobile		= explode("-", $user->__get('user_mobile'));
 		</div><!--/six columns-->
 		
 	</div><!--/row-->
-</div><!--/twelve columns-->
 
 
-<div class="twelve columns">
 	<div class="row">
 	
 		<div class="six columns">
@@ -193,9 +188,7 @@ $mobile		= explode("-", $user->__get('user_mobile'));
 		</div><!--/six columns-->
 		
 	</div><!--/row-->
-</div><!--/twelve columns-->
 
-<div class="twelve columns">
 	<div class="row">
 			<div class="six columns">
 				<div class="mid-input director-image">
@@ -237,7 +230,6 @@ $mobile		= explode("-", $user->__get('user_mobile'));
 			</div><!--/six columns-->
 	
 	</div><!--/row-->
-</div><!--/twelve columns-->
 
 	
 	
