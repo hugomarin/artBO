@@ -33,7 +33,7 @@ if ((isset($_GET[0])) && ($_GET[1] == 0))
 					    	<legend>Login</legend>
 					    	<div class="mid-input-div"><!-- Div Input -->
 					    		<label>Email</label>
-					        	<input type="text" class="expand input-text email" name="user_email" title="Email">
+					        	<input type="text" class="expand input-text email" name="user_email" title="Email" required="required">
 					    	</div>
 					    	
 					    
@@ -65,22 +65,22 @@ if ((isset($_GET[0])) && ($_GET[1] == 0))
 					    						    
 					    	<div class="mid-input-div"><!-- Div Input -->
 					    		<label>Email</label>
-					        	<input type="text" name="user_email" class="expand input-text email" title="Email">
+					        	<input type="mail" name="user_email" class="expand input-text email" title="Email" required="required">
 					    	</div>
 					    	
 					    	<div class="mid-input-div"><!-- Div Input -->
 					    		<label>Confirm Email</label>
-					        	<input type="text" name="user_email_confirm" class="expand input-text retype" alt="email" title="Email">
+					        	<input type="mail" name="user_email_confirm" class="expand input-text retype" alt="email" title="Email" required="required">
 					    	</div>
 					    
 					    	<div class="mid-input-div"><!-- Div Input -->
 					    		<label>Password</label>
-					    		<input type="password" name="user_password" class="expand input-text" title="Password">
+					    		<input type="password" name="user_password" class="expand input-text" title="Password" required="required">
 					    	</div>
 					    	
 					    	<div class="mid-input-div"><!-- Div Input -->
 					    		<label>Confirm password</label>
-					    		<input type="password" name="user_password_confirm" class="expand input-text retype" alt="password" title="Confirm Password">
+					    		<input type="password" name="user_password_confirm" class="expand input-text retype" alt="password" title="Confirm Password" required="required">
 					    	</div>
 					    
 					    	<!--  Input Button -->

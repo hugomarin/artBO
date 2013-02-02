@@ -33,13 +33,13 @@ if ((isset($_GET[0])) && ($_GET[1] == 0))
 					    	<legend>Iniciar sesi&oacute;n</legend>
 					    	<div class="mid-input-div"><!-- Div Input -->
 					    		<label>Correo electr&oacute;nico</label>
-					        	<input type="text" class="expand input-text email" name="user_email" title="Correo electr&oacute;nico">
+					        	<input type="mail" class="expand input-text email" name="user_email" title="Correo electr&oacute;nico" required="required">
 					    	</div>
 					    	
 					    
 					    	<div class="mid-input-div"><!-- Div Input -->
 					    		<label>Contrase&ntilde;a</label>
-					    		<input type="password" class="expand input-text" name="user_password" title="Contrase&ntilde;a">
+					    		<input type="password" class="expand input-text" name="user_password" title="Contrase&ntilde;a" required="required">
 					    	</div>
 					    	
 					    
@@ -65,12 +65,12 @@ if ((isset($_GET[0])) && ($_GET[1] == 0))
 					    						    
 					    	<div class="mid-input-div"><!-- Div Input -->
 					    		<label>Correo electr&oacute;nico</label>
-					        	<input type="text" name="user_email" class="expand input-text email" title="Correo electr&oacute;nico">
+					        	<input type="mail" name="user_email" class="expand input-text email" title="Correo electr&oacute;nico">
 					    	</div>
 					    	
 					    	<div class="mid-input-div"><!-- Div Input -->
 					    		<label>Confirmar correo electr&oacute;nico</label>
-					        	<input type="text" name="user_email_confirm" class="expand input-text retype" alt="email" title="Correo electr&oacute;nico (repetir)">
+					        	<input type="mail" name="user_email_confirm" class="expand input-text retype" alt="email" title="Correo electr&oacute;nico (repetir)">
 					    	</div>
 					    
 					    	<div class="mid-input-div"><!-- Div Input -->
