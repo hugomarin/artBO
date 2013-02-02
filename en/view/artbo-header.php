@@ -1,5 +1,4 @@
 <div class="encabezado">
-		<!-- header artbo logo -->
 	<div class="row superior-2">	
 		<!-- columns 1/2 -->
 		<div class="four columns">
