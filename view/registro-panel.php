@@ -9,7 +9,7 @@ $mobile		= explode("-", $user->__get('user_mobile'));
 			
 		<!-- País: Este campo se pregunta si la galería no tiene NiT, es decir si es extranjera -->
 		<div class="mid-input">
-			<label><strong>*País</strong></label>	
+			<label><strong><span class="asterix">*</span>País</strong></label>	
 				<select name="country_id">
 					<option>Seleccione</option>
 					<?php
@@ -27,7 +27,7 @@ $mobile		= explode("-", $user->__get('user_mobile'));
 		
 		<!-- Ciudad -->
 		<div class="mid-input">
-			<label><strong>*Ciudad</strong></label>	
+			<label><strong><span class="asterix">*</span>Ciudad</strong></label>	
 			<input type="text" name="user_city" class="expand input-text" value="<?php echo $user->__get('user_city');?>"/>
 		</div>
 		<!-- End Ciudad -->
@@ -35,20 +35,20 @@ $mobile		= explode("-", $user->__get('user_mobile'));
 			
 		<!-- Dirección -->
 		<div class="mid-input">
-			<label><strong>*Direcci&oacute;n</strong></label>	
+			<label><strong><span class="asterix">*</span>Direcci&oacute;n</strong></label>	
 			<input type="text"  name="user_address"  class="expand input-text" value="<?php echo $user->__get('user_address');?>"/>
 		</div>
 		<!-- End Dirección -->
 		
 		<!-- Código Postal: Este campo se pregunta si la galería no tiene NiT, es decir si es extranjera -->
 		<div class="mid-input">
-			<label><strong>*Código Postal</strong></label>	
+			<label><strong><span class="asterix">*</span>Código Postal</strong></label>	
 			<input type="text"  name="user_postal_code" class="expand input-text" value="<?php echo $user->__get('user_postal_code');?>"/>
 		</div>
 		<!-- End Ciudad -->
 		<!-- Teléfono -->
 		<div class="mid-input">
-		<strong>*Teléfono</strong>
+		<strong><span class="asterix">*</span>Teléfono</strong>
 			<div class="row">
 				<!-- columns 1/3 codigo pais -->
 				<div class="four columns">
@@ -104,7 +104,7 @@ $mobile		= explode("-", $user->__get('user_mobile'));
 			
 		<!-- Nombre del director -->
 		<div class="mid-input">
-			<label><strong>*Nombre del director</strong></label>	
+			<label><strong><span class="asterix">*</span>Nombre del director</strong></label>	
 			<input type="text" name="user_director_name" class="expand input-text" value="<?php echo $user->__get('user_director_name');?>" />
 		</div>
 		<!-- End Nombre del director -->
@@ -123,21 +123,21 @@ $mobile		= explode("-", $user->__get('user_mobile'));
 		
 		<!-- Email del director -->
 		<div class="mid-input">
-			<label><strong>*Correo electrónico del director</strong></label>	
+			<label><strong><span class="asterix">*</span>Correo electrónico del director</strong></label>	
 			<input type="text" name="user_director_email" class="expand input-text" value="<?php echo $user->__get('user_director_email');?>" />
 		</div>
 		<!-- End Email del director -->
 			
 		<!-- Nombre de contacto -->
 		<div class="mid-input">
-			<label><strong>*Nombre de contacto</strong></label>	
+			<label><strong><span class="asterix">*</span>Nombre de contacto</strong></label>	
 			<input type="text" name="user_contact_name" class="expand input-text" value="<?php echo $user->__get('user_contact_name');?>" />
 		</div>
 		<!-- End Nombre de contacto -->
 		
 		<!-- Email contacto -->
 		<div class="mid-input">
-			<label><strong>*Correo electrónico contacto</strong></label>	
+			<label><strong><span class="asterix">*</span>Correo electrónico contacto</strong></label>	
 			<input type="text" name="user_contact_email" class="expand input-text" value="<?php echo $user->__get('user_contact_email');?>" />
 		</div>
 		<!-- End Email contacto-->
