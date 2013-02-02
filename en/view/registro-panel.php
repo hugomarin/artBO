@@ -113,7 +113,7 @@ $mobile		= explode("-", $user->__get('user_mobile'));
 		if($user->__get('user_director_image') != '')
 		{
 			?>
-			<img src="<?php echo APPLICATION_URL?>resources/images/50x50/<?php echo $user->__get('user_director_image');?>" class="left"  height="50" width="50" alt="profle"/>
+			<img src="<?php echo APPLICATION_URL?>resources/images/50x50/<?php echo $user->__get('user_director_image');?>" class="left"  height="50" width="50" alt="profile"/>
 			<?php
 		}
 		?>

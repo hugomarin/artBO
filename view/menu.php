@@ -14,7 +14,7 @@
 			<!-- vencimiento -->
 			<div class="row">
 				<div class="six columns">
-					<span> Tu registro en <strong> Artbo</strong> </span>
+					<span> Tu registro en <strong> artBO</strong> </span>
 				</div>
 				<div class="four columns offset-by-two text-right">
 					el registro de <strong>Galerías </strong> vence en <span class="red label round"><?php echo $days?> días</span>

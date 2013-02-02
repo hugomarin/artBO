@@ -13,6 +13,9 @@ if ((isset($_GET[0])) && ($_GET[1] == 0))
 		<div class="six columns centered"><!-- six columns -->
 			
 			
+			<h5>“Bienvenido al proceso de aplicación de artBO 2013 el cual estará abierto entre el 1 de marzo y hasta el 30 de abril.  Este espacio es para galerías nacionales e internacionales constituidas legalmente.  Por favor inicie su sesión o regístrese.”</h5>
+			
+			
 			<!-- Login register -->
 				<dl class="tabs">
 				  <dd><a href="#simple1" class="active" title="Inicio de sesi&oacute;n">Inicio de sesi&oacute;n</a></dd>

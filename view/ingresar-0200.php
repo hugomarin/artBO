@@ -33,7 +33,7 @@
 <div class="four columns">
 							
 						<h3>Proyectos individuales</h3>
-						<p class="min-height">Los espacios de esta sección sólo serán asignados por invitación directa del curador designado por Artbo.</p>
+						<p class="min-height">Los espacios de esta sección sólo serán asignados por invitación directa del curador designado por artBO.</p>
 						<a href="<?php echo APPLICATION_URL?>user.controller/gallerySelect/3.html" class="round  button" title="Seleccionar">Seleccionar</a>
 					</div>
 -->

@@ -11,7 +11,7 @@
 				<!-- login form -->
 				<form action="#" class="nice"> 
 				    	
-				    	<p>Introduce una nueva contraseña para tu cuenta de Artbo.</p>
+				    	<p>Introduce una nueva contraseña para tu cuenta de artBO.</p>
 
 					
 				    	<!-- casilla de alerta -->

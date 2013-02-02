@@ -60,7 +60,7 @@ $users = UserHelper::retrieveUsers();
                     <td class="table03"><img src="imgcontrol/ico_tree2.gif" width="12" height="12" /></td>
                     <td><?php echo $user->__get('user_name')?></a></td>
                     <td><?php echo $user->__get('user_email')?></td>
-                    <td>Exportar: <a href="index.php?user_export.control/<?php echo $user->__get('user_id')?>" target="_blank">Usuario</a> | <a href="index.php?artistas_export.control/<?php echo $user->__get('user_id')?>" target="_blank">Artistas ARTBO</a> | <a href="index.php?artistas2_export.control/<?php echo $user->__get('user_id')?>" target="_blank">Todos los Artistas</a> | <a href="index.php?expositions_export.control/<?php echo $user->__get('user_id')?>" target="_blank">Exposiciones</a> | <a href="index.php?feria_export.control/<?php echo $user->__get('user_id')?>" target="_blank">Ferias</a><br />
+                    <td>Exportar: <a href="index.php?user_export.control/<?php echo $user->__get('user_id')?>" target="_blank">Usuario</a> | <a href="index.php?artistas_export.control/<?php echo $user->__get('user_id')?>" target="_blank">Artistas artBO</a> | <a href="index.php?artistas2_export.control/<?php echo $user->__get('user_id')?>" target="_blank">Todos los Artistas</a> | <a href="index.php?expositions_export.control/<?php echo $user->__get('user_id')?>" target="_blank">Exposiciones</a> | <a href="index.php?feria_export.control/<?php echo $user->__get('user_id')?>" target="_blank">Ferias</a><br />
                     Borrar: <a href="index.php?user.controller/deleteA/<?php echo $user->__get('user_id')?>">Borrar</a></td>
 
                 </tr>
