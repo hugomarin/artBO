@@ -217,7 +217,7 @@ include_once('menu.php');
 							</td>
 							<td>
 								<div class="siguiente left"><!-- siguiente -->
-									<a title="Registro Artistas" href="<?php echo APPLICATION_URL?>registro-artistas-0440.html">Next</a>
+									<a title="Register Artists" href="<?php echo APPLICATION_URL?>registro-artistas-0440.html">Next</a>
 								</div> <!-- END siguiente -->
 							</td>
 						</tr>

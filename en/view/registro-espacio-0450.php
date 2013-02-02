@@ -121,7 +121,7 @@
 							</td>
 							<td>
 								<div class="siguiente left"><!-- siguiente -->
-									<a title="Registro Documentos" href="<?php echo APPLICATION_URL?>registro-documentos-0460.html">Next</a>
+									<a title="Register Documents" href="<?php echo APPLICATION_URL?>registro-documentos-0460.html">Next</a>
 								</div> <!-- END siguiente -->
 							</td>
 						</tr>

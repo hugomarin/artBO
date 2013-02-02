@@ -131,7 +131,7 @@ include_once('menu.php');
 							</td>
 							<td>
 								<div class="siguiente left"><!-- siguiente -->
-									<a href="<?php echo APPLICATION_URL?>registro-espacio-0450.html">Next</a>
+									<a title="Register Artist" href="<?php echo APPLICATION_URL?>registro-espacio-0450.html">Next</a>
 								</div> <!-- END siguiente -->
 							</td>
 						</tr>

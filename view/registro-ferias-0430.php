@@ -102,13 +102,13 @@ include_once('menu.php');
                                         </div>	
                                     <!-- nombre -->
                                         <div class="four columns">
-                                            <label>Nombre de la feria</label>	
+                                            <label>*Nombre de la feria</label>	
                                             <input class="expand input-text" type="text" name="feria_name_<?php echo $i;?>" value="<?php echo $feria->__get('feria_name');?>"/>
                                         </div>
                                     <!-- END nombre -->
                                     <!-- ciudad -->
                                         <div class="three columns">
-                                            <label>Ciudad</label>	
+                                            <label>*Ciudad</label>	
                                             <input type="text"  name="feria_city_<?php echo $i;?>" class="expand input-text" value="<?php echo $feria->__get('feria_city');?>"/>
                                         </div>
                                     <!-- END ciudad -->
@@ -154,13 +154,13 @@ include_once('menu.php');
                                         </div>	
                                     <!-- nombre -->
                                         <div class="four columns">
-                                            <label>Nombre de la feria</label>	
+                                            <label>*Nombre de la feria</label>	
                                             <input class="expand input-text" type="text" name="feria_name_1" />
                                         </div>
                                     <!-- END nombre -->
                                     <!-- ciudad -->
                                         <div class="three columns">
-                                            <label>Ciudad</label>	
+                                            <label>*Ciudad</label>	
                                             <input type="text"  name="feria_city_1" class="expand input-text"/>
                                         </div>
                                     <!-- END ciudad -->
@@ -252,7 +252,7 @@ $(document).ready(function()
 							// nueva feria
 							var countryOptions	= '<?php foreach($countries as $country) {?><option value="<?php echo $country->__get('country_id');?>"><?php echo utf8_encode($country->__get('country_name'));?></option><?php } ?>';
 							$("#add-feria").click(function(){
-							$(".link_list").hide().append('<!-- expo --><li class="link_default"><div class="row"><div class="one columns"><img src="<?php echo APPLICATION_URL?>images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr">	</div>	<!-- nombre --><div class="four columns"><label>Nombre de la feria</label>	<input class="expand input-text" type="text" name="feria_name_'+counterFeria+'" /></div><!-- END nombre --><!-- ciudad --><div class="three columns"><label>Ciudad</label>	<input type="text"  class="expand input-text" name="feria_city_'+counterFeria+'"/></div><!-- END ciudad --><!-- pais--><div class="two columns"><label>País</label>	<select name="country_id_'+counterFeria+'">'+countryOptions+'</select></div><!-- END País --><!-- Año--><div class="two columns"><label>Año</label><select name="feria_year_'+counterFeria+'"><option value="2012">2012</option><option value="2011">2011</option><option>2010</option></select></div><!-- END Año --></li><!-- end Expo --> ').fadeIn(1000);
+							$(".link_list").hide().append('<!-- expo --><li class="link_default"><div class="row"><div class="one columns"><img src="<?php echo APPLICATION_URL?>images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr">	</div>	<!-- nombre --><div class="four columns"><label>*Nombre de la feria</label><select name="feria_year_'+counterFeria+'"><option value="2012">2012</option><option value="2011">2011</option><option>2010</option></select></div><!-- END Año --></li><!-- end Expo --> ').fadeIn(1000);
 							counterFeria = counterFeria + 1;
 							});// end nueva feria
 

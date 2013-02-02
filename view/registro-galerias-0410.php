@@ -42,19 +42,19 @@ include_once('menu.php'); ?>
 							<div class="row">
 								<div class="six columns">
 									<!-- horario -->
-									<strong>Horario de apertura al publico* (0:00 - 24:00)</strong>
+									<strong>*Horario de apertura al publico (0:00 - 24:00)</strong>
 									<input name="user_open_time" type="text" value="<?php echo $user->__get('user_open_time');?>" class="small input-text expand" />
 									<!-- END horario -->
 								</div>
 								<div class="six columns">	
 									<!-- mts -->
-									<strong>Área de exposición de la galería* (m2)</strong>
+									<strong>*Área de exposición de la galería (m2)</strong>
 									<input name="user_area" type="text" value="<?php echo $user->__get('user_area');?>" class="small input-text expand" />
 									<!-- END mts -->
 								</div>
 							</div>
 							<!-- año apertura -->
-							<strong>Año de apertura*</strong>
+							<strong>*Año de apertura</strong>
 							<select name="user_open_year">
 							  <option SELECTED>Seleccione</option>
                               <?php 

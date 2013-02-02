@@ -95,7 +95,7 @@ include_once('menu.php'); ?>
 							</td>
 							<td>
 								<div class="siguiente left"><!-- siguiente -->
-									<a href="<?php echo APPLICATION_URL?>registro-exposiciones-0420.html">Next</a>
+									<a title="Register Galeries" href="<?php echo APPLICATION_URL?>registro-exposiciones-0420.html">Next</a>
 								</div> <!-- END siguiente -->
 							</td>
 						</tr>
