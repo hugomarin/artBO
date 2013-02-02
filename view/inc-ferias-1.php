@@ -1,6 +1,5 @@
 	<!-- panel 2 -->
-					<div class="panel-2">
-						
+					<div>
 						<h2>artBO</h2>
 						
 						<label>Indique en qué ediciones de artBO ha participado</label>
@@ -63,24 +62,24 @@
 							{
 						?>            
                                 <li class="link_default">
-                                    <div class="row">                  
-                                        <div class="one columns">
+                                     <ul class="no-bullet fairs">
+                                        <li class="handler">
                                             <img src="<?php echo APPLICATION_URL?>images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr">	
-                                        </div>	
+                                        </li>	
                                     <!-- nombre -->
-                                        <div class="four columns">
+                                        <li class="name">
                                             <label>*Nombre de la feria</label>	
                                             <input class="expand input-text" type="text" name="feria_name_<?php echo $i;?>" value="<?php echo $feria->__get('feria_name');?>"/>
-                                        </div>
+                                        </li>
                                     <!-- END nombre -->
                                     <!-- ciudad -->
-                                        <div class="three columns">
+                                        <li>
                                             <label>*Ciudad</label>	
                                             <input type="text"  name="feria_city_<?php echo $i;?>" class="expand input-text" value="<?php echo $feria->__get('feria_city');?>"/>
-                                        </div>
+                                        </li>
                                     <!-- END ciudad -->
                                     <!-- pais-->
-                                        <div class="two columns">
+                                        <li>
                                             <label>País</label>	
                                             <select name="country_id_<?php echo $i;?>">
                                                 <?php
@@ -93,19 +92,22 @@
                                                 }
                                                 ?>
                                             </select>
-                                        </div>
+                                        </li>
                                     <!-- END País -->
                                     <!-- Año-->
-                                        <div class="two columns">
+                                        <li>
                                             <label>Año</label>	
                                             <select name="feria_year_<?php echo $i;?>">
                                                 <option value="2012" <?php if ($feria->__get('feria_year') == 2012)  echo 'selected="selected"';?>>2012</option>
                                                 <option value="2011" <?php if ($feria->__get('feria_year') == 2011)  echo 'selected="selected"';?>>2011</option>
                                                 <option value="2011" <?php if ($feria->__get('feria_year') == 2010)  echo 'selected="selected"';?>>2010</option>
                                             </select>
-                                        </div>
-                                <!-- END Año -->
-                                    </div>
+                                        </li>
+                                        <!-- /Año -->
+                                         <li class="handler">
+		                                	<a href="#"><img src="http://cambelt.co/icon/minus/35x35?color=F2F2F2" alt="caneca" title="caneca" /></a>
+		                               	</li>
+                                    </ul>
                                 </li>
                     	<?php
 								$i++;
@@ -114,25 +116,25 @@
 						else
 						{
 						?>
-                                <li class="link_default">
-                                    <div class="row">                  
-                                        <div class="one columns">
+								<li class="link_default">
+									<ul class="no-bullet fairs">
+                                        <li class="handler">
                                             <img src="<?php echo APPLICATION_URL?>images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr">	
-                                        </div>	
+                                        </li>	
                                     <!-- nombre -->
-                                        <div class="four columns">
+                                        <li class="name">
                                             <label>*Nombre de la feria</label>	
                                             <input class="expand input-text" type="text" name="feria_name_1" />
-                                        </div>
+                                        </li>
                                     <!-- END nombre -->
                                     <!-- ciudad -->
-                                        <div class="three columns">
+                                        <li>
                                             <label>*Ciudad</label>	
                                             <input type="text"  name="feria_city_1" class="expand input-text"/>
-                                        </div>
+                                        </li>
                                     <!-- END ciudad -->
                                     <!-- pais-->
-                                        <div class="two columns">
+                                        <li>
                                             <label>País</label>	
                                             <select name="country_id_1">
                                                 <?php
@@ -144,23 +146,25 @@
                                                 }
                                                 ?>
                                             </select>
-                                        </div>
+                                        </li>
                                     <!-- END País -->
                                     <!-- Año-->
-                                        <div class="two columns">
+                                        <li class="two columns">
                                             <label>Año</label>	
                                             <select name="feria_year_1">
                                                 <option value="2012">2012</option>
                                                 <option value="2011">2011</option>
                                                 <option value="2010">2010</option>
                                             </select>
-                                        </div>
-                                <!-- END Año -->
-                                    </div>
+                                        </li>
+                                <!-- / Año -->
+                                  		<li class="handler">
+		                                	<a href="#"><img src="http://cambelt.co/icon/minus/35x35?color=F2F2F2" alt="caneca" title="caneca" /></a>
+		                               	</li>
+                                    </ul>
                                 </li>                        
                         <?php
 						}
 						?>            
-                                
 			<!-- end Expo --> 
 			</ul>	

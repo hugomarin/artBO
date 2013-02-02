@@ -19,7 +19,15 @@
        margin-left:20px;
       }
     }
-    
+     &.fairs{
+      li{
+       width:16%;
+       margin-left:20px;
+       &.name{
+         width:35%;
+       }
+      }
+    }
     li{
       float:left;
       &.handler{
