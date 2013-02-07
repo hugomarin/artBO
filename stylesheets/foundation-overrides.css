@@ -56,8 +56,12 @@ label {
   background: #ECECEC;
   margin-bottom: 10px;
 }
+/* line 47, ../sass/foundation-overrides.scss */
+.panel.nopadding {
+  padding: 0;
+}
 
-/* line 49, ../sass/foundation-overrides.scss */
+/* line 52, ../sass/foundation-overrides.scss */
 p {
   line-height: 1.4;
 }

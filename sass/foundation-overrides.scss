@@ -44,6 +44,9 @@ label{
   border-bottom: 5px solid #B4B5B4;
   background: #ECECEC;
   margin-bottom: 10px;
+  &.nopadding{
+    padding:0;
+  }
 }
 
 p{

@@ -106,7 +106,7 @@ header.intro h5 {
 }
 
 /* line 103, ../sass/new.scss */
-.asterisk {
+.asterix {
   color: #BB0C35;
   margin: 0 5px 0 0;
   font-weight: normal;
@@ -120,4 +120,78 @@ header.intro h5 {
 /* line 113, ../sass/new.scss */
 .bold {
   font-weight: bold;
+}
+
+/* line 117, ../sass/new.scss */
+.inner-header {
+  background-color: #F5F5F5;
+  border-bottom: 1px solid white;
+  padding: 20px;
+}
+/* line 121, ../sass/new.scss */
+.inner-header h2 {
+  margin: 3px 0;
+}
+
+/* line 126, ../sass/new.scss */
+.container {
+  padding: 20px;
+}
+
+/* line 131, ../sass/new.scss */
+.mini-nav-header {
+  position: relative;
+  top: 20px;
+}
+/* line 134, ../sass/new.scss */
+.mini-nav-header dl {
+  float: right;
+}
+/* line 137, ../sass/new.scss */
+.mini-nav-header dl dd h4 {
+  line-height: .4;
+  color: #666;
+  font-size: 21px;
+}
+/* line 142, ../sass/new.scss */
+.mini-nav-header dl dd a {
+  background: white url(../images/handlers.jpg) no-repeat;
+  display: inline-block;
+  width: 33px;
+  height: 33px;
+  text-indent: -9000px;
+  display: inline-block;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  border-bottom: 4px solid #e1e1e1;
+}
+/* line 151, ../sass/new.scss */
+.mini-nav-header dl dd a.save {
+  background: white url(../images/handlers/guardar.jpg) no-repeat;
+  background-position: 3px 3px;
+  text-indent: 0;
+  width: 80px;
+  color: #666666;
+  padding-left: 25px;
+  line-height: 2;
+}
+/* line 160, ../sass/new.scss */
+.mini-nav-header dl dd a.prev {
+  background-position: -17px 3px;
+}
+/* line 163, ../sass/new.scss */
+.mini-nav-header dl dd a.next {
+  background-position: -39px 3px;
+}
+/* line 166, ../sass/new.scss */
+.mini-nav-header dl dd a:hover {
+  background-color: #e6e6e6;
+}
+
+/* line 175, ../sass/new.scss */
+.form-data label.secondary {
+  padding: 4px 15px;
 }

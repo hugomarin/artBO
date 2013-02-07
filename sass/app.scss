@@ -205,11 +205,11 @@ background:url('../images/resources/forward.png') no-repeat;
 margin:1px;
 }
 
-a.save{ 
-padding:15px 19px;
-background:url('../images/resources/guardar.png') no-repeat;  
-margin:1px;
-}
+// a.save{ 
+// padding:15px 19px;
+// background:url('../images/resources/guardar.png') no-repeat;  
+// margin:1px;
+// }
 
 
 .anterior{
@@ -371,18 +371,17 @@ background: -webkit-linear-gradient(top, #f7f7f7 0%,#f0f0f0 100%);}
 
 
 li.link_default {
-  list-style-type:none; display:block; border-top: 1px solid #e4e4e4; border-right:1px solid #e3e3e3; border-left:1px solid #e3e3e3; background: #f2f2f2; padding:6px 5px;
-  margin-bottom: 0;
+  list-style-type:none;
+  display:block;
+  background: #E5E5E5;
+  padding:6px 5px;
+  margin-bottom: 3px;
+  @include border-radius(4px);
 }
-
-
 
 
 .ui-state-highlight { height: 33px; line-height: 1.2em; }
 
-li.link_default:last-child {
-  border-bottom: 1px solid #e6e6e6;
-}
 
 .link-title, .link-url { display: inline-block; padding: 2px 4px 2px 5px; white-space: normal; width: 240px; word-wrap: break-word; vertical-align: top; z-index:999; }
 

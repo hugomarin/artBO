@@ -100,7 +100,7 @@ header{
   text-decoration:underline;
 }
 
-.asterisk{
+.asterix{
   color:#BB0C35;
   margin:0 5px 0 0;
   font-weight: normal;
@@ -112,4 +112,67 @@ header{
 
 .bold{
   font-weight:bold;
+}
+
+.inner-header{
+  background-color:#F5F5F5;
+  border-bottom:1px solid white;
+  padding:20px;
+  h2{
+    margin:3px 0;
+  }
+}
+
+.container{
+  padding:20px;
+}
+
+
+.mini-nav-header{
+  position:relative;
+  top:20px;
+  dl{
+    float:right;
+    dd{
+      h4{
+          line-height:.4;
+          color:#666;
+          font-size:21px;
+        }
+      a{
+        background: white url(../images/handlers.jpg) no-repeat;
+        display: inline-block; 
+        width:33px;
+        height:33px;
+        text-indent:-9000px;
+        display:inline-block;
+        @include border-radius(4px);
+        border-bottom:4px solid #E1E1E1;
+        &.save{
+          background: white url(../images/handlers/guardar.jpg) no-repeat;
+          background-position: 3px 3px;
+          text-indent: 0;
+          width: 80px;
+          color: #666666;
+          padding-left: 25px;
+          line-height:2;
+        }
+        &.prev{
+          background-position:-17px 3px;
+        }
+        &.next{
+          background-position:-39px 3px; 
+        }
+        &:hover{
+          background-color: scale-lightness(#fff, -10%);
+        }
+      } 
+    }
+  }
+}
+
+.form-data{
+  label.secondary{
+    padding:4px 15px;
+  }
 }

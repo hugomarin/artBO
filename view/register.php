@@ -16,19 +16,19 @@ include_once('header-nologin2.php');
 				Ya te registráste en artBO, haz clic <a class="underline" href="#">aquí.</a></p>
 				
 				<form action="register_submit" method="get" accept-charset="utf-8">
-					<label for="name"><span class="asterisk">*</span>Nombre</label>
+					<label for="name"><span class="asterix">*</span>Nombre</label>
 					<input type="text" name="some_name" value="" id="some_name"/>
-					<label for="name"><span class="asterisk">*</span>Apellido</label>
+					<label for="name"><span class="asterix">*</span>Apellido</label>
 					<input type="text" name="some_name" value="" id="some_name"/>
-					<label for="name"><span class="asterisk">*</span>Nombre de la Galeria</label>
+					<label for="name"><span class="asterix">*</span>Nombre de la Galeria</label>
 					<input type="text" name="some_name" value="" id="some_name"/>
-					<label for="name"><span class="asterisk">*</span>Correo Electronico</label>
+					<label for="name"><span class="asterix">*</span>Correo Electronico</label>
 					<input type="email" name="some_name" value="" id="some_name"/>
-					<label for="name"><span class="asterisk">*</span>Confirmación correo Electronico</label>
+					<label for="name"><span class="asterix">*</span>Confirmación correo Electronico</label>
 					<input type="email" name="some_name" value="" id="some_name"/>
-					<label for="name"><span class="asterisk">*</span>Clave</label>
+					<label for="name"><span class="asterix">*</span>Clave</label>
 					<input type="password" name="some_name" value="" id="some_name"/>
-					<label for="name"><span class="asterisk">*</span>Confirmación Clave</label>
+					<label for="name"><span class="asterix">*</span>Confirmación Clave</label>
 					<input type="password" name="some_name" value="" id="some_name"/>
 				</form>
 			</div>

@@ -6,30 +6,34 @@ include_once('menu.php');
 <!-- 2. End menu -->
 			
 	<div class="row main-row">	
-		<div class="panel">
-			
-			<div class="row inner-header">
-				<div class="eight columns title">
-					<span class="redtext">Registro</span>
-					<h2><span>Exposiciones:</span> <?php echo $user->__get('user_name');?></h2>
+		<div class="panel nopadding">
+			<div class="inner-header">
+				<div class="row">
+					<div class="eight columns title">
+						<strong class="redtext">Exposiciones</strong>
+						<h2><?php echo $user->__get('user_name');?></h2>
+					</div>
+					<div class="four columns mini-nav-header">
+						<dl class="sub-nav">
+							<dd><a class="save" title="Guardar" href="javascript:void(0);" onClick="document.getElementById('validable').submit();">Guardar</a></dd>
+							<dd><a class="prev" title="Registro Galerias" href="<?php echo APPLICATION_URL?>registro-galerias-0410.html">Anterior</a></dd>
+							<dd><h4>2/6</h4></dd>
+							<dd><a class="next" title="Registro Ferias" href="<?php echo APPLICATION_URL?>registro-ferias-0430.html">Siguiente</a></dd>
+						</dl>	
+					</div>
 				</div>
-				<div class="four columns mini-nav-header">
-					<dl class="sub-nav">
-						<dd><a title="Registro Galerias" href="<?php echo APPLICATION_URL?>registro-galerias-0410.html">Anterior</a></dd>
-						<dd><a title="Guardar" href="javascript:void(0);" onClick="document.getElementById('validable').submit();">Guardar</a></dd>
-						<dd><a title="Registro Ferias" href="<?php echo APPLICATION_URL?>registro-ferias-0430.html">Siguiente</a></dd>
-					</dl>	
-				</div>
-			</div>	<!-- END titulo row -->
-			<div class="row form-data">	
-				<div class="twelve columns">
-					<p><em>*Registrar las exposiciones realizadas entre el 2011 y el 2013 en orden cronológico, incluyendo las exposiciones que tiene planeadas para el próximo año</em></p>
-					<!-- formulario -->
-					<form action="<?php echo APPLICATION_URL?>user.controller/createExpo.html" id="validable" class="custom" method="post">		
-						<?php include_once('inc-exposiciones-1.php'); ?>
-					</form>
-					<!-- /formulario -->
-					<a href="#" id="add-expo"><strong>+</strong> Agregar una nueva exposición</a>
+			</div>
+			<div class="container">
+				<div class="row form-data">	
+					<div class="twelve columns">
+						<p>*Registrar las exposiciones realizadas entre el 2011 y el 2013 en orden cronológico, incluyendo las exposiciones que tiene planeadas para el próximo año</p>
+						<!-- formulario -->
+						<form action="<?php echo APPLICATION_URL?>user.controller/createExpo.html" id="validable" class="custom" method="post">		
+							<?php include_once('inc-exposiciones-1.php'); ?>
+						</form>
+						<!-- /formulario -->
+						<a href="#" id="add-expo" class="label secondary whitetxt radius">Agregar una nueva exposición</a>
+					</div>
 				</div>
 			</div>
 			<hr />
