@@ -1,6 +1,17 @@
 @import "compass";
 
 
+body{
+  &.bigpic{
+    background: url(../images/bigbg.jpg) center top;
+    border-top: 5px solid #9A1935;
+  }
+  &.bigpic1{
+    background: url(../images/bigbg2.jpg) center top;
+    border-top: 5px solid #9A1935;
+  }
+}
+
 .link_default{
   ul{
      @include clearfix; 
@@ -43,4 +54,62 @@
   }
 }
 
+.image-logos{
+  height:55px;
+}
 
+header{
+  &.intro{
+   h2{
+     color:white;
+     line-height:1.3;
+   }
+   h5{
+     color:white;
+     line-height:1.8;
+   }
+  }  
+}
+
+.options{
+  margin-top:30px;
+  h3{
+    color:white;
+    font-size:32px;
+    margin:0;
+  }
+  h5{
+    color:white;
+    line-height: 1.5;
+  }
+  div{
+    width:50%;
+    &.login{
+      float:left;
+      border-right:1px solid white;
+      padding-right:30px;
+    }
+    &.register{
+      float:right;
+      padding-left:30px;
+    }
+  }
+}
+
+.underline{
+  text-decoration:underline;
+}
+
+.asterisk{
+  color:#BB0C35;
+  margin:0 5px 0 0;
+  font-weight: normal;
+}
+
+.whitetxt{
+  color:#fff;
+}
+
+.bold{
+  font-weight:bold;
+}

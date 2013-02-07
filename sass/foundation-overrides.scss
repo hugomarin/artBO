@@ -1,8 +1,51 @@
+@import "compass/css3";
+
 select{
   margin-top:7px;
 }
 
 
-input[type="text"]{
-  margin:0;
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea{
+  margin:0 0 15px 0;
+  border:0;
+  @include border-radius(4px);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0);
+  font-size: 15px;
+  font-family:"Trebuchet";
+  &:focus {
+    outline:none;
+    border-bottom:1px solid rgba(50,50,50,.2);
+    @include border-bottom-radius(0);
+  }
+}
+
+label{
+  font-weight:bold;
+  margin:5px 0;
+}
+
+.button {
+  width: auto;
+  background: #BB0C35;
+  border:0;
+  border-bottom: 4px solid #9D0B2C;
+  padding: 15px 30px 13px;
+  
+  &:hover, &:focus {
+    color: white;
+    background-color: #9D0B2C;
+  }
+}
+
+
+.panel{
+  border-bottom: 5px solid #B4B5B4;
+  background: #ECECEC;
+  margin-bottom: 10px;
+}
+
+p{
+  line-height:1.4;
 }
