@@ -45,10 +45,11 @@ body{
         width:2%;
         height:auto;
         margin:0 auto;
-        padding:28px 0; 
+        padding:10px 0; 
         a{
           position:relative;
           right:9px;
+          bottom:4px;
         }
       }
       &:last-child{
@@ -168,7 +169,7 @@ header{
           background-position:-39px 3px; 
         }
         &:hover{
-          background-color: scale-lightness(#fff, -10%);
+          border-bottom:4px solid scale-lightness(#E1E1E1, -10%);
         }
       } 
     }
@@ -176,9 +177,21 @@ header{
 }
 
 .form-data{
-  label.secondary{
+  .label.secondary{
     padding:4px 15px;
+    color:#fff;
+    font-size:14px;
+  }
+  form{
+    input[type="text"]{
+      margin:0 auto;
+    }
   }
 }
 
 
+.intitle{
+  margin: 17px -20px;
+  background: rgba(50, 50, 50, .05);
+  padding: 10px 0;
+}

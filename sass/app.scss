@@ -374,7 +374,7 @@ li.link_default {
   list-style-type:none;
   display:block;
   background: #E5E5E5;
-  padding:6px 5px;
+  padding: 11px 0 0;
   margin-bottom: 3px;
   @include border-radius(4px);
 }
@@ -387,7 +387,7 @@ li.link_default {
 
 .link-url { width: 580px; }
 
-.image_handle { cursor: move; display: block; float: left; width:11px; height:11px; }
+.image_handle { cursor: move; display: block; float: left; width:15px; height:15px; }
 
 
 /* -----------------------------------------

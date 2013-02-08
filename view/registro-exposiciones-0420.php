@@ -28,12 +28,28 @@ include_once('menu.php');
 				<div class="row form-data">	
 					<div class="twelve columns">
 						<h5>Registrar las exposiciones realizadas entre el 2011 y el 2013 en orden cronológico, incluyendo las exposiciones que tiene planeadas para el próximo año</h5>
+						<div class="intitle">
+							<!-- .row>.one.column+.four.columns+three.columns+.three.columns+.one.columns -->
+							<div class="row">
+								<div class="one column"></div>
+								<div class="six columns">
+									<span class="asterix">*</span><strong>Nombre de la exposición</strong>
+								</div>
+								<div class="two columns">
+									<span class="asterix">*</span><strong>Año</strong>
+								</div>
+								<div class="two columns">
+									<span class="asterix">*</span><strong>Mes</strong> 
+								</div>
+								<div class="one columns"></div>
+							</div>
+						</div>
 						<!-- formulario -->
-						<form action="<?php echo APPLICATION_URL?>user.controller/createExpo.html" id="validable" class="custom" method="post">		
+						<form action="<?php echo APPLICATION_URL?>user.controller/createExpo.html" id="validable" method="post">		
 							<?php include_once('inc-exposiciones-1.php'); ?>
 						</form>
 						<!-- /formulario -->
-						<a href="#" id="add-expo" class="label secondary whitetxt radius">Agregar una nueva exposición</a>
+						<a href="#" id="add-expo" class="label secondary round">Agregar una nueva exposición</a>
 					</div>
 				</div>
 			</div>
@@ -43,22 +59,6 @@ include_once('menu.php');
 				<div class="eight columns note">
 					<span><strong><span class="asterix">*</span>Datos requeridos</strong></span>
 				</div><!--/note-->
-				
-				<div class="four columns mini-nav-footer">
-					<dl class="sub-nav">
-						<dd><a title="Registro Galerías" href="<?php echo APPLICATION_URL?>registro-galerias-0410.html">Anterior</a></dd>
-						<dd><a title="Guardar" href="javascript:void(0);" onClick="document.getElementById('validable').submit();" >Guardar</a></dd>
-						<dd><a title="Registro Ferias" href="<?php echo APPLICATION_URL?>registro-ferias-0430.html">Siguiente</a></dd>
-					</dl>
-				<?php 
-					if (isset($_GET[0]))
-					{
-					?>
-				<p class="text-center bluetxt">Su registro ha sido guardado</p>
-				<?php
-					}
-					?>
-				</div><!--/mini-nav-->
 			</div><!--/inner-footer-->
 	</div><!-- END Main: Panel -->
 	<img src="<?php echo APPLICATION_URL?>images/resources/sombraFinal.png" class="top-sombra" width="980" height="17" alt="sombra"/><!-- Sombra final del panel -->

@@ -18,6 +18,7 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
     outline:none;
     border-bottom:1px solid rgba(50,50,50,.2);
     @include border-bottom-radius(0);
+    background:#ECECEC;
   }
 }
 
@@ -34,8 +35,8 @@ label{
   padding: 15px 30px 13px;
   
   &:hover, &:focus {
-    color: white;
     background-color: #9D0B2C;
+    border-bottom: 4px solid #9D0B2C;
   }
 }
 
