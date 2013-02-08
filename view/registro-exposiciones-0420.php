@@ -1,5 +1,6 @@
 <?php 
-include_once('header-login.php'); 
+include_once('header-login.php');
+// include_once('header-nologin.php');  
 $expositions	= ExpositionHelper::retrieveExpositions(" AND user_id = ". $user->__get('user_id') . " ORDER by exposition_year, exposition_month");
 include_once('menu.php'); 
 ?>
@@ -26,7 +27,7 @@ include_once('menu.php');
 			<div class="container">
 				<div class="row form-data">	
 					<div class="twelve columns">
-						<p>*Registrar las exposiciones realizadas entre el 2011 y el 2013 en orden cronológico, incluyendo las exposiciones que tiene planeadas para el próximo año</p>
+						<h5>Registrar las exposiciones realizadas entre el 2011 y el 2013 en orden cronológico, incluyendo las exposiciones que tiene planeadas para el próximo año</h5>
 						<!-- formulario -->
 						<form action="<?php echo APPLICATION_URL?>user.controller/createExpo.html" id="validable" class="custom" method="post">		
 							<?php include_once('inc-exposiciones-1.php'); ?>

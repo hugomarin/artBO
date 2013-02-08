@@ -52,16 +52,45 @@ label {
 
 /* line 43, ../sass/foundation-overrides.scss */
 .panel {
+  border: 0;
   border-bottom: 5px solid #b4b5b4;
   background: #ECECEC;
   margin-bottom: 10px;
 }
-/* line 47, ../sass/foundation-overrides.scss */
+/* line 48, ../sass/foundation-overrides.scss */
 .panel.nopadding {
   padding: 0;
 }
 
-/* line 52, ../sass/foundation-overrides.scss */
+/* line 53, ../sass/foundation-overrides.scss */
 p {
   line-height: 1.4;
+}
+
+/* line 58, ../sass/foundation-overrides.scss */
+form.custom div.custom.dropdown a.current {
+  border: 0;
+  line-height: 31px;
+  min-height: 31px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 65, ../sass/foundation-overrides.scss */
+form.custom div.custom.dropdown a.selector {
+  border: 0;
+  width: 32px;
+  height: 28px;
+  margin-top: 2px;
+  border-left: 1px solid #dddddd;
+}
+
+/* line 73, ../sass/foundation-overrides.scss */
+form.custom div.custom.dropdown.open ul {
+  position: absolute;
+  height: 150px;
+  top: -9px;
 }

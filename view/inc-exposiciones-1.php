@@ -11,7 +11,7 @@
                                 <ul class="no-bullet expo">
 	                                <!-- move img -->
 	                                <li class="handler">
-	                                    <img src="images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr">
+	                                    <img src="images/drag_handle.gif" alt="drag_handle" width="50" height="51" class="image_handle nsr">
 	                                </li>
 	                                <!-- END move img -->
 	                                <!-- nombre -->
@@ -22,14 +22,14 @@
 	                                <!-- END nombre -->
 	                                <!-- Año -->
 	                                <li class="date">
-	                                    <label>Año</label>	
+	                                    <label><span class="asterix">*</span>Año</label>	
 	                                    <select name="expo_fecha_<?php echo $i?>">
 	                                        <option value="2012" <?php if ($exposition->__get('exposition_year') == 2012) echo 'selected="selected"';?>>2012</option>
 	                                        <option value="2011" <?php if ($exposition->__get('exposition_year') == 2011) echo 'selected="selected"';?>>2011</option>
 	                                    </select>
 	                                </li>
 	                                <li class="date">
-	                                    <label>Mes</label>	
+	                                    <label><span class="asterix">*</span>Mes</label>	
 	                                    <select name="expo_mes_<?php echo $i?>">
 	                                        <option value="01" <?php if ($exposition->__get('exposition_month') == 1) echo 'selected="selected"';?>>01</option>
 	                                        <option value="02" <?php if ($exposition->__get('exposition_month') == 2) echo 'selected="selected"';?>>02</option>
@@ -46,7 +46,7 @@
 	                                    </select>
 	                                </li>
 	                                <li class="handler">
-	                                	<a href="#"><img src="http://cambelt.co/icon/minus/35x35?color=F2F2F2" alt="caneca" title="caneca" /></a>
+	                                	<a href="#"><img src="images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a>
 	                                </li>
 	                                <!-- END Año -->
                                 </ul>	
@@ -73,7 +73,7 @@
                                 <!-- END nombre -->
                                 <!-- Año -->
                                 <div class="two columns offset-by-three">
-                                    <label>Año</label>	
+                                    <label><span class="asterix">*</span>Año</label>	
                                     <select name="expo_fecha_1">
                                         <option>2012</option>
                                         <option>2011</option>
@@ -81,7 +81,7 @@
                                 </div>
                                 <!-- END Año -->
                                 <div class="two columns offset-by-three">
-                                    <label>Mes</label>	
+                                    <label><span class="asterix">*</span>Mes</label>	
                                     <select name="expo_mes_1">
                                         <option value="01">01</option>
                                         <option value="02">02</option>

@@ -46,114 +46,119 @@ body.bigpic1 {
   width: 2%;
   height: auto;
   margin: 0 auto;
-  padding: 31px 0;
+  padding: 28px 0;
 }
-/* line 50, ../sass/new.scss */
+/* line 49, ../sass/new.scss */
+.link_default ul li.handler a {
+  position: relative;
+  right: 9px;
+}
+/* line 54, ../sass/new.scss */
 .link_default ul li:last-child {
   margin-left: 20px;
 }
 
-/* line 57, ../sass/new.scss */
+/* line 61, ../sass/new.scss */
 .image-logos {
   height: 55px;
 }
 
-/* line 63, ../sass/new.scss */
+/* line 67, ../sass/new.scss */
 header.intro h2 {
   color: white;
   line-height: 1.3;
 }
-/* line 67, ../sass/new.scss */
+/* line 71, ../sass/new.scss */
 header.intro h5 {
   color: white;
   line-height: 1.8;
 }
 
-/* line 74, ../sass/new.scss */
+/* line 78, ../sass/new.scss */
 .options {
   margin-top: 30px;
 }
-/* line 76, ../sass/new.scss */
+/* line 80, ../sass/new.scss */
 .options h3 {
   color: white;
   font-size: 32px;
   margin: 0;
 }
-/* line 81, ../sass/new.scss */
+/* line 85, ../sass/new.scss */
 .options h5 {
   color: white;
   line-height: 1.5;
 }
-/* line 85, ../sass/new.scss */
+/* line 89, ../sass/new.scss */
 .options div {
   width: 50%;
 }
-/* line 87, ../sass/new.scss */
+/* line 91, ../sass/new.scss */
 .options div.login {
   float: left;
   border-right: 1px solid white;
   padding-right: 30px;
 }
-/* line 92, ../sass/new.scss */
+/* line 96, ../sass/new.scss */
 .options div.register {
   float: right;
   padding-left: 30px;
 }
 
-/* line 99, ../sass/new.scss */
+/* line 103, ../sass/new.scss */
 .underline {
   text-decoration: underline;
 }
 
-/* line 103, ../sass/new.scss */
+/* line 107, ../sass/new.scss */
 .asterix {
   color: #BB0C35;
   margin: 0 5px 0 0;
   font-weight: normal;
 }
 
-/* line 109, ../sass/new.scss */
+/* line 113, ../sass/new.scss */
 .whitetxt {
   color: #fff;
 }
 
-/* line 113, ../sass/new.scss */
+/* line 117, ../sass/new.scss */
 .bold {
   font-weight: bold;
 }
 
-/* line 117, ../sass/new.scss */
+/* line 121, ../sass/new.scss */
 .inner-header {
   background-color: #F5F5F5;
   border-bottom: 1px solid white;
   padding: 20px;
 }
-/* line 121, ../sass/new.scss */
+/* line 125, ../sass/new.scss */
 .inner-header h2 {
   margin: 3px 0;
 }
 
-/* line 126, ../sass/new.scss */
+/* line 130, ../sass/new.scss */
 .container {
   padding: 20px;
 }
 
-/* line 131, ../sass/new.scss */
+/* line 135, ../sass/new.scss */
 .mini-nav-header {
   position: relative;
   top: 20px;
 }
-/* line 134, ../sass/new.scss */
+/* line 138, ../sass/new.scss */
 .mini-nav-header dl {
   float: right;
 }
-/* line 137, ../sass/new.scss */
+/* line 141, ../sass/new.scss */
 .mini-nav-header dl dd h4 {
   line-height: .4;
   color: #666;
   font-size: 21px;
 }
-/* line 142, ../sass/new.scss */
+/* line 146, ../sass/new.scss */
 .mini-nav-header dl dd a {
   background: white url(../images/handlers.jpg) no-repeat;
   display: inline-block;
@@ -168,7 +173,7 @@ header.intro h5 {
   border-radius: 4px;
   border-bottom: 4px solid #e1e1e1;
 }
-/* line 151, ../sass/new.scss */
+/* line 155, ../sass/new.scss */
 .mini-nav-header dl dd a.save {
   background: white url(../images/handlers/guardar.jpg) no-repeat;
   background-position: 3px 3px;
@@ -178,20 +183,20 @@ header.intro h5 {
   padding-left: 25px;
   line-height: 2;
 }
-/* line 160, ../sass/new.scss */
+/* line 164, ../sass/new.scss */
 .mini-nav-header dl dd a.prev {
   background-position: -17px 3px;
 }
-/* line 163, ../sass/new.scss */
+/* line 167, ../sass/new.scss */
 .mini-nav-header dl dd a.next {
   background-position: -39px 3px;
 }
-/* line 166, ../sass/new.scss */
+/* line 170, ../sass/new.scss */
 .mini-nav-header dl dd a:hover {
   background-color: #e6e6e6;
 }
 
-/* line 175, ../sass/new.scss */
+/* line 179, ../sass/new.scss */
 .form-data label.secondary {
   padding: 4px 15px;
 }

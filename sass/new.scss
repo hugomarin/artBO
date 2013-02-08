@@ -45,7 +45,11 @@ body{
         width:2%;
         height:auto;
         margin:0 auto;
-        padding:31px 0; 
+        padding:28px 0; 
+        a{
+          position:relative;
+          right:9px;
+        }
       }
       &:last-child{
         margin-left:20px;
@@ -176,3 +180,5 @@ header{
     padding:4px 15px;
   }
 }
+
+

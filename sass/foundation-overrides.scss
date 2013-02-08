@@ -41,6 +41,7 @@ label{
 
 
 .panel{
+  border:0;
   border-bottom: 5px solid #B4B5B4;
   background: #ECECEC;
   margin-bottom: 10px;
@@ -51,4 +52,26 @@ label{
 
 p{
   line-height:1.4;
+}
+
+
+form.custom div.custom.dropdown a.current{
+  border:0;
+  line-height: 31px;
+  min-height: 31px;
+  @include border-radius(4px);
+}
+
+form.custom div.custom.dropdown a.selector{
+  border:0;
+  width: 32px;
+  height: 28px;
+  margin-top: 2px;
+  border-left:1px solid #DDD; 
+}
+
+form.custom div.custom.dropdown.open ul{
+  position: absolute;
+  height: 150px;
+  top: -9px;
 }
