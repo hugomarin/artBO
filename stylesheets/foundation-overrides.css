@@ -28,15 +28,16 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus
   -moz-border-radius-bottomright: 0;
   -webkit-border-bottom-right-radius: 0;
   border-bottom-right-radius: 0;
+  background: #ECECEC;
 }
 
-/* line 24, ../sass/foundation-overrides.scss */
+/* line 25, ../sass/foundation-overrides.scss */
 label {
   font-weight: bold;
   margin: 5px 0;
 }
 
-/* line 29, ../sass/foundation-overrides.scss */
+/* line 30, ../sass/foundation-overrides.scss */
 .button {
   width: auto;
   background: #BB0C35;
@@ -44,30 +45,30 @@ label {
   border-bottom: 4px solid #9d0b2c;
   padding: 15px 30px 13px;
 }
-/* line 36, ../sass/foundation-overrides.scss */
+/* line 37, ../sass/foundation-overrides.scss */
 .button:hover, .button:focus {
-  color: white;
   background-color: #9D0B2C;
+  border-bottom: 4px solid #9d0b2c;
 }
 
-/* line 43, ../sass/foundation-overrides.scss */
+/* line 44, ../sass/foundation-overrides.scss */
 .panel {
   border: 0;
   border-bottom: 5px solid #b4b5b4;
   background: #ECECEC;
   margin-bottom: 10px;
 }
-/* line 48, ../sass/foundation-overrides.scss */
+/* line 49, ../sass/foundation-overrides.scss */
 .panel.nopadding {
   padding: 0;
 }
 
-/* line 53, ../sass/foundation-overrides.scss */
+/* line 54, ../sass/foundation-overrides.scss */
 p {
   line-height: 1.4;
 }
 
-/* line 58, ../sass/foundation-overrides.scss */
+/* line 59, ../sass/foundation-overrides.scss */
 form.custom div.custom.dropdown a.current {
   border: 0;
   line-height: 31px;
@@ -79,7 +80,7 @@ form.custom div.custom.dropdown a.current {
   border-radius: 4px;
 }
 
-/* line 65, ../sass/foundation-overrides.scss */
+/* line 66, ../sass/foundation-overrides.scss */
 form.custom div.custom.dropdown a.selector {
   border: 0;
   width: 32px;
@@ -88,7 +89,7 @@ form.custom div.custom.dropdown a.selector {
   border-left: 1px solid #dddddd;
 }
 
-/* line 73, ../sass/foundation-overrides.scss */
+/* line 74, ../sass/foundation-overrides.scss */
 form.custom div.custom.dropdown.open ul {
   position: absolute;
   height: 150px;
