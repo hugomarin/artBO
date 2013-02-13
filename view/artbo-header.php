@@ -15,17 +15,15 @@
 					if (isset($user)) 
 					{
 					?>
-                    <a href="<?php echo APPLICATION_URL?>datos-galeria-0300.html"><img src="<?php echo APPLICATION_FULL_URL?>resources/images/26x26/<?php echo $user->__get('user_image');?>" class="left"  height="26" width="26" alt="perfil"/></a>
-					<p class="left"><strong><?php echo $user->__get('user_name') . ' | '; echo ($user->__get('user_gallery_type') == 2) ? 'Nueva galería' : 'Galería';?></strong><br />
-											<?php echo $user->__get('user_director_name');?><br />
-					<a href="<?php echo APPLICATION_URL?>exit.html" title="Salir"><strong>Salir</strong></a> | <a href="<?php echo APPLICATION_URL?>datos-galeria-0300.html" title="Salir"><strong>Editar Perfil</strong></a></p>
+                    <a href="<?php echo APPLICATION_URL?>datos-galeria-0300.html"><img src="<?php echo APPLICATION_FULL_URL?>resources/images/26x26/<?php echo $user->__get('user_image');?>" class="left"  height="36" width="36" alt="perfil"/></a>
+					<p class="left"><?php echo ($user->__get('user_gallery_type') == 2) ? 'Nueva galería' : 'Galería' . ' '; echo '<strong>'.$user->__get('user_name').'</strong>';?><br />
+					<a href="<?php echo APPLICATION_URL?>datos-galeria-0300.html" title="Salir">Editar Perfil</a> | <a href="<?php echo APPLICATION_URL?>exit.html" title="Salir">Salir</a></p>
 					<?php
 					}
 					?>
                 </div>
-
 				<div class="idiomas left">
-					<p>Español / <a href="<?php echo APPLICATION_URL?>en/home.html" title="artBO English">English</a></p>
+					<p>Español | <a href="<?php echo APPLICATION_URL?>en/home.html" title="artBO English">English</a></p>
 				</div>
 			</div>
 		</div>

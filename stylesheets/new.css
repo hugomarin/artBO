@@ -51,7 +51,7 @@ body.bigpic1 {
 /* line 49, ../sass/new.scss */
 .link_default ul li.handler a {
   position: relative;
-  right: 9px;
+  right: 2px;
   bottom: 4px;
 }
 /* line 55, ../sass/new.scss */
@@ -130,7 +130,7 @@ header.intro h5 {
 
 /* line 122, ../sass/new.scss */
 .inner-header {
-  background-color: #F5F5F5;
+  background-color: #F9f9f9;
   border-bottom: 1px solid white;
   padding: 20px;
 }
@@ -198,19 +198,207 @@ header.intro h5 {
 }
 
 /* line 180, ../sass/new.scss */
+.form-data h5 {
+  font-weight: normal;
+  line-height: 1.5;
+  font-size: 16px;
+}
+/* line 185, ../sass/new.scss */
 .form-data .label.secondary {
   padding: 4px 15px;
   color: #fff;
   font-size: 14px;
+  -webkit-transition-property: background, color;
+  -moz-transition-property: background, color;
+  -o-transition-property: background, color;
+  transition-property: background, color;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
 }
-/* line 186, ../sass/new.scss */
+/* line 192, ../sass/new.scss */
+.form-data .label.secondary:hover {
+  color: #999999;
+  background: #e0e0e0;
+}
+/* line 198, ../sass/new.scss */
 .form-data form input[type="text"] {
-  margin: 0 auto;
+  margin: 0 0 10px 0;
+}
+/* line 200, ../sass/new.scss */
+.form-data form input[type="text"].no-margin {
+  margin: 0;
 }
 
-/* line 193, ../sass/new.scss */
+/* line 207, ../sass/new.scss */
+label {
+  font-weight: bold;
+  margin: 15px 0 8px;
+}
+
+/* line 212, ../sass/new.scss */
 .intitle {
-  margin: 17px -20px;
-  background: rgba(50, 50, 50, 0.05);
-  padding: 10px 0;
+  padding: 5px 0;
+}
+/* line 215, ../sass/new.scss */
+.intitle ul li {
+  float: left;
+  list-style-type: none;
+}
+/* line 220, ../sass/new.scss */
+.intitle ul.expos li {
+  width: 20%;
+}
+/* line 222, ../sass/new.scss */
+.intitle ul.expos li:first-child {
+  margin-left: 60px;
+  width: 51%;
+}
+/* line 229, ../sass/new.scss */
+.intitle ul.ferias li {
+  width: 18%;
+}
+/* line 231, ../sass/new.scss */
+.intitle ul.ferias li:first-child {
+  margin-left: 60px;
+  width: 36%;
+}
+/* line 238, ../sass/new.scss */
+.intitle ul.artistas li {
+  width: 29.4%;
+}
+/* line 240, ../sass/new.scss */
+.intitle ul.artistas li:first-child {
+  margin-left: 60px;
+}
+
+/* line 249, ../sass/new.scss */
+.inner-footer {
+  background-color: #eee;
+}
+/* line 251, ../sass/new.scss */
+.inner-footer strong {
+  line-height: 3;
+}
+/* line 254, ../sass/new.scss */
+.inner-footer a {
+  margin: 0 5px;
+  font-weight: bold;
+}
+
+/* line 260, ../sass/new.scss */
+.graytxt {
+  color: #4C4C4C;
+}
+
+/* line 264, ../sass/new.scss */
+.advisory {
+  margin-bottom: 30px;
+}
+/* line 266, ../sass/new.scss */
+.advisory span {
+  font-size: 12px;
+  color: #5b5b5b;
+  display: block;
+  line-height: 1.4;
+}
+/* line 272, ../sass/new.scss */
+.advisory a {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* line 278, ../sass/new.scss */
+.redtxt {
+  color: #BB0C35;
+}
+
+/* line 285, ../sass/new.scss */
+.nav-bar li span.spriteArrow {
+  background: url("../images/spriteArrow.jpg");
+  height: 40px;
+  width: 28px;
+  display: inline-block;
+  float: left;
+}
+/* line 292, ../sass/new.scss */
+.nav-bar li span.number-menu {
+  padding: 3px 8px;
+}
+/* line 296, ../sass/new.scss */
+.nav-bar li:hover {
+  background: transparent;
+  cursor: pointer;
+}
+/* line 299, ../sass/new.scss */
+.nav-bar li:hover a {
+  color: #fff;
+}
+/* line 302, ../sass/new.scss */
+.nav-bar li:hover span.number-menu {
+  color: #bbb;
+}
+/* line 306, ../sass/new.scss */
+.nav-bar li.active {
+  background: #BB0C35;
+}
+/* line 309, ../sass/new.scss */
+.nav-bar li.active span.spriteArrow {
+  background-position: 0 -40px;
+}
+/* line 315, ../sass/new.scss */
+.nav-bar li.active + li span.spriteArrow {
+  background-position: 0 -80px;
+}
+
+/* line 325, ../sass/new.scss */
+.doctype-data {
+  width: 45%;
+  float: left;
+  height: 80px;
+  display: inline-block;
+}
+
+/* line 332, ../sass/new.scss */
+.docnumber-data {
+  width: 38%;
+  float: right;
+  height: 80px;
+  display: inline-block;
+}
+
+/* line 339, ../sass/new.scss */
+.caption {
+  color: #808080;
+  margin: 10px 0;
+  display: block;
+}
+
+/* line 345, ../sass/new.scss */
+.block {
+  display: block;
+  height: 80px;
+}
+
+/* line 350, ../sass/new.scss */
+input[type="file"] {
+  margin: 15px 0;
+}
+
+/* line 355, ../sass/new.scss */
+img.selected {
+  border: 0;
+  -webkit-box-shadow: rgba(187, 12, 53, 0.2) 0 0 10px;
+  -moz-box-shadow: rgba(187, 12, 53, 0.2) 0 0 10px;
+  box-shadow: rgba(187, 12, 53, 0.2) 0 0 10px;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  transform: rotate(-3deg);
 }

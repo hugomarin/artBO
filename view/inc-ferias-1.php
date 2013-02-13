@@ -50,10 +50,23 @@
 					<!-- END panel 2 -->
 					<h2>Participación en otras ferias</h2>
 					<p><em>Registrar las ferias en las que participó entre 2011 y 2012</em></p>
-				<!-- END formulario -->
-			<ul class="link_list ui-sortable">
-			  
-			<!-- expo -->
+							<div class="intitle">
+						<ul class="ferias">
+							<li>
+								<span class="asterix">*</span><strong>Nombre de la feria</strong>
+							</li>
+							<li>
+								<span class="asterix">*</span><strong>Ciudad</strong>
+							</li>
+							<li>
+								<span class="asterix">*</span><strong>País</strong>
+							</li>
+							<li>
+								<span class="asterix">*</span><strong>Año</strong>
+							</li>
+						</ul>
+					</div>
+				<ul class="link_list ui-sortable">
                     	<?php
 						if (count($ferias) > 0)
 						{
@@ -68,19 +81,16 @@
                                         </li>	
                                     <!-- nombre -->
                                         <li class="name">
-                                            <label>*Nombre de la feria</label>	
                                             <input class="expand input-text" type="text" name="feria_name_<?php echo $i;?>" value="<?php echo $feria->__get('feria_name');?>"/>
                                         </li>
                                     <!-- END nombre -->
                                     <!-- ciudad -->
                                         <li>
-                                            <label>*Ciudad</label>	
                                             <input type="text"  name="feria_city_<?php echo $i;?>" class="expand input-text" value="<?php echo $feria->__get('feria_city');?>"/>
                                         </li>
                                     <!-- END ciudad -->
                                     <!-- pais-->
                                         <li>
-                                            <label>País</label>	
                                             <select name="country_id_<?php echo $i;?>">
                                                 <?php
                                                 foreach ($countries as $country)
@@ -96,7 +106,6 @@
                                     <!-- END País -->
                                     <!-- Año-->
                                         <li>
-                                            <label>Año</label>	
                                             <select name="feria_year_<?php echo $i;?>">
                                                 <option value="2012" <?php if ($feria->__get('feria_year') == 2012)  echo 'selected="selected"';?>>2012</option>
                                                 <option value="2011" <?php if ($feria->__get('feria_year') == 2011)  echo 'selected="selected"';?>>2011</option>
@@ -105,7 +114,7 @@
                                         </li>
                                         <!-- /Año -->
                                          <li class="handler">
-		                                	<a href="#"><img src="http://cambelt.co/icon/minus/35x35?color=F2F2F2" alt="caneca" title="caneca" /></a>
+		                                	<a href="#"><img src="images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a>
 		                               	</li>
                                     </ul>
                                 </li>
@@ -159,7 +168,7 @@
                                         </li>
                                 <!-- / Año -->
                                   		<li class="handler">
-		                                	<a href="#"><img src="http://cambelt.co/icon/minus/35x35?color=F2F2F2" alt="caneca" title="caneca" /></a>
+		                                	<a href="#"><img src="images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a>
 		                               	</li>
                                     </ul>
                                 </li>                        

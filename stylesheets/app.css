@@ -6133,61 +6133,67 @@ input.only {
 /* line 130, ../sass/app.scss */
 .encabezado {
   background: #b71234;
-  margin-bottom: 30px;
-  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
-  -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.19);
+  margin-bottom: 20px;
 }
 
-/* line 139, ../sass/app.scss */
+/* line 135, ../sass/app.scss */
 strong.valign {
   position: relative;
   bottom: 15px;
 }
 
-/* line 145, ../sass/app.scss */
+/* line 141, ../sass/app.scss */
 .lateralizq {
   border-left: thick solid #be0f34;
   border-left-width: 1px;
   margin: 5px 0px;
 }
 
-/* line 151, ../sass/app.scss */
+/* line 147, ../sass/app.scss */
 .lateralder {
   margin: 5px 0px;
 }
 
-/* line 155, ../sass/app.scss */
+/* line 151, ../sass/app.scss */
 .perfil-data p, .idiomas p {
   margin-bottom: 0;
   margin-top: 7px;
 }
 
-/* line 160, ../sass/app.scss */
+/* line 156, ../sass/app.scss */
 .idiomas p {
   margin-bottom: 0;
-  margin-top: 7px;
-  color: #b3b3b3;
+  margin-top: 20px;
+  color: #fff;
+  font-weight: bold;
 }
 
-/* line 166, ../sass/app.scss */
+/* line 163, ../sass/app.scss */
+.idiomas p a {
+  font-weight: normal;
+}
+
+/* line 167, ../sass/app.scss */
 .perfil p a, .idiomas p a {
   margin-bottom: 0;
   margin-top: 7px;
   color: white;
-  font-weight: bold;
-  text-decoration: underline;
 }
 
-/* line 175, ../sass/app.scss */
+/* line 174, ../sass/app.scss */
 .perfil img {
   position: relative;
   top: 9px;
   margin-right: 15px;
+  border: 1px solid white;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
 }
 
-/* line 181, ../sass/app.scss */
+/* line 182, ../sass/app.scss */
 .number-menu {
   background: url("../images/resources/icon-num.png") no-repeat center;
   padding: 6px 8px;
@@ -6198,26 +6204,26 @@ strong.valign {
   font-weight: bold;
 }
 
-/* line 191, ../sass/app.scss */
+/* line 192, ../sass/app.scss */
 .quitarH2 {
   font-weight: normal;
 }
 
-/* line 195, ../sass/app.scss */
+/* line 196, ../sass/app.scss */
 a.back {
   padding: 15px 17px;
   background: url("../images/resources/back.png") no-repeat;
   margin: 1px;
 }
 
-/* line 202, ../sass/app.scss */
+/* line 203, ../sass/app.scss */
 a.forward {
   padding: 15px 17px;
   background: url("../images/resources/forward.png") no-repeat;
   margin: 1px;
 }
 
-/* line 215, ../sass/app.scss */
+/* line 216, ../sass/app.scss */
 .anterior {
   width: 107px;
   height: 30px;
@@ -6225,7 +6231,7 @@ a.forward {
   margin: 1px;
 }
 
-/* line 222, ../sass/app.scss */
+/* line 223, ../sass/app.scss */
 .anterior a {
   color: #003f62;
   text-shadow: 1px 1px 1px #27abc4;
@@ -6235,7 +6241,7 @@ a.forward {
   position: relative;
 }
 
-/* line 232, ../sass/app.scss */
+/* line 233, ../sass/app.scss */
 .siguiente {
   width: 107px;
   height: 30px;
@@ -6243,7 +6249,7 @@ a.forward {
   margin: 1px;
 }
 
-/* line 239, ../sass/app.scss */
+/* line 240, ../sass/app.scss */
 .siguiente a {
   color: #003f62;
   text-shadow: 1px 1px 1px #27abc4;
@@ -6253,7 +6259,7 @@ a.forward {
   position: relative;
 }
 
-/* line 249, ../sass/app.scss */
+/* line 250, ../sass/app.scss */
 .save {
   width: 90px;
   height: 30px;
@@ -6261,7 +6267,7 @@ a.forward {
   margin: 1px;
 }
 
-/* line 257, ../sass/app.scss */
+/* line 258, ../sass/app.scss */
 .save a {
   color: #3d332a;
   text-shadow: 1px 1px 1px #b7b0a5;
@@ -6274,7 +6280,7 @@ a.forward {
 /* -----------------------------------------
    Collections
 ----------------------------------------- */
-/* line 272, ../sass/app.scss */
+/* line 273, ../sass/app.scss */
 .small-product-image {
   width: 70px;
   float: left;
@@ -6282,25 +6288,25 @@ a.forward {
   margin-right: 20px;
 }
 
-/* line 273, ../sass/app.scss */
+/* line 274, ../sass/app.scss */
 .collection-info {
   margin: 0;
 }
 
-/* line 274, ../sass/app.scss */
+/* line 275, ../sass/app.scss */
 .remove-product {
   float: right;
   position: relative;
   top: 13px;
 }
 
-/* line 276, ../sass/app.scss */
+/* line 277, ../sass/app.scss */
 .drag-handle {
   cursor: move !important;
   margin-right: 5px;
 }
 
-/* line 278, ../sass/app.scss */
+/* line 279, ../sass/app.scss */
 .products-li li {
   border-bottom: 1px dotted #cccccc;
   padding: 7px;
@@ -6308,7 +6314,7 @@ a.forward {
   height: 55px;
 }
 
-/* line 282, ../sass/app.scss */
+/* line 283, ../sass/app.scss */
 .product-li li {
   border-bottom: 1px dotted #cccccc;
   padding: 7px;
@@ -6318,7 +6324,7 @@ a.forward {
   font-weight: bold;
 }
 
-/* line 289, ../sass/app.scss */
+/* line 290, ../sass/app.scss */
 img.images {
   border: 1px solid #eeeeee;
   border-right: 1px solid #cccccc;
@@ -6326,14 +6332,15 @@ img.images {
   padding: 5px;
   background: #f7f7f7;
   margin-right: 5px;
+  margin-top: 10px;
 }
 
-/* line 293, ../sass/app.scss */
+/* line 294, ../sass/app.scss */
 textarea.grande {
   width: 100%;
 }
 
-/* line 301, ../sass/app.scss */
+/* line 302, ../sass/app.scss */
 .loading {
   display: block;
   width: 80px;
@@ -6356,7 +6363,7 @@ textarea.grande {
 /* -----------------------------------------
    Products
 ----------------------------------------- */
-/* line 324, ../sass/app.scss */
+/* line 325, ../sass/app.scss */
 .cell-title {
   width: 50%;
   background: #f2f2f2;
@@ -6369,7 +6376,7 @@ textarea.grande {
   vertical-align: middle;
 }
 
-/* line 326, ../sass/app.scss */
+/* line 327, ../sass/app.scss */
 .cell-data {
   width: 50%;
   background: #fefefe;
@@ -6382,25 +6389,25 @@ textarea.grande {
   vertical-align: middle;
 }
 
-/* line 329, ../sass/app.scss */
+/* line 330, ../sass/app.scss */
 .product-edit-collection label {
   display: inline;
 }
 
-/* line 333, ../sass/app.scss */
+/* line 334, ../sass/app.scss */
 li.product-edit-collection {
   display: inline;
   padding-right: 40px;
 }
 
-/* line 338, ../sass/app.scss */
+/* line 339, ../sass/app.scss */
 ul.product-edit-ul {
   margin-bottom: 0;
   margin-top: 0;
   margin-right: 0;
 }
 
-/* line 344, ../sass/app.scss */
+/* line 345, ../sass/app.scss */
 .row.action-btn {
   background-color: #c9eddf;
   margin-bottom: 1.5em;
@@ -6409,7 +6416,7 @@ ul.product-edit-ul {
   padding: 10px 0;
 }
 
-/* line 352, ../sass/app.scss */
+/* line 353, ../sass/app.scss */
 .margin-left {
   margin-right: 10px;
 }
@@ -6417,7 +6424,7 @@ ul.product-edit-ul {
 /* -----------------------------------------
    Navegación
 ----------------------------------------- */
-/* line 363, ../sass/app.scss */
+/* line 364, ../sass/app.scss */
 .faux-table-header {
   position: relative;
   border: 1px solid #e3e3e3;
@@ -6433,7 +6440,7 @@ ul.product-edit-ul {
   background: -webkit-linear-gradient(top, #f7f7f7 0%, #f0f0f0 100%);
 }
 
-/* line 368, ../sass/app.scss */
+/* line 369, ../sass/app.scss */
 .faux-table-header:after {
   content: "";
   position: absolute;
@@ -6444,12 +6451,12 @@ ul.product-edit-ul {
   width: 100%;
 }
 
-/* line 369, ../sass/app.scss */
+/* line 370, ../sass/app.scss */
 .faux-table-header span {
   padding: 5px 181px 5px 15px;
 }
 
-/* line 373, ../sass/app.scss */
+/* line 374, ../sass/app.scss */
 li.link_default {
   list-style-type: none;
   display: block;
@@ -6463,13 +6470,13 @@ li.link_default {
   border-radius: 4px;
 }
 
-/* line 383, ../sass/app.scss */
+/* line 384, ../sass/app.scss */
 .ui-state-highlight {
   height: 33px;
   line-height: 1.2em;
 }
 
-/* line 386, ../sass/app.scss */
+/* line 387, ../sass/app.scss */
 .link-title, .link-url {
   display: inline-block;
   padding: 2px 4px 2px 5px;
@@ -6480,12 +6487,12 @@ li.link_default {
   z-index: 999;
 }
 
-/* line 388, ../sass/app.scss */
+/* line 389, ../sass/app.scss */
 .link-url {
   width: 580px;
 }
 
-/* line 390, ../sass/app.scss */
+/* line 391, ../sass/app.scss */
 .image_handle {
   cursor: move;
   display: block;
@@ -6497,7 +6504,7 @@ li.link_default {
 /* -----------------------------------------
    Footer
 ----------------------------------------- */
-/* line 398, ../sass/app.scss */
+/* line 399, ../sass/app.scss */
 .top-sombra {
   position: relative;
   bottom: 25px;
@@ -6506,30 +6513,26 @@ li.link_default {
   margin: 0 auto;
 }
 
-/* line 407, ../sass/app.scss */
+/* line 408, ../sass/app.scss */
 .perfil-data {
   float: right;
   min-width: 162px;
 }
 
-/* line 412, ../sass/app.scss */
+/* line 413, ../sass/app.scss */
 .idiomas {
   float: left;
-  width: 110px;
   text-align: right;
   height: 56px;
-  line-height: 50px;
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
   padding-left: 10px;
 }
 
-/* line 422, ../sass/app.scss */
+/* line 420, ../sass/app.scss */
 .perfil {
-  padding-right: 10px;
-  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  padding-right: 30px;
 }
 
-/* line 429, ../sass/app.scss */
+/* line 426, ../sass/app.scss */
 li#2 {
   background-image: url(../images/resources/nav-bgGray.png);
   background-color: #ff36a4;

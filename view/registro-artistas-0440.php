@@ -6,69 +6,88 @@ include_once('menu.php');
 <!-- 2. End menu -->
 			
 	<!--3. Row main-->
-	<div class="row main-row">	
-		<div class="panel">
-			
-			<div class="row inner-header">
-				<div class="eight columns title">
-					<span class="redtext">Registro</span>
-					<h2><span> Artistas:</span> <?php echo $user->__get('user_name');?></h2>	
-				</div>
-			
-				<div class="four columns mini-nav-header">
-					<dl class="sub-nav">
-						<dd><a title="Registro Ferias" href="<?php echo APPLICATION_URL?>registro-ferias-0430.html">Anterior</a></dd>
-						<dd><a title="Guardar" href="javascript:void(0);" onClick="document.getElementById('validable').submit();" >Guardar</a></dd>
-						<dd><a title="Registro espacio" href="<?php echo APPLICATION_URL?>registro-espacio-0450.html" >Siguiente</a></dd>
-					</dl>	
-				</div>
 				
+	<div class="row main-row">	
+		<div class="alert-box success">
+	    	Sus datos han sido guardados
+	    	<a href="" class="close">×</a>
+		</div>
+		<div class="panel nopadding">
+			<div class="inner-header">
+				<div class="row">
+					<div class="eight columns title">
+						<span class="redtext">Registro</span>
+						<h2><?php echo $user->__get('user_name');?></h2>	
+					</div>
+					<div class="four columns mini-nav-header">
+						<dl class="sub-nav">
+							<dd><a class="save" title="Guardar" href="javascript:void(0);" onClick="document.getElementById('validable').submit();" >Guardar</a></dd>
+							<dd><a class="prev" title="Registro Ferias" href="<?php echo APPLICATION_URL?>registro-ferias-0430.html">Anterior</a></dd>
+							<dd><h4>4/6</h4></dd>
+							<dd><a class="next" title="Registro espacio" href="<?php echo APPLICATION_URL?>registro-espacio-0450.html" >Siguiente</a></dd>
+						</dl>	
+					</div>
+				</div>
 			</div>	<!-- END titulo row -->
-			<div class="row form-data">	
-				<div class="twelve columns">
-	                <p><em>Recuerde que su propuesta de artistas para Artbo 2013 debe ser acorde al tamaño del stand  que ha seleccionado. Por cada 10 mts², sólo podrá exhibir un artista.</em></p>
-	                <p><em>Artistas a representar en artBO 2013</em></p>
-	                
-					<form action="<?php echo APPLICATION_URL?>user.controller/createArtist.html" id="validable" class="" method="post">
-						<?php include_once('inc-artistas-1.php'); ?>
-					</form>
-					
-					 <p><em>Artistas representados</em></p>
-					 <form action="registro-artistas-0440_submit" method="get" accept-charset="utf-8">
-						<textarea name="Name" rows="8" cols="40" placeholder="Digite la información correspondiente a artistas representados"></textarea>
-					 </form>
+			<div class="container">
+				<div class="row form-data">	
+					<div class="twelve columns">
+						<h5>Recuerde que su propuesta de artistas para Artbo 2013 debe ser acorde al tamaño del stand  que ha seleccionado. Por cada 10 mts², sólo podrá exhibir un artista.</h5>
+						<em>Artistas a representar en artBO 2013</em><br />
+						<div class="intitle">
+							<!-- .row>.one.column+.four.columns+three.columns+.three.columns+.one.columns -->
+							<ul class="artistas">
+								<li>
+									<span class="asterix">*</span><strong>Nombre</strong>
+								</li>
+								<li>
+									<span class="asterix">*</span><strong>Apellido</strong>
+								</li>
+								<li>
+									<span class="asterix">*</span><strong>Nacionalidad</strong>
+								</li>
+							</ul>
+						</div>
+						<form action="<?php echo APPLICATION_URL?>user.controller/createArtist.html" id="validable" class="" method="post">
+							<?php include_once('inc-artistas-1.php'); ?>
+						</form>
+						<a href="#" id="add-artist" class="label secondary round">Agregar un nuevo artista </a> 
+						<br /><br />
+						 <p><em>Artistas representados</em></p>
+						 <form action="registro-artistas-0440_submit" method="get" accept-charset="utf-8">
+							<textarea name="Name" rows="8" cols="40" placeholder="Digite la información correspondiente a artistas representados"></textarea>
+						 </form>
+					</div>
 				</div>
 			</div>
-            <hr />
-            <div class="row inner-footer">
-				<div class="eight columns note">
-					<span><strong><span class="asterix">*</span>Datos requeridos</strong></span>
-				</div><!--/note-->
-				
-				<div class="four columns mini-nav-footer">
-					<dl class="sub-nav">
-						<dd><a title="Registro ferias" href="<?php echo APPLICATION_URL?>registro-ferias-0430.html">Anterior</a></dd>
-						<dd><a title="Guardar" href="javascript:void(0);" onClick="document.getElementById('validable').submit();" >Guardar</a></dd>
-						<dd><a title="Registro espacios" href="<?php echo APPLICATION_URL?>registro-espacio-0450.html">Siguiente</a></dd>
-					</dl>
-				<?php 
-					if (isset($_GET[0]))
-					{
-					?>
-				<p class="text-center bluetxt">Su registro ha sido guardado</p>
-				<?php
-					}
-					?>
-				</div><!--/mini-nav-->
+			
+			<div class="inner-footer">
+				<div class="container">
+					<div class="row">
+						<div class="eight columns">
+							<strong><span class="asterix">*</span>Datos requeridos</strong>
+						</div>
+						<div class="four columns">
+							<div class="right">
+								<a href="<?php echo APPLICATION_URL?>registro-ferias-0430.html" class="graytxt">Anterior</a>  <a href="<?php echo APPLICATION_URL?>registro-espacio-0450.html" class="button radius">Siguiente: Espacios</a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div><!--/inner-footer-->
+		</div><!-- END Main: Panel -->
+		<div class="advisory">
+			<span>Recomendamos visualizar en: IE 9.0 - Firefox 10.0 - Safari 5.1 - Chrome 17.0     |     Optimizada 1024 x 768</span>
+			<span><a href="#">Términos y Condiciones</a> del Sitio</span>
 		</div>
-		<!-- End Row -->
-	</div><!-- END Main: Row  -->
+	</div><!--/row main-row-->
 <!-- 2. End content -->
 <!-- modal del artista -->
 <?php include_once 'modal.php'; ?>
 <!-- END modal del artista -->
 <!-- 3. footer -->		
+<?php include_once('footer.php'); ?>
+<!-- 3. End footer -->
 <script language="javascript">
 var counterArtist;
 $(document).ready(function() 
@@ -78,7 +97,7 @@ $(document).ready(function()
 counterArtist = <?php echo (count($artists) > 0) ? count($artists)+1 : 2; ?>;
 $("#add-artist").click(function(){
 
-$(".link_list").hide().append('<li class="link_default"><div class="row"><div class="three columns"><img src="<?php echo APPLICATION_URL?>images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr"><label><span class="asterix">*</span>Nombre</label></div></div></li>').fadeIn(1000);
+$(".link_list").hide().append('<li class="link_default"><ul class="no-bullet artist"><li class="handler"><img src="images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr"></li><li><input type="text" name="artist_name_<?php echo $i;?>" value="<?php echo $artist->__get('artist_name');?>" /></li><li><input type="text" name="artist_surname_<?php echo $i;?>" value="<?php echo $artist->__get('artist_surname');?>" /></li><li><input type="text" class="no-margin" name="artist_nationality_<?php echo $i;?>" value="<?php echo $artist->__get('artist_nationality');?>" /><a href="#" class="revelar-a <?php if ($artist->__get('artist_artbo') != 1) echo 'hidden"';?> revealer " id="link-<?php echo $i?>" data-reveal-id="artista" >Más información sobre el artista</a></li><li class="handler"><a href="#"><img src="images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a></li></ul></li>').fadeIn(1000);
 	$(".revealer-new").each(function(item){
 		$(this).click(function () {
 			$("#artist_name").val($("#artist_name_" + (counterArtist - 1)).val());
@@ -102,9 +121,5 @@ counterArtist = counterArtist+1;
 // end nueva expo
 
 });
-
-
 </script>	
-<?php include_once('footer.php'); ?>
-<!-- 3. End footer -->
 
