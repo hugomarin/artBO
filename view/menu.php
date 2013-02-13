@@ -23,7 +23,7 @@
 				<li id="0">
 					<a href="<?php echo APPLICATION_URL?>registro-inicio-0400.html" class="main" title="Inicio">INSTRUCCIONES </a>
 				</li>
-				<li id="1" class="active" >
+				<li id="1">
 					<span class="spriteArrow"></span>
 					<a href="<?php echo APPLICATION_URL?>registro-galerias-0410.html" class="main" title="Galerías"><span class="number-menu">1</span>Galería </a>
 			    </li>

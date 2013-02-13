@@ -4,13 +4,10 @@
 <!-- 2. End menu -->
 
 
-	<!--3. Row main-->
 	<div class="row main-row">	
-		<!-- panel -->
-		<div class="panel">
-			
-			<div class="row inner-header">
-				
+		<div class="panel nopadding">
+			<div class="inner-header">
+				<div class="row">
 		 		<div class="twelve columns">
 					<h5>Bienvenido al proceso de aplicación online de artBO 2012.</h5>
 			
@@ -53,11 +50,27 @@
 				</div>
 		</div>
 		<!-- panel -->
-	<img src="images/resources/sombraFinal.png" class="top-sombra" width="980" height="17" alt="sombra"/><!-- Sombra final del panel -->
+	
 
-	</div>
+			<div class="inner-footer">
+						<div class="container">
+							<div class="row">
+								<div class="twelve columns">
+									<div class="right">
+										<a href="<?php echo APPLICATION_URL?>registro-galerias-0410.html" class="button radius">Siguiente: Galeria</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!--/inner-footer-->
+				</div><!-- END Main: Panel -->
+				<div class="advisory">
+					<span>Recomendamos visualizar en: IE 9.0 - Firefox 10.0 - Safari 5.1 - Chrome 17.0     |     Optimizada 1024 x 768</span>
+					<span><a href="#">Términos y Condiciones</a> del Sitio</span>
+				</div>
+		</div>
 	<!-- 3. END Row main -->
-
+		
 <!-- 4. footer -->			
 <?php include_once('footer.php'); ?>
 <!-- 4. End footer -->

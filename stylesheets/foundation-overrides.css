@@ -16,7 +16,7 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0);
   font-size: 15px;
-  font-family: "Trebuchet";
+  font-family: "Trebuchet MS" "Helvetica" "Arial";
 }
 /* line 17, ../sass/foundation-overrides.scss */
 input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="time"]:focus, input[type="url"]:focus, textarea:focus {
@@ -58,20 +58,21 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus
 .button:hover, .button:focus {
   background-color: #9D0B2C;
   border-bottom: 4px solid #9d0b2c;
+  outline-color: white;
 }
-/* line 48, ../sass/foundation-overrides.scss */
+/* line 49, ../sass/foundation-overrides.scss */
 .button.small {
   padding: 10px 15px 7px;
   border-bottom: 2px solid #9d0b2c;
 }
-/* line 52, ../sass/foundation-overrides.scss */
+/* line 53, ../sass/foundation-overrides.scss */
 .button.nulled {
   padding: 10px 15px 7px;
   border-bottom: 2px solid #b7b5b5;
   background-color: #e6e6e6;
 }
 
-/* line 60, ../sass/foundation-overrides.scss */
+/* line 61, ../sass/foundation-overrides.scss */
 .panel {
   border: 0;
   border-bottom: 5px solid #b4b5b4;
@@ -84,17 +85,17 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus
   -webkit-border-bottom-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-/* line 66, ../sass/foundation-overrides.scss */
+/* line 67, ../sass/foundation-overrides.scss */
 .panel.nopadding {
   padding: 0;
 }
 
-/* line 71, ../sass/foundation-overrides.scss */
+/* line 72, ../sass/foundation-overrides.scss */
 p {
   line-height: 1.4;
 }
 
-/* line 76, ../sass/foundation-overrides.scss */
+/* line 77, ../sass/foundation-overrides.scss */
 form.custom div.custom.dropdown a.current {
   border: 0;
   line-height: 31px;
@@ -106,7 +107,7 @@ form.custom div.custom.dropdown a.current {
   border-radius: 4px;
 }
 
-/* line 83, ../sass/foundation-overrides.scss */
+/* line 84, ../sass/foundation-overrides.scss */
 form.custom div.custom.dropdown a.selector {
   border: 0;
   width: 32px;
@@ -115,19 +116,19 @@ form.custom div.custom.dropdown a.selector {
   border-left: 1px solid #dddddd;
 }
 
-/* line 91, ../sass/foundation-overrides.scss */
+/* line 92, ../sass/foundation-overrides.scss */
 form.custom div.custom.dropdown.open ul {
   position: absolute;
   height: 150px;
   top: -9px;
 }
 
-/* line 98, ../sass/foundation-overrides.scss */
+/* line 99, ../sass/foundation-overrides.scss */
 .error input, input.error, .error textarea, textarea.error, .error input:focus, input.error:focus, .error textarea:focus, textarea.error:focus {
   background-color: #e4a4af;
 }
 
-/* line 102, ../sass/foundation-overrides.scss */
+/* line 103, ../sass/foundation-overrides.scss */
 div.alert-box {
   margin: 0;
   -webkit-border-radius: 0;
@@ -137,10 +138,10 @@ div.alert-box {
   border-radius: 0;
   padding: 9px 20px 9px;
 }
-/* line 103, ../sass/foundation-overrides.scss */
+/* line 104, ../sass/foundation-overrides.scss */
 div.alert-box a.close {
   top: 6px;
-  color: #55C896;
+  color: transparent;
   background-color: #FFF;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
@@ -151,43 +152,48 @@ div.alert-box a.close {
   opacity: .6;
   line-height: .9;
 }
-/* line 111, ../sass/foundation-overrides.scss */
+/* line 112, ../sass/foundation-overrides.scss */
 div.alert-box a.close:hover {
   opacity: .9;
 }
-/* line 118, ../sass/foundation-overrides.scss */
+/* line 119, ../sass/foundation-overrides.scss */
 div.alert-box.success {
   background-color: #55C896;
 }
 
-/* line 123, ../sass/foundation-overrides.scss */
+/* line 124, ../sass/foundation-overrides.scss */
 .nav-bar {
   margin-bottom: 0;
 }
-/* line 125, ../sass/foundation-overrides.scss */
+/* line 126, ../sass/foundation-overrides.scss */
 .nav-bar li {
   border: 0;
   line-height: 40px;
 }
-/* line 128, ../sass/foundation-overrides.scss */
+/* line 129, ../sass/foundation-overrides.scss */
 .nav-bar li:first-child {
   font-weight: bold;
 }
-/* line 131, ../sass/foundation-overrides.scss */
+/* line 132, ../sass/foundation-overrides.scss */
 .nav-bar li:last-child {
   border: 0;
   -webkit-box-shadow: 0 0 0 0;
   -moz-box-shadow: 0 0 0 0;
   box-shadow: 0 0 0 0;
 }
-/* line 136, ../sass/foundation-overrides.scss */
+/* line 137, ../sass/foundation-overrides.scss */
 .nav-bar li a {
   margin: 0 16px;
   height: 40px;
   display: inline-block;
 }
 
-/* line 144, ../sass/foundation-overrides.scss */
+/* line 145, ../sass/foundation-overrides.scss */
 .block-grid.five-up h4 {
   margin: 2px 0;
+}
+
+/* line 149, ../sass/foundation-overrides.scss */
+a:focus {
+  outline-color: lightgray;
 }

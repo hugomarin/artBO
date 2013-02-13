@@ -159,9 +159,11 @@
 
 		// end nuevo artista
 		
+		console.log('<?php echo $name ?>')
 		
-		
-		switch ('<?php echo $name ?>' ) {	
+		switch ('<?php echo $name ?>' ) {
+			case 'index.php':$('#0').addClass('active');
+			break;	
 			case 'registro-ferias-430.php':$('#3').addClass('active');
 			break;
 			case 'registro-exposiciones-0420.php':$('#2').addClass('active');

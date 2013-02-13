@@ -41,7 +41,7 @@ include_once('menu.php'); ?>
 						</div>
 						<div class="four columns">
 							<div class="right">
-								<a href="<?php echo APPLICATION_URL?>registro-artistas-0440.html" class="graytxt">Anterior</a>  <a href="<?php echo APPLICATION_URL?>registro-documentos-0460.html" class="button radius">Finalizar</a>
+								<a href="<?php echo APPLICATION_URL?>registro-artistas-0440.html" class="graytxt">Anterior</a>  <a href="<?php echo APPLICATION_URL?>registro-documentos-0460.html" class="button radius">Siguiente: Documentos</a>
 							</div>
 						</div>
 					</div>

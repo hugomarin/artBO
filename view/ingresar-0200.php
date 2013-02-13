@@ -44,7 +44,7 @@
 		<!-- panel -->
 	
 	</div>
-	<!-- END ingresar Row -->s
+	<!-- END ingresar Row -->
 
 <!-- 3. footer -->			
 <?php include_once('footer.php'); ?>

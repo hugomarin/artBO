@@ -1,7 +1,6 @@
 	<!-- panel 2 -->
 					<div>
 						<h2>artBO</h2>
-						
 						<label>Indique en qué ediciones de artBO ha participado</label>
 						<div class="row">
 							<!-- columns artBo 1/4 -->

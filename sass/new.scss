@@ -2,12 +2,32 @@
 
 
 body{
-  &.bigpic{
+  &.bigpic1{
     background: url(../images/bigbg.jpg) center top;
     border-top: 5px solid #9A1935;
   }
-  &.bigpic1{
+  &.bigpic2{
+    background: url(../images/bigbg1.jpg) center top;
+    border-top: 5px solid #9A1935;
+  }
+  &.bigpic3{
     background: url(../images/bigbg2.jpg) center top;
+    border-top: 5px solid #9A1935;
+  }
+  &.bigpic4{
+    background: url(../images/bigbg3.jpg) center top;
+    border-top: 5px solid #9A1935;
+  }
+  &.bigpic5{
+    background: url(../images/bigbg4.jpg) center top;
+    border-top: 5px solid #9A1935;
+  }
+  &.bigpic6{
+    background: url(../images/bigbg5.jpg) center top;
+    border-top: 5px solid #9A1935;
+  }
+  &.bigpic7{
+    background: url(../images/bigbg6.jpg) center top;
     border-top: 5px solid #9A1935;
   }
 }
@@ -86,6 +106,7 @@ header{
   h5{
     color:white;
     line-height: 1.5;
+    min-height: 55px;
   }
   div{
     width:50%;
@@ -361,3 +382,20 @@ img.selected{
   @include rotate(-3deg); 
 }
 
+@mixin spritenew($url: '../images/sprite_new.png',$x:0 ,$y:0) {
+  background: url($url) $x $y;
+  display:inline-block;
+  text-indent:-9999px;
+}
+.artBO{
+  @include spritenew();
+  height:60px;
+  width:115px;
+  margin:20px 10px;
+}
+.ccB{
+  @include spritenew($x:-120px);
+  height:60px;
+  width:180px;
+  margin:20px 10px;
+}
