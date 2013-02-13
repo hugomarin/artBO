@@ -113,7 +113,7 @@
                                         </li>
                                         <!-- /Año -->
                                          <li class="handler">
-		                                	<a href="#"><img src="images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a>
+		                                	<a href="#"><img src="<?php echo APPLICATION_URL?>images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a>
 		                               	</li>
                                     </ul>
                                 </li>
@@ -131,19 +131,16 @@
                                         </li>	
                                     <!-- nombre -->
                                         <li class="name">
-                                            <label>*Nombre de la feria</label>	
                                             <input class="expand input-text" type="text" name="feria_name_1" />
                                         </li>
                                     <!-- END nombre -->
                                     <!-- ciudad -->
                                         <li>
-                                            <label>*Ciudad</label>	
                                             <input type="text"  name="feria_city_1" class="expand input-text"/>
                                         </li>
                                     <!-- END ciudad -->
                                     <!-- pais-->
                                         <li>
-                                            <label>País</label>	
                                             <select name="country_id_1">
                                                 <?php
                                                 foreach ($countries as $country)
@@ -157,15 +154,14 @@
                                         </li>
                                     <!-- END País -->
                                     <!-- Año-->
-                                        <li class="two columns">
-                                            <label>Año</label>	
+                                        <li>
                                             <select name="feria_year_1">
                                                 <option value="2012">2012</option>
                                                 <option value="2011">2011</option>
                                                 <option value="2010">2010</option>
                                             </select>
                                         </li>
-                                <!-- / Año -->
+                                	<!-- / Año -->
                                   		<li class="handler">
 		                                	<a href="#"><img src="images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a>
 		                               	</li>

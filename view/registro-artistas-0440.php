@@ -8,10 +8,10 @@ include_once('menu.php');
 	<!--3. Row main-->
 				
 	<div class="row main-row">	
-		<div class="alert-box success">
+		<!-- <div class="alert-box success">
 	    	Sus datos han sido guardados
 	    	<a href="" class="close">×</a>
-		</div>
+		</div> -->
 		<div class="panel nopadding">
 			<div class="inner-header">
 				<div class="row">
@@ -33,7 +33,7 @@ include_once('menu.php');
 				<div class="row form-data">	
 					<div class="twelve columns">
 						<h5>Recuerde que su propuesta de artistas para Artbo 2013 debe ser acorde al tamaño del stand  que ha seleccionado. Por cada 10 mts², sólo podrá exhibir un artista.</h5>
-						<em>Artistas a representar en artBO 2013</em><br />
+						<h5>Artistas a representar en artBO 2013:</h5><br />
 						<div class="intitle">
 							<!-- .row>.one.column+.four.columns+three.columns+.three.columns+.one.columns -->
 							<ul class="artistas">
@@ -53,7 +53,7 @@ include_once('menu.php');
 						</form>
 						<a href="#" id="add-artist" class="label secondary round">Agregar un nuevo artista </a> 
 						<br /><br />
-						 <p><em>Artistas representados</em></p>
+						 <h5>Artistas representados:</h5>
 						 <form action="registro-artistas-0440_submit" method="get" accept-charset="utf-8">
 							<textarea name="Name" rows="8" cols="40" placeholder="Digite la información correspondiente a artistas representados"></textarea>
 						 </form>
@@ -90,9 +90,7 @@ include_once('menu.php');
 <!-- 3. End footer -->
 <script language="javascript">
 var counterArtist;
-$(document).ready(function() 
-						   {
-							   
+$(document).ready(function() {
 // nueva expo
 counterArtist = <?php echo (count($artists) > 0) ? count($artists)+1 : 2; ?>;
 $("#add-artist").click(function(){

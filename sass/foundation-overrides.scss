@@ -22,6 +22,16 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   }
 }
 
+textarea{
+  line-height:25px;
+   &:focus {
+    outline:none;
+    border-bottom:0;
+    background: url(../images/textarea.png) repeat 0 5px;
+    @include border-bottom-radius(0);
+  }
+}
+
 .label{
   font-weight:bold;
   margin:5px 0;
@@ -135,7 +145,7 @@ div.alert-box{
       
     }
     a{
-      margin:0 16px;
+      margin:0 15px;
       height: 40px;
       display: inline-block;
     }

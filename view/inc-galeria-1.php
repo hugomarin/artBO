@@ -10,8 +10,7 @@ $mobile		= explode("-", $user->__get('user_mobile'));
 				<label title="Cargue la imagen correspondiente a su galería"><span class="asterix">*</span>Imagen de la Galería</label>
 				<!-- <i>Imagen del espacio expositivo</i>
 				<br /> -->
-				
-				<img src="http://placehold.it/480x360" class="images" title="Imagen de la Galería">
+				<img src="http://cambelt.co/icon/camera/480x360?color=b71632,fefefe" class="images" title="Imagen de la Galería">
 				<span class="caption">Puede subir imagen de la última exposición realizada en su galería en .jpg, .png o .gif. El archivo no debe superar los 1000 Kb.</caption><br />
 				<input type="file" name="user_director_image" />
 			</div><!--/gallery-image-->
@@ -205,7 +204,7 @@ $mobile		= explode("-", $user->__get('user_mobile'));
 							<?php
 						}
 					?>
-					<img src="http://placehold.it/480x360" class="images" title="Imagen del director">
+					<img src="http://cambelt.co/icon/avatar/480x360?color=b71632,fefefe" class="images" title="Imagen del director">
 					<span class="caption">Puede subir imagen de la última exposición realizada en su galería en .jpg, .png o .gif. El archivo no debe superar los 1000 Kb.</caption>
 					<input type="file" name="user_director_image" title="Cargue la foto correspondiente a su director" /><br />
 				</div><!--/gallery-image-->

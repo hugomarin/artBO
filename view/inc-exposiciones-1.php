@@ -11,12 +11,9 @@
                                 <ul class="no-bullet expo">
 	                                <!-- move img -->
 	                                <li class="handler">
-	                                    <img src="images/drag_handle.gif" alt="drag_handle" width="50" height="51" class="image_handle nsr">
+	                                    <img src="<?php echo APPLICATION_URL?>images/drag_handle.gif" alt="drag_handle" width="50" height="51" class="image_handle nsr">
 	                                </li>
-	                                <!-- END move img -->
-	                                <!-- nombre -->
 	                                <li>
-	                                    <!-- <label><span class="asterix">*</span>Nombre de la exposición</label>	 -->
 	                                    <input name="expo_nombre_<?php echo $i?>" class="large input-text" type="text" value="<?php echo $exposition->__get('exposition_name');?>" />
 	                                </li>
 	                                <!-- END nombre -->
@@ -46,7 +43,7 @@
 	                                    </select>
 	                                </li>
 	                                <li class="handler">
-	                                	<a href="#"><img src="images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a>
+	                                	<a href="#"><img src="<?php echo APPLICATION_URL?>images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a>
 	                                </li>
 	                                <!-- END Año -->
                                 </ul>	
@@ -59,29 +56,26 @@
 						{
 						?>
 							<li class="link_default">
-                                <div class="row">
+                                 <ul class="no-bullet expo">
                                 <!-- move img -->
-                                <div class="one columns">
-                                    <img src="<?php echo APPLICATION_URL?>images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr">
-                                </div>
+                                 <li class="handler">
+	                                    <img src="images/drag_handle.gif" alt="drag_handle" width="50" height="51" class="image_handle nsr">
+                                 </li>
                                 <!-- END move img -->
                                 <!-- nombre -->
-                                <div class="six columns">
-                                    <label><span class="asterix">*</span>Nombre de la exposición</label>	
-                                    <input name="expo_nombre_1" class="large input-text" type="text" />
-                                </div>
+                                <li>
+                                    <input name="expo_nombre_1" class="large input-text" type="text"  />
+                                </li>
                                 <!-- END nombre -->
                                 <!-- Año -->
-                                <div class="two columns offset-by-three">
-                                    <label><span class="asterix">*</span>Año</label>	
+                               <li class="date">
                                     <select name="expo_fecha_1">
                                         <option>2012</option>
                                         <option>2011</option>
                                     </select>
-                                </div>
+                                </li>
                                 <!-- END Año -->
-                                <div class="two columns offset-by-three">
-                                    <label><span class="asterix">*</span>Mes</label>	
+                                <li class="date">
                                     <select name="expo_mes_1">
                                         <option value="01">01</option>
                                         <option value="02">02</option>
@@ -96,8 +90,11 @@
                                         <option value="11">11</option>
                                         <option value="12">12</option>
                                     </select>
-                                </div>                                  
-                                </div>	
+                                </li>
+                                <li class="handler">
+                                	<a href="#"><img src="images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a>
+                                </li>
+                                </ul>	
                             </li>                        
                         <?php
 						}

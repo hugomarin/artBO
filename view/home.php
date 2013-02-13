@@ -12,7 +12,7 @@ if ((isset($_GET[0])) && ($_GET[1] == 0))
 <div class="container">
 	<div class="row"><!-- Row -->	
 		<div class="eight columns centered"><!-- six columns -->
-			<div class="image-logos"></div>
+			<span class="artBO">Artbo</span><span class="ccB">CCB</span>
 			<header class="intro">
 				<h2>Bienvenido al proceso de aplicación de artBO 2013</h2>
 				<h5>El cual estará abierto entre el 1 de marzo y hasta el 30 de abril.  Este espacio es para galerías nacionales e internacionales constituidas legalmente.  Por favor inicie su sesión o regístrese.</h5>

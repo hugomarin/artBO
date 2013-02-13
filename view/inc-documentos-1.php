@@ -10,8 +10,8 @@
 						<p>Expedido por la Cámara de Comercio de Bogotá (Original, no mayor a 90 días de expedición) o documento correspondiente de constitución expedido por el ente respectivo de su país.</p>
 	            	</div>
 	            	<div class="five columns">
-	            		<img src="http://placehold.it/235x150" class="images" title="Imagen del director">
-	            		<input type="file" name="user_certificate">
+	            		<img src="http://cambelt.co/icon/camera/235x150?color=b71632,fefefe" class="images right" title="Imagen del director">
+	            		<input type="file" name="user_certificate" class="right">
 	            		 <?php if ($user->__get('user_certificate') != '') { ?><p><a href="<?php echo APPLICATION_URL;?>resources/documents/<?php echo $user->__get('user_certificate');?>">Documento actual</a></p><?php } ?>	
 	            	</div>
 				</div>
@@ -24,8 +24,8 @@
 						<p>El RUT es un documento exigido paras las Galerías colombianas, Las extranjeras deben enviar identificación fiscal.</p>
 	            	</div>
 	            	<div class="five columns">
-	            		<img src="http://placehold.it/235x150" class="images" title="Imagen del director">
-	            		<input type="file" name="user_rut">
+	            		<img src="http://cambelt.co/icon/camera/235x150?color=b71632,fefefe" class="images right" title="Imagen del director">
+	            		<input type="file" name="user_rut" class="right">
 	            		  <?php if ($user->__get('user_rut') != '') { ?><p><a href="<?php echo APPLICATION_URL;?>resources/documents/<?php echo $user->__get('user_rut');?>">Documento actual</a></p><?php } ?>	
 	            	</div>
 				</div>
@@ -38,8 +38,8 @@
 						<p>Documento de identidad del responsable legal de la galería (c&eacute;dula de ciudadanía o de extranjer&iacute;a para las galerías colombianas, el pasaporte para las galerías internacionales).</p>
 	            	</div>
 	            	<div class="five columns">
-	            		<img src="http://placehold.it/235x150" class="images" title="Imagen del director">
-	            		<input type="file" name="user_document">
+	            		<img src="http://cambelt.co/icon/camera/235x150?color=b71632,fefefe" class="images right" title="Imagen del director">
+	            		<input type="file" name="user_document" class="right">
 	            		 <?php if ($user->__get('user_document') != '') { ?><p><a href="<?php echo APPLICATION_URL;?>resources/documents/<?php echo $user->__get('user_document');?>">Documento actual</a></p><?php } ?>	
 	            	</div>
 				</div>
@@ -52,8 +52,8 @@
 						<p>Copia del pago de los derechos de inscripción por USD $160</p>
 	            	</div>
 	            	<div class="five columns">
-	            		<img src="http://cambelt.co/icon/camera/235x150?color=b71632,fefefe" class="images" title="Registro de pago" />
-	            		<input type="file" name="user_payment">
+	            		<img src="http://cambelt.co/icon/camera/235x150?color=b71632,fefefe" class="images right" title="Registro de pago" />
+	            		<input type="file" name="user_payment" class="right">
 	            		 <?php if ($user->__get('user_payment') != '') { ?><p><a href="<?php echo APPLICATION_URL;?>resources/documents/<?php echo $user->__get('user_payment');?>">Documento actual</a></p><?php } ?>	
 	            	</div>
 				</div>
@@ -65,8 +65,8 @@
 	<br />
 	<!-- aceptación de terminos -->
 	<div class="panel-2">
-	<p> Yo <input type="text" class="medium" placeholder="Nombre del Director o Representante legal" name="user_name_accept" value="<?php echo $user->__get('user_name_accept');?>" /> Identificado con
-		<input type="text" class="small" placeholder="Número de Cédula" name="user_document_accept" value="<?php echo $user->__get('user_document_accept');?>"   /> 
+	<p> Yo <input type="text" class="legal" placeholder="Nombre del Director o Representante legal" name="user_name_accept" value="<?php echo $user->__get('user_name_accept');?>" /> Identificado con
+		<input type="text" class="doc" placeholder="Número de Cédula" name="user_document_accept" value="<?php echo $user->__get('user_document_accept');?>"   /> 
 	declaro conocer y aceptar <a href="documentos/Reglamento.pdf" title="Reglamento de participación en artBO" target="_blank">las condiciones y el reglamento de participación</a> en artBO.
 	</p>
 	

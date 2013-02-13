@@ -4,7 +4,7 @@
 		
 		
 <!-- content -->
-<div class="container superior">
+<div class="container">
 	<div class="row "><!-- Row -->	
 		<div class="six columns centered ">
 			<span class="artBO">Artbo</span><span class="ccB">CCB</span>

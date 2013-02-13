@@ -10,7 +10,7 @@
                         <li class="link_default">
                            <ul class="no-bullet artist">
                                 <li class="handler">
-                                    <img src="images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr">
+                                    <img src="<?php echo APPLICATION_URL?>images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr">
                                 </li>
                                 <!-- nombre -->
                                 <li>
@@ -33,7 +33,7 @@
                                     <!-- END boton para modal de artista -->
                                 </li>
                                 <li class="handler">
-                                	<a href="#"><img src="images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a>
+                                	<a href="#"><img src="<?php echo APPLICATION_URL?>images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a>
                                	</li>
                             </ul>
                         </li>
@@ -48,7 +48,7 @@
                              <ul class="no-bullet artist">
                                 <!-- nombre -->
                                <li class="handler">
-                                    <img src="images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr">
+                                    <img src="<?php echo APPLICATION_URL?>images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr">
                                </li>
                                <li>
                                     <input type="text" name="artist_name_1" />
@@ -68,7 +68,7 @@
                                     <!-- END boton para modal de artista -->
                                 </li>
                                 <li class="handler">
-                                	<a href="#"><img src="images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a>
+                                	<a href="#"><img src="<?php echo APPLICATION_URL?>images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a>
                                	</li>
 							</ul>
                         </li>  

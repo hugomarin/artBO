@@ -199,8 +199,20 @@ header.intro h5 {
   -o-border-radius: 4px;
   border-radius: 4px;
   border-bottom: 4px solid #e1e1e1;
+  -webkit-transition-property: border;
+  -moz-transition-property: border;
+  -o-transition-property: border;
+  transition-property: border;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
 }
-/* line 177, ../sass/new.scss */
+/* line 180, ../sass/new.scss */
 .mini-nav-header dl dd a.save {
   background: white url(../images/handlers/guardar.jpg) no-repeat;
   background-position: 3px 3px;
@@ -210,26 +222,26 @@ header.intro h5 {
   padding-left: 25px;
   line-height: 2;
 }
-/* line 186, ../sass/new.scss */
+/* line 189, ../sass/new.scss */
 .mini-nav-header dl dd a.prev {
   background-position: -17px 3px;
 }
-/* line 189, ../sass/new.scss */
+/* line 192, ../sass/new.scss */
 .mini-nav-header dl dd a.next {
   background-position: -39px 3px;
 }
-/* line 192, ../sass/new.scss */
+/* line 195, ../sass/new.scss */
 .mini-nav-header dl dd a:hover {
   border-bottom: 4px solid #cbcbcb;
 }
 
-/* line 201, ../sass/new.scss */
+/* line 204, ../sass/new.scss */
 .form-data h5 {
   font-weight: normal;
   line-height: 1.5;
   font-size: 16px;
 }
-/* line 206, ../sass/new.scss */
+/* line 209, ../sass/new.scss */
 .form-data .label.secondary {
   padding: 4px 15px;
   color: #fff;
@@ -247,104 +259,104 @@ header.intro h5 {
   -o-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
 }
-/* line 213, ../sass/new.scss */
+/* line 216, ../sass/new.scss */
 .form-data .label.secondary:hover {
   color: #999999;
   background: #e0e0e0;
 }
-/* line 219, ../sass/new.scss */
+/* line 222, ../sass/new.scss */
 .form-data form input[type="text"] {
   margin: 0 0 10px 0;
 }
-/* line 221, ../sass/new.scss */
+/* line 224, ../sass/new.scss */
 .form-data form input[type="text"].no-margin {
   margin: 0;
 }
 
-/* line 228, ../sass/new.scss */
+/* line 231, ../sass/new.scss */
 label {
   font-weight: bold;
   margin: 15px 0 8px;
 }
 
-/* line 233, ../sass/new.scss */
+/* line 236, ../sass/new.scss */
 .intitle {
   padding: 5px 0;
 }
-/* line 236, ../sass/new.scss */
+/* line 239, ../sass/new.scss */
 .intitle ul li {
   float: left;
   list-style-type: none;
 }
-/* line 241, ../sass/new.scss */
+/* line 244, ../sass/new.scss */
 .intitle ul.expos li {
   width: 20%;
 }
-/* line 243, ../sass/new.scss */
+/* line 246, ../sass/new.scss */
 .intitle ul.expos li:first-child {
   margin-left: 60px;
   width: 51%;
 }
-/* line 250, ../sass/new.scss */
+/* line 253, ../sass/new.scss */
 .intitle ul.ferias li {
   width: 18%;
 }
-/* line 252, ../sass/new.scss */
+/* line 255, ../sass/new.scss */
 .intitle ul.ferias li:first-child {
   margin-left: 60px;
   width: 36%;
 }
-/* line 259, ../sass/new.scss */
+/* line 262, ../sass/new.scss */
 .intitle ul.artistas li {
   width: 29.4%;
 }
-/* line 261, ../sass/new.scss */
+/* line 264, ../sass/new.scss */
 .intitle ul.artistas li:first-child {
   margin-left: 60px;
 }
 
-/* line 270, ../sass/new.scss */
+/* line 273, ../sass/new.scss */
 .inner-footer {
   background-color: #eee;
 }
-/* line 272, ../sass/new.scss */
+/* line 275, ../sass/new.scss */
 .inner-footer strong {
   line-height: 3;
 }
-/* line 275, ../sass/new.scss */
+/* line 278, ../sass/new.scss */
 .inner-footer a {
   margin: 0 5px;
   font-weight: bold;
 }
 
-/* line 281, ../sass/new.scss */
+/* line 284, ../sass/new.scss */
 .graytxt {
   color: #4C4C4C;
 }
 
-/* line 285, ../sass/new.scss */
+/* line 288, ../sass/new.scss */
 .advisory {
   margin-bottom: 30px;
 }
-/* line 287, ../sass/new.scss */
+/* line 290, ../sass/new.scss */
 .advisory span {
   font-size: 12px;
   color: #5b5b5b;
   display: block;
   line-height: 1.4;
 }
-/* line 293, ../sass/new.scss */
+/* line 296, ../sass/new.scss */
 .advisory a {
   color: #000;
   text-decoration: underline;
 }
 
-/* line 299, ../sass/new.scss */
+/* line 302, ../sass/new.scss */
 .redtxt {
   color: #BB0C35;
 }
 
-/* line 306, ../sass/new.scss */
+/* line 309, ../sass/new.scss */
 .nav-bar li span.spriteArrow {
   background: url("../images/spriteArrow.jpg");
   height: 40px;
@@ -352,37 +364,37 @@ label {
   display: inline-block;
   float: left;
 }
-/* line 313, ../sass/new.scss */
+/* line 316, ../sass/new.scss */
 .nav-bar li span.number-menu {
   padding: 3px 8px;
 }
-/* line 317, ../sass/new.scss */
+/* line 320, ../sass/new.scss */
 .nav-bar li:hover {
   background: transparent;
   cursor: pointer;
 }
-/* line 320, ../sass/new.scss */
+/* line 323, ../sass/new.scss */
 .nav-bar li:hover a {
   color: #fff;
 }
-/* line 323, ../sass/new.scss */
+/* line 326, ../sass/new.scss */
 .nav-bar li:hover span.number-menu {
   color: #bbb;
 }
-/* line 327, ../sass/new.scss */
+/* line 330, ../sass/new.scss */
 .nav-bar li.active {
   background: #BB0C35;
 }
-/* line 330, ../sass/new.scss */
+/* line 333, ../sass/new.scss */
 .nav-bar li.active span.spriteArrow {
   background-position: 0 -40px;
 }
-/* line 336, ../sass/new.scss */
+/* line 339, ../sass/new.scss */
 .nav-bar li.active + li span.spriteArrow {
   background-position: 0 -80px;
 }
 
-/* line 346, ../sass/new.scss */
+/* line 349, ../sass/new.scss */
 .doctype-data {
   width: 45%;
   float: left;
@@ -390,7 +402,7 @@ label {
   display: inline-block;
 }
 
-/* line 353, ../sass/new.scss */
+/* line 356, ../sass/new.scss */
 .docnumber-data {
   width: 38%;
   float: right;
@@ -398,25 +410,25 @@ label {
   display: inline-block;
 }
 
-/* line 360, ../sass/new.scss */
+/* line 363, ../sass/new.scss */
 .caption {
   color: #808080;
   margin: 10px 0;
   display: block;
 }
 
-/* line 366, ../sass/new.scss */
+/* line 369, ../sass/new.scss */
 .block {
   display: block;
   height: 80px;
 }
 
-/* line 371, ../sass/new.scss */
+/* line 374, ../sass/new.scss */
 input[type="file"] {
   margin: 15px 0;
 }
 
-/* line 376, ../sass/new.scss */
+/* line 379, ../sass/new.scss */
 img.selected {
   border: 0;
   -webkit-box-shadow: rgba(187, 12, 53, 0.2) 0 0 10px;
@@ -429,7 +441,7 @@ img.selected {
   transform: rotate(-3deg);
 }
 
-/* line 390, ../sass/new.scss */
+/* line 398, ../sass/new.scss */
 .artBO {
   background: url("../images/sprite_new.png") 0 0;
   display: inline-block;
@@ -438,8 +450,12 @@ img.selected {
   width: 115px;
   margin: 20px 10px;
 }
+/* line 391, ../sass/new.scss */
+.artBO else {
+  background: url("../images/sprite_new2x.png") 0 0;
+}
 
-/* line 396, ../sass/new.scss */
+/* line 404, ../sass/new.scss */
 .ccB {
   background: url("../images/sprite_new.png") -120px 0;
   display: inline-block;
@@ -447,4 +463,46 @@ img.selected {
   height: 60px;
   width: 180px;
   margin: 20px 10px;
+}
+/* line 391, ../sass/new.scss */
+.ccB else {
+  background: url("../images/sprite_new2x.png") -120px 0;
+}
+
+/* line 411, ../sass/new.scss */
+.stand-items img.images {
+  margin-top: 10px;
+}
+
+/* line 416, ../sass/new.scss */
+input[type="text"].legal {
+  display: inline-block;
+  width: 300px;
+}
+/* line 420, ../sass/new.scss */
+input[type="text"].doc {
+  display: inline-block;
+  width: 200px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+  /* line 430, ../sass/new.scss */
+  .artBO {
+    display: inline-block;
+    text-indent: -9999px;
+  }
+  /* line 391, ../sass/new.scss */
+  .artBO else {
+    background: url("../images/sprite_new2x.png") 0 0;
+  }
+
+  /* line 433, ../sass/new.scss */
+  .ccB {
+    display: inline-block;
+    text-indent: -9999px;
+  }
+  /* line 391, ../sass/new.scss */
+  .ccB else {
+    background: url("../images/sprite_new2x.png") 0 0;
+  }
 }

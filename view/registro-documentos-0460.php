@@ -38,7 +38,7 @@ include_once('menu.php'); ?>
 						</div>
 						<div class="four columns">
 							<div class="right">
-								<a href="<?php echo APPLICATION_URL?>registro-artistas-0440.html" class="graytxt">Anterior</a>  <a  href="javascript:void(0);" onClick="document.getElementById('validable').submit();" class="button radius">Guardar</a>
+								<a href="<?php echo APPLICATION_URL?>registro-artistas-0440.html" class="graytxt">Anterior</a>  <a  href="javascript:void(0);" onClick="document.getElementById('validable').submit();" class="button radius nulled">Guardar</a>
 							</div>
 						</div>
 					</div>
