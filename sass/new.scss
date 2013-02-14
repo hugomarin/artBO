@@ -3,31 +3,45 @@
 
 body{
   &.bigpic1{
-    background: url(../images/bigbg.jpg) center top;
+    background: #000 url(../images/bigbg.jpg) center top;
+    background-image: url(../images/bigbg1.jpg);
+    background-color:#000;
     border-top: 5px solid #9A1935;
   }
   &.bigpic2{
-    background: url(../images/bigbg1.jpg) center top;
+    background: #000 url(../images/bigbg1.jpg) center top;
+    background-image: url(../images/bigbg1.jpg);
+    background-color:#000;
     border-top: 5px solid #9A1935;
   }
   &.bigpic3{
-    background: url(../images/bigbg2.jpg) center top;
+    background: #000 url(../images/bigbg2.jpg) center top;
+    background-image: url(../images/bigbg2.jpg);
+    background-color:#000;
     border-top: 5px solid #9A1935;
   }
   &.bigpic4{
-    background: url(../images/bigbg3.jpg) center top;
+    background: #000 url(../images/bigbg3.jpg) center top;
+    background-image: url(../images/bigbg3.jpg);
+    background-color:#000;
     border-top: 5px solid #9A1935;
   }
   &.bigpic5{
-    background: url(../images/bigbg4.jpg) center top;
+    background: #000 url(../images/bigbg4.jpg) center top;
+    background-image: url(../images/bigbg4.jpg);
+    background-color:#000;
     border-top: 5px solid #9A1935;
   }
   &.bigpic6{
-    background: url(../images/bigbg5.jpg) center top;
+    background: #000 url(../images/bigbg5.jpg) center top;
+    background-image: url(../images/bigbg5.jpg);
+    background-color:#000;
     border-top: 5px solid #9A1935;
   }
   &.bigpic7{
-    background: url(../images/bigbg6.jpg) center top;
+    background: #000 url(../images/bigbg6.jpg) center top;
+    background-image: url(../images/bigbg6.jpg);
+    background-color:#000;
     border-top: 5px solid #9A1935;
   }
 }
@@ -308,7 +322,7 @@ label{
     span{
       &.spriteArrow{
         background: url('../images/spriteArrow.jpg');
-        height: image-height('../images/spriteArrow.jpg')/3;
+        height: 39px;
         width: image-width('../images/spriteArrow.jpg');
         display:inline-block;
         float:left;

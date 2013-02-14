@@ -6332,14 +6332,15 @@ img.images {
   padding: 5px;
   background: #f7f7f7;
   margin-right: 5px;
+  width: 98%;
 }
 
-/* line 293, ../sass/app.scss */
+/* line 299, ../sass/app.scss */
 textarea.grande {
   width: 100%;
 }
 
-/* line 301, ../sass/app.scss */
+/* line 307, ../sass/app.scss */
 .loading {
   display: block;
   width: 80px;
@@ -6362,7 +6363,7 @@ textarea.grande {
 /* -----------------------------------------
    Products
 ----------------------------------------- */
-/* line 324, ../sass/app.scss */
+/* line 330, ../sass/app.scss */
 .cell-title {
   width: 50%;
   background: #f2f2f2;
@@ -6375,7 +6376,7 @@ textarea.grande {
   vertical-align: middle;
 }
 
-/* line 326, ../sass/app.scss */
+/* line 332, ../sass/app.scss */
 .cell-data {
   width: 50%;
   background: #fefefe;
@@ -6388,25 +6389,25 @@ textarea.grande {
   vertical-align: middle;
 }
 
-/* line 329, ../sass/app.scss */
+/* line 335, ../sass/app.scss */
 .product-edit-collection label {
   display: inline;
 }
 
-/* line 333, ../sass/app.scss */
+/* line 339, ../sass/app.scss */
 li.product-edit-collection {
   display: inline;
   padding-right: 40px;
 }
 
-/* line 338, ../sass/app.scss */
+/* line 344, ../sass/app.scss */
 ul.product-edit-ul {
   margin-bottom: 0;
   margin-top: 0;
   margin-right: 0;
 }
 
-/* line 344, ../sass/app.scss */
+/* line 350, ../sass/app.scss */
 .row.action-btn {
   background-color: #c9eddf;
   margin-bottom: 1.5em;
@@ -6415,7 +6416,7 @@ ul.product-edit-ul {
   padding: 10px 0;
 }
 
-/* line 352, ../sass/app.scss */
+/* line 358, ../sass/app.scss */
 .margin-left {
   margin-right: 10px;
 }
@@ -6423,7 +6424,7 @@ ul.product-edit-ul {
 /* -----------------------------------------
    Navegación
 ----------------------------------------- */
-/* line 363, ../sass/app.scss */
+/* line 369, ../sass/app.scss */
 .faux-table-header {
   position: relative;
   border: 1px solid #e3e3e3;
@@ -6439,7 +6440,7 @@ ul.product-edit-ul {
   background: -webkit-linear-gradient(top, #f7f7f7 0%, #f0f0f0 100%);
 }
 
-/* line 368, ../sass/app.scss */
+/* line 374, ../sass/app.scss */
 .faux-table-header:after {
   content: "";
   position: absolute;
@@ -6450,12 +6451,12 @@ ul.product-edit-ul {
   width: 100%;
 }
 
-/* line 369, ../sass/app.scss */
+/* line 375, ../sass/app.scss */
 .faux-table-header span {
   padding: 5px 181px 5px 15px;
 }
 
-/* line 373, ../sass/app.scss */
+/* line 379, ../sass/app.scss */
 li.link_default {
   list-style-type: none;
   display: block;
@@ -6469,13 +6470,13 @@ li.link_default {
   border-radius: 4px;
 }
 
-/* line 383, ../sass/app.scss */
+/* line 389, ../sass/app.scss */
 .ui-state-highlight {
   height: 33px;
   line-height: 1.2em;
 }
 
-/* line 386, ../sass/app.scss */
+/* line 392, ../sass/app.scss */
 .link-title, .link-url {
   display: inline-block;
   padding: 2px 4px 2px 5px;
@@ -6486,12 +6487,12 @@ li.link_default {
   z-index: 999;
 }
 
-/* line 388, ../sass/app.scss */
+/* line 394, ../sass/app.scss */
 .link-url {
   width: 580px;
 }
 
-/* line 390, ../sass/app.scss */
+/* line 396, ../sass/app.scss */
 .image_handle {
   cursor: move;
   display: block;
@@ -6503,7 +6504,7 @@ li.link_default {
 /* -----------------------------------------
    Footer
 ----------------------------------------- */
-/* line 398, ../sass/app.scss */
+/* line 404, ../sass/app.scss */
 .top-sombra {
   position: relative;
   bottom: 25px;
@@ -6512,13 +6513,13 @@ li.link_default {
   margin: 0 auto;
 }
 
-/* line 407, ../sass/app.scss */
+/* line 413, ../sass/app.scss */
 .perfil-data {
   float: right;
   min-width: 162px;
 }
 
-/* line 412, ../sass/app.scss */
+/* line 418, ../sass/app.scss */
 .idiomas {
   float: left;
   text-align: right;
@@ -6526,12 +6527,13 @@ li.link_default {
   padding-left: 10px;
 }
 
-/* line 419, ../sass/app.scss */
+/* line 425, ../sass/app.scss */
 .perfil {
   padding-right: 30px;
+  width: 250px;
 }
 
-/* line 425, ../sass/app.scss */
+/* line 432, ../sass/app.scss */
 li#2 {
   background-image: url(../images/resources/nav-bgGray.png);
   background-color: #ff36a4;

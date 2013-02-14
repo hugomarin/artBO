@@ -287,7 +287,13 @@ position:relative;
 }
 
 
-img.images {border: 1px solid #eee; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; padding: 5px; background: #f7f7f7; margin-right: 5px; 
+img.images {
+ border: 1px solid #eee;
+ border-right: 1px solid #ccc; 
+ border-bottom: 1px solid #ccc;
+ padding: 5px; background: #f7f7f7; 
+ margin-right: 5px;
+ width:98%;
 }
 
 textarea.grande{
@@ -418,6 +424,7 @@ margin:0 auto;
 
 .perfil {
   padding-right: 30px;
+  width:250px;
 }
 
 

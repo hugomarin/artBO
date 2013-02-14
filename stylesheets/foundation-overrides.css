@@ -32,21 +32,38 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus
 }
 
 /* line 25, ../sass/foundation-overrides.scss */
+textarea {
+  line-height: 25px;
+}
+/* line 27, ../sass/foundation-overrides.scss */
+textarea:focus {
+  outline: none;
+  border-bottom: 0;
+  background: url(../images/textarea.png) repeat 0 5px;
+  -moz-border-radius-bottomleft: 0;
+  -webkit-border-bottom-left-radius: 0;
+  border-bottom-left-radius: 0;
+  -moz-border-radius-bottomright: 0;
+  -webkit-border-bottom-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* line 35, ../sass/foundation-overrides.scss */
 .label {
   font-weight: bold;
   margin: 5px 0;
   padding: 2px 4px 2px;
 }
-/* line 29, ../sass/foundation-overrides.scss */
+/* line 39, ../sass/foundation-overrides.scss */
 .label.round {
   padding: 2px 7px 2px;
 }
-/* line 32, ../sass/foundation-overrides.scss */
+/* line 42, ../sass/foundation-overrides.scss */
 .label.radius {
   padding: 1px 4px 1px;
 }
 
-/* line 37, ../sass/foundation-overrides.scss */
+/* line 47, ../sass/foundation-overrides.scss */
 .button {
   width: auto;
   background: #BB0C35;
@@ -54,25 +71,25 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus
   border-bottom: 4px solid #9d0b2c;
   padding: 15px 26px 13px;
 }
-/* line 44, ../sass/foundation-overrides.scss */
+/* line 54, ../sass/foundation-overrides.scss */
 .button:hover, .button:focus {
   background-color: #9D0B2C;
   border-bottom: 4px solid #9d0b2c;
   outline-color: white;
 }
-/* line 49, ../sass/foundation-overrides.scss */
+/* line 59, ../sass/foundation-overrides.scss */
 .button.small {
   padding: 10px 15px 7px;
   border-bottom: 2px solid #9d0b2c;
 }
-/* line 53, ../sass/foundation-overrides.scss */
+/* line 63, ../sass/foundation-overrides.scss */
 .button.nulled {
   padding: 10px 15px 7px;
   border-bottom: 2px solid #b7b5b5;
   background-color: #e6e6e6;
 }
 
-/* line 61, ../sass/foundation-overrides.scss */
+/* line 71, ../sass/foundation-overrides.scss */
 .panel {
   border: 0;
   border-bottom: 5px solid #b4b5b4;
@@ -85,17 +102,17 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus
   -webkit-border-bottom-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-/* line 67, ../sass/foundation-overrides.scss */
+/* line 77, ../sass/foundation-overrides.scss */
 .panel.nopadding {
   padding: 0;
 }
 
-/* line 72, ../sass/foundation-overrides.scss */
+/* line 82, ../sass/foundation-overrides.scss */
 p {
   line-height: 1.4;
 }
 
-/* line 77, ../sass/foundation-overrides.scss */
+/* line 87, ../sass/foundation-overrides.scss */
 form.custom div.custom.dropdown a.current {
   border: 0;
   line-height: 31px;
@@ -107,7 +124,7 @@ form.custom div.custom.dropdown a.current {
   border-radius: 4px;
 }
 
-/* line 84, ../sass/foundation-overrides.scss */
+/* line 94, ../sass/foundation-overrides.scss */
 form.custom div.custom.dropdown a.selector {
   border: 0;
   width: 32px;
@@ -116,19 +133,19 @@ form.custom div.custom.dropdown a.selector {
   border-left: 1px solid #dddddd;
 }
 
-/* line 92, ../sass/foundation-overrides.scss */
+/* line 102, ../sass/foundation-overrides.scss */
 form.custom div.custom.dropdown.open ul {
   position: absolute;
   height: 150px;
   top: -9px;
 }
 
-/* line 99, ../sass/foundation-overrides.scss */
+/* line 109, ../sass/foundation-overrides.scss */
 .error input, input.error, .error textarea, textarea.error, .error input:focus, input.error:focus, .error textarea:focus, textarea.error:focus {
   background-color: #e4a4af;
 }
 
-/* line 103, ../sass/foundation-overrides.scss */
+/* line 113, ../sass/foundation-overrides.scss */
 div.alert-box {
   margin: 0;
   -webkit-border-radius: 0;
@@ -138,7 +155,7 @@ div.alert-box {
   border-radius: 0;
   padding: 9px 20px 9px;
 }
-/* line 104, ../sass/foundation-overrides.scss */
+/* line 114, ../sass/foundation-overrides.scss */
 div.alert-box a.close {
   top: 6px;
   color: transparent;
@@ -152,48 +169,48 @@ div.alert-box a.close {
   opacity: .6;
   line-height: .9;
 }
-/* line 112, ../sass/foundation-overrides.scss */
+/* line 122, ../sass/foundation-overrides.scss */
 div.alert-box a.close:hover {
   opacity: .9;
 }
-/* line 119, ../sass/foundation-overrides.scss */
+/* line 129, ../sass/foundation-overrides.scss */
 div.alert-box.success {
   background-color: #55C896;
 }
 
-/* line 124, ../sass/foundation-overrides.scss */
+/* line 134, ../sass/foundation-overrides.scss */
 .nav-bar {
   margin-bottom: 0;
 }
-/* line 126, ../sass/foundation-overrides.scss */
+/* line 136, ../sass/foundation-overrides.scss */
 .nav-bar li {
   border: 0;
   line-height: 40px;
 }
-/* line 129, ../sass/foundation-overrides.scss */
+/* line 139, ../sass/foundation-overrides.scss */
 .nav-bar li:first-child {
   font-weight: bold;
 }
-/* line 132, ../sass/foundation-overrides.scss */
+/* line 142, ../sass/foundation-overrides.scss */
 .nav-bar li:last-child {
   border: 0;
   -webkit-box-shadow: 0 0 0 0;
   -moz-box-shadow: 0 0 0 0;
   box-shadow: 0 0 0 0;
 }
-/* line 137, ../sass/foundation-overrides.scss */
+/* line 147, ../sass/foundation-overrides.scss */
 .nav-bar li a {
-  margin: 0 16px;
+  margin: 0 15px;
   height: 40px;
   display: inline-block;
 }
 
-/* line 145, ../sass/foundation-overrides.scss */
+/* line 155, ../sass/foundation-overrides.scss */
 .block-grid.five-up h4 {
   margin: 2px 0;
 }
 
-/* line 149, ../sass/foundation-overrides.scss */
+/* line 159, ../sass/foundation-overrides.scss */
 a:focus {
   outline-color: lightgray;
 }
