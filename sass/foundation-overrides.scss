@@ -132,7 +132,8 @@ div.alert-box{
 }
 
 .nav-bar{
-  margin-bottom: 0;
+  overflow:hidden;
+  margin-bottom:0;
   li{
     border: 0;
     line-height: 40px;
@@ -141,13 +142,11 @@ div.alert-box{
     }
     &:last-child{
       border:0;
-      @include box-shadow(0 0 0 0); 
-      
+      @include box-shadow(0 0 0 0);
     }
     a{
-      margin:0 15px;
+      margin:0 16px;
       height: 40px;
-      display: inline-block;
     }
   }
 }

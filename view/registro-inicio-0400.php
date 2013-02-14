@@ -3,7 +3,6 @@
 <?php include_once('menu.php'); ?>
 <!-- 2. End menu -->
 
-
 	<div class="row main-row">	
 		<div class="panel nopadding">
 			<div class="inner-header">
@@ -14,9 +13,7 @@
 					<p><strong>Recuerde que tiene hasta el 12 de junio para finalizar este proceso.</strong></p>
 			
 					<p>Usted puede ir completando la información solicitada paso a paso o puede empezar por cualquiera de las secciones. Recuerde siempre guardar los cambios realizados. </p>
-					
-					 
-					
+
 					<p>Su galería quedará registrada siempre y cuando haya realizado el pago de los derechos de inscripción por un valor de .00 (ciento sesenta dólares). Para información sobre las formas de pago, por favor consulte <a href="http://www.artboonline.com/documentos/1965_formascondicionespago.pdf" title="Formas de pago" target="_blank">aqu&iacute;</a>.</p>
 					
 					 <p>Esta es una breve descripción de la información solicitada en cada sección:</p>

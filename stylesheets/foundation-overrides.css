@@ -180,18 +180,19 @@ div.alert-box.success {
 
 /* line 134, ../sass/foundation-overrides.scss */
 .nav-bar {
+  overflow: hidden;
   margin-bottom: 0;
 }
-/* line 136, ../sass/foundation-overrides.scss */
+/* line 137, ../sass/foundation-overrides.scss */
 .nav-bar li {
   border: 0;
   line-height: 40px;
 }
-/* line 139, ../sass/foundation-overrides.scss */
+/* line 140, ../sass/foundation-overrides.scss */
 .nav-bar li:first-child {
   font-weight: bold;
 }
-/* line 142, ../sass/foundation-overrides.scss */
+/* line 143, ../sass/foundation-overrides.scss */
 .nav-bar li:last-child {
   border: 0;
   -webkit-box-shadow: 0 0 0 0;
@@ -200,17 +201,16 @@ div.alert-box.success {
 }
 /* line 147, ../sass/foundation-overrides.scss */
 .nav-bar li a {
-  margin: 0 15px;
+  margin: 0 16px;
   height: 40px;
-  display: inline-block;
 }
 
-/* line 155, ../sass/foundation-overrides.scss */
+/* line 154, ../sass/foundation-overrides.scss */
 .block-grid.five-up h4 {
   margin: 2px 0;
 }
 
-/* line 159, ../sass/foundation-overrides.scss */
+/* line 158, ../sass/foundation-overrides.scss */
 a:focus {
   outline-color: lightgray;
 }

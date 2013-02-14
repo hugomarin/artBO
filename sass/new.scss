@@ -1,5 +1,17 @@
 @import "compass";
 
+@mixin breakpoint($point) {
+  @if $point == ipad {
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) { @content; }
+  }
+  @else if $point == iphone {
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px)  { @content; }
+  }
+  @else if $point == large {
+    @media only screen and (min-width : 1824px)  { @content; }
+  }
+} 
+
 
 body{
   &.bigpic1{
@@ -448,3 +460,5 @@ only screen and (min-device-pixel-ratio: 2) {
     @include spritenew($retina: true);
   }
 }
+
+

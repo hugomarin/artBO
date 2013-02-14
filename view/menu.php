@@ -9,48 +9,45 @@
   $days  = (int)($hours/24);
 ?>
 <!-- 2. Navigation -->
+<div class="row">
+	<div class="twelve columns">
+		<div class="right">
+			El registro de <span class="redtxt">Galerías </span> vence en <span class="red label radius"><?php echo $days?></span> <strong>días</strong>
+		</div>
+	</div>
+</div>
+
 <div class="row"><!-- Row -->	
-			
-			<div class="row">
-				<div class="twelve columns">
-					<div class="right">
-						El registro de <span class="redtxt">Galerías </span> vence en <span class="red label radius"><?php echo $days?></span> <strong>días</strong>
-					</div>
-				</div>
-			</div>	
-	
-			<ul class="nav-bar">
-				<li id="0">
-					<a href="<?php echo APPLICATION_URL?>registro-inicio-0400.html" class="main" title="Inicio">INSTRUCCIONES </a>
-				</li>
-				<li id="1">
-					<span class="spriteArrow"></span>
-					<a href="<?php echo APPLICATION_URL?>registro-galerias-0410.html" class="main" title="Galerías"><span class="number-menu">1</span>Galería </a>
-			    </li>
-			    <li id="2">
-			    	<span class="spriteArrow"></span>
-					<a href="<?php echo APPLICATION_URL?>registro-exposiciones-0420.html" class="main" title="Exposiciones"><span class="number-menu">2</span>Exposiciones</a>
-			    </li>
-			    <li id="3">
-			    	<span class="spriteArrow"></span>
-					<a href="<?php echo APPLICATION_URL?>registro-ferias-0430.html" class="main" title="Ferias"><span class="number-menu">3</span>Ferias</a>
-			    </li>
-			    <li id="4">
-			    	<span class="spriteArrow"></span>
-					<a href="<?php echo APPLICATION_URL?>registro-artistas-0440.html" class="main" title="Artistas"><span class="number-menu">4</span>Artistas</a>
-			    </li>
-			     <li id="5">
-			     	<span class="spriteArrow"></span>
-					<a href="<?php echo APPLICATION_URL?>registro-espacio-0450.html" class="main" title="Tipo de Stand"><span class="number-menu">5</span>Tipo de Stand</a>
-			    </li>
-			    <li id="6">
-			    	<span class="spriteArrow"></span>
-					<a href="<?php echo APPLICATION_URL?>registro-documentos-0460.html" class="main" title="Documentos"><span class="number-menu">6</span>Documentos</a>
-			    </li>
-			   
-			</ul>
-	
-	
+
+	<ul class="nav-bar">
+		<li id="0">
+			<a href="<?php echo APPLICATION_URL?>registro-inicio-0400.html" class="main" title="Inicio">INSTRUCCIONES </a>
+		</li>
+		<li id="1">
+			<span class="spriteArrow"></span>
+			<a href="<?php echo APPLICATION_URL?>registro-galerias-0410.html" class="main" title="Galerías"><span class="number-menu">1</span>Galería </a>
+	    </li>
+	    <li id="2">
+	    	<span class="spriteArrow"></span>
+			<a href="<?php echo APPLICATION_URL?>registro-exposiciones-0420.html" class="main" title="Exposiciones"><span class="number-menu">2</span>Exposiciones</a>
+	    </li>
+	    <li id="3">
+	    	<span class="spriteArrow"></span>
+			<a href="<?php echo APPLICATION_URL?>registro-ferias-0430.html" class="main" title="Ferias"><span class="number-menu">3</span>Ferias</a>
+	    </li>
+	    <li id="4">
+	    	<span class="spriteArrow"></span>
+			<a href="<?php echo APPLICATION_URL?>registro-artistas-0440.html" class="main" title="Artistas"><span class="number-menu">4</span>Artistas</a>
+	    </li>
+	     <li id="5">
+	     	<span class="spriteArrow"></span>
+			<a href="<?php echo APPLICATION_URL?>registro-espacio-0450.html" class="main" title="Tipo de Stand"><span class="number-menu">5</span>Tipo de Stand</a>
+	    </li>
+	    <li id="6">
+	    	<span class="spriteArrow"></span>
+			<a href="<?php echo APPLICATION_URL?>registro-documentos-0460.html" class="main" title="Documentos"><span class="number-menu">6</span>Documentos</a>
+	    </li>
+	</ul>
 </div><!-- End Row -->
 <!-- 2. End Navigation -->
 
