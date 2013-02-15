@@ -5,13 +5,8 @@
 	<script src="<?php echo APPLICATION_URL?>javascripts/app.js"></script>
 	<script src="<?php echo APPLICATION_URL?>javascripts/jquery-ui-1.8.18.custom.min.js"></script>
 	<script src="<?php echo APPLICATION_URL?>javascripts/validator.js"></script>
-	
-	
-	<?php
-			$currentFile = $_SERVER["PHP_SELF"];
-			$parts = Explode('/', $currentFile);
-			$name = $parts[count($parts) - 1];
-	?>
+
+	<?php $name = explode("/", $path); ?>
 
 	<!-- Included JS Files -->
 	<script type="text/javascript">
@@ -159,26 +154,26 @@
 
 		// end nuevo artista
 		
-		console.log('<?php echo $name ?>')
+		console.log('<?php echo $name[1]; ?>');
 		
-		switch ('<?php echo $name ?>' ) {
-			case 'index.php':$('#0').addClass('active');
+		
+		switch ('<?php echo $name[1] ?>' ) {
+			case 'registro-inicio-0400':$('#0').addClass('active');
 			break;	
-			case 'registro-ferias-430.php':$('#3').addClass('active');
+			case 'registro-ferias-0430':$('#3').addClass('active');
 			break;
-			case 'registro-exposiciones-0420.php':$('#2').addClass('active');
+			case 'registro-exposiciones-0420':$('#2').addClass('active');
 			break;
-			case 'registro-galerias-0410.php':$('#1').addClass('active');
+			case 'registro-galerias-0410':$('#1').addClass('active');
 			break;
-			case 'registro-artistas-0440.php':$('#4').addClass('active');
+			case 'registro-artistas-0440':$('#4').addClass('active');
 			break;
-			case 'registro-espacio-0450.php':$('#5').addClass('active');
+			case 'registro-espacio-0450':$('#5').addClass('active');
 			break;
-			case 'registro-documentos-0460.php':$('#6').addClass('active');
+			case 'registro-documentos-0460':$('#6').addClass('active');
 			break;
 			
 			}
-			
 			
 		
 	 });

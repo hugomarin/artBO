@@ -1,19 +1,27 @@
 <?php include_once('header-login.php'); ?>
 
 	<div class="row contenido"><!-- Row -->	
-		
 		<!-- columna 1/2 -->
 		<div class="six columns centered">
-			<div class="panel"><!-- panel -->
-				<h2 class="text-center">Cree su perfil</h2>
-				<hr />
-				<h4 class="text-center">Galería</h4>
-                <form action="<?php echo APPLICATION_URL?>user.controller/basic.html" id="validable" class="" method="post" enctype="multipart/form-data">
-				<!-- row -->
+			<form action="datos-galeria-0300_submit" method="post" accept-charset="utf-8">
+				<div class="panel"><!-- panel -->
+					<h2>Editar su perfil</h2>
+					<label for="contraseña">Nueva contraseña</label>
+					<input type="password" name="contraseña" value="" id="contraseña"/>
+					<label for="Repetir contraseña">Repetir contraseña</label>
+					<input type="password" name="Repetir contraseña" value="" id="Repetir contraseña"/>
+				</div>
 				<div class="row">
-					<!-- columna 1/1 -->
+					<div class="six columns"><a class="bold" title="volver" href="<?php echo APPLICATION_URL?>registro-inicio-0400.html">Volver</a></div>
+					<div class="six columns"><input title="guardar" type="submit" name="cambiar" value="Guardar" class="button radius right"/></div>
+				</div>
+			</form>
+			<!-- <form action="<?php echo APPLICATION_URL?>user.controller/basic.html" id="validable" class="" method="post" enctype="multipart/form-data">
+				
+				<div class="row">
+				
 					<div class="twelve columns">
-						<!-- imagen galeria -->
+				
 						<label><strong>Imagen de la Galería</strong></label>
 						<br />
 						<div class="text-center">
@@ -27,21 +35,19 @@
 							<hr />
 						</div>
 						
-						<!-- END imagen galeria -->
-						<!-- Nombre de la galería -->
+						
 						<div class="mid-input">
 							<label><strong>Nombre de la Galería*</strong></label>
 							<input type="text" name="user_name" class="expand input-text only" value="<?php echo $user->__get('user_name');?>" />
 						</div>
-						<!-- End Nombre de la galería -->
-						<!-- pagina web -->
+						
 						<label><strong>Pagina web</strong> </label>
 						<input type="text" name="user_website" class="expand input-text only" value="<?php echo $user->__get('user_website');?>" />
-						<!-- END pagina web -->
+						
 						<br />
-						<!-- documento -->
+						
 						<div class="row">
-							<!-- columns 1/2 -->
+						
 							<div class="seven columns">
 							<label><strong>Tipo de documento*</strong></label>
 							<select name="user_document_type">
@@ -50,33 +56,28 @@
 								<option value="RUT" <?php if ($user->__get('user_document_type') == 'RUT') echo 'selected="SELECTED"';?>>No. de identificación fiscal de su país</option>
 							</select>
 							</div>
-							<!-- END columns 1/2 -->
-							<!-- columns 2/2 -->
+						
 							<div class="five columns ">
 								<label><strong>Número de Documento*</strong></label>
 								<input type="text" name="user_gallery_document" class="small input-text" value="<?php echo $user->__get('user_gallery_document');?>" />
 							</div>
-							<!-- END columns 2/2 -->
+						
 						</div>
 					
-						<!-- END documento -->
+						
 						<span>Nota: Tenga en cuenta que con el mismo número de identificación también registrará el ingreso de mercancía de sus obras, equipos y otros a Corferias.</span><br /><br />
 						<span><strong>*Datos requeridos</strong></span>
-						<!-- botones -->
+						
 						<hr />
 						<div class="text-center">
 							<a href="javascript:void(0);" onClick="document.getElementById('validable').submit();" class="button round">Siguiente</a>
 						</div>
-						<!-- END botones -->
+						
 						<br />
 					</div>
-					<!-- END columna 1/1 -->
 				</div>
-				<!-- END row -->
-				</form>	
+			</form>	 -->
 	
-			</div><!-- End panel -->
-			<div class="shadow>"><img src="<?php echo APPLICATION_URL?>images/resources/sombraFinalDatos.png" class="top-sombra" width="470" height="12" alt="sombra"/></div><!-- Sombra final del panel -->
 		</div><!-- END columna 1/2 -->
 	</div><!-- End Row -->
 			

@@ -16,7 +16,7 @@ include_once('menu.php');
 			<div class="inner-header">
 				<div class="row">
 					<div class="eight columns title">
-						<span class="redtext">Registro</span>
+						<span class="redtext bold">Artistas</span>
 						<h2><?php echo $user->__get('user_name');?></h2>	
 					</div>
 					<div class="four columns mini-nav-header">
@@ -69,7 +69,7 @@ include_once('menu.php');
 						</div>
 						<div class="four columns">
 							<div class="right">
-								<a href="<?php echo APPLICATION_URL?>registro-ferias-0430.html" class="graytxt">Anterior</a>  <a href="<?php echo APPLICATION_URL?>registro-espacio-0450.html" class="button radius">Siguiente: Espacios</a>
+								<a title="Registro ferias" href="<?php echo APPLICATION_URL?>registro-ferias-0430.html" class="graytxt">Anterior</a>  <a href="<?php echo APPLICATION_URL?>registro-espacio-0450.html" title="Registro Tipo de Stand" class="button radius">Siguiente: Tipo de Stand</a>
 							</div>
 						</div>
 					</div>

@@ -11,16 +11,16 @@ include_once('menu.php'); ?>
 			<div class="inner-header">
 				<div class="row">
 					<div class="eight columns title">
-						<strong class="redtext">Registro</strong>
+						<strong class="redtext bold">Galería</strong>
 						<h2><?php echo $user->__get('user_name');?></h2>
 					</div><!--/title-->
-				
+					
 					<div class="four columns mini-nav-header">
 						<dl class="sub-nav">
-							<dd><a class="save" href="javascript:void(0);" onClick="document.getElementById('validable').submit();">Guardar</a></dd>
-							<dd><a class="prev" href="<?php echo APPLICATION_URL?>registro-inicio-0400.html">Anterior</a></dd>
+							<dd><a title="Guardar" class="save" href="javascript:void(0);" onClick="document.getElementById('validable').submit();">Guardar</a></dd>
+							<dd><a title="Inicio" class="prev" href="<?php echo APPLICATION_URL?>registro-inicio-0400.html">Anterior</a></dd>
 							<dd><h4>1/6</h4></dd>
-							<dd><a class="next" href="<?php echo APPLICATION_URL?>registro-exposiciones-0420.html">Siguiente</a></dd>
+							<dd><a title="Registro Exposiciones" class="next" href="<?php echo APPLICATION_URL?>registro-exposiciones-0420.html">Siguiente</a></dd>
 						</dl>	
 					</div>
 				</div><!--/row inner-header-->
@@ -28,7 +28,7 @@ include_once('menu.php'); ?>
 		<div class="container">
 			<div class="row form-data">	
 				<div class="twelve columns">
-					<form action="<?php echo APPLICATION_URL?>user.controller/first.html" id="validable" class="custom" method="post" enctype="multipart/form-data">
+					<form action="<?php echo APPLICATION_URL?>user.controller/first.html" id="validable" method="post" enctype="multipart/form-data">
 					<?php include_once('inc-galeria-1.php'); ?>
 					</form>
 				</div><!--/twelve columns-->
@@ -43,7 +43,7 @@ include_once('menu.php'); ?>
 						</div>
 						<div class="four columns">
 							<div class="right">
-								<a href="#" class="graytxt">Anterior</a>  <a href="#" class="button radius">Siguiente: Exposiciones</a>
+								<a title="Anterior" href="#" class="graytxt">Anterior</a>  <a href="#" title="Siguiente: Exposiciones" class="button radius">Siguiente: Exposiciones</a>
 							</div>
 						</div>
 					</div>
@@ -55,5 +55,5 @@ include_once('menu.php'); ?>
 			<span><a href="#">Términos y Condiciones</a> del Sitio</span>
 		</div>
 	</div><!--/row main-row-->
-			
+	
 <?php include_once('footer.php'); ?>

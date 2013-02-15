@@ -14,7 +14,7 @@ include_once('menu.php');
 			<div class="inner-header">
 				<div class="row">
 					<div class="eight columns title">
-						<strong class="redtext">Exposiciones</strong>
+						<strong class="redtext bold">Exposiciones</strong>
 						<h2><?php echo $user->__get('user_name');?></h2>
 					</div>
 					<div class="four columns mini-nav-header">

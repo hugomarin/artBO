@@ -7,20 +7,19 @@ include_once('menu.php'); ?>
 			<div class="inner-header">
 				<div class="row">
 				<div class="eight columns title">
-					<span class="redtext">Registro</span>
-					<h2>Documentos: <?php echo $user->__get('user_name');?></h2>
+					<span class="redtext bold">Documentos</span>
+					<h2><?php echo $user->__get('user_name');?></h2>
 				</div><!--/title-->
 				
 				<div class="four columns mini-nav-header">
 					<dl class="sub-nav">
-						<dd><a class="prev" href="<?php echo APPLICATION_URL?>registro-espacio-0450.html">Anterior</a></dd>
+						<dd><a title="Anterior" class="prev" href="<?php echo APPLICATION_URL?>registro-espacio-0450.html">Anterior</a></dd>
 						<dd><h4>6/6</h4></dd>
-						<dd><a class="save" href="javascript:void(0);" onClick="document.getElementById('validable').submit();">Guardar</a></dd>
+						<dd><a title="Guardar" class="save" href="javascript:void(0);" onClick="document.getElementById('validable').submit();">Guardar</a></dd>
 					</dl>
 				</div>
 			</div><!--/row inner-header-->
 			
-		<div class="container">
 			<div class="row form-data">	
 				<div class="twelve columns">
 					<form action="<?php echo APPLICATION_URL?>user.controller/uploadDocuments.html" id="validable" class="" method="post" enctype="multipart/form-data" onSubmit="return Validator.prototype.checkRequiredFields();">
@@ -28,7 +27,6 @@ include_once('menu.php'); ?>
 					</form>
 				</div><!--/twelve columns-->
 			</div><!--/form-data-->
-		</div>
 		</div>
 			<div class="inner-footer">
 				<div class="container">

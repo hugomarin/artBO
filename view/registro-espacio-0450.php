@@ -7,17 +7,17 @@ include_once('menu.php'); ?>
 			<div class="inner-header">
 				<div class="row">
 					<div class="eight columns title">
-						<span class="redtext">Registro</span>
-						<h2>Tipo de stand: <?php echo $user->__get('user_name');?></h2>
-						<h5>Descargue pdf con información sobre los stands de artBO.</h5>
+						<span class="redtext bold">Tipo de Stand</span>
+						<h2><?php echo $user->__get('user_name');?></h2>
+						<h5>Descargue <a href="#">pdf</a> con información sobre los stands de artBO.</h5>
 					</div><!--/title-->
 					
 					<div class="four columns mini-nav-header">
 						<dl class="sub-nav">
-							<dd><a class="save" href="javascript:void(0);" onClick="document.getElementById('validable').submit();">Guardar</a></dd>
-							<dd><a class="prev" href="<?php echo APPLICATION_URL?>registro-artistas-0440.html">Anterior</a></dd>
+							<dd><a title="Guardar" class="save" href="javascript:void(0);" onClick="document.getElementById('validable').submit();">Guardar</a></dd>
+							<dd><a title="Registro Artistas" class="prev" href="<?php echo APPLICATION_URL?>registro-artistas-0440.html">Anterior</a></dd>
 							<dd><h4>6/6</h4></dd>
-							<dd><a class="next" href="<?php echo APPLICATION_URL?>registro-documentos-0460.html">Siguiente</a></dd>
+							<dd><a title="Registro Documentos" class="next" href="<?php echo APPLICATION_URL?>registro-documentos-0460.html">Siguiente</a></dd>
 						</dl>	
 					</div>
 				</div><!--/row inner-header-->
@@ -41,7 +41,7 @@ include_once('menu.php'); ?>
 						</div>
 						<div class="four columns">
 							<div class="right">
-								<a href="<?php echo APPLICATION_URL?>registro-artistas-0440.html" class="graytxt">Anterior</a>  <a href="<?php echo APPLICATION_URL?>registro-documentos-0460.html" class="button radius">Siguiente: Documentos</a>
+								<a title="Registro Artistas" href="<?php echo APPLICATION_URL?>registro-artistas-0440.html" class="graytxt">Anterior</a>  <a title="Registro Documentos" href="<?php echo APPLICATION_URL?>registro-documentos-0460.html" class="button radius">Siguiente: Documentos</a>
 							</div>
 						</div>
 					</div>

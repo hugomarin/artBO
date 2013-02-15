@@ -355,6 +355,9 @@ label{
     }
     &.active{
       background:#BB0C35;
+      &:last-child{
+        float:right;
+      }
       span{
         &.spriteArrow{
           background-position:0 -40px;
@@ -449,6 +452,11 @@ input[type="text"]{
   }
 }
 
+.documents{
+  h4{
+    margin-top:0;
+  }
+}
 
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), 
