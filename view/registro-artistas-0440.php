@@ -24,8 +24,8 @@ include_once('menu.php');
 				<!-- END button back save forward -->
 			</div>	<!-- END titulo row -->
 				<hr />
-                <p><em>Recuerde que su propuesta de artistas para Artbo 2012 debe ser acorde al tamaño del stand  que ha seleccionado. Por cada 10 mts², sólo podrá exhibir un artista.</em></p>
-                <p><em>Para indicar que el artista participará en Artbo 2012 debe seleccionar el cuadro de verificación.</em></p>
+                <p><em>Recuerde que su propuesta de artistas para artBO 2012 debe ser acorde al tamaño del stand  que ha seleccionado. Por cada 10 mts², sólo podrá exhibir un artista.</em></p>
+                <p><em>Para indicar que el artista participará en artBO 2012 debe seleccionar el cuadro de verificación.</em></p>
                 
 			<form action="<?php echo APPLICATION_URL?>user.controller/createArtist.html" id="validable" class="" method="post">
 			<ul class="link_list ui-sortable">
