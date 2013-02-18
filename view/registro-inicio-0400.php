@@ -18,7 +18,6 @@
 					
 					 <p>Esta es una breve descripción de la información solicitada en cada sección:</p>
 					
-					
 					 <ul class="no-bullet">
 			            <li class="thin">1. <strong>Galería</strong> Información básica de la galería, el director con foto y una reseña de la galería. </li> 
 			            <li class="thin">2. <strong>Exposiciones</strong> Lista de las exposiciones realizadas entre el 2011 y el 2012 en orden cronológico. </li>

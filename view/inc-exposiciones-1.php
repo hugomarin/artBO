@@ -1,3 +1,19 @@
+ 	<div class="intitle">
+		<ul class="ferias">
+			<li>
+				<span class="asterix">*</span><strong>Nombre de la feria</strong>
+			</li>
+			<li>
+				<span class="asterix">*</span><strong>Ciudad</strong>
+			</li>
+			<li>
+				<span class="asterix">*</span><strong>País</strong>
+			</li>
+			<li>
+				<span class="asterix">*</span><strong>Año</strong>
+			</li>
+		</ul>
+	</div>
  <ul class="link_list ui-sortable">
                     <!-- expo -->
                     	<?php
@@ -8,7 +24,7 @@
 							{
 							?>
 							<li class="link_default">
-                                <ul class="no-bullet expo">
+                                <ul class="no-bullet ferias">
 	                                <!-- move img -->
 	                                <li class="handler">
 	                                    <img src="<?php echo APPLICATION_URL?>images/drag_handle.gif" alt="drag_handle" width="50" height="51" class="image_handle nsr">

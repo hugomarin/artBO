@@ -154,7 +154,7 @@
 
 		// end nuevo artista
 		
-		console.log('<?php echo $name[1]; ?>');
+		
 		
 		
 		switch ('<?php echo $name[1] ?>' ) {
