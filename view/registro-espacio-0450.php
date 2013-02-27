@@ -16,7 +16,7 @@ include_once('menu.php'); ?>
 						<dl class="sub-nav">
 							<dd><a title="Guardar" class="save" href="javascript:void(0);" onClick="$('#validable2').attr('action','<?php echo APPLICATION_URL?>user.controller/selectStand/stay.html'); $('#validable2').submit();">Guardar</a></dd>
 							<dd><a title="Registro Artistas" class="prev" href="<?php echo APPLICATION_URL?>registro-artistas-0440.html">Anterior</a></dd>
-							<dd><h4>6/6</h4></dd>
+							<dd><h4>5/6</h4></dd>
 							<dd><a title="Registro Documentos" class="next" href="<?php echo APPLICATION_URL?>registro-documentos-0460.html">Siguiente</a></dd>
 						</dl>	
 					</div>

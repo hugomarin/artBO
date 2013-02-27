@@ -23,22 +23,22 @@ else
 			<form action="<?php echo APPLICATION_URL?>user.controller/create.html" method="post" id="validable">
 				<div class="panel">
 					<h3>Registro</h3>
-					<p>Si nunca te haz registrado en artBO, incluida la última versión.<br />
-					Ya te registráste en artBO, haz clic <a class="underline" href="login.html">aquí.</a></p>
+					<!-- <p>Si nunca te haz registrado en artBO, incluida la última versión.<br />
+					Ya te registráste en artBO, haz clic <a class="underline" href="login.html">aquí.</a></p> -->
 				
 					<label for="name"><span class="asterix">*</span>Nombre</label>
 					<input type="text" name="user_name" title="Digite su(s) nombre(s)"/>
 					<label for="name"><span class="asterix">*</span>Apellido</label>
 					<input type="text" name="userlast_name" title="Digite su(s) apellido(s)"/>
-					<label for="name"><span class="asterix">*</span>Nombre de la Galeria</label>
+					<label for="name"><span class="asterix">*</span>Nombre de la Galería</label>
 					<input type="text" name="gallery_name" title="Digite el nombre de la galería"/>
-					<label for="name"><span class="asterix">*</span>Correo Electronico</label>
+					<label for="name"><span class="asterix">*</span>Correo electrónico</label>
 					<input type="email" name="user_email"  title="Digite el correo electrónico"/>
-					<label for="name"><span class="asterix">*</span>Confirmación correo Electronico</label>
+					<label for="name"><span class="asterix">*</span>Confirmar correo electrónico</label>
 					<input type="email" name="user_email_confirm"  alt="email" title="Confirme el correo electrónico digitado"/>
 					<label for="name"><span class="asterix">*</span>Clave</label>
 					<input type="password" name="user_password" title="Digite su contraseña"/>
-					<label for="name"><span class="asterix">*</span>Confirmación Clave</label>
+					<label for="name"><span class="asterix">*</span>Confirmar clave</label>
 					<input type="password" name="user_password_confirm" alt="Confirme la clave digitada" title="Contrase&ntilde;a (repetir)"/>
 				</div>
 				<div class="row">

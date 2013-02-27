@@ -11,7 +11,7 @@
 	<!-- Set the viewport width to device width for mobile -->
 	<!-- <meta name="viewport" content="width=device-width" /> -->
 
-	<title>ArtBo</title>
+	<title>artBO</title>
   
 	<!-- Included CSS Files -->
 	<link rel="stylesheet" href="<?php echo APPLICATION_URL?>stylesheets/app.css">
@@ -21,6 +21,7 @@
 	
 	<script type="text/javascript" src="//use.typekit.net/fzq1qvs.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	
 
 	<!--[if lt IE 9]>
 		<link rel="stylesheet" href="<?php echo APPLICATION_URL?>stylesheets/ie.css">

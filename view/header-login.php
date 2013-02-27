@@ -6,3 +6,6 @@ else
 $user	= new User($userId);
 require_once(SITE_VIEW."header-nologin.php");
 ?>
+
+<script type="text/javascript" src="//use.typekit.net/fzq1qvs.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
