@@ -13,7 +13,6 @@ var validInst ; // VARIABLE DE INSTANCIACION DE LA CLASE
 // RECIBE DIV (STRING, DIV ID)
 function Validator(msgAlertType, div, extra)
 {
-	
 	// INSTANCIACION DE VARIABLES GLOBALES
 	this.msgAlertType  = msgAlertType ? msgAlertType : 1 ;
 	this.div           = div ? div : '' ;
@@ -340,7 +339,7 @@ Validator.prototype.throwAlert = function()
 											{
 												target.style.display = '';
 											}
-
+											console.log(msg);
 											// CONSTRUYE EL MENSAJE CON LOS CAMPOS INVALIDOS 
 											// Y REMPLZA EL {LINEBREAK} POR <BR/>	
 											target.innerHTML = msg + '<br>' + this.validatorMsg.replace(/{linebreak}/g, "<br/>");	

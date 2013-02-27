@@ -17,11 +17,11 @@ include_once('menu.php');
 				<div class="row">
 					<div class="eight columns title">
 						<span class="redtext bold">Artistas</span>
-						<h2><?php echo $user->__get('user_name');?></h2>	
+						<h2><?php echo $user->__get('user_gallery_comname');?></h2>	
 					</div>
 					<div class="four columns mini-nav-header">
 						<dl class="sub-nav">
-							<dd><a class="save" title="Guardar" href="javascript:void(0);" onClick="document.getElementById('validable').submit();" >Guardar</a></dd>
+							<dd><a class="save" title="Guardar" href="javascript:void(0);" onclick="$('#validable').submit();" >Guardar</a></dd>
 							<dd><a class="prev" title="Registro Ferias" href="<?php echo APPLICATION_URL?>registro-ferias-0430.html">Anterior</a></dd>
 							<dd><h4>4/6</h4></dd>
 							<dd><a class="next" title="Registro espacio" href="<?php echo APPLICATION_URL?>registro-espacio-0450.html" >Siguiente</a></dd>
@@ -50,12 +50,11 @@ include_once('menu.php');
 						</div>
 						<form action="<?php echo APPLICATION_URL?>user.controller/createArtist.html" id="validable" class="" method="post">
 							<?php include_once('inc-artistas-1.php'); ?>
-						</form>
 						<a href="#" id="add-artist" class="label secondary round">Agregar un nuevo artista </a> 
 						<br /><br />
 						 <h5>Artistas representados:</h5>
-						 <form action="registro-artistas-0440_submit" method="get" accept-charset="utf-8">
-							<textarea name="Name" rows="8" cols="40" placeholder="Digite la información correspondiente a artistas representados"></textarea>
+
+							<textarea name="user_represented_artists" rows="8" cols="40" placeholder="Digite la información correspondiente a artistas representados"><?php echo $user->__get('user_represented_artists');?></textarea>
 						 </form>
 					</div>
 				</div>
@@ -69,7 +68,7 @@ include_once('menu.php');
 						</div>
 						<div class="four columns">
 							<div class="right">
-								<a title="Registro ferias" href="<?php echo APPLICATION_URL?>registro-ferias-0430.html" class="graytxt">Anterior</a>  <a href="<?php echo APPLICATION_URL?>registro-espacio-0450.html" title="Registro Tipo de Stand" class="button radius">Siguiente: Tipo de Stand</a>
+								<a title="Registro ferias" href="<?php echo APPLICATION_URL?>registro-ferias-0430.html" class="graytxt">Anterior</a>  <a href="javascript:void(0);" onclick="$('#validable').submit();" title="Registro Tipo de Stand" class="button radius">Siguiente: Tipo de Stand</a>
 							</div>
 						</div>
 					</div>
@@ -95,8 +94,8 @@ $(document).ready(function() {
 counterArtist = <?php echo (count($artists) > 0) ? count($artists)+1 : 2; ?>;
 $("#add-artist").click(function(){
 
-$(".link_list").hide().append('<li class="link_default"><ul class="no-bullet artist"><li class="handler"><img src="images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr"></li><li><input type="text" name="artist_name_<?php echo $i;?>" value="<?php echo $artist->__get('artist_name');?>" /></li><li><input type="text" name="artist_surname_<?php echo $i;?>" value="<?php echo $artist->__get('artist_surname');?>" /></li><li><input type="text" class="no-margin" name="artist_nationality_<?php echo $i;?>" value="<?php echo $artist->__get('artist_nationality');?>" /><a href="#" class="revelar-a <?php if ($artist->__get('artist_artbo') != 1) echo 'hidden"';?> revealer " id="link-<?php echo $i?>" data-reveal-id="artista" >Más información sobre el artista</a></li><li class="handler"><a href="#"><img src="images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a></li></ul></li>').fadeIn(1000);
-	$(".revealer-new").each(function(item){
+$(".link_list").hide().append('<li class="link_default"><ul class="no-bullet artist"><li class="handler"><img src="images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr"></li><li><input type="text" name="artist_name_'+counterArtist+'"  /></li><li><input type="text" name="artist_surname_'+counterArtist+'" /></li><li><input type="text" class="no-margin" name="artist_nationality_'+counterArtist+'" /><a href="#" class="revelar-a revealer " id="link-'+counterArtist+'" data-reveal-id="artista" >Más información sobre el artista</a></li><li class="handler"><a href="#"><img src="images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a></li></ul></li>').fadeIn(1000);
+	$(".revealer").each(function(item){
 		$(this).click(function () {
 			$("#artist_name").val($("#artist_name_" + (counterArtist - 1)).val());
 			$("#artist_surname").val($("#artist_surname_" + (counterArtist - 1)).val());

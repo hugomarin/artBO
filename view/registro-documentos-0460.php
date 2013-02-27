@@ -1,14 +1,30 @@
 <?php 
 include_once('header-login.php');  
-include_once('menu.php'); ?>
-			
+include_once('menu.php'); 
+$userForms	= UserFormHelper::retrieveUserForms(" AND user_id = ".escape($_SESSION['user_id']));
+$class		= 'nulled';
+if (count($userForms) == 5)
+{
+	$action		= "document.getElementById('validable').submit();";
+	$class		= '';
+}
+else
+	$action		= "alertNotYet()";
+	
+?>
+<script language="javascript">
+function alertNotYet()
+{
+	alert ('Debe completar los pasos anteriores antes de guardar su formulario');
+}
+</script>
 <div class="row main-row">	
 		<div class="panel nopadding">
 			<div class="inner-header">
 				<div class="row">
 				<div class="eight columns title">
 					<span class="redtext bold">Documentos</span>
-					<h2><?php echo $user->__get('user_name');?></h2>
+					<h2><?php echo $user->__get('user_gallery_comname');?></h2>
 				</div><!--/title-->
 				
 				<div class="four columns mini-nav-header">
@@ -36,7 +52,8 @@ include_once('menu.php'); ?>
 						</div>
 						<div class="four columns">
 							<div class="right">
-								<a href="<?php echo APPLICATION_URL?>registro-artistas-0440.html" class="graytxt">Anterior</a>  <a  href="javascript:void(0);" onClick="document.getElementById('validable').submit();" class="button radius nulled">Guardar</a>
+								<a href="<?php echo APPLICATION_URL?>registro-espacio-0450.html" class="graytxt">Anterior</a>  
+                                <a  href="javascript:void(0);" onClick="<?php echo $action;?>" class="button radius <?php echo $class;?>">Guardar</a>
 							</div>
 						</div>
 					</div>
@@ -56,9 +73,9 @@ include_once('menu.php'); ?>
 if (isset($_GET[0]))
 {
 ?>
-<script language="JavaScript">
-	alert('Al hacer click declaro conocer y aceptar las condiciones y el reglamento de participaciónen artBO. Ha terminado de registrar su galería. Muchas gracias.');
-</script>
+	<script language="JavaScript">
+        alert('Al hacer click declaro conocer y aceptar las condiciones y el reglamento de participaciónen artBO. Ha terminado de registrar su galería. Muchas gracias.');
+    </script>
 <?php
 }
 ?>

@@ -1,5 +1,8 @@
 <?php 
 include_once('header-nologin2.php'); 
+if (isset($_GET[0]))
+	$error	= '<div class="alert-box error" id="alert">Sus datos no coinciden.<a href="javascript:void(0);" onClick="document.getElementById(\'alert\').style.display=\'none\';" class="close">&times;</a></div>';
+
 ?>
 
 <body>
@@ -13,7 +16,7 @@ include_once('header-nologin2.php');
 					<h3>Inicio de Sesión</h3>
 					<p>Si nunca te haz registrado en artBO, incluida la última versión,
 					haz clic <a class="underline" href="<?php echo APPLICATION_URL?>register.html">aquí.</a></p>
-					<?php echo $error;?>
+					<?php if (isset($error)) echo $error;?>
 					<label for="name">Correo Electronico</label>
 					<input type="email"  name="user_email" title="Digite el correo electrónico" required="required"/>
 					<label for="name">Clave</label>

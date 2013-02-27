@@ -5,7 +5,7 @@
 	<script src="<?php echo APPLICATION_URL?>javascripts/app.js"></script>
 	<script src="<?php echo APPLICATION_URL?>javascripts/jquery-ui-1.8.18.custom.min.js"></script>
 	<script src="<?php echo APPLICATION_URL?>javascripts/validator.js"></script>
-
+    <script src="<?php echo APPLICATION_URL?>javascripts/fileuploader.js"></script>
 	<?php $name = explode("/", $path); ?>
 
 	<!-- Included JS Files -->

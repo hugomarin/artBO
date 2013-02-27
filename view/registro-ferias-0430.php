@@ -21,11 +21,11 @@ include_once('menu.php');
 				<div class="row">
 					<div class="eight columns title">
 						<span class="redtext bold">Ferias</span>
-						<h2><?php echo $user->__get('user_name');?> </h2>	
+						<h2><?php echo $user->__get('user_gallery_comname');?> </h2>	
 					</div>
 					<div class="four columns mini-nav-header">
 						<dl class="sub-nav">
-							<dd><a class="save" title="Guardar" href="javascript:void(0);" onClick="document.getElementById('validable').submit();" >Guardar</a></dd>
+							<dd><a class="save" title="Guardar" href="javascript:void(0);" onclick="$('#validable').submit();">Guardar</a></dd>
 							<dd><a class="prev" title="Registro Exposiciones" href="<?php echo APPLICATION_URL?>registro-exposiciones-0420.html">Anterior</a></dd>
 							<dd><h4>3/6</h4></dd>
 							<dd><a  class="next" title="Registro Artistas" href="<?php echo APPLICATION_URL?>registro-artistas-0440.html" >Siguiente</a></dd>
@@ -54,7 +54,7 @@ include_once('menu.php');
 						</div>
 						<div class="four columns">
 							<div class="right">
-								<a href="<?php echo APPLICATION_URL?>registro-exposiciones-0420.html" title="Registro Ferias" class="graytxt">Anterior</a>  <a href="<?php echo APPLICATION_URL?>registro-artistas-0440.html" class="button radius">Siguiente: Artistas</a>
+								<a href="<?php echo APPLICATION_URL?>registro-exposiciones-0420.html" title="Registro Ferias" class="graytxt">Anterior</a>  <a href="javascript:void(0);" onclick="$('#validable').submit();" class="button radius">Siguiente: Artistas</a>
 							</div>
 						</div>
 					</div>
@@ -81,7 +81,7 @@ $(document).ready(function()
 	// nueva feria
 	var countryOptions	= '<?php foreach($countries as $country) {?><option value="<?php echo $country->__get('country_id');?>"><?php echo utf8_encode($country->__get('country_name'));?></option><?php } ?>';
 	$("#add-feria").click(function(){
-	$(".link_list").hide().append('<!-- expo --><li class="link_default"><div class="row"><div class="one columns"><img src="<?php echo APPLICATION_URL?>images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr">	</div>	<!-- nombre --><div class="four columns"><label>*Nombre de la feria</label><select name="feria_year_'+counterFeria+'"><option value="2012">2012</option><option value="2011">2011</option><option>2010</option></select></div><!-- END Año --></li><!-- end Expo --> ').fadeIn(1000);
+	$(".link_list").hide().append('<li class="link_default"><ul class="no-bullet fairs"><li class="handler"><img src="<?php echo APPLICATION_URL?>images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr">	</li>	<!-- nombre --><li class="name"><input class="expand input-text" type="text" name="feria_name_'+counterFeria+'" /></li><!-- END nombre --><!-- ciudad --><li><input type="text"  name="feria_city_'+counterFeria+'" class="expand input-text"/></li><!-- END ciudad --><!-- pais--><li><select name="country_id_'+counterFeria+'"><?php foreach ($countries as $country){?><option value="<?php echo $country->__get('country_id')?>"><?php echo utf8_encode($country->__get('country_name'));?></option><?php } ?></select></li><!-- END País --><!-- Año--><li><select name="feria_year_'+counterFeria+'"><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option></select></li><!-- / Año --><li class="handler"><a href="#"><img src="images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a></li></ul></li> ').fadeIn(1000);
 	counterFeria = counterFeria + 1;
 	});// end nueva feria
 
