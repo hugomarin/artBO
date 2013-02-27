@@ -6,7 +6,7 @@ for($i = 1; $i <= count($artists); $i++)
 	$artist 	= $artists[($i - 1)]; 
 	$artistWork	= ArtistWorkHelper::retrieveArtistWorks("AND artist_id = " . $artist->__get('artist_id'));
 	?>
-<div id="artista-<?php echo $i?>" class="reveal-modal">
+<div id="artista-<?php echo $i?>" class="reveal-modal" style="display: block;">
 
 
 	<a class="close-reveal-modal">×</a><!-- modal close tag -->
@@ -98,7 +98,7 @@ for($i = 1; $i <= count($artists); $i++)
 ?>
 		
 <!-- modal general -->
-<div id="artista-new" class="reveal-modal">
+<div id="artista-new" class="reveal-modal" style="display: block;" >
 
 	<a class="close-reveal-modal">×</a><!-- modal close tag -->
 		<h2>Artista</h2>
@@ -113,11 +113,11 @@ for($i = 1; $i <= count($artists); $i++)
 			<div class="twelve columns">
 			<!-- formulario -->
 				<label><strong>Nombre</strong></label>
-				<input type="text" id="artist_name" name="artist_name" value="">
+				<input type="text" id="artist_name_new" name="artist_name" value="">
 				<label><strong>Apellido</strong></label>
-				<input type="text" id="artist_surname" name="artist_surname" value="">
+				<input type="text" id="artist_surname_new" name="artist_surname" value="">
 				<label><strong>Nacionalidad</strong></label>
-				<input type="text" id="artist_nationality" name="artist_nationality" value="">
+				<input type="text" id="artist_nationality_new" name="artist_nationality" value="">
 				<label><strong>Fecha de nacimiento (YYYY-MM-DD)</strong></label>
 				<input type="text" name="artist_birthday"  value="" class="small datepicker"/><br/>
 				<label><strong>Lugar de residencia</strong></label>

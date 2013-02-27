@@ -3,6 +3,9 @@
 						<h2>artBO</h2>
 						<label>Indique en qué ediciones de artBO ha participado</label>
 						<div class="row">
+							<div class="three columns">
+								<input type="checkbox" name="artbo_12" <?php if ($artbo[6] == 1) echo 'checked="checked"';?>/> artBO 2012
+							</div>                        
 							<!-- columns artBo 1/4 -->
 							<div class="three columns">
 								<input type="checkbox" name="artbo_11" <?php if ($artbo[0] == 1) echo 'checked="checked"';?>/> artBO 2011
@@ -19,13 +22,15 @@
 							</div>
 							<!-- columns artBo 3/4 -->
 							<!-- END columns artBo 4/4 -->
-							<div class="three columns">
-								<input type="checkbox" name="artbo_08" <?php if ($artbo[3] == 1) echo 'checked="checked"';?>/> artBO 2008
-							</div>
+
 							<!-- END columns artBo 4/4 -->
 						</div>	
 						<div class="row">
-							<!-- columns artBo 1/4 -->
+                        
+							<div class="three columns">
+								<input type="checkbox" name="artbo_08" <?php if ($artbo[3] == 1) echo 'checked="checked"';?>/> artBO 2008
+							</div>
+                            							<!-- columns artBo 1/4 -->
 							<div class="three columns">
 								<input type="checkbox" name="artbo_07" <?php if ($artbo[4] == 1) echo 'checked="checked"';?>/> artBO 2007
 							</div>
@@ -106,14 +111,14 @@
                                     <!-- Año-->
                                         <li>
                                             <select name="feria_year_<?php echo $i;?>">
+                                            	<option value="2013" <?php if ($feria->__get('feria_year') == 2013)  echo 'selected="selected"';?>>2013</option>
                                                 <option value="2012" <?php if ($feria->__get('feria_year') == 2012)  echo 'selected="selected"';?>>2012</option>
                                                 <option value="2011" <?php if ($feria->__get('feria_year') == 2011)  echo 'selected="selected"';?>>2011</option>
-                                                <option value="2011" <?php if ($feria->__get('feria_year') == 2010)  echo 'selected="selected"';?>>2010</option>
                                             </select>
                                         </li>
                                         <!-- /Año -->
                                          <li class="handler">
-		                                	<a href="#"><img src="<?php echo APPLICATION_URL?>images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a>
+		                                	<a href="javascript:void(0)" onClick=" $(this).parent().parent().parent().remove();"><img src="<?php echo APPLICATION_URL?>images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a>
 		                               	</li>
                                     </ul>
                                 </li>
@@ -156,14 +161,15 @@
                                     <!-- Año-->
                                         <li>
                                             <select name="feria_year_1">
+                                            	<option value="2013">2013</option>
                                                 <option value="2012">2012</option>
                                                 <option value="2011">2011</option>
-                                                <option value="2010">2010</option>
+                                                
                                             </select>
                                         </li>
                                 	<!-- / Año -->
                                   		<li class="handler">
-		                                	<a href="#"><img src="images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a>
+		                                	<a href="javascript:void(0)" onClick=" $(this).parent().parent().parent().remove();"><img src="images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a>
 		                               	</li>
                                     </ul>
                                 </li>                        

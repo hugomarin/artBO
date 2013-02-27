@@ -128,10 +128,20 @@ switch ($action):
 		$userForms	= UserFormHelper::selectUserForms(" AND user_id = ".escape($_SESSION['user_id'])." AND form_number = 1");
 		if ($userForms['num_rows'] == 0)
 		{
-			$form	= new UserForm();
-			$form->__set('user_id', $_SESSION['user_id']);
-			$form->__set('form_number', 1);
-			$form->save();
+			$accept		= true;
+			$fields		= UserFieldHelper::retrieveUserFields();
+			foreach ($fields as $field)
+			{
+				if (($user->__get($field) == '') || ($user->__get($field) == 0) || ($user->__get($field) == 'NULL'))
+				$accept	= false;
+			}
+			if ($accept)
+			{
+				$form	= new UserForm();
+				$form->__set('user_id', $_SESSION['user_id']);
+				$form->__set('form_number', 1);
+				$form->save();
+			}
 		}
 		if (!isset($_GET[1]))
 			redirectUrl(APPLICATION_URL.'registro-exposiciones-0420/saved.html');
@@ -173,13 +183,14 @@ switch ($action):
 		$deleteSQL   = "DELETE FROM user_ferias WHERE user_id = " . $_SESSION['user_id'];
 		$connection->query($deleteSQL);		
 		$user		= new User($_SESSION['user_id']);
-		$string		= '';
+		$string		= '';	
 		$string		.= (isset($_POST['artbo_11'])) ? '1|' : '0|'; 
 		$string		.= (isset($_POST['artbo_10'])) ? '1|' : '0|'; 
 		$string		.= (isset($_POST['artbo_09'])) ? '1|' : '0|'; 
 		$string		.= (isset($_POST['artbo_08'])) ? '1|' : '0|'; 
 		$string		.= (isset($_POST['artbo_07'])) ? '1|' : '0|'; 
-		$string		.= (isset($_POST['artbo_06'])) ? '1' : '0'; 
+		$string		.= (isset($_POST['artbo_06'])) ? '1|' : '0|'; 
+		$string		.= (isset($_POST['artbo_12'])) ? '1' : '0'; 			
 		$user->__set('user_artbo', $string);
 		$user->update();
 		foreach ($_POST as $key => $value)
@@ -351,8 +362,15 @@ switch ($action):
 		break;
 	case 'selectStand':
 		$user 		= new User($_SESSION['user_id']);
+		$cornisa	= '';
+		for ($i = 0; $i < 6; $i++)
+		{
+			if ((isset($_POST['cornisa_'.$i])) && ($_POST['cornisa_'.$i] != ''))
+				$cornisa	 = $_POST['cornisa_'.$i];							  
+		}
 		foreach ($_POST as $key => $value)
 			$user->__set($key, $value);	
+		$user->__set('user_space_name', $cornisa); 
 		$user->update();
 		$userForms	= UserFormHelper::selectUserForms(" AND user_id = ".escape($_SESSION['user_id'])." AND form_number = 5");
 		if ($userForms['num_rows'] == 0)

@@ -76,17 +76,20 @@ class Medio {
 					if (($file != '.') && ($file != '..')) 
 					{
 						$res = (count(explode('x',$file)) > 1) ? explode('x',$file) : explode('r',$file) ;
-						$width = $res[0];
-						$height = $res[1];
-						
-						$image = new Image($this->uploadFile['base'].$this->uploadFile['file'], $waterMark, $waterMarkFolder);
-						$image->newSize = array($width, $height);
-						if(($width != 0) && ($height != 0))
-							$image->autocrop(true);
-						else
-							$image->resize();	
-						$dest = $this->uploadFile['base'].$file.'/'.$this->uploadFile['file'];
-						$image->save($dest);
+						if(isset($res[1]))
+						{
+							$width = $res[0];
+							$height = $res[1];
+							
+							$image = new Image($this->uploadFile['base'].$this->uploadFile['file'], $waterMark, $waterMarkFolder);
+							$image->newSize = array($width, $height);
+							if(($width != 0) && ($height != 0))
+								$image->autocrop(true);
+							else
+								$image->resize();	
+							$dest = $this->uploadFile['base'].$file.'/'.$this->uploadFile['file'];
+							$image->save($dest);
+						}
 					}				
 				}
 			}

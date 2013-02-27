@@ -61,7 +61,7 @@ class qqUploadedFileForm {
 
 class qqFileUploader {
     private $allowedExtensions = array();
-    private $sizeLimit = 524288000;//500mb
+    private $sizeLimit = 1000000;//500mb
     private $file;
 
     function __construct(array $allowedExtensions = array(), $sizeLimit = 524288000){        
@@ -160,17 +160,11 @@ class qqFileUploader {
         }
     }    
 }
-$user	= new User($_GET[0]);
 // list of valid extensions, ex. array("jpeg", "xml", "bmp")
-$allowedExtensions = array("pdf","jpg","jpeg","gif","png");
+$allowedExtensions = array("pdf","jpg","jpeg","gif","png","doc","docx","mp3","swf","zip","rar","arj","xls","xlsx","ppt","pptx","txt","rtf","7z","psd","ai","tiff","eps","ait");
 // max file size in bytes
-$sizeLimit =  1024 * 1024;
+$sizeLimit = (500 * 1024) * 1024;
 $uploader = new qqFileUploader($allowedExtensions, $sizeLimit);
-if(!file_exists('resources/documents/' . makeUrlClear(utf8_decode($user->__get('user_name')))))
-{
-	mkdir('resources/documents/' . makeUrlClear(utf8_decode($user->__get('user_name'))), 0755);
-}
-$dir	= 'resources/documents/' . makeUrlClear(utf8_decode($user->__get('user_name')));
-$result = $uploader->handleUpload($_SERVER['DOCUMENT_ROOT'].APPLICATION_URL.$dir);
+$result = $uploader->handleUpload($_SERVER['DOCUMENT_ROOT'].APPLICATION_URL.'resources/documents/');
 // to pass data through iframe you will need to encode all html tags
 echo htmlspecialchars(json_encode($result), ENT_NOQUOTES);
