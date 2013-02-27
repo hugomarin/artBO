@@ -94,13 +94,13 @@ $(document).ready(function() {
 counterArtist = <?php echo (count($artists) > 0) ? count($artists)+1 : 2; ?>;
 $("#add-artist").click(function(){
 
-$(".link_list").hide().append('<li class="link_default"><ul class="no-bullet artist"><li class="handler"><img src="<?php echo APPLICATION_URL?>images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr"></li><li><input type="text" name="artist_name_'+counterArtist+'" id="artist_name_'+counterArtist+'"  /></li><li><input type="text" name="artist_surname_'+counterArtist+'" id="artist_surname_'+counterArtist+'" /></li><li><input type="text" class="no-margin" name="artist_nationality_'+counterArtist+'" id="artist_nationality_'+counterArtist+'" /><a href="#" class="revelar-a revealer " id="link-'+counterArtist+'" data-reveal-id="artista" >Más información sobre el artista</a></li><li class="handler"><a href="#"><img src="<?php echo APPLICATION_URL?>images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a></li></ul></li>').fadeIn(1000);
+$(".link_list").hide().append('<li class="link_default"><ul class="no-bullet artist"><li class="handler"><img src="<?php echo APPLICATION_URL?>images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr"></li><li><input type="text" name="artist_name_'+counterArtist+'"  /></li><li><input type="text" name="artist_surname_'+counterArtist+'" /></li><li><input type="text" class="no-margin" name="artist_nationality_'+counterArtist+'" /><a href="#" class="revelar-a revealer " id="link-'+counterArtist+'" data-reveal-id="artista" >Más información sobre el artista</a></li><li class="handler"><a href="#"><img src="<?php echo APPLICATION_URL?>images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a></li></ul></li>').fadeIn(1000);
 	$(".revealer").each(function(item){
 		$(this).click(function () {
 			
-			$("#artist_name_new").val($("#artist_name_" + (counterArtist - 1)).val());
-			$("#artist_surname_new").val($("#artist_surname_" + (counterArtist - 1)).val());
-			$("#artist_nationality_new").val($("#artist_nationality_" + (counterArtist - 1)).val());
+			$("#artist_name").val($("#artist_name_" + (counterArtist - 1)).val());
+			$("#artist_surname").val($("#artist_surname_" + (counterArtist - 1)).val());
+			$("#artist_nationality").val($("#artist_nationality_" + (counterArtist - 1)).val());
 			var toggle = true;
 			if(this.nodeName.toLowerCase() == 'input')
 			{

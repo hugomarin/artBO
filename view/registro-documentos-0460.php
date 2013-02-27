@@ -53,7 +53,7 @@ function alertNotYet()
 						<div class="four columns">
 							<div class="right">
 								<a href="<?php echo APPLICATION_URL?>registro-espacio-0450.html" class="graytxt">Anterior</a>  
-                                <a  href="javascript:void(0);" onClick="<?php echo $action;?>" class="button radius <?php echo $class;?>">Guardar</a>
+                                <a  href="javascript:void(0);" onClick="<?php echo $action;?>" class="button radius <?php echo $class;?>">Finalizar</a>
 							</div>
 						</div>
 					</div>
