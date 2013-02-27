@@ -11,7 +11,7 @@ $mobile		= explode("-", $user->__get('user_mobile'));
 				<!-- <i>Imagen del espacio expositivo</i>
 				<br /> -->
 				<img src="http://cambelt.co/icon/camera/480x360?color=b71632,fefefe" class="images" title="Imagen de la Galería">                
-				<span class="caption">Puede subir imagen de la última exposición realizada en su galería en .jpg, .png o .gif. El archivo no debe superar los 1000 Kb.</caption><br />
+				<span class="caption">Puede subir imagen de la última exposición realizada en su galería en .JPG, .PDF o .PNG. El archivo no debe superar los 1000 KB.</caption><br />
 							<div id="user_gallery_image">		
 								<noscript>			
 									<input type="file" name="user_gallery_image" title="Cargue la foto correspondiente a su director" />
