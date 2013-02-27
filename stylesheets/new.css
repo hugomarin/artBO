@@ -508,8 +508,13 @@ input[type="text"].doc {
   margin-top: 0;
 }
 
+/* line 461, ../sass/new.scss */
+.sub-menu {
+  margin: 5px 30px;
+}
+
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
-  /* line 464, ../sass/new.scss */
+  /* line 468, ../sass/new.scss */
   .artBO {
     display: inline-block;
     text-indent: -9999px;
@@ -519,7 +524,7 @@ input[type="text"].doc {
     background: url("../images/sprite_new2x.png") 0 0;
   }
 
-  /* line 467, ../sass/new.scss */
+  /* line 471, ../sass/new.scss */
   .ccB {
     display: inline-block;
     text-indent: -9999px;

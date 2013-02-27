@@ -65,7 +65,7 @@ body{
       li{
        width:50%;
        margin-left:20px;
-       &.date{
+       &.date{ 
          width:18%;
        }
       }
@@ -458,6 +458,10 @@ input[type="text"]{
   }
 }
 
+.sub-menu{
+  margin:5px 30px;
+}
+
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), 
 only screen and (min-device-pixel-ratio: 2) {
@@ -468,5 +472,3 @@ only screen and (min-device-pixel-ratio: 2) {
     @include spritenew($retina: true);
   }
 }
-
-

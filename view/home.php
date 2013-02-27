@@ -7,7 +7,7 @@ if ((isset($_GET[0])) && ($_GET[1] == 0))
 	$error	= '<div class="alert-box error" id="alert">Hay un error en los datos suministrados.<a href="javascript:void(0);" onClick="document.getElementById(\'alert\').style.display=\'none\';" class="close">&times;</a></div>';
 ?>
 
-<body>
+<body bgcolor="#000">
 <!-- content -->
 <div class="container">
 	<div class="row"><!-- Row -->	
