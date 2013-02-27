@@ -27,9 +27,8 @@
                                     <!-- nacionalidad -->
                                     <input type="text" class="no-margin" name="artist_nationality_<?php echo $i;?>" value="<?php echo $artist->__get('artist_nationality');?>" />
                                     <!-- END nacionalidad -->
-                                    <!-- <label for="checkbox3a"><input class="revealer" type="checkbox" name="artist_artbo_<?php echo $i;?>" <?php if ($artist->__get('artist_artbo') == 1) echo 'checked="CHECKED"';?>  id="checkbox-<?php echo $i?>"> <strong>Este artista participará en Artbo</strong></label> -->
                                     <!-- boton para modal de artista -->
-                                    <a href="#" class="revelar-a <?php if ($artist->__get('artist_artbo') != 1) echo 'hidden"';?> revealer " id="link-<?php echo $i?>" data-reveal-id="artista" >Más información sobre el artista</a>
+                                    <a href="#" class="revelar-a revealer " id="link-<?php echo $i?>" data-reveal-id="artista" >Más información sobre el artista</a>
                                     <!-- END boton para modal de artista -->
                                 </li>
                                 <li class="handler">
@@ -65,6 +64,7 @@
                                     <!-- END nacionalidad -->
                                     <!-- <label for="checkbox3a"><input class="revealer-new" type="checkbox" id="checkbox-1" name="artist_artbo_1"><strong>Este artista participará en Artbo</strong></label> -->
                                     <!-- boton para modal de artista -->
+                                    <a href="#" class="revelar-a revealer " id="link-<?php echo $i?>" data-reveal-id="artista" >Más información sobre el artista</a>
                                     <!-- END boton para modal de artista -->
                                 </li>
                                 <li class="handler">

@@ -14,11 +14,11 @@ switch ($action):
 			$user->__set('user_state', 'A');
 			$insert	= $user->save();
 			$_SESSION['user_id']	= $insert['insert_id'];
-			redirectUrl(APPLICATION_URL.'datos-galeria-0300.html');
+			redirectUrl(APPLICATION_URL.'registro-inicio-0400.html');
 		}
 		else
 		{
-			redirectUrl(APPLICATION_URL.'home/error/0.html');
+			redirectUrl(APPLICATION_URL.'register/error/0.html');
 		}
 	break;
 	case 'recover_password':
@@ -123,9 +123,20 @@ switch ($action):
 				die();
 			}
 				
-		}	
+		}																						   
 		$user->update();
-		redirectUrl(APPLICATION_URL.'registro-galerias-0410/saved.html');
+		$userForms	= UserFormHelper::selectUserForms(" AND user_id = ".escape($_SESSION['user_id'])." AND form_number = 1");
+		if ($userForms['num_rows'] == 0)
+		{
+			$form	= new UserForm();
+			$form->__set('user_id', $_SESSION['user_id']);
+			$form->__set('form_number', 1);
+			$form->save();
+		}
+		if (!isset($_GET[1]))
+			redirectUrl(APPLICATION_URL.'registro-exposiciones-0420/saved.html');
+		else
+			redirectUrl(APPLICATION_URL.'registro-galerias-0410/saved.html');		
 	break;
 	case 'createExpo':
 		$connection  = Connection::getInstance();
@@ -144,7 +155,18 @@ switch ($action):
 				$expo->save();
 			}
 		}
-		redirectUrl(APPLICATION_URL.'registro-exposiciones-0420/saved.html');
+		$userForms	= UserFormHelper::selectUserForms(" AND user_id = ".escape($_SESSION['user_id'])." AND form_number = 2");
+		if ($userForms['num_rows'] == 0)
+		{
+			$form	= new UserForm();
+			$form->__set('user_id', $_SESSION['user_id']);
+			$form->__set('form_number', 2);
+			$form->save();
+		}		
+		if (!isset($_GET[1]))
+			redirectUrl(APPLICATION_URL.'registro-ferias-0430/saved.html');
+		else
+			redirectUrl(APPLICATION_URL.'registro-exposiciones-0420/saved.html');				
 	break;
 	case 'createFeria':
 		$connection  = Connection::getInstance();
@@ -174,7 +196,18 @@ switch ($action):
 				$feria->save();
 			}
 		}
-		redirectUrl(APPLICATION_URL.'registro-ferias-0430/saved.html');
+		$userForms	= UserFormHelper::selectUserForms(" AND user_id = ".escape($_SESSION['user_id'])." AND form_number = 3");
+		if ($userForms['num_rows'] == 0)
+		{
+			$form	= new UserForm();
+			$form->__set('user_id', $_SESSION['user_id']);
+			$form->__set('form_number', 3);
+			$form->save();
+		}	
+		if (!isset($_GET[1]))
+			redirectUrl(APPLICATION_URL.'registro-artistas-0440/saved.html');
+		else
+			redirectUrl(APPLICATION_URL.'registro-ferias-0430/saved.html');				
 	break;	
 	case 'createArtist':
 		$connection  = Connection::getInstance();
@@ -195,7 +228,23 @@ switch ($action):
 				$artist->save();
 			}
 		}
-		redirectUrl(APPLICATION_URL.'registro-artistas-0440/saved.html');
+		$user 		= new User($_SESSION['user_id']);
+		foreach ($_POST as $key => $value)
+			$user->__set($key, $value);	
+		$user->update();		
+		$userForms	= UserFormHelper::selectUserForms(" AND user_id = ".escape($_SESSION['user_id'])." AND form_number = 4");
+		if ($userForms['num_rows'] == 0)
+		{
+			$form	= new UserForm();
+			$form->__set('user_id', $_SESSION['user_id']);
+			$form->__set('form_number', 4);
+			$form->save();
+		}		
+		if (!isset($_GET[1]))
+			redirectUrl(APPLICATION_URL.'registro-espacio-0450/saved.html');
+		else
+			redirectUrl(APPLICATION_URL.'registro-artistas-0440/saved.html');				
+
 	break;
 	case 'updateArtist':
 
@@ -305,7 +354,18 @@ switch ($action):
 		foreach ($_POST as $key => $value)
 			$user->__set($key, $value);	
 		$user->update();
-		redirectUrl(APPLICATION_URL.'registro-espacio-0450/saved.html');
+		$userForms	= UserFormHelper::selectUserForms(" AND user_id = ".escape($_SESSION['user_id'])." AND form_number = 5");
+		if ($userForms['num_rows'] == 0)
+		{
+			$form	= new UserForm();
+			$form->__set('user_id', $_SESSION['user_id']);
+			$form->__set('form_number', 5);
+			$form->save();
+		}			
+		if (!isset($_GET[1]))
+			redirectUrl(APPLICATION_URL.'registro-documentos-0460.html');
+		else
+			redirectUrl(APPLICATION_URL.'registro-espacio-0450/saved.html');			
 	break;
 	case 'uploadDocuments':
 		$user 		= new User($_SESSION['user_id']);
@@ -599,10 +659,22 @@ switch ($action):
 			}
 		}
 		else
-			redirectUrl(APPLICATION_URL."home/error/1.html");
-		
+		{
+			$user 	= UserHelper::retrieveUsers("AND user_email = '".escape($_POST['user_email'])."'");
+			if(count($user) > 0)
+			{			
+				redirectUrl(APPLICATION_URL."login/error.html");
+			}
+			else
+				redirectUrl(APPLICATION_URL."register/norecord.html");
+		}
 	break;	
-	
+	case 'changePassword':
+		$user 	=  new User($_SESSION['user_id']);	
+		$user->__set('user_password', md5($_POST['contrasena']));
+		$user->update();
+		redirectUrl(APPLICATION_URL."datos-galeria-0300/exito.html");
+	break;
 	case 'RememberPassword':
 		$userExist	= UserHelper::retrieveUsers(' AND user_email = "'.trim($_POST['user_email']).'"');
 		if(count($userExist)>0)

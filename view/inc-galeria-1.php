@@ -10,9 +10,29 @@ $mobile		= explode("-", $user->__get('user_mobile'));
 				<label title="Cargue la imagen correspondiente a su galería"><span class="asterix">*</span>Imagen de la Galería</label>
 				<!-- <i>Imagen del espacio expositivo</i>
 				<br /> -->
-				<img src="http://cambelt.co/icon/camera/480x360?color=b71632,fefefe" class="images" title="Imagen de la Galería">
+				<img src="http://cambelt.co/icon/camera/480x360?color=b71632,fefefe" class="images" title="Imagen de la Galería">                
 				<span class="caption">Puede subir imagen de la última exposición realizada en su galería en .jpg, .png o .gif. El archivo no debe superar los 1000 Kb.</caption><br />
-				<input type="file" name="user_director_image" />
+							<div id="user_gallery_image">		
+								<noscript>			
+									<input type="file" name="user_gallery_image" title="Cargue la foto correspondiente a su director" />
+								</noscript>         
+							</div>							
+							<script src="<?php echo APPLICATION_URL?>javascripts/fileuploader.js" type="text/javascript"></script>
+							<script>        
+								function createUploader(){            
+									var uploader = new qq.FileUploader({
+										element: document.getElementById('user_gallery_image'),
+										action: '<?php echo APPLICATION_URL?>uploading.controller/<?php echo $_SESSION['user_id'];?>/user_gallery_image',
+										debug: true
+									});           
+								}
+								
+								// in your app create uploader as soon as the DOM is ready
+								// don't wait for the window to load  
+								window.onload = createUploader;     
+							</script>
+                                            
+                <br />
 			</div><!--/gallery-image-->
 			
 		</div><!--/six columns-->
@@ -20,13 +40,13 @@ $mobile		= explode("-", $user->__get('user_mobile'));
 		<div class="six columns">
 			<div class="mid-input galleryname-data">
 				<label><span class="asterix">*</span>Nombre comercial de la galería</label>	
-				<input type="text" name="" class="expand input-text" value="" title="Digite el nombre comercial de la galería"/>
+				<input type="text" name="user_gallery_comname" class="expand input-text" value="<?php echo $user->__get('user_gallery_comname');?>" title="Digite el nombre comercial de la galería"/>
 			</div><!--/ galleryname-data-->
 			
 			
 				<div class="mid-input companyname-data">
 					<label><span class="asterix">*</span>Nombre de la empresa o razón social</label>	
-					<input type="text" name="" class="expand input-text" value="" title="Digite el nombre de la empresa o razón social"/>
+					<input type="text" name="user_gallery_razon" class="expand input-text" value="<?php echo $user->__get('user_gallery_razon');?>" title="Digite el nombre de la empresa o razón social"/>
 					<span class="caption"><strong>Nota:</strong> Con esta información se procederá a realizar la facturación correspondiente.</caption>
 				</div><!--/companyname-data-->
 			<div class="block">	
@@ -41,14 +61,14 @@ $mobile		= explode("-", $user->__get('user_mobile'));
 			
 				<div class="mid-input docnumber-data">
 					<label><span class="asterix">*</span> Número de documento</label>	
-					<input type="text" name="" class="expand input-text" value="" title="Digite el número del documento"/>
+					<input type="text" name="user_gallery_document" class="expand input-text" value="<?php echo $user->__get('user_gallery_document');?>" title="Digite el número del documento"/>
 				</div><!--/companyname-data-->
 			</div>
 			<span class="caption"><strong>Nota:</strong>Tenga en cuenta que con número de identificación, también se registrará el ingreso de mercancía de sus obras, equipos y otros a Corferias.</caption>
 			
 			<div class="mid-input website-data">
 				<label>Página web</label>	
-				<input type="text" name="" class="expand input-text" value="" title="Digite la dirección electrónica de su página web"/>
+				<input type="text" name="user_gallery_website" class="expand input-text" value="<?php echo $user->__get('user_gallery_website');?>" title="Digite la dirección electrónica de su página web"/>
 			</div><!--/website-data-->
 		</div><!--/six columns-->
 	</div><!--/row-->
@@ -181,8 +201,13 @@ $mobile		= explode("-", $user->__get('user_mobile'));
 				<div class="six columns">
 					<div class="mid-input galleryprofile-data">
 						<label><span class="asterix">*</span>Perfil  de la galería</label>
-						<select name="user_open_year" title="Seleccione el perfil de la galería">
-						  <option SELECTED>Seleccione</option>
+						<select name="user_gallery_profile" title="Seleccione el perfil de la galería">
+						  <option value="NULL">Seleccione</option>
+                          <option value="Moderno" <?php if ($user->__get('user_gallery_profile') == 'Moderno') echo 'SELECTED="SELECTED"';?>>Moderno</option>
+                          <option value="Contemporáneo" <?php if ($user->__get('user_gallery_profile') == 'Contemporáneo') echo 'SELECTED="SELECTED"';?>>Contemporáneo</option>
+                          <option value="Fotografía" <?php if ($user->__get('user_gallery_profile') == 'Fotografía') echo 'SELECTED="SELECTED"';?>>Fotografía</option>
+                          <option value="Experimental/nuevos medios" <?php if ($user->__get('user_gallery_profile') == 'Experimental/nuevos medios') echo 'SELECTED="SELECTED"';?>>Experimental/nuevos medios</option>
+                          <option value="Otro" <?php if ($user->__get('user_gallery_profile') == 'Otro') echo 'SELECTED="SELECTED"';?>>Otro</option>
 						</select>
 					</div><!--/year-data-->
 				</div>
