@@ -3,46 +3,43 @@
 						<h2>artBO</h2>
 						<label>Indique en qué ediciones de artBO ha participado</label>
 						<div class="row">
+							<div class="three columns">
+								<input type="checkbox" name="artbo_12" <?php if ($artbo[0] == 1) echo 'checked="checked"';?>/> artBO 2011
+							</div>
 							<!-- columns artBo 1/4 -->
 							<div class="three columns">
-								<input type="checkbox" name="artbo_11" <?php if ($artbo[0] == 1) echo 'checked="checked"';?>/> artBO 2011
+								<input type="checkbox" name="artbo_11" <?php if ($artbo[1] == 1) echo 'checked="checked"';?>/> artBO 2011
 							</div>
 							<!-- END columns artBo 1/4 -->
 							<!-- columns artBo 2/4 -->
 							<div class="three columns">
-								<input type="checkbox" name="artbo_10" <?php if ($artbo[1] == 1) echo 'checked="checked"';?>/> artBO 2010
+								<input type="checkbox" name="artbo_10" <?php if ($artbo[2] == 1) echo 'checked="checked"';?>/> artBO 2010
 							</div>
 							<!-- END columns artBo 2/4 -->
 							<!-- columns artBo 3/4 -->
 							<div class="three columns">
-								<input type="checkbox" name="artbo_09" <?php if ($artbo[2] == 1) echo 'checked="checked"';?>/> artBO 2009
+								<input type="checkbox" name="artbo_09" <?php if ($artbo[3] == 1) echo 'checked="checked"';?>/> artBO 2009
 							</div>
 							<!-- columns artBo 3/4 -->
-							<!-- END columns artBo 4/4 -->
-							<div class="three columns">
-								<input type="checkbox" name="artbo_08" <?php if ($artbo[3] == 1) echo 'checked="checked"';?>/> artBO 2008
-							</div>
-							<!-- END columns artBo 4/4 -->
 						</div>	
 						<div class="row">
+							<div class="three columns">
+								<input type="checkbox" name="artbo_08" <?php if ($artbo[4] == 1) echo 'checked="checked"';?>/> artBO 2008
+							</div>
 							<!-- columns artBo 1/4 -->
 							<div class="three columns">
-								<input type="checkbox" name="artbo_07" <?php if ($artbo[4] == 1) echo 'checked="checked"';?>/> artBO 2007
+								<input type="checkbox" name="artbo_07" <?php if ($artbo[5] == 1) echo 'checked="checked"';?>/> artBO 2007
 							</div>
 							<!-- END columns artBo 1/4 -->
 								<!-- columns artBo 2/4 -->
 							<div class="three columns">
-								<input type="checkbox" name="artbo_06" <?php if ($artbo[5] == 1) echo 'checked="checked"';?>/> artBO 2006
+								<input type="checkbox" name="artbo_06" <?php if ($artbo[6] == 1) echo 'checked="checked"';?>/> artBO 2006
 							</div>
 							<!-- END columns artBo 2/4 -->
 							<!-- columns artBo 3/4 -->
 							<div class="three columns">
+								<input type="checkbox" name="artbo_05" <?php if ($artbo[7] == 1) echo 'checked="checked"';?>/> artBO 2005
 							</div>
-							<!-- END columns artBo 3/4 -->
-							<!-- columns artBo 4/4 -->
-							<div class="three columns">
-							</div>
-							<!-- END columns artBo 4/4 -->
 						</div>	
 					</div>
 						<hr />
