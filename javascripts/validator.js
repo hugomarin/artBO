@@ -329,7 +329,8 @@ Validator.prototype.throwAlert = function()
 												// CONSTRUYE EL MENSAJE CON LOS CAMPOS INVALIDOS 
 												// Y REMPLZA EL {LINEBREAK} POR \R\N
 												msg += '\r\n' + this.validatorMsg.replace(/{linebreak}/g, "\r\n");					
-												alert(msg) ;
+												// alert(msg) ;
+												$('.panel.nopadding').prepend('<div class="alert-box error">' + msg + '<a href="#" class="close">×</a> </div>');
 										break;
 										case 2:
 											var target = document.getElementById(this.div);

@@ -488,9 +488,9 @@ only screen and (min-device-pixel-ratio: 2) {
 
 .qq-upload-button {
   width: 150px;
-  background: #BB0C35;
+  background: white;
   border: 0;
-  border-bottom: 4px solid #9D0B2C;
+  border-bottom: 4px solid #E1E1E1;
   padding: 7px 10px 6px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -499,12 +499,11 @@ only screen and (min-device-pixel-ratio: 2) {
   border-radius: 4px;
   margin: 10px 5px;
   font-weight: bold;
-  color:white;
+  @include transition-property(border);
+  @include transition-duration(.3s);
+  @include transition-timing-function(ease-in);
   &:hover{
-     @include transition-property(background);
-      @include transition-duration(.3s);
-      @include transition-timing-function(ease-in);
-      background: #9D0B2C;
+      border-bottom: 4px solid gray;
   }
 }
 

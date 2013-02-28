@@ -550,9 +550,9 @@ input[type="text"].doc {
 /* line 489, ../sass/new.scss */
 .qq-upload-button {
   width: 150px;
-  background: #BB0C35;
+  background: white;
   border: 0;
-  border-bottom: 4px solid #9d0b2c;
+  border-bottom: 4px solid #e1e1e1;
   padding: 7px 10px 6px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -561,14 +561,10 @@ input[type="text"].doc {
   border-radius: 4px;
   margin: 10px 5px;
   font-weight: bold;
-  color: white;
-}
-/* line 503, ../sass/new.scss */
-.qq-upload-button:hover {
-  -webkit-transition-property: background;
-  -moz-transition-property: background;
-  -o-transition-property: background;
-  transition-property: background;
+  -webkit-transition-property: border;
+  -moz-transition-property: border;
+  -o-transition-property: border;
+  transition-property: border;
   -webkit-transition-duration: 0.3s;
   -moz-transition-duration: 0.3s;
   -o-transition-duration: 0.3s;
@@ -577,10 +573,13 @@ input[type="text"].doc {
   -moz-transition-timing-function: ease-in;
   -o-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
-  background: #9D0B2C;
+}
+/* line 505, ../sass/new.scss */
+.qq-upload-button:hover {
+  border-bottom: 4px solid gray;
 }
 
-/* line 511, ../sass/new.scss */
+/* line 510, ../sass/new.scss */
 .qq-drop-processing {
   display: none;
 }

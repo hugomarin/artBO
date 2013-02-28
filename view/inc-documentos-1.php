@@ -1,5 +1,5 @@
 <?php
-$default	= 'http://cambelt.co/icon/camera/480x360?color=b71632,fefefe';
+$default	= 'http://cambelt.co/icon/document/230x170?color=b71632,fefefe';
 ?>
 	<h5>Adjunte copias de los documentos en formato JPG o PDF únicamente. Con un peso máximo de 1000KB</h5>
 	
@@ -8,14 +8,14 @@ $default	= 'http://cambelt.co/icon/camera/480x360?color=b71632,fefefe';
 		<ul class="documents no-bullet">	
 			<li>
 				<div class="row">
-					<div class="seven columns">		
+					<div class="nine columns">		
 						<h4><span class="asterix">*</span>Certificado de existencia</h4>
 						<p>Expedido por la Cámara de Comercio de Bogotá (Original, no mayor a 90 días de expedición) o documento correspondiente de constitución expedido por el ente respectivo de su país.</p>
 	            	</div>
-	            	<div class="five columns">
+	            	<div class="three columns">
 						<?php
                         $image	= ($user->__get('user_certificate') != '') ? APPLICATION_URL.$dir.$user->__get('user_certificate') : $default;
-						if (strpos($image, '.pdf')  !== false) $image	= 'http://cambelt.co/icon/camera/480x360?color=3fc46b,fefefe';
+						if (strpos($image, '.pdf')  !== false) $image	= 'http://cambelt.co/icon/document/230x170?color=3fc46b,fefefe';
                             
                         ?>	            		
                         <img src="<?php echo $image;?>" class="images right" title="Imagen del director">
@@ -26,14 +26,14 @@ $default	= 'http://cambelt.co/icon/camera/480x360?color=b71632,fefefe';
 	        
 	        <li>
 				<div class="row">
-					<div class="seven columns">		
+					<div class="nine columns">		
 						<h4><span class="asterix">*</span>RUT o Identificación Fiscal</h4>
 						<p>El RUT es un documento exigido paras las Galerías colombianas, Las extranjeras deben enviar identificación fiscal.</p>
 	            	</div>
-	            	<div class="five columns">
+	            	<div class="three columns">
 						<?php
                         $image	= ($user->__get('user_rut') != '') ? APPLICATION_URL.$dir.$user->__get('user_rut') : $default;
-						if (strpos($image, '.pdf')  !== false) $image	= 'http://cambelt.co/icon/camera/480x360?color=3fc46b,fefefe';
+						if (strpos($image, '.pdf')  !== false) $image	= 'http://cambelt.co/icon/document/230x170?color=3fc46b,fefefe';
                             
                         ?>	                    
 	            		<img src="<?php echo $image;?>" class="images right" title="Imagen del director">
@@ -44,14 +44,14 @@ $default	= 'http://cambelt.co/icon/camera/480x360?color=b71632,fefefe';
 	        
 	       	<li>
 				<div class="row">
-					<div class="seven columns">		
+					<div class="nine columns">		
 						<h4><span class="asterix">*</span>Documento de identidad</h4>
 						<p>Documento de identidad del responsable legal de la galería (c&eacute;dula de ciudadanía o de extranjer&iacute;a para las galerías colombianas, el pasaporte para las galerías internacionales).</p>
 	            	</div>
-	            	<div class="five columns">
+	            	<div class="three columns">
 						<?php
                         $image	= ($user->__get('user_document') != '') ? APPLICATION_URL.$dir.$user->__get('user_document') : $default;
-						if (strpos($image, '.pdf')  !== false) $image	= 'http://cambelt.co/icon/camera/480x360?color=3fc46b,fefefe';
+						if (strpos($image, '.pdf')  !== false) $image	= 'http://cambelt.co/icon/document/230x170?color=3fc46b,fefefe';
                             
                         ?>	                    
 	            		<img src="<?php echo $image;?>" class="images right" title="Imagen del director">
@@ -62,14 +62,14 @@ $default	= 'http://cambelt.co/icon/camera/480x360?color=b71632,fefefe';
 	       	
 	       	<li>
 				<div class="row">
-					<div class="seven columns">		
+					<div class="nine columns">		
 						<h4><span class="asterix">*</span>Registro de pago</h4>
 						<p>Copia del pago de los derechos de inscripción por USD $160</p>
 	            	</div>
-	            	<div class="five columns">
+	            	<div class="three columns">
 						<?php
                         $image	= ($user->__get('user_payment') != '') ? APPLICATION_URL.$dir.$user->__get('user_payment') : $default;
-						if (strpos($image, '.pdf')  !== false) $image	= 'http://cambelt.co/icon/camera/480x360?color=3fc46b,fefefe';
+						if (strpos($image, '.pdf')  !== false) $image	= 'http://cambelt.co/icon/document/230x170?color=3fc46b,fefefe';
                             
                         ?>	                    
 	            		<img src="<?php echo $image;?>" class="images right" title="Imagen del director">
