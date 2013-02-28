@@ -4,9 +4,8 @@ include_once('header-login.php');
 include_once('menu.php'); ?>
 			
 	<div class="row main-row">	
-		<!-- <div class="alert-box success">
-	    	Sus datos han sido guardados
-	    	<a href="" class="close">×</a>
+		 <!-- <div class="alert-box error">
+	    	<a href="#" class="close">×</a>
 		</div> -->
 		<div class="panel nopadding">
 			<div class="inner-header">

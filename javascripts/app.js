@@ -91,5 +91,22 @@ jQuery(document).ready(function ($) {
 	/* DISABLED BUTTONS ------------- */
 	/* Gives elements with a class of 'disabled' a return: false; */
   
+  
+  // $(".alert-box").on("click", "a.close", function() {
+		// console.log($(this));
+		  // event.preventDefault();
+		  // $(".alert-box").fadeOut(function(event){
+		    // $(this).remove();
+		  // });
+	// });
 
 });
+
+
+$(".alert-box").on("click", "a.close", function() {
+		console.log($(this));
+		  event.preventDefault();
+		  $(".alert-box").fadeOut(function(event){
+		    $(this).remove();
+		  });
+	});

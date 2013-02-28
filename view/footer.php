@@ -1,5 +1,6 @@
 
 	<script src="<?php echo APPLICATION_URL?>javascripts/jquery.min.js"></script>
+	<script src="<?php echo APPLICATION_URL?>javascripts/jquery-ui-1.8.18.custom.min.js"></script>
 	<script src="<?php echo APPLICATION_URL?>javascripts/modernizr.foundation.js"></script>
 	<script src="<?php echo APPLICATION_URL?>javascripts/foundation.js"></script>
 	<script src="<?php echo APPLICATION_URL?>javascripts/app.js"></script>	
@@ -175,9 +176,6 @@
 		// nuevo artista 
 
 		// end nuevo artista
-		
-		
-		console.log(<?php echo isset($user) ?>);
 		
 		
 		
