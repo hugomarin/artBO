@@ -22,7 +22,7 @@
 	                                <li class="date">
 	                                    <!-- <label><span class="asterix">*</span>Año</label>	 -->
 	                                    <select name="expo_fecha_<?php echo $i?>">
-                                        	<option value="2013" <?php if ($exposition->__get('exposition_year') == 2013) echo 'selected="selected"';?>>2012</option>
+                                        	<option value="2013" <?php if ($exposition->__get('exposition_year') == 2013) echo 'selected="selected"';?>>2013</option>
 	                                        <option value="2012" <?php if ($exposition->__get('exposition_year') == 2012) echo 'selected="selected"';?>>2012</option>
 	                                        <option value="2011" <?php if ($exposition->__get('exposition_year') == 2011) echo 'selected="selected"';?>>2011</option>
 	                                    </select>
@@ -45,7 +45,7 @@
 	                                    </select>
 	                                </li>
 	                                <li class="handler">
-	                                	<a href="javascript:void(0)" onClick=" $(this).parent().parent().parent().remove();"><img src="<?php echo APPLICATION_URL?>images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a>
+	                                	<a href="javascript:void(0)" onClick=" $(this).parent().parent().parent().remove(); validInst = new Validator(1, '', true);"><img src="<?php echo APPLICATION_URL?>images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a>
 	                                </li>
 	                                <!-- END Año -->
                                 </ul>	
@@ -95,7 +95,7 @@
                                     </select>
                                 </li>
                                 <li class="handler">
-                                	<a href="javascript:void(0)" onClick=" $(this).parent().parent().parent().remove();"><img src="images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a>
+                                	<a href="javascript:void(0)" onClick=" $(this).parent().parent().parent().remove(); validInst = new Validator(1, '', true);"><img src="images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a>
                                 </li>
                                 </ul>	
                             </li>                        

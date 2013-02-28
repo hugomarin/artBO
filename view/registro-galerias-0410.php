@@ -1,4 +1,5 @@
 <?php 
+error_reporting(E_ALL);
 include_once('header-login.php');  
 include_once('menu.php'); ?>
 			
