@@ -1,11 +1,21 @@
-	
-	<script src="<?php echo APPLICATION_URL?>javascripts/jquery.min.js"></script>
+
 	<script src="<?php echo APPLICATION_URL?>javascripts/modernizr.foundation.js"></script>
 	<script src="<?php echo APPLICATION_URL?>javascripts/foundation.js"></script>
-	<script src="<?php echo APPLICATION_URL?>javascripts/app.js"></script>
-	<script src="<?php echo APPLICATION_URL?>javascripts/jquery-ui-1.8.18.custom.min.js"></script>
+	<script src="<?php echo APPLICATION_URL?>javascripts/app.js"></script>	
 	<script src="<?php echo APPLICATION_URL?>javascripts/validator.js"></script>
     <script src="<?php echo APPLICATION_URL?>javascripts/fileuploader.js"></script>
+	<script src="<?php echo APPLICATION_URL?>javascripts/fileuploader/util.js"></script>
+	<script src="<?php echo APPLICATION_URL?>javascripts/fileuploader/button.js"></script>
+    <script src="<?php echo APPLICATION_URL?>javascripts/fileuploader/ajax.requester.js"></script>
+    <script src="<?php echo APPLICATION_URL?>javascripts/fileuploader/deletefile.ajax.requester.js"></script>
+    <script src="<?php echo APPLICATION_URL?>javascripts/fileuploader/handler.base.js"></script>
+    <script src="<?php echo APPLICATION_URL?>javascripts/fileuploader/window.receive.message.js"></script>
+    <script src="<?php echo APPLICATION_URL?>javascripts/fileuploader/handler.form.js"></script>
+    <script src="<?php echo APPLICATION_URL?>javascripts/fileuploader/handler.xhr.js"></script>
+    <script src="<?php echo APPLICATION_URL?>javascripts/fileuploader/uploader.basic.js"></script>
+    <script src="<?php echo APPLICATION_URL?>javascripts/fileuploader/dnd.js"></script>
+    <script src="<?php echo APPLICATION_URL?>javascripts/fileuploader/uploader.js"></script>
+    <script src="<?php echo APPLICATION_URL?>javascripts/fileuploader/jquery-plugin.js"></script>
 	<?php $name = explode("/", $path); ?>
 
 	<!-- Included JS Files -->
@@ -115,16 +125,16 @@
 				if(toggle) {	
 					$('#artista-' + this.id.split('-')[1]).reveal();
 				}	
-				$("#link-" + this.id.split('-')[1]).slideToggle();
+				//$("#link-" + this.id.split('-')[1]).slideToggle();
 			});
 
 		});
 		
 		$(".revealer-new").each(function(item){
 			$(this).click(function () {
-				$("#artist_name_new").value = $("#atist_name_" + (counterArtist - 1)).value;
-				$("#artist_surname_new").value = $("#atist_surname_" + (counterArtist - 1)).value;
-				$("#artist_nationality_new").value = $("#atist_nationality_" + (counterArtist - 1)).value;
+				$("#artist_name_new").val($("#artist_name_" + (counterArtist - 1)).val());
+				$("#artist_surname_new").val($("#artist_surname_" + (counterArtist - 1)).val());
+				$("#artist_nationality_new").val($("#artist_nationality_" + (counterArtist - 1)).val());
 				var toggle = true;
 				if(this.nodeName.toLowerCase() == 'input')
 				{
@@ -135,7 +145,7 @@
 					
 					$('#artista-new').reveal();
 				}	
-	
+				//$("#link-" + (counterArtist - 1)).slideToggle();
 			});
 		});
 		

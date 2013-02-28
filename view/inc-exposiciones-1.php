@@ -22,7 +22,7 @@
 	                                <li class="date">
 	                                    <!-- <label><span class="asterix">*</span>Año</label>	 -->
 	                                    <select name="expo_fecha_<?php echo $i?>">
-	                                        <option value="2012" <?php if ($exposition->__get('exposition_year') == 2013) echo 'selected="selected"';?>>2013</option>
+                                        	<option value="2013" <?php if ($exposition->__get('exposition_year') == 2013) echo 'selected="selected"';?>>2012</option>
 	                                        <option value="2012" <?php if ($exposition->__get('exposition_year') == 2012) echo 'selected="selected"';?>>2012</option>
 	                                        <option value="2011" <?php if ($exposition->__get('exposition_year') == 2011) echo 'selected="selected"';?>>2011</option>
 	                                    </select>
@@ -45,7 +45,7 @@
 	                                    </select>
 	                                </li>
 	                                <li class="handler">
-	                                	<a href="#"><img src="<?php echo APPLICATION_URL?>images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a>
+	                                	<a href="javascript:void(0)" onClick=" $(this).parent().parent().parent().remove();"><img src="<?php echo APPLICATION_URL?>images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a>
 	                                </li>
 	                                <!-- END Año -->
                                 </ul>	
@@ -72,30 +72,30 @@
                                 <!-- Año -->
                                <li class="date">
                                     <select name="expo_fecha_1">
-                                        <option>2013</option>
-                                        <option>2012</option>
-                                        <option>2011</option>
+                                    	<option value="2013">2013</option>
+                                        <option value="2012">2012</option>
+                                        <option value="2011">2011</option>
                                     </select>
                                 </li>
                                 <!-- END Año -->
                                 <li class="date">
                                     <select name="expo_mes_1">
-                                        <option value="01">Enero</option>
-                                        <option value="02">Febrero</option>
-                                        <option value="03">Marzo</option>
-                                        <option value="04">Abril</option>
-                                        <option value="05">Mayo</option>
-                                        <option value="06">Junio</option>
-                                        <option value="07">Julio</option>
-                                        <option value="08">Agosto</option>
-                                        <option value="09">Septiembre</option>
-                                        <option value="10">Octubre</option>
-                                        <option value="11">Noviembre</option>
-                                        <option value="12">Diciembre</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                        <option value="06">06</option>
+                                        <option value="07">07</option>
+                                        <option value="08">08</option>
+                                        <option value="09">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
                                     </select>
                                 </li>
                                 <li class="handler">
-                                	<a href="#"><img src="images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a>
+                                	<a href="javascript:void(0)" onClick=" $(this).parent().parent().parent().remove();"><img src="images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a>
                                 </li>
                                 </ul>	
                             </li>                        

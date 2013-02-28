@@ -50,21 +50,21 @@
                                     <img src="<?php echo APPLICATION_URL?>images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr">
                                </li>
                                <li>
-                                    <input type="text" name="artist_name_1" />
+                                    <input type="text" id="artist_name_1" name="artist_name_1" />
 								</li>
                                 <!-- END nombre -->
                                 <!-- Apellido -->
                                 <li>
-                                    <input type="text" name="artist_surname_1" />
+                                    <input type="text" id="artist_surname_1" name="artist_surname_1" />
                                 </li>
                                 <!-- END Apellido --> 
                                 <!-- checkboxes -->
                                 <li>
-                                    <input type="text" class="no-margin" name="artist_nationality_1" />
+                                    <input type="text" id="artist_nationality_1" class="no-margin" name="artist_nationality_1" />
                                     <!-- END nacionalidad -->
                                     <!-- <label for="checkbox3a"><input class="revealer-new" type="checkbox" id="checkbox-1" name="artist_artbo_1"><strong>Este artista participará en Artbo</strong></label> -->
                                     <!-- boton para modal de artista -->
-                                    <a href="#" class="revelar-a revealer " id="link-<?php echo $i?>" data-reveal-id="artista" >Más información sobre el artista</a>
+                                    <a href="#" class="revelar-a revealer-new " id="link-<?php echo $i?>" data-reveal-id="artista" >Más información sobre el artista</a>
                                     <!-- END boton para modal de artista -->
                                 </li>
                                 <li class="handler">

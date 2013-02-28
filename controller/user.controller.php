@@ -128,10 +128,20 @@ switch ($action):
 		$userForms	= UserFormHelper::selectUserForms(" AND user_id = ".escape($_SESSION['user_id'])." AND form_number = 1");
 		if ($userForms['num_rows'] == 0)
 		{
-			$form	= new UserForm();
-			$form->__set('user_id', $_SESSION['user_id']);
-			$form->__set('form_number', 1);
-			$form->save();
+			$accept		= true;
+			$fields		= UserFieldHelper::retrieveUserFields();
+			foreach ($fields as $field)
+			{
+				if (($user->__get($field) == '') || ($user->__get($field) == 0) || ($user->__get($field) == 'NULL'))
+				$accept	= false;
+			}
+			if ($accept)
+			{
+				$form	= new UserForm();
+				$form->__set('user_id', $_SESSION['user_id']);
+				$form->__set('form_number', 1);
+				$form->save();
+			}
 		}
 		if (!isset($_GET[1]))
 			redirectUrl(APPLICATION_URL.'registro-exposiciones-0420/saved.html');
@@ -173,13 +183,14 @@ switch ($action):
 		$deleteSQL   = "DELETE FROM user_ferias WHERE user_id = " . $_SESSION['user_id'];
 		$connection->query($deleteSQL);		
 		$user		= new User($_SESSION['user_id']);
-		$string		= '';
+		$string		= '';	
 		$string		.= (isset($_POST['artbo_11'])) ? '1|' : '0|'; 
 		$string		.= (isset($_POST['artbo_10'])) ? '1|' : '0|'; 
 		$string		.= (isset($_POST['artbo_09'])) ? '1|' : '0|'; 
 		$string		.= (isset($_POST['artbo_08'])) ? '1|' : '0|'; 
 		$string		.= (isset($_POST['artbo_07'])) ? '1|' : '0|'; 
-		$string		.= (isset($_POST['artbo_06'])) ? '1' : '0'; 
+		$string		.= (isset($_POST['artbo_06'])) ? '1|' : '0|'; 
+		$string		.= (isset($_POST['artbo_12'])) ? '1' : '0'; 			
 		$user->__set('user_artbo', $string);
 		$user->update();
 		foreach ($_POST as $key => $value)
@@ -351,8 +362,15 @@ switch ($action):
 		break;
 	case 'selectStand':
 		$user 		= new User($_SESSION['user_id']);
+		$cornisa	= '';
+		for ($i = 0; $i < 6; $i++)
+		{
+			if ((isset($_POST['cornisa_'.$i])) && ($_POST['cornisa_'.$i] != ''))
+				$cornisa	 = $_POST['cornisa_'.$i];							  
+		}
 		foreach ($_POST as $key => $value)
 			$user->__set($key, $value);	
+		$user->__set('user_space_name', $cornisa); 
 		$user->update();
 		$userForms	= UserFormHelper::selectUserForms(" AND user_id = ".escape($_SESSION['user_id'])." AND form_number = 5");
 		if ($userForms['num_rows'] == 0)
@@ -369,90 +387,7 @@ switch ($action):
 	break;
 	case 'uploadDocuments':
 		$user 		= new User($_SESSION['user_id']);
-
-		if(!file_exists('resources/documents/' . makeUrlClear(utf8_decode($user->__get('user_name')))))
-		{
-			mkdir('resources/documents/' . makeUrlClear(utf8_decode($user->__get('user_name'))), 0755);
-		}
-		
-		$send = true;
-		if($_FILES["user_certificate"]["name"] != "")
-		{
-			if ($_FILES['user_certificate']['size'] < 1048576)
-			{
-				$ext	= getFileExtension($_FILES["user_certificate"]['name']);
-				$name 	= md5(date("YmdHis") . '1') . $ext;
-			
-				if(uploadFile('resources/documents/' . makeUrlClear(utf8_decode($user->__get('user_name'))) . '/', $_FILES["user_certificate"]['tmp_name'], $name))
-				{
-					$user->__set('user_certificate', makeUrlClear(utf8_decode($user->__get('user_name'))) . '/' . $name);						
-				}
-			}
-			else
-				$send = false;
-		}	
-		if($_FILES["user_rut"]["name"] != "")
-		{
-			if ($_FILES['user_rut']['size'] < 1048576)
-			{			
-				$ext	= getFileExtension($_FILES["user_rut"]['name']);
-				$name 	= md5(date("YmdHis") . '2') . $ext;
-			
-				if(uploadFile('resources/documents/' . makeUrlClear(utf8_decode($user->__get('user_name'))) . '/', $_FILES["user_rut"]['tmp_name'], $name))
-				{
-					$user->__set('user_rut', makeUrlClear(utf8_decode($user->__get('user_name'))) . '/' . $name);						
-				}				
-			}
-			else
-				$send = false;			
-		}	
-		if($_FILES["user_document"]["name"] != "")
-		{
-			if ($_FILES['user_document']['size'] < 1048576)
-			{			
-				$ext	= getFileExtension($_FILES["user_document"]['name']);
-				$name 	= md5(date("YmdHis") . '3') . $ext;
-			
-				if(uploadFile('resources/documents/' . makeUrlClear(utf8_decode($user->__get('user_name'))) . '/', $_FILES["user_document"]['tmp_name'], $name))
-				{
-					$user->__set('user_document', makeUrlClear(utf8_decode($user->__get('user_name'))) . '/' . $name);						
-				}
-			}
-			else
-				$send = false;			
-		}
-		if($_FILES["user_payment"]["name"] != "")
-		{
-			if ($_FILES['user_payment']['size'] < 1048576)
-			{			
-				$ext	= getFileExtension($_FILES["user_payment"]['name']);
-				$name 	= md5(date("YmdHis") . '4') . $ext;
-			
-				if(uploadFile('resources/documents/' . makeUrlClear(utf8_decode($user->__get('user_name'))) . '/', $_FILES["user_payment"]['tmp_name'], $name))
-				{
-					$user->__set('user_payment', makeUrlClear(utf8_decode($user->__get('user_name'))) . '/' . $name);						
-				}
-			}
-			else
-				$send = false;			
-		}
-		foreach ($_POST as $key => $value)
-		{
-				$user->__set($key, $value);	
-		}
-
-		$user->update();
-		if ($send)
-			redirectUrl(APPLICATION_URL.'registro-documentos-0460/saved.html');
-		else
-		{
-		?>
-			<script language="javascript">
-                alert('Alguno de los archivos cargados excede 1000kb y no fue agregado al sistema.');
-                window.history.go(-1);
-            </script>
-		<?
-		}
+		redirectUrl(APPLICATION_URL.'registro-documentos-0460/saved.html');
 	break;
 	case 'update':
 		$user 	=  new User($_POST['user_id']);

@@ -52,12 +52,8 @@ function alertNotYet()
 						</div>
 						<div class="four columns">
 							<div class="right">
-<<<<<<< HEAD
-								<a href="<?php echo APPLICATION_URL?>registro-artistas-0440.html" class="graytxt">Anterior</a>  <a  href="javascript:void(0);" onClick="document.getElementById('validable').submit();" class="button radius nulled">Finalizar</a>
-=======
 								<a href="<?php echo APPLICATION_URL?>registro-espacio-0450.html" class="graytxt">Anterior</a>  
-                                <a  href="javascript:void(0);" onClick="<?php echo $action;?>" class="button radius <?php echo $class;?>">Guardar</a>
->>>>>>> 5d094de6bf05b96f768024333fd4d836a2ad151c
+                                <a  href="javascript:void(0);" onClick="<?php echo $action;?>" class="button radius <?php echo $class;?>">Finalizar</a>
 							</div>
 						</div>
 					</div>
