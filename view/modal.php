@@ -10,8 +10,7 @@ for($i = 1; $i <= count($artists); $i++)
 
 
 	<a class="close-reveal-modal">×</a><!-- modal close tag -->
-		<h2><?php echo $artist->__get('artist_name')?></h2>
-		<hr />
+		<h3><?php echo $artist->__get('artist_name')?></h3>
 		<!-- row -->
 		
 		<!-- END columns 1/2 -->
@@ -103,8 +102,7 @@ for($i = 1; $i <= count($artists); $i++)
 <div id="artista-new" class="reveal-modal" style="display: block;" >
 
 	<a class="close-reveal-modal">×</a><!-- modal close tag -->
-		<h2>Artista</h2>
-		<hr />
+		<h3>Artista</h3>
 		<!-- row -->
 		<form class="" id="new_artist_form" enctype="multipart/form-data" action="<?php echo APPLICATION_URL?>user.controller.html" method="post">
 		<input type="hidden" name="action" value="insertArtist">		
@@ -118,7 +116,6 @@ for($i = 1; $i <= count($artists); $i++)
 							<label>Lugar de residencia</label>
 							<input type="text" name="artist_residency" value="<?php echo $artist->__get('artist_residency')?>" class="small"/>
 						</div>
-			
 						<div class="six columns">
 						
 							<label>Reseña del artista<label>
