@@ -30,7 +30,7 @@ include_once('menu.php'); ?>
 			<div class="row form-data">	
 				<div class="twelve columns">
 					<form action="<?php echo APPLICATION_URL?>user.controller/first.html" id="validable2" method="post" enctype="multipart/form-data">
-					<?php include_once('inc-galeria-1.php'); ?>
+					<?php include_once(SITE_VIEW.'inc-galeria-1.php'); ?>
 					</form>
 				</div><!--/twelve columns-->
 			</div><!--/form-data-->

@@ -32,8 +32,8 @@ include_once('menu.php');
 			<div class="container">
 				<div class="row form-data">	
 					<div class="twelve columns">
-						<h5>Recuerde que su propuesta de artistas para artBO 2013 debe ser acorde al tamaño del stand que ha seleccionado. Por cada 10 mts², sólo podrá exhibir un artista.</h5>
-						<h5>Artistas representados en artBO 2013:</h5><br />
+						<h5>Recuerde que su propuesta de artistas para Artbo 2013 debe ser acorde al tamaño del stand  que ha seleccionado. Por cada 10 mts², sólo podrá exhibir un artista.</h5>
+						<h5>Artistas a representar en artBO 2013:</h5><br />
 						<div class="intitle">
 							<!-- .row>.one.column+.four.columns+three.columns+.three.columns+.one.columns -->
 							<ul class="artistas">
@@ -50,10 +50,7 @@ include_once('menu.php');
 						</div>
 						<form action="<?php echo APPLICATION_URL?>user.controller/createArtist.html" id="validable" class="" method="post">
 							<?php include_once('inc-artistas-1.php'); ?>
-<<<<<<< HEAD
-=======
 
->>>>>>> bc325ec3a3560e54c12104197982f6ade363e1a9
 						</form>
 						<a href="#" id="add-artist" class="label secondary round">Agregar un nuevo artista </a>
 						<br /><br />
@@ -62,14 +59,10 @@ include_once('menu.php');
 						  <textarea name="Name" rows="8" cols="40"></textarea>
 						</form> 
 						<br /><br />
-						 <h5>Otros artistas representados:</h5>
+						 <h5>Otros Artistas representados:</h5>
 						 <form action="registro-artistas-0440_submit" method="get" accept-charset="utf-8">
-<<<<<<< HEAD
-							<textarea name="Name" rows="8" cols="40" placeholder="Digite la información correspondiente a artistas representados"></textarea>
-=======
 							<textarea name="user_represented_artists" rows="8" cols="40" placeholder="Digite la información correspondiente a artistas representados"><?php echo $user->__get('user_represented_artists');?></textarea>
 
->>>>>>> bc325ec3a3560e54c12104197982f6ade363e1a9
 						 </form>
 					</div>
 				</div>
