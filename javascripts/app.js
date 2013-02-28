@@ -32,9 +32,9 @@ jQuery(document).ready(function ($) {
 	}
 
 	/* ALERT BOXES ------------ */
-	$(".alert-box").delegate("a.close", "click", function(event) {
+	$(document).delegate("a.close", "click", function(event) {
     event.preventDefault();
-	  $(this).closest(".alert-box").fadeOut(function(event){
+	  $(".alert-box").fadeOut(function(event){
 	    $(this).remove();
 	  });
 	});
@@ -103,10 +103,10 @@ jQuery(document).ready(function ($) {
 });
 
 
-$(".alert-box").on("click", "a.close", function() {
-		console.log($(this));
-		  event.preventDefault();
-		  $(".alert-box").fadeOut(function(event){
-		    $(this).remove();
-		  });
-	});
+// $(".alert-box").on("click", "a.close", function() {
+		// console.log($(this));
+		  // event.preventDefault();
+		  // $(".alert-box").fadeOut(function(event){
+		    // $(this).remove();
+		  // });
+	// });
