@@ -464,8 +464,8 @@ img.selected {
   background: url("../images/sprite_new.png") 0 0;
   display: inline-block;
   text-indent: -9999px;
-  height: 60px;
-  width: 115px;
+  height: 78px;
+  width: 145px;
   margin: 20px 10px;
 }
 /* line 420, ../sass/new.scss */
@@ -475,46 +475,47 @@ img.selected {
 
 /* line 433, ../sass/new.scss */
 .ccB {
-  background: url("../images/sprite_new.png") -120px 0;
+  background: url("../images/sprite_new.png") -150px 0;
   display: inline-block;
   text-indent: -9999px;
-  height: 60px;
-  width: 180px;
+  height: 70px;
+  width: 140px;
   margin: 20px 10px;
+  float: right;
 }
 /* line 420, ../sass/new.scss */
 .ccB else {
-  background: url("../images/sprite_new2x.png") -120px 0;
+  background: url("../images/sprite_new2x.png") -150px 0;
 }
 
-/* line 440, ../sass/new.scss */
+/* line 441, ../sass/new.scss */
 .stand-items img.images {
   margin-top: 10px;
 }
 
-/* line 445, ../sass/new.scss */
+/* line 446, ../sass/new.scss */
 input[type="text"].legal {
   display: inline-block;
   width: 300px;
 }
-/* line 449, ../sass/new.scss */
+/* line 450, ../sass/new.scss */
 input[type="text"].doc {
   display: inline-block;
   width: 200px;
 }
 
-/* line 456, ../sass/new.scss */
+/* line 457, ../sass/new.scss */
 .documents h4 {
   margin-top: 0;
 }
 
-/* line 461, ../sass/new.scss */
+/* line 462, ../sass/new.scss */
 .sub-menu {
   margin: 5px 30px;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
-  /* line 468, ../sass/new.scss */
+  /* line 469, ../sass/new.scss */
   .artBO {
     display: inline-block;
     text-indent: -9999px;
@@ -524,7 +525,7 @@ input[type="text"].doc {
     background: url("../images/sprite_new2x.png") 0 0;
   }
 
-  /* line 471, ../sass/new.scss */
+  /* line 472, ../sass/new.scss */
   .ccB {
     display: inline-block;
     text-indent: -9999px;
@@ -534,7 +535,7 @@ input[type="text"].doc {
     background: url("../images/sprite_new2x.png") 0 0;
   }
 }
-/* line 477, ../sass/new.scss */
+/* line 478, ../sass/new.scss */
 .reveal-modal {
   background-color: #e8e8e8;
   width: 70%;
@@ -544,4 +545,42 @@ input[type="text"].doc {
   top: 0;
   right: 0;
   left: 0;
+}
+
+/* line 489, ../sass/new.scss */
+.qq-upload-button {
+  width: 150px;
+  background: #BB0C35;
+  border: 0;
+  border-bottom: 4px solid #9d0b2c;
+  padding: 7px 10px 6px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  margin: 10px 5px;
+  font-weight: bold;
+  color: white;
+}
+/* line 503, ../sass/new.scss */
+.qq-upload-button:hover {
+  -webkit-transition-property: background;
+  -moz-transition-property: background;
+  -o-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  background: #9D0B2C;
+}
+
+/* line 511, ../sass/new.scss */
+.qq-drop-processing {
+  display: none;
 }

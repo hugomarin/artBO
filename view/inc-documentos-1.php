@@ -102,7 +102,7 @@ $default	= 'http://cambelt.co/icon/camera/480x360?color=b71632,fefefe';
           },
           autoUpload: true,
           text: {
-            uploadButton: '<i class="icon-plus icon-white"></i> Seleccione archivo para cargar'
+            uploadButton: '<i class="icon-plus icon-white"></i> Seleccione archivo'
           }
         });
         var seconduploader = new qq.FineUploader({
@@ -113,7 +113,7 @@ $default	= 'http://cambelt.co/icon/camera/480x360?color=b71632,fefefe';
           },
           autoUpload: true,
           text: {
-            uploadButton: '<i class="icon-plus icon-white"></i> Seleccione archivo para cargar'
+            uploadButton: '<i class="icon-plus icon-white"></i> Seleccione archivo'
           }
         });	
         var thirduploader = new qq.FineUploader({
@@ -124,7 +124,7 @@ $default	= 'http://cambelt.co/icon/camera/480x360?color=b71632,fefefe';
           },
           autoUpload: true,
           text: {
-            uploadButton: '<i class="icon-plus icon-white"></i> Seleccione archivo para cargar'
+            uploadButton: '<i class="icon-plus icon-white"></i> Seleccione archivo'
           }
         });			
         var thirduploader = new qq.FineUploader({
@@ -135,7 +135,7 @@ $default	= 'http://cambelt.co/icon/camera/480x360?color=b71632,fefefe';
           },
           autoUpload: true,
           text: {
-            uploadButton: '<i class="icon-plus icon-white"></i> Seleccione archivo para cargar'
+            uploadButton: '<i class="icon-plus icon-white"></i> Seleccione archivo'
           }
         });				
       });

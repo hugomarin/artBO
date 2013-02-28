@@ -426,15 +426,16 @@ img.selected{
 }
 .artBO{
   @include spritenew();
-  height:60px;
-  width:115px;
+  height:78px;
+  width:145px;
   margin:20px 10px;
-}
+} 
 .ccB{
-  @include spritenew($x:-120px);
-  height:60px;
-  width:180px;
+  @include spritenew($x:-150px);
+  height:70px;
+  width:140px;
   margin:20px 10px;
+  float:right;
 }
 
 .stand-items img.images{
@@ -483,4 +484,30 @@ only screen and (min-device-pixel-ratio: 2) {
 	top: 0;
 	right: 0;
 	left: 0;
+}
+
+.qq-upload-button {
+  width: 150px;
+  background: #BB0C35;
+  border: 0;
+  border-bottom: 4px solid #9D0B2C;
+  padding: 7px 10px 6px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  margin: 10px 5px;
+  font-weight: bold;
+  color:white;
+  &:hover{
+     @include transition-property(background);
+      @include transition-duration(.3s);
+      @include transition-timing-function(ease-in);
+      background: #9D0B2C;
+  }
+}
+
+.qq-drop-processing{
+  display:none;
 }
