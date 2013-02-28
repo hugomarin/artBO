@@ -1,4 +1,5 @@
 
+	<script src="<?php echo APPLICATION_URL?>javascripts/jquery.min.js"></script>
 	<script src="<?php echo APPLICATION_URL?>javascripts/modernizr.foundation.js"></script>
 	<script src="<?php echo APPLICATION_URL?>javascripts/foundation.js"></script>
 	<script src="<?php echo APPLICATION_URL?>javascripts/app.js"></script>	
@@ -22,23 +23,34 @@
 	<script type="text/javascript">
 	var ApplicationUrl = '<?php echo APPLICATION_URL?>';	
 	$(function() {
+		
+		if ($(".datepicker").is('*')) {
+
 		$( ".datepicker" ).datepicker({
 			showOn: "button",
 			buttonImage: ApplicationUrl + "images/calendar.png",
 			buttonImageOnly: true,
 			dateFormat: "yy-mm-dd" 
 		});
-		
+ 
+		}else if ($("#sortable").is('*')) {
+			
 		$( "#sortable" ).sortable();
 		$( "#sortable" ).disableSelection();
-		
+			
+		}else if ($(".link_list").is('*')) {
+			
 		$(".link_list").sortable({
 			placeholder: "ui-state-highlight"
 		});
 		$(".link_list").disableSelection();
+			
+		}else if  ($(".link_list").is('*')) {
 		
 		$( ".products-li" ).sortable();
-		$( ".products-li" ).disableSelection();
+		$( ".products-li" ).disableSelection();		
+		
+		}
 		
 	});
 	
@@ -163,6 +175,9 @@
 		// nuevo artista 
 
 		// end nuevo artista
+		
+		
+		console.log(<?php echo isset($user) ?>);
 		
 		
 		
