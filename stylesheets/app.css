@@ -6532,7 +6532,7 @@ li.link_default {
 /* line 427, ../sass/app.scss */
 .perfil {
   padding-right: 30px;
-  width: 250px;
+  width: auto;
 }
 
 /* line 434, ../sass/app.scss */

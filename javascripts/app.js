@@ -38,8 +38,24 @@ jQuery(document).ready(function ($) {
 	    $(this).remove();
 	  });
 	});
+	
+	$('.stand-items li a.button').live('click', function(e) {
+		var stand = $(this).data('stand');
+		console.log(stand);
+		document.getElementById('selectedStand').value=stand;
+		removeAll();
+		$(this).addClass('nulled');
+		$(this).parent().find('img').addClass('selected');
+	});
 
-
+	function removeAll()
+	{
+		$('.button').each(function (index) {
+			$(this).removeClass('nulled');
+			$(this).parent().find('img').removeClass('selected');						
+		});
+	}
+	
 	/* PLACEHOLDER FOR FORMS ------------- */
 	/* Remove this and jquery.placeholder.min.js if you don't need :) */
 
