@@ -9,7 +9,6 @@ include_once('menu.php'); ?>
 					<div class="eight columns title">
 						<span class="redtext bold">Tipo de Stand</span>
 						<h2><?php echo $user->__get('user_gallery_comname');?></h2>
-						<h5>Descargue <a href="#">pdf</a> con información sobre los stands de artBO.</h5>
 					</div><!--/title-->
 					
 					<div class="four columns mini-nav-header">
@@ -26,6 +25,7 @@ include_once('menu.php'); ?>
 		<div class="container">
 			<div class="row form-data">	
 					<div class="twelve columns">
+						<h5>Descargue <a href="#">pdf</a> con información sobre los stands de artBO.</h5>
 						<form action="<?php echo APPLICATION_URL?>user.controller/selectStand.html" id="validable2" class="" method="post">	
 						<?php include_once('inc-stand-1.php'); ?>
 						</form>

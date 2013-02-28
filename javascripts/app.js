@@ -39,12 +39,24 @@ jQuery(document).ready(function ($) {
 	  });
 	});
 	
+	function escape_Input(){
+		if($('.nulled').is('*')){
+			console.log($('.nulled').parent().find('input.input-text'));
+			$('.standname-data').each(function (index) {
+				$(this).find('input').hide();
+			});
+			$('.nulled').parent().find('input.input-text').show();
+		}
+	}
+	
+	escape_Input();
+	
 	$('.stand-items li a.button').live('click', function(e) {
 		var stand = $(this).data('stand');
-		console.log(stand);
 		document.getElementById('selectedStand').value=stand;
 		removeAll();
 		$(this).addClass('nulled');
+		$(this).parent().find('input.expand').show();
 		$(this).parent().find('img').addClass('selected');
 	});
 
@@ -52,6 +64,7 @@ jQuery(document).ready(function ($) {
 	{
 		$('.button').each(function (index) {
 			$(this).removeClass('nulled');
+			$(this).parent().find('input.expand').hide();
 			$(this).parent().find('img').removeClass('selected');						
 		});
 	}
