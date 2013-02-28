@@ -11,7 +11,7 @@
         <li>
             <img src="<?php echo APPLICATION_URL?>images/63.jpg" class="images <?php if ($user->__get('user_stand_type') == 1) echo 'selected'; ?>" width="200" height="200" alt="default"/>
                 
-            <h4 id="h4-1">Plus 63 mts2</h4>
+            <h4 id="h4-1">Plus 63 mts<sup>2</sup></h4>
             <p>USD$15.498.00</p>
 	            
 	            <div class="mid-input standname-data">
@@ -25,7 +25,7 @@
          <li>
             <img src="<?php echo APPLICATION_URL?>images/63.jpg" class="images <?php if ($user->__get('user_stand_type') == 2) echo 'selected'; ?>" width="200" height="200" alt="default"/>
                 
-            <h4>63 mts2</h4>
+            <h4>63 mts<sup>2</sup></h4>
             <p>USD$14.301.00</p>
             
 	            <div class="mid-input standname-data">
@@ -39,7 +39,7 @@
         <li>
             <img src="<?php echo APPLICATION_URL?>images/45.jpg" class="images <?php if ($user->__get('user_stand_type') == 3) echo 'selected'; ?>" width="200" height="200" alt="default"/>
                 
-            <h4>45 mts2</h4>
+            <h4>45 mts<sup>2</sup></h4>
             <p>USD$10.215.00</p>
             
 	            <div class="mid-input standname-data">
@@ -69,7 +69,7 @@
          
          <li>
             <img src="<?php echo APPLICATION_URL?>images/31.jpg" class="images <?php if ($user->__get('user_stand_type') == 5) echo 'selected'; ?>" width="200" height="200" alt="default" />
-            <h4>31,50 mts2</h4>
+            <h4>31,50 mts<sup>2</sup></h4>
             <p>USD$ 7.749.00</p>
  	            <div class="mid-input standname-data">
 					<label>Nombre para la cornisa del stand</label>	
