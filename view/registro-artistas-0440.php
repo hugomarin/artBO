@@ -50,6 +50,10 @@ include_once('menu.php');
 						</div>
 						<form action="<?php echo APPLICATION_URL?>user.controller/createArtist.html" id="validable" class="" method="post">
 							<?php include_once('inc-artistas-1.php'); ?>
+<<<<<<< HEAD
+=======
+
+>>>>>>> bc325ec3a3560e54c12104197982f6ade363e1a9
 						</form>
 						<a href="#" id="add-artist" class="label secondary round">Agregar un nuevo artista </a>
 						<br /><br />
@@ -60,7 +64,12 @@ include_once('menu.php');
 						<br /><br />
 						 <h5>Otros artistas representados:</h5>
 						 <form action="registro-artistas-0440_submit" method="get" accept-charset="utf-8">
+<<<<<<< HEAD
 							<textarea name="Name" rows="8" cols="40" placeholder="Digite la información correspondiente a artistas representados"></textarea>
+=======
+							<textarea name="user_represented_artists" rows="8" cols="40" placeholder="Digite la información correspondiente a artistas representados"><?php echo $user->__get('user_represented_artists');?></textarea>
+
+>>>>>>> bc325ec3a3560e54c12104197982f6ade363e1a9
 						 </form>
 					</div>
 				</div>

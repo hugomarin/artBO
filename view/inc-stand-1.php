@@ -50,22 +50,6 @@
             <a href="javascript:void(0);" onClick="document.getElementById('selectedStand').value='3'; removeAll(); $(this).addClass('nulled');;" class="round small button <?php if ($user->__get('user_stand_type') == 3) echo 'nulled'; ?>">Seleccionar</a>
          </li>
         
-        
-        
-         <li>
-            <img src="<?php echo APPLICATION_URL?>images/33.jpg" class="images <?php if ($user->__get('user_stand_type') == 4) echo 'selected'; ?>" width="200" height="200" alt="default"/>
-                
-            <h4>33.75 mts2</h4>
-            <p>USD$7.661.00</p>
-            
- 	            <div class="mid-input standname-data">
-					<label>Nombre para la cornisa del stand</label>	
-					<input type="text" name="cornisa_4" class="expand input-text" value="<?php echo $user->__get('user_space_name');?>" title="Indique el nombre que deberá aparecer en la cornisa del stand"  />
-				</div><!--/directorname-data-->
-            
-            <a href="javascript:void(0);" onClick="document.getElementById('selectedStand').value='4'; removeAll(); $(this).addClass('nulled');" class="round small button <?php if ($user->__get('user_stand_type') == 4) echo 'nulled'; ?>">Seleccionar</a>
-         </li>
-         
          
          <li>
             <img src="<?php echo APPLICATION_URL?>images/31.jpg" class="images <?php if ($user->__get('user_stand_type') == 5) echo 'selected'; ?>" width="200" height="200" alt="default" />
