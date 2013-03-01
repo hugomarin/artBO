@@ -19,7 +19,7 @@
 					<input type="text" name="cornisa_1" class="expand input-text" value="<?php echo $user->__get('user_space_name');?>" title="Indique el nombre que deberá aparecer en la cornisa del stand"  />
 				</div><!--/directorname-data-->
 				
-            <a href="javascript:void(0);" onClick="document.getElementById('selectedStand').value='1'; removeAll(); $(this).addClass('nulled');" class="round small button <?php if ($user->__get('user_stand_type') == 1) echo 'nulled'; ?>">Seleccionar</a>
+            <a href="javascript:void(0);" data-stand="1" class="round small button <?php if ($user->__get('user_stand_type') == 1) echo 'nulled'; ?>">Seleccionar</a>
         </li>
         
          <li>
@@ -33,7 +33,7 @@
 					<input type="text" name="cornisa_2" class="expand input-text" value="<?php echo $user->__get('user_space_name');?>" title="Indique el nombre que deberá aparecer en la cornisa del stand"  />
 				</div><!--/directorname-data-->
             
-            <a href="javascript:void(0);" onClick="document.getElementById('selectedStand').value='2'; removeAll(); $(this).addClass('nulled');" class="round small button  <?php if ($user->__get('user_stand_type') == 2) echo 'nulled'; ?>">Seleccionar</a>
+            <a href="javascript:void(0);" data-stand="2" class="round small button  <?php if ($user->__get('user_stand_type') == 2) echo 'nulled'; ?>">Seleccionar</a>
         </li>
 
         <li>
@@ -47,7 +47,7 @@
 					<input type="text" name="cornisa_3" class="expand input-text" value="<?php echo $user->__get('user_space_name');?>" title="Indique el nombre que deberá aparecer en la cornisa del stand"  />
 				</div><!--/directorname-data--> 
            
-            <a href="javascript:void(0);" onClick="document.getElementById('selectedStand').value='3'; removeAll(); $(this).addClass('nulled');;" class="round small button <?php if ($user->__get('user_stand_type') == 3) echo 'nulled'; ?>">Seleccionar</a>
+            <a href="javascript:void(0);" data-stand="3" class="round small button <?php if ($user->__get('user_stand_type') == 3) echo 'nulled'; ?>">Seleccionar</a>
          </li>
         
          
@@ -59,7 +59,7 @@
 					<label>Nombre para la cornisa del stand</label>	
 					<input type="text" name="cornisa_5" class="expand input-text" value="<?php echo $user->__get('user_space_name');?>" title="Indique el nombre que deberá aparecer en la cornisa del stand"  />
 				</div><!--/directorname-data-->
-            <a href="javascript:void(0);" onClick="document.getElementById('selectedStand').value='5'; removeAll(); $(this).addClass('nulled');" class="round small button <?php if ($user->__get('user_stand_type') == 5) echo 'nulled'; ?>">Seleccionar</a>
+            <a href="javascript:void(0);" data-stand="5" class="round small button <?php if ($user->__get('user_stand_type') == 5) echo 'nulled'; ?>">Seleccionar</a>
         </li>
 	<?php
 	}
@@ -74,7 +74,7 @@
 				<label>Nombre para la cornisa del stand</label>	
 				<input type="text" name="cornisa_1" class="expand input-text" value="<?php echo $user->__get('user_space_name');?>" title="Indique el nombre que deberá aparecer en la cornisa del stand"  />
 			</div>
-			<a href="javascript:void(0);" onClick="document.getElementById('selectedStand').value='6'; removeAll(); document.getElementById('validable').submit();" class="round small button <?php if ($user->__get('user_stand_type') == 6) echo 'nulled'; ?>">Seleccionar</a>
+			<a href="javascript:void(0);" data-stand="6" class="round small button <?php if ($user->__get('user_stand_type') == 6) echo 'nulled'; ?>">Seleccionar</a>
 		</li>
 	<?php
 	}
@@ -82,11 +82,3 @@
 	</ul>
 	</div><!--/twelve columns-->
 </div><!--/row-->
-<script language="javascript">
-function removeAll()
-{
-	$('.button').each(function (index) {
-		$(this).removeClass('nulled');								
-	});
-}
-</script>

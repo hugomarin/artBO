@@ -1,6 +1,6 @@
 	<!-- panel 2 -->
 					<div>
-						<h2>artBO</h2>
+						<h4>artBO</h4>
 						<label>Indique en qué ediciones de artBO ha participado</label>
 						<div class="row">
 							<div class="three columns">
@@ -52,8 +52,8 @@
 					</div>
 						<hr />
 					<!-- END panel 2 -->
-					<h2>Participación en otras ferias</h2>
-					<p><em>Registrar las ferias en las que participó entre 2011 y 2012</em></p>
+					<h4>Participación en otras ferias</h4>
+					<p><em>Registrar las ferias en las que participó entre 2011 y 2012</em></p> 
 							<div class="intitle">
 						<ul class="ferias">
 							<li>

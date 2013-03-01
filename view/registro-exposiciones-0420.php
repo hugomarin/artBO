@@ -6,10 +6,9 @@ include_once('menu.php');
 ?>
 <!-- 2. End menu -->
 	<div class="row main-row">
-		<!-- <div class="alert-box success">
-	    	Sus datos han sido guardados
-	    	<a href="" class="close">×</a>
-		</div>	 -->
+		 <!-- <div class="alert-box error">
+	    	<a href="#" class="close">×</a>
+		</div> -->
 		<div class="panel nopadding">
 			<div class="inner-header">
 				<div class="row">

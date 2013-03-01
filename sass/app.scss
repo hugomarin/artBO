@@ -130,6 +130,7 @@ input.only{
 .encabezado{
   background:#b71234;
   margin-bottom: 20px;
+  padding:5px 0;
 }
 
 strong.valign{
@@ -294,6 +295,7 @@ img.images {
  padding: 5px; background: #f7f7f7; 
  margin-right: 5px;
  width:98%;
+ margin-bottom: 10px; 
 }
 
 textarea.grande{
@@ -424,7 +426,7 @@ margin:0 auto;
 
 .perfil {
   padding-right: 30px;
-  width:250px;
+  width:auto;
 }
 
 
@@ -433,6 +435,4 @@ li#2 {
   background-image: url(../images/resources/nav-bgGray.png);
   background-color: #ff36a4;
 }
-
-
 

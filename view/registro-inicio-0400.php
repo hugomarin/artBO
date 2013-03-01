@@ -13,7 +13,7 @@
 				<p>Puede ir completando la información solicitada paso a paso o empezar por cualquiera de las secciones. Guarde siempre los cambios realizados. Si aplicó a artBO 2012, la información que registró se guardó en su perfil.</p>
 				<h5>Su aplicación será válida cuando realice el pago de los derechos de inscripción por un valor de USD $160.00.<a href="" target="_blank">Pague aquí.</a></h5>
 				<p>Consulte el Reglamento de Participación de artBO <a href="#" target="_blank">aquí.</a></p>
-				<h5>Esta es una breve descripción de la información solicitada en cada sección:</h5>
+				<h5>Información que deberá completar en cada sección:</h5>
 				<ul class="no-bullet">
 					<li class="thin">1. <strong>Galería:</strong> información básica de la galería, del director y una reseña de la galería.</li>
 					<li class="thin">2. <strong>Exposiciones:</strong>lista de las exposiciones realizadas entre el 2011 y el 2013, en orden cronológico.</li>
