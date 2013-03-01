@@ -14,7 +14,7 @@ $default	= 'http://cambelt.co/icon/camera/480x360?color=b71632,fefefe';
 	            	</div>
 	            	<div class="five columns">
 						<?php
-                        $image	= ($user->__get('user_certificate') != '') ? $dir.$user->__get('user_certificate') : $default;
+                        $image	= ($user->__get('user_certificate') != '') ? APPLICATION_URL.$dir.$user->__get('user_certificate') : $default;
 						if (strpos($image, '.pdf')  !== false) $image	= 'http://cambelt.co/icon/camera/480x360?color=3fc46b,fefefe';
                             
                         ?>	            		
@@ -32,7 +32,7 @@ $default	= 'http://cambelt.co/icon/camera/480x360?color=b71632,fefefe';
 	            	</div>
 	            	<div class="five columns">
 						<?php
-                        $image	= ($user->__get('user_rut') != '') ? $dir.$user->__get('user_rut') : $default;
+                        $image	= ($user->__get('user_rut') != '') ? APPLICATION_URL.$dir.$user->__get('user_rut') : $default;
 						if (strpos($image, '.pdf')  !== false) $image	= 'http://cambelt.co/icon/camera/480x360?color=3fc46b,fefefe';
                             
                         ?>	                    
@@ -50,7 +50,7 @@ $default	= 'http://cambelt.co/icon/camera/480x360?color=b71632,fefefe';
 	            	</div>
 	            	<div class="five columns">
 						<?php
-                        $image	= ($user->__get('user_document') != '') ? $dir.$user->__get('user_document') : $default;
+                        $image	= ($user->__get('user_document') != '') ? APPLICATION_URL.$dir.$user->__get('user_document') : $default;
 						if (strpos($image, '.pdf')  !== false) $image	= 'http://cambelt.co/icon/camera/480x360?color=3fc46b,fefefe';
                             
                         ?>	                    
@@ -68,7 +68,7 @@ $default	= 'http://cambelt.co/icon/camera/480x360?color=b71632,fefefe';
 	            	</div>
 	            	<div class="five columns">
 						<?php
-                        $image	= ($user->__get('user_payment') != '') ? $dir.$user->__get('user_payment') : $default;
+                        $image	= ($user->__get('user_payment') != '') ? APPLICATION_URL.$dir.$user->__get('user_payment') : $default;
 						if (strpos($image, '.pdf')  !== false) $image	= 'http://cambelt.co/icon/camera/480x360?color=3fc46b,fefefe';
                             
                         ?>	                    

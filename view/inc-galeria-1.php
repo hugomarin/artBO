@@ -32,7 +32,7 @@ function decide($field, $required, $user)
 				<!-- <i>Imagen del espacio expositivo</i>
 				<br /> -->
                 <?php
-				$image	= ($user->__get('user_gallery_image') != '') ? $dir.$user->__get('user_gallery_image') : $default;
+				$image	= ($user->__get('user_gallery_image') != '') ? APPLICATION_URL.$dir.$user->__get('user_gallery_image') : $default;
 					
 				?>
 				<img src="<?php echo $image;?>" class="images" title="Imagen de la Galería">                
@@ -229,7 +229,7 @@ function decide($field, $required, $user)
 				<div class="mid-input director-image">
 					<label><span class="asterix">*</span>Foto del director</label>
 					<?php
-                    $image	= ($user->__get('user_director_image') != '') ? $dir.$user->__get('user_director_image') : $default;
+                    $image	= ($user->__get('user_director_image') != '') ? APPLICATION_URL.$dir.$user->__get('user_director_image') : $default;
                         
                     ?>
                     <img src="<?php echo $image;?>" class="images" title="Imagen del director">                
