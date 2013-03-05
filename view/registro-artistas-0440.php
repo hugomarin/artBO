@@ -51,19 +51,18 @@ include_once('menu.php');
 						<form action="<?php echo APPLICATION_URL?>user.controller/createArtist.html" id="validable" class="" method="post">
 							<?php include_once('inc-artistas-1.php'); ?>
 
-						</form>
 						<a href="#" id="add-artist" class="label secondary round">Agregar un nuevo artista </a>
 						<br /><br />
 						<h5>Propuesta de la galeria:</h5>
-						<form action="registro-artistas-0440_propuesta" method="post">
-						  <textarea name="Name" rows="8" cols="40"></textarea>
-						</form> 
+
+						  <textarea name="user_gallery_proposal" rows="8" cols="40"><?php echo $user->__get('user_gallery_proposal')?></textarea>
+
 						<br /><br />
 						 <h5>Otros Artistas representados:</h5>
-						 <form action="registro-artistas-0440_submit" method="get" accept-charset="utf-8">
-							<textarea name="user_represented_artists" rows="8" cols="40" placeholder="Digite la información correspondiente a artistas representados"><?php echo $user->__get('user_represented_artists');?></textarea>
 
-						 </form>
+							<textarea name="user_represented_artists" rows="8" cols="40" placeholder="Digite la información correspondiente a artistas representados"><?php echo $user->__get('user_represented_artists');?></textarea>
+						</form>
+
 					</div>
 				</div>
 			</div>
@@ -102,10 +101,10 @@ $(document).ready(function() {
 counterArtist = <?php echo (count($artists) > 0) ? count($artists)+1 : 2; ?>;
 $("#add-artist").click(function(){
 
-$(".link_list").hide().append('<li class="link_default"><ul class="no-bullet artist"><li class="handler"><img src="<?php echo APPLICATION_URL?>images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr"></li><li><input type="text" name="artist_name_'+counterArtist+'"  /></li><li><input type="text" name="artist_surname_'+counterArtist+'" /></li><li><input type="text" class="no-margin" name="artist_nationality_'+counterArtist+'" /><a href="#" class="revelar-a revealer " id="link-'+counterArtist+'" data-reveal-id="artista" >Más información sobre el artista</a></li><li class="handler"><a href="#"><img src="<?php echo APPLICATION_URL?>images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a></li></ul></li>').fadeIn(1000);
-	$(".revealer").each(function(item){
+$(".link_list").hide().append('<li class="link_default"><ul class="no-bullet artist"><li class="handler"><img src="<?php echo APPLICATION_URL?>images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr"></li><li><input type="text" name="artist_name_'+counterArtist+'" id="artist_name_'+counterArtist+'"  /></li><li><input type="text" name="artist_surname_'+counterArtist+'" id="artist_surname_'+counterArtist+'" /></li><li><input type="text" class="no-margin" name="artist_nationality_'+counterArtist+'" id="artist_nationality_'+counterArtist+'" /><a href="#" class="revelar-a revealer-new " id="link-'+counterArtist+'" data-reveal-id="artista" >Más información sobre el artista</a></li><li class="handler"><a href="#" class="delete-artist"><img src="<?php echo APPLICATION_URL?>images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a></li></ul></li>').fadeIn(1000);
+	$(".revealer-new").each(function(item){
+		$(this).unbind('click');
 		$(this).click(function () {
-			
 			$("#artist_name").val($("#artist_name_" + (counterArtist - 1)).val());
 			$("#artist_surname").val($("#artist_surname_" + (counterArtist - 1)).val());
 			$("#artist_nationality").val($("#artist_nationality_" + (counterArtist - 1)).val());
@@ -120,6 +119,11 @@ $(".link_list").hide().append('<li class="link_default"><ul class="no-bullet art
 				$('#artista-new').reveal();
 			}	
 			//$(".revelar-a").slideToggle();	
+		});
+		$('.delete-artist').unbind('click');
+		$('.delete-artist').click(function () {
+			$(this).parent().parent().parent().remove();
+			$(document).ready(function () { validInst = new Validator(1, '', true); });
 		});
 	});	
 counterArtist = counterArtist+1;						

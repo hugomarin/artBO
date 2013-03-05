@@ -25,15 +25,18 @@
 
 // Include the uploader class
 require_once('model/qqFileUploader.model.php');
-$user			= new User($_GET[0]);
-$extraFolder 	= isset($_GET[2]) ? '/' . $_GET[2] : '';
-$uploader 		= new qqFileUploader();
-if(!file_exists('resources/galerias/'. $user->__get('user_id'). '-' . makeUrlClear(utf8_decode($user->__get('user_name'))) . $extraFolder))
-{
-	mkdir('resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8_decode($user->__get('user_name'))) . $extraFolder, 0755);
-}
+$user				= new User($_GET[0]);
+$key				= isset($_GET[2]) ? $_GET[2] : 'null';
+$artistWorkArray    = ArtistWorkHelper::retrieveArtistWorks("AND artist_work_key = '" . $key . "'");
+$artistWork 		= (count($artistWorkArray) > 0) ? $artistWorkArray[0] : new ArtistWork();
 
-$dir	= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8_decode($user->__get('user_name'))) . $extraFolder;
+$uploader 			= new qqFileUploader();
+if(!file_exists('resources/galerias/'. $user->__get('user_id'). '-' . makeUrlClear(utf8_decode($user->__get('user_name'))) . '/artistas'))
+{
+	
+	mkdir('resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8_decode($user->__get('user_name'))) . '/artistas', 0755, true);
+}
+$dir	= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8_decode($user->__get('user_name'))) . '/artistas';
 // Specify the list of valid extensions, ex. array("jpeg", "xml", "bmp")
 $uploader->allowedExtensions = array();
 
@@ -58,8 +61,9 @@ $ext				  = explode('.', $result['uploadName']);
 rename($dir.'/'.$result['uploadName'], $dir.'/'.$_GET[1].'.'.$ext[count($ext) - 1]);
 $result['uploadName']	= $_GET[1].'.'.$ext[count($ext) - 1];
 
-$user->__set($_GET[1], $result['uploadName']);
-$user->update();
+$artistWork->__set('artist_work_key', $key);
+$artistWork->__set('artist_work_file', $result['uploadName']);
 
+(count($artistWorkArray) > 0) ? $artistWork->update() : $artistWork->save();
 header("Content-Type: text/plain");
 echo json_encode($result);

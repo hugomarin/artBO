@@ -42,6 +42,7 @@
 							<!-- END columns artBo 2/4 -->
 							<!-- columns artBo 3/4 -->
 							<div class="three columns">
+								<input type="checkbox" name="artbo_05" <?php if ($artbo[7] == 1) echo 'checked="checked"';?>/> artBO 2005
 							</div>
 							<!-- END columns artBo 3/4 -->
 							<!-- columns artBo 4/4 -->

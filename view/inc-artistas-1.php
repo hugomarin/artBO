@@ -26,13 +26,18 @@
                                 <li>
                                     <!-- nacionalidad -->
                                     <input type="text" class="no-margin" name="artist_nationality_<?php echo $i;?>" value="<?php echo $artist->__get('artist_nationality');?>" />
+                                    <input type="hidden" id="artist_id_<?php echo $i;?>" class="no-margin" name="artist_id_<?php echo $i;?>" value="<?php echo $artist->__get('artist_id')?>" />
+                                    
+                                    <input type="hidden" id="artist_birthday_<?php echo $i;?>" class="no-margin" name="artist_birthday_<?php echo $i;?>" value="<?php echo $artist->__get('artist_birthday')?>" />
+                                    <input type="hidden" id="artist_residency_<?php echo $i;?>" class="no-margin" name="artist_residency_<?php echo $i;?>" value="<?php echo $artist->__get('artist_residency')?>" />
+                                    <input type="hidden" id="artist_review_<?php echo $i;?>" class="no-margin" name="artist_review_<?php echo $i;?>" value="<?php echo $artist->__get('artist_review')?>" />
                                     <!-- END nacionalidad -->
                                     <!-- boton para modal de artista -->
                                     <a href="#" class="revelar-a revealer " id="link-<?php echo $i?>" data-reveal-id="artista" >Más información sobre el artista</a>
                                     <!-- END boton para modal de artista -->
                                 </li>
                                 <li class="handler">
-                                	<a href="#"><img src="<?php echo APPLICATION_URL?>images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a>
+                                	<a href="#" class="delete-artist"><img src="<?php echo APPLICATION_URL?>images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a>
                                	</li>
                             </ul>
                         </li>
@@ -61,6 +66,11 @@
                                 <!-- checkboxes -->
                                 <li>
                                     <input type="text" id="artist_nationality_1" class="no-margin" name="artist_nationality_1" />
+                                    <input type="hidden" id="artist_id_1" class="no-margin" name="artist_id_1" value="" />
+                                    
+                                    <input type="hidden" id="artist_birthday_1" class="no-margin" name="artist_birthday_1" value="" />
+                                    <input type="hidden" id="artist_residency_1" class="no-margin" name="artist_residency_1" value="" />
+                                    <input type="hidden" id="artist_review_1" class="no-margin" name="artist_review_1" value="" />
                                     <!-- END nacionalidad -->
                                     <!-- <label for="checkbox3a"><input class="revealer-new" type="checkbox" id="checkbox-1" name="artist_artbo_1"><strong>Este artista participará en Artbo</strong></label> -->
                                     <!-- boton para modal de artista -->
@@ -68,7 +78,7 @@
                                     <!-- END boton para modal de artista -->
                                 </li>
                                 <li class="handler">
-                                	<a href="#"><img src="<?php echo APPLICATION_URL?>images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a>
+                                	<a href="#" class="delete-artist"><img src="<?php echo APPLICATION_URL?>images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a>
                                	</li>
 							</ul>
                         </li>  

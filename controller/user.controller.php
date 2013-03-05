@@ -15,6 +15,21 @@ switch ($action):
 			$insert	= $user->save();
 			$_SESSION['user_id']	= $insert['insert_id'];
 			redirectUrl(APPLICATION_URL.'registro-inicio-0400.html');
+			$html 		= '<div style="background: #f5f5f5; padding-bottom: 30px;margin-top: 0; width: 600px; font-family: Arial;"><div style="background: #9c1a36; padding: 10px 50px;"><img src="http://i.imgur.com/pUNnGGF.png" alt="artBO" /></div><div style="margin-top: 30px; padding: 10px 50px;"><h1 style="margin-bottom:30px;">Le damos la Bienvenida a artBO 2013</h1><p style="margin-bottom:30px;">A partir de ahora, usted podra adelantar su proceso de registro e inscripcion en el pabellon de su interes</p><p>Gracias,</p><a href="#" style="text-decoration: none; color: #3a6cdd;">artBO</a></div></div>'; 
+			$subject	= utf8_decode('Registro exitoso');
+			$from		= 'info@artbo.co';
+			$to			= $user->__get('user_email');
+			$fromName	= 'CCB Artbo';
+			$replyTo	= 'info@artbo.co';
+			$args 		= array('html'		=> $html,
+								'from'		=> $from,
+								'to'		=> $to,
+								'subject'	=> $subject,
+								'fromName'	=> $fromName,
+								'replyTo'	=> $replyTo);	
+
+			EmailHelper::sendMail($args);
+			
 		}
 		else
 		{
@@ -28,11 +43,9 @@ switch ($action):
 			
 			$password 	= substr(md5(date('YmdHis')), 0, 8);
 			$user 		=& $users[0];
-			$user->__set('user_password', md5($password));
+			$user->__set('user_verification', md5($password));
 			$user->update();
-			$html 		= '<p>Hola ' . $user->__get('user_names') . ',</p>';
-			$html  	   .= '<p></p><p>Tu nueva contrase&ntilde;a es: ' . $password . '</p>'; 
-			$html  	   .= '<p></p><p>CCB</p>'; 
+			$html  	   .= '<div style="background: #f5f5f5; padding-bottom: 30px;margin-top: 0; width: 600px; font-family: Arial;"><div style="background: #9c1a36; padding: 10px 50px;"><img src="http://i.imgur.com/pUNnGGF.png" alt="artBO" /></div><div style="margin-top: 30px; padding: 10px 50px;"><h1 style="margin-bottom:30px;">Recordar Clave</h1><p style="margin-bottom:30px;">Hemos recibido una peticion para recordar su contrase&ntilde;a. Para completar el proceso de reestablecer contrase&ntilde;a visite la siguiente url:</p><a style="text-decoration: none; color: #3a6cdd;" href="http://activemgmd.com/ccb/ccb-galerias/restablecer-contrasena/'.md5($password).'.html">http://activemgmd.com/ccb/ccb-galerias/restablecer-contrasena/'.md5($password).'.html</a><br /><p>Si usted no ha solicitado este cambio porfavor ignore este correo.</p><p>Gracias,</p><span>Soporte </span><a href="#" style="text-decoration: none; color: #3a6cdd;">artBO</a></div></div>'; 
 			$subject	= utf8_decode('Recuperar contraseña');
 			$from		= 'info@artbo.co';
 			$to			= $user->__get('user_email');
@@ -190,7 +203,8 @@ switch ($action):
 		$string		.= (isset($_POST['artbo_08'])) ? '1|' : '0|'; 
 		$string		.= (isset($_POST['artbo_07'])) ? '1|' : '0|'; 
 		$string		.= (isset($_POST['artbo_06'])) ? '1|' : '0|'; 
-		$string		.= (isset($_POST['artbo_12'])) ? '1' : '0'; 			
+		$string		.= (isset($_POST['artbo_12'])) ? '1|' : '0|'; 
+		$string		.= (isset($_POST['artbo_05'])) ? '1' : '0'; 			
 		$user->__set('user_artbo', $string);
 		$user->update();
 		foreach ($_POST as $key => $value)
@@ -233,10 +247,20 @@ switch ($action):
 				$artist->__set('artist_name', $value);
 				$artist->__set('artist_surname', $_POST['artist_surname_'.$string]);
 				$artist->__set('artist_nationality', $_POST['artist_nationality_'.$string]);
+				$artist->__set('artist_birthday', $_POST['artist_birthday_'.$string]);
+				$artist->__set('artist_residency', $_POST['artist_residency_'.$string]);
+				$artist->__set('artist_review', $_POST['artist_review_'.$string]);
 				if (isset($_POST['artist_artbo_'.$string]))
 					$artist->__set('artist_artbo', 1);				
 				$artist->__set('user_id', $_SESSION['user_id']);
-				$artist->save();
+				
+				$result = $artist->save();
+				
+				$artistWorks = ArtistWorkHelper::retrieveArtistWorks("AND artist_id = '" . $_POST['artist_id_'.$string] . "'");
+				foreach($artistWorks as $artistWork)
+				{
+					$artistWork->updateField('artist_id', $result["insert_id"]);
+				}
 			}
 		}
 		$user 		= new User($_SESSION['user_id']);
@@ -271,6 +295,21 @@ switch ($action):
 		for($i = 1; $i <= 3; $i++)
 		{
 			$artistWork = isset($artistWorks[($i - 1)]) ? $artistWorks[($i - 1)] : new ArtistWork();
+			if(!isset($artistWorks[($i - 1)]))
+			{
+				$artistWorks	= ArtistWorkHelper::retrieveArtistWorks("AND artist_work_key = '" . $_POST["artist_work_key_" . $i] . "'");
+				if(count($artistWorks) > 0)
+					$artistWork = $artistWorks[0];
+			}
+			else
+			{
+				$artistWorks	= ArtistWorkHelper::retrieveArtistWorks("AND artist_work_key = '" . $_POST["artist_work_key_" . $i] . "' AND artist_work_id != " . $artistWork->__get('artist_work_id'));
+				if(count($artistWorks) > 0)
+				{
+					$artistWork->delete();
+					$artistWork = $artistWorks[0];
+				}
+			}
 			foreach($_POST as $key => $value)
 			{
 				if(strpos($key, '_' . $i) !== false)
@@ -278,32 +317,7 @@ switch ($action):
 					$artistWork->__set(str_replace('_' . $i, '', $key), $value);
 				}
 			}
-			if(isset($_FILES['artist_work_file_' . $i]) && ($_FILES['artist_work_file_' . $i]['name'] != ''))
-			{
-
-				
-				$ext	= getFileExtension($_FILES['artist_work_file_' . $i]['name']);
-				$name 	= md5(date("YmdHis") . $i) . $ext;
-				
-				if(!file_exists('resources/images/' . makeUrlClear(utf8_decode($user->__get('user_name')))))
-				{
-					mkdir('resources/images/' . makeUrlClear(utf8_decode($user->__get('user_name'))), 0755);
-				}
-				if(!file_exists('resources/images/' . makeUrlClear(utf8_decode($user->__get('user_name'))) . '/' . makeUrlClear(utf8_decode($artist->__get('artist_name')))))
-				{
-					mkdir('resources/images/' . makeUrlClear(utf8_decode($user->__get('user_name'))) . '/' . makeUrlClear(utf8_decode($artist->__get('artist_name'))), 0755);
-				}
-				
-				if(uploadFile('resources/images/' . makeUrlClear(utf8_decode($user->__get('user_name'))) . '/' . makeUrlClear(utf8_decode($artist->__get('artist_name'))) . '/', $_FILES['artist_work_file_' . $i]['tmp_name'], $name))
-				{
-
-					$artistWork->__set('artist_id', $artist->__get('artist_id'));
-					$artistWork->__set('artist_work_file', makeUrlClear(utf8_decode($user->__get('user_name'))) . '/' . makeUrlClear(utf8_decode($artist->__get('artist_name'))) . '/' . $name);
-					$accept = array('jpg', 'gif', 'png', 'jpeg');
-					$medio 	= new Medio($name , $accept, 'resources/images/');  
-					
-				}
-			}
+			$artistWork->__set('artist_id', $_POST["artist_id"]);
 			if($artistWork->__get('artist_work_id') != '')
 				$artistWork->update();
 			else
@@ -323,38 +337,23 @@ switch ($action):
 		$result = $artist->save();
 		for($i = 1; $i <= 3; $i++)
 		{
+			$artistWorks	= ArtistWorkHelper::retrieveArtistWorks("AND artist_work_key = '" . $_POST["artist_work_key_" . $i] . "'");
+			$artistWork = isset($artistWorks[0]) ? $artistWorks[0] : new ArtistWork();	
 			
-			if(isset($_FILES['artist_work_file_' . $i]) && ($_FILES['artist_work_file_' . $i]['name'] != ''))
+			foreach($_POST as $key => $value)
 			{
-				$artistWork = new ArtistWork();
-				$ext	= getFileExtension($_FILES['artist_work_file_' . $i]['name']);
-				$name 	= md5(date("YmdHis") . $i) . $ext;
-				
-				if(!file_exists('resources/images/' . makeUrlClear(utf8_decode($user->__get('user_name')))))
+				if(strpos($key, '_' . $i) !== false)
 				{
-					mkdir('resources/images/' . makeUrlClear(utf8_decode($user->__get('user_name'))), 0755);
-				}
-				if(!file_exists('resources/images/' . makeUrlClear(utf8_decode($user->__get('user_name'))) . '/' . makeUrlClear(utf8_decode($artist->__get('artist_name')))))
-				{
-					mkdir('resources/images/' . makeUrlClear(utf8_decode($user->__get('user_name'))) . '/' . makeUrlClear(utf8_decode($artist->__get('artist_name'))), 0755);
-				}
-				
-				if(uploadFile('resources/images/' . makeUrlClear(utf8_decode($user->__get('user_name'))) . '/' . makeUrlClear(utf8_decode($artist->__get('artist_name'))) . '/', $_FILES['artist_work_file_' . $i]['tmp_name'], $name))
-				{
-					foreach($_POST as $key => $value)
-					{
-						if(strpos($key, '_' . $i) !== false)
-						{
-							$artistWork->__set(str_replace('_' . $i, '', $key), $value);
-						}
-					}
-					$accept = array('jpg', 'gif', 'png', 'jpeg');
-					$medio 	= new Medio($name , $accept, 'resources/images/'); 
-					$artistWork->__set('artist_work_file', makeUrlClear(utf8_decode($user->__get('user_name'))) . '/' . makeUrlClear(utf8_decode($artist->__get('artist_name'))) . '/' . $name);
-					$artistWork->__set('artist_id', $result["insert_id"]);
-					$artistWork->save();
+					$artistWork->__set(str_replace('_' . $i, '', $key), $value);
 				}
 			}
+
+			$artistWork->__set('artist_id', $result["insert_id"]);
+			if($artistWork->__get('artist_work_id') != '')
+				$artistWork->update();
+			else
+				$artistWork->save();
+
 		}
 		
 		
@@ -387,7 +386,42 @@ switch ($action):
 	break;
 	case 'uploadDocuments':
 		$user 		= new User($_SESSION['user_id']);
-		redirectUrl(APPLICATION_URL.'registro-documentos-0460/saved.html');
+		$finish		= true;
+		if ($user->__get('user_certificate') == '')
+			$finish	= false;
+		if ($user->__get('user_rut') == '')
+			$finish	= false;
+		if ($user->__get('user_document') == '')
+			$finish	= false;
+		if ($user->__get('user_payment') == '')
+			$finish	= false;
+		if ($finish)
+		{
+			$html		= '<div style="background: #f5f5f5; padding-bottom: 30px;margin-top: 0; width: 600px; font-family: Arial;"><div style="background: #9c1a36; padding: 10px 50px;"><img src="http://i.imgur.com/pUNnGGF.png" alt="artBO" /></div><div style="margin-top: 30px; padding: 10px 50px;"><h1 style="margin-bottom:30px;">Ha finalizado su registro</h1><p  style="margin-bottom:30px;">Usted a completado el proceso de registro de artBO 2013. <br />Agradecemos su participaci&oacute;n en la convocatoria.</p><br /><p>Gracias,</p><a href="#" style="text-decoration: none; color: #3a6cdd;">artBO</a></div></div>';
+			$subject	= utf8_decode('Finalizado registro');
+			$from		= 'info@artbo.co';
+			$to			= $user->__get('user_email');
+			$fromName	= 'CCB Artbo';
+			$replyTo	= 'info@artbo.co';
+			$args 		= array('html'		=> $html,
+								'from'		=> $from,
+								'to'		=> $to,
+								'subject'	=> $subject,
+								'fromName'	=> $fromName,
+								'replyTo'	=> $replyTo);	
+	
+			EmailHelper::sendMail($args);		
+			redirectUrl(APPLICATION_URL.'registro-documentos-0460/saved.html');
+		}
+		else
+		{
+		?>
+			<script language="javascript">
+                alert ('Debe subir todos los documentos solicitados en esta página');
+                window.location.href="<?php echo APPLICATION_URL;?>registro-documentos-0460.html";
+            </script>
+        <?php
+		}
 	break;
 	case 'update':
 		$user 	=  new User($_POST['user_id']);
@@ -610,6 +644,13 @@ switch ($action):
 		$user->update();
 		redirectUrl(APPLICATION_URL."datos-galeria-0300/exito.html");
 	break;
+	case 'changePasswordOC':
+		$user 	=  new User($_SESSION['user_id']);	
+		$user->__set('user_verification', '');
+		$user->__set('user_password', md5($_POST['contrasena']));
+		$user->update();
+		redirectUrl(APPLICATION_URL."login-recuperar-contrasena-0140/exito.html");
+	break;	
 	case 'RememberPassword':
 		$userExist	= UserHelper::retrieveUsers(' AND user_email = "'.trim($_POST['user_email']).'"');
 		if(count($userExist)>0)

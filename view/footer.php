@@ -171,6 +171,11 @@
 		
 		});
 		
+		$('.delete-artist').unbind('click');
+		$('.delete-artist').click(function () {
+			$(this).parent().parent().parent().remove();
+			$(document).ready(function () { validInst = new Validator(1, '', true); });
+		});		
 		// datos - galeria slide to 
 		
 		// nuevo artista 
