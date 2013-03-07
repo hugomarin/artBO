@@ -7,7 +7,7 @@ include_once('header-nologin2.php');
 <div class="container">
 	<div class="row"><!-- Row -->	
 		<div class="six columns centered"><!-- six columns -->
-			<span class="artBO">Artbo</span><span class="ccB">CCB</span>
+			<span class="artBO">artBO</span><span class="ccB">CCB</span>
 			<!-- casilla de alerta -->
 	        <?php
 			if (isset($_GET[0]))

@@ -33,7 +33,7 @@ function validate()
 <div class="container">
 	<div class="row"><!-- Row -->	
 		<div class="six columns centered"><!-- six columns -->
-			<span class="artBO">Artbo</span><span class="ccB">CCB</span>
+			<span class="artBO">artBO</span><span class="ccB">CCB</span>
 	    	<div class="alert-box error">
 	    		Las contraseñas no coinciden. Prueba de nuevo.
 	    		<a href="" class="close" title="Cerrar">&times;</a>

@@ -12,21 +12,21 @@ if ((isset($_GET[0])) && ($_GET[1] == 0))
 <div class="container">
 	<div class="row"><!-- Row -->	
 		<div class="eight columns centered"><!-- six columns -->
-			<span class="artBO">Artbo</span><span class="ccB">CCB</span>
+			<span class="artBO">artBO</span><span class="ccB">CCB</span>
 			<header class="intro">
-				<h2>Bienvenido al proceso de aplicación a artBO 2013</h2>
-				<h5>El cual estará abierto Abierto del 1 de marzo al 30 de abril. Este espacio es para galerías nacionales e internacionales constituidas legalmente.  Por favor inicie su sesión o regístrese.</h5>
+				<h2>Proceso de aplicación a artBO 2013</h2>
+				<h5>Abierto del 1 de marzo al 30 de abril. Este espacio es para galerías nacionales e internacionales constituidas legalmente. Por favor inicie su sesión o regístrese.</h5>
 			</header>
 			<div class="options">
 				<div class="login">
 					<h3>Inicio de sesión</h3>
-					<h5>Si ya te registráste en artBO 
-					2013 0 artBO 2012.</h5>
+					<h5>Si ya te registraste en artBO 
+					2013 o artBO 2012.</h5>
 					<a href="<?php echo APPLICATION_URL?>login.html" class="button radius">Inicio de sesión</a>
 				</div>
 				<div class="register">
 					<h3>Registro</h3>
-					<h5>Si nunca te haz registrdo en artBO.</h5>
+					<h5>Si nunca te has registrado en artBO.</h5>
 					<a href="<?php echo APPLICATION_URL?>register.html" class="button radius">Registrarse</a>
 				</div>
 			</div>

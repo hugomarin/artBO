@@ -32,7 +32,7 @@ include_once('menu.php');
 			<div class="container">
 				<div class="row form-data">	
 					<div class="twelve columns">
-						<h5>Recuerde que su propuesta de artistas para Artbo 2013 debe ser acorde al tamaño del stand  que ha seleccionado. Por cada 10 mts², sólo podrá exhibir un artista.</h5>
+						<h5>Recuerde que su propuesta de artistas para artBO 2013 debe ser acorde al tamaño del stand  que ha seleccionado. Por cada 10 mts², sólo podrá exhibir un artista.</h5>
 						
 						
 						<h6>Propuesta artística para artBO 2013 (máximo 250 palabras)</h6>

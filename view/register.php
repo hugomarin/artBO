@@ -18,7 +18,7 @@ else
 <div class="container">
 	<div class="row"><!-- Row -->	
 		<div class="six columns centered"><!-- six columns -->
-			<span class="artBO">Artbo</span><span class="ccB">CCB</span>
+			<span class="artBO">artBO</span><span class="ccB">CCB</span>
 			<?php echo $error;?>
 			<form action="<?php echo APPLICATION_URL?>user.controller/create.html" method="post" id="validable">
 				<div class="panel">
