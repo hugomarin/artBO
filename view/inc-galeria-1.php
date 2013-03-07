@@ -36,7 +36,7 @@ function decide($field, $required, $user)
 					
 				?>
 				<img src="<?php echo $image;?>" class="images" title="Imagen de la Galería">                
-				<span class="caption">Puede subir imagen de la última exposición realizada en su galería en .jpg, .png o .gif. El archivo no debe superar los 1000 Kb.</caption><br />
+				<span class="caption">Puede subir imagen de la última exposición realizada en su galería en .jpg, .png o .gif. El archivo no debe superar los 1000 KB.</caption><br />
                 <div id="user_gallery_image"></div>
                                             
                 <br />
@@ -216,6 +216,8 @@ function decide($field, $required, $user)
                           <option value="Experimental/nuevos medios" <?php if ($user->__get('user_gallery_profile') == 'Experimental/nuevos medios') echo 'SELECTED="SELECTED"';?>>Experimental/nuevos medios</option>
                           <option value="Otro" <?php if ($user->__get('user_gallery_profile') == 'Otro') echo 'SELECTED="SELECTED"';?>>Otro</option>
 						</select>
+						<label><span class="asterix">*</span>¿Cuál?</label>
+						<input name="" type="text" title="" value="" class="small input-text expand" />
 					</div><!--/year-data-->
 				</div>
 				

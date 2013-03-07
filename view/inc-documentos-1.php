@@ -28,7 +28,7 @@ $default	= 'http://cambelt.co/icon/document/230x170?color=b71632,fefefe';
 				<div class="row">
 					<div class="nine columns">		
 						<h4><span class="asterix">*</span>RUT o Identificación Fiscal</h4>
-						<p>El RUT es un documento exigido paras las Galerías colombianas, Las extranjeras deben enviar identificación fiscal.</p>
+						<p>El RUT es un documento exigido paras las galerías colombianas, Las extranjeras deben enviar identificación fiscal.</p>
 	            	</div>
 	            	<div class="three columns">
 						<?php
@@ -46,7 +46,7 @@ $default	= 'http://cambelt.co/icon/document/230x170?color=b71632,fefefe';
 				<div class="row">
 					<div class="nine columns">		
 						<h4><span class="asterix">*</span>Documento de identidad</h4>
-						<p>Documento de identidad del responsable legal de la galería (c&eacute;dula de ciudadanía o de extranjer&iacute;a para las galerías colombianas, el pasaporte para las galerías internacionales).</p>
+						<p>Documento de identidad del representante legal de la galería (c&eacute;dula de ciudadanía o de extranjer&iacute;a para las galerías colombianas, el pasaporte para las galerías internacionales).</p>
 	            	</div>
 	            	<div class="three columns">
 						<?php

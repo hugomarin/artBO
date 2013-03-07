@@ -17,7 +17,7 @@ if (isset($_GET[0]))
 					<!-- <p>Si nunca te haz registrado en artBO, incluida la última versión, 
 					haz clic <a class="underline" href="<?php echo APPLICATION_URL?>register.html">aquí.</a></p>-->
 					<?php if (isset($error)) echo $error;?>
-					<label for="name">Correo Electrónico</label>
+					<label for="name">Correo electrónico</label>
 					<input type="email"  name="user_email" title="Digite el correo electrónico" required="required"/>
 					<label for="name">Clave</label>
 					<input type="password" name="user_password" title="Digite su contraseña" required="required"/>

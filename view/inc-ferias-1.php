@@ -1,7 +1,7 @@
 	<!-- panel 2 -->
 					<div>
 						<h4>artBO</h4>
-						<label>Indique en qué ediciones de artBO ha participado</label>
+						<p><em>Indique en qué ediciones de artBO ha participado.</em></p>
 						<div class="row">
 							<div class="three columns">
 								<input type="checkbox" name="artbo_12" <?php if ($artbo[6] == 1) echo 'checked="checked"';?>/> artBO 2012
@@ -54,7 +54,7 @@
 						<hr />
 					<!-- END panel 2 -->
 					<h4>Participación en otras ferias</h4>
-					<p><em>Registrar las ferias en las que participó entre 2011 y 2012</em></p> 
+					<p><em>Registrar las ferias en las que participó entre 2011 y 2013.</em></p> 
 							<div class="intitle">
 						<ul class="ferias">
 							<li>
