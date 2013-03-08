@@ -18,7 +18,7 @@ $default	= 'http://cambelt.co/icon/document/230x170?color=b71632,fefefe';
 						if (strpos($image, '.pdf')  !== false) $image	= 'http://cambelt.co/icon/document/230x170?color=3fc46b,fefefe';
                             
                         ?>	            		
-                        <img src="<?php echo $image;?>" class="images right" title="Imagen del director">
+                        <img src="<?php echo $image;?>" class="images right" title="Certificado de existencia">
  						<div id="user_certificate"></div>	            	
                     </div>
 				</div>
@@ -36,7 +36,7 @@ $default	= 'http://cambelt.co/icon/document/230x170?color=b71632,fefefe';
 						if (strpos($image, '.pdf')  !== false) $image	= 'http://cambelt.co/icon/document/230x170?color=3fc46b,fefefe';
                             
                         ?>	                    
-	            		<img src="<?php echo $image;?>" class="images right" title="Imagen del director">
+	            		<img src="<?php echo $image;?>" class="images right" title="Identificación Fiscal">
                         <div id="user_rut"></div>	
 	            	</div>
 				</div>
@@ -54,7 +54,7 @@ $default	= 'http://cambelt.co/icon/document/230x170?color=b71632,fefefe';
 						if (strpos($image, '.pdf')  !== false) $image	= 'http://cambelt.co/icon/document/230x170?color=3fc46b,fefefe';
                             
                         ?>	                    
-	            		<img src="<?php echo $image;?>" class="images right" title="Imagen del director">
+	            		<img src="<?php echo $image;?>" class="images right" title="Documento de identidad">
                         <div id="user_document"></div>                                            
 	            	</div>
 				</div>
@@ -72,7 +72,7 @@ $default	= 'http://cambelt.co/icon/document/230x170?color=b71632,fefefe';
 						if (strpos($image, '.pdf')  !== false) $image	= 'http://cambelt.co/icon/document/230x170?color=3fc46b,fefefe';
                             
                         ?>	                    
-	            		<img src="<?php echo $image;?>" class="images right" title="Imagen del director">
+	            		<img src="<?php echo $image;?>" class="images right" title="Registro de pago">
                         <div id="user_payment"></div>                                              
 	            	</div>
 				</div>
