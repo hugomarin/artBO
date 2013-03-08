@@ -5,7 +5,7 @@ function validate()
 	var ret	= true;
 	if (document.getElementById("rep_contrasena").value != document.getElementById('contrasena').value) 
 	{ 
-		alert ('Las contraseñas no coinciden.'); 
+		alert ('Las claves no coinciden.'); 
 		ret	= false; 
 	}
 	else if (document.getElementById('contrasena').value == '')

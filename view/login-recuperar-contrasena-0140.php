@@ -9,14 +9,14 @@
 		<div class="six columns centered ">
 			<span class="artBO">artBO</span><span class="ccB">CCB</span>
 			<div class="alert-box success">
-				Felicitaciones. Haz cambiado tu contraseña.
+				Felicitaciones. Haz cambiado tu clave.
 				<a href="" class="close" title="Cerrar">&times;</a>
 			</div>
 			<div class="panel"><!-- Panel -->
-				<h3>Restablecer contraseña</h3>
+				<h3>Restablecer clave</h3>
 				<p>Ahora puedes ingresar</p>
 			</div>  <!-- End Panel -->
-			<a href="<?php echo APPLICATION_URL?>login.html" title="Restablecer contraseña" class="button radius right">Ir a inicio de sesión</a>
+			<a href="<?php echo APPLICATION_URL?>login.html" title="Restablecer clave" class="button radius right">Ir a inicio de sesión</a>
 		</div> <!-- end six columns -->
 	</div><!-- End Row -->
 </div>

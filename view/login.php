@@ -20,10 +20,10 @@ if (isset($_GET[0]))
 					<label for="name">Correo electrónico</label>
 					<input type="email"  name="user_email" title="Digite el correo electrónico" required="required"/>
 					<label for="name">Clave</label>
-					<input type="password" name="user_password" title="Digite su contraseña" required="required"/>
+					<input type="password" name="user_password" title="Digite su clave" required="required"/>
 				</div>
 				<div class="row">
-					<div class="six columns"><a href="<?php echo APPLICATION_URL?>login-recuperar-contrasena-0110.html" title="Haga clic aquí para recordar su clave" class="whitetxt bold">&iquest;Olvidó su contraseña?</a></div>
+					<div class="six columns"><a href="<?php echo APPLICATION_URL?>login-recuperar-contrasena-0110.html" title="Haga clic aquí para recordar su clave" class="whitetxt bold">&iquest;Olvidó su clave?</a></div>
 					<div class="six columns"><input type="submit" class="button radius right" title="Haga clic aquí para iniciar sesión" value="Inicio de sesión"></div>
 				</div>
 			</form>

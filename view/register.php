@@ -37,7 +37,7 @@ else
 					<label for="name"><span class="asterix">*</span>Confirmar correo electrónico</label>
 					<input type="email" name="user_email_confirm"  alt="email" title="Confirme el correo electrónico digitado"/>
 					<label for="name"><span class="asterix">*</span>Clave</label>
-					<input type="password" name="user_password" title="Digite su contraseña"/>
+					<input type="password" name="user_password" title="Digite su clave"/>
 					<label for="name"><span class="asterix">*</span>Confirmar clave</label>
 					<input type="password" name="user_password_confirm" alt="Confirme la clave digitada" title="Contrase&ntilde;a (repetir)"/>
 				</div>
