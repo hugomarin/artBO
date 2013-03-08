@@ -26,9 +26,9 @@ if (isset($_GET[0]))
 			<form action="<?php echo APPLICATION_URL;?>user.controller/changePassword.html" method="post" accept-charset="utf-8">
 				<div class="panel"><!-- panel -->
 					<h2>Editar su perfil</h2>
-					<label for="contraseña">Nueva contraseña</label>
+					<label for="contraseña">Nueva clave</label>
 					<input type="password" name="contrasena" value="" id="contrasena"/>
-					<label for="Repetir contraseña">Repetir contraseña</label>
+					<label for="Repetir contraseña">Repetir clave</label>
 					<input type="password" name="rep_contrasena" value="" id="rep_contrasena"/>
 				</div>
 				<div class="row">

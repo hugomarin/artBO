@@ -36,7 +36,7 @@ function decide($field, $required, $user)
 					
 				?>
 				<img src="<?php echo $image;?>" class="images" title="Imagen de la Galería">                
-				<span class="caption">Puede subir imagen de la última exposición realizada en su galería en .jpg, .png o .gif. El archivo no debe superar los 1000 KB.</caption><br />
+				<caption class="caption">Puede subir imagen de la última exposición realizada en su galería en .jpg, .png o .gif. El archivo no debe superar los 1000 KB.</caption><br />
                 <div id="user_gallery_image"></div>
                                             
                 <br />
@@ -54,7 +54,7 @@ function decide($field, $required, $user)
 				<div class="mid-input companyname-data">
 					<label><span class="asterix">*</span>Nombre de la empresa o razón social</label>	
 					<input type="text" name="user_gallery_razon" class="expand input-text <?php echo decide('user_gallery_razon', $required, $user);?>" value="<?php echo $user->__get('user_gallery_razon');?>" title="Digite el nombre de la empresa o razón social"/>
-					<span class="caption"><strong>Nota:</strong> Con esta información se procederá a realizar la facturación correspondiente.</caption>
+					<caption class="caption"><strong>Nota:</strong> Con esta información se procederá a realizar la facturación correspondiente.</caption>
 				</div><!--/companyname-data-->
 			<div class="block">	
 				<div class="mid-input doctype-data">
@@ -71,7 +71,7 @@ function decide($field, $required, $user)
 					<input type="text" name="user_gallery_document" class="expand input-text <?php echo decide('user_gallery_document', $required, $user);?>" value="<?php echo $user->__get('user_gallery_document');?>" title="Digite el número del documento"/>
 				</div><!--/companyname-data-->
 			</div>
-			<span class="caption"><strong>Nota:</strong>Tenga en cuenta que con número de identificación, también se registrará el ingreso de mercancía de sus obras, equipos y otros a Corferias.</caption>
+			<caption class="caption"><strong>Nota:</strong>Tenga en cuenta que con número de identificación, también se registrará el ingreso de mercancía de sus obras, equipos y otros a Corferias.</caption>
 			
 			<div class="mid-input website-data">
 				<label>Página web</label>	
@@ -235,7 +235,7 @@ function decide($field, $required, $user)
                         
                     ?>
                     <img src="<?php echo $image;?>" class="images" title="Imagen del director">                
-                    <span class="caption">Puede subir imagen de la última exposición realizada en su galería en .jpg, .png o .gif. El archivo no debe superar los 1000 Kb.</caption><br />
+                    <caption class="caption">Puede subir imagen de la última exposición realizada en su galería en .jpg, .png o .gif. El archivo no debe superar los 1000 Kb.</caption><br />
                     <div id="user_director_image"></div>                    
 				</div><!--/gallery-image-->
 			</div><!--/six columns-->
