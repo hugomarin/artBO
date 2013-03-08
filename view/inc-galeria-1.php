@@ -28,7 +28,7 @@ function decide($field, $required, $user)
 	<div class="row">
 		<div class="six columns">
 			<div class="mid-input gallery-image">
-				<label title="Cargue la imagen correspondiente a su galería"><span class="asterix">*</span>Imagen de la Galería</label>
+				<label title="Cargue la imagen correspondiente a su galería"><span class="asterix">*</span>Imagen de la galería</label>
 				<!-- <i>Imagen del espacio expositivo</i>
 				<br /> -->
                 <?php
@@ -36,7 +36,7 @@ function decide($field, $required, $user)
 					
 				?>
 				<img src="<?php echo $image;?>" class="images" title="Imagen de la Galería">                
-				<caption class="caption">Puede subir imagen de la última exposición realizada en su galería en .jpg, .png o .gif. El archivo no debe superar los 1000 KB.</caption><br />
+				<caption class="caption">Puede subir imagen de la última exposición realizada en su galería en .JPG, .PDF o .PNG. El archivo no debe superar los 1000 KB.</caption><br />
                 <div id="user_gallery_image"></div>
                                             
                 <br />
@@ -71,7 +71,7 @@ function decide($field, $required, $user)
 					<input type="text" name="user_gallery_document" class="expand input-text <?php echo decide('user_gallery_document', $required, $user);?>" value="<?php echo $user->__get('user_gallery_document');?>" title="Digite el número del documento"/>
 				</div><!--/companyname-data-->
 			</div>
-			<caption class="caption"><strong>Nota:</strong>Tenga en cuenta que con número de identificación, también se registrará el ingreso de mercancía de sus obras, equipos y otros a Corferias.</caption>
+			<caption class="caption"><strong>Nota:</strong> Tenga en cuenta que con número de identificación, también se registrará el ingreso de mercancía de sus obras, equipos y otros a Corferias.</caption>
 			
 			<div class="mid-input website-data">
 				<label>Página web</label>	
@@ -111,7 +111,7 @@ function decide($field, $required, $user)
 			</div><!--/address-date-->
 			
 			<div class="mid-input postalcode-data">
-				<label><span class="asterix">*</span>Código Postal</label>	
+				<label><span class="asterix">*</span>Código postal</label>	
 				<input type="text"  name="user_postal_code" class="expand input-text <?php echo decide('user_postal_code', $required, $user);?>" value="<?php echo $user->__get('user_postal_code');?>" title="Digite el código postal" 
 				/>
 			</div><!--/postalcode-data-->
@@ -235,7 +235,7 @@ function decide($field, $required, $user)
                         
                     ?>
                     <img src="<?php echo $image;?>" class="images" title="Imagen del director">                
-                    <caption class="caption">Puede subir imagen de la última exposición realizada en su galería en .jpg, .png o .gif. El archivo no debe superar los 1000 Kb.</caption><br />
+                    <caption class="caption">Puede subir imagen de la última exposición realizada en su galería en .JPG, .PDF o .PNG. El archivo no debe superar los 1000 KB.</caption><br />
                     <div id="user_director_image"></div>                    
 				</div><!--/gallery-image-->
 			</div><!--/six columns-->
