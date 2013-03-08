@@ -29,7 +29,7 @@ include_once('menu.php');
 			<div class="container">
 				<div class="row form-data">	
 					<div class="twelve columns">
-						<h5>Registrar las exposiciones realizadas entre el 2011 y el 2013 en orden cronológico, incluyendo las exposiciones que tiene planeadas para el próximo año</h5>
+						<h5>Registre las exposiciones realizadas entre el 2011 y el 2013, en orden cronológico, incluyendo las exposiciones que tiene planeadas para el próximo año.</h5>
 						<div class="intitle">
 							<!-- .row>.one.column+.four.columns+three.columns+.three.columns+.one.columns -->
 							<ul class="expos">

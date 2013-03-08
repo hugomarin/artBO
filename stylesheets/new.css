@@ -429,24 +429,26 @@ label {
 }
 
 /* line 392, ../sass/new.scss */
-.caption {
+.caption, caption {
   color: #808080;
   margin: 10px 0;
   display: block;
+  font-size: .8em;
+  line-height: 1.4em;
 }
 
-/* line 398, ../sass/new.scss */
+/* line 400, ../sass/new.scss */
 .block {
   display: block;
   height: 80px;
 }
 
-/* line 403, ../sass/new.scss */
+/* line 405, ../sass/new.scss */
 input[type="file"] {
   margin: 15px 0;
 }
 
-/* line 408, ../sass/new.scss */
+/* line 410, ../sass/new.scss */
 img.selected {
   border: 0;
   -webkit-box-shadow: rgba(187, 12, 53, 0.2) 0 0 10px;
@@ -459,7 +461,7 @@ img.selected {
   transform: rotate(-3deg);
 }
 
-/* line 427, ../sass/new.scss */
+/* line 429, ../sass/new.scss */
 .artBO {
   background: url("../images/sprite_new.png") 0 0;
   display: inline-block;
@@ -468,12 +470,12 @@ img.selected {
   width: 145px;
   margin: 20px 10px;
 }
-/* line 420, ../sass/new.scss */
+/* line 422, ../sass/new.scss */
 .artBO else {
   background: url("../images/sprite_new2x.png") 0 0;
 }
 
-/* line 433, ../sass/new.scss */
+/* line 435, ../sass/new.scss */
 .ccB {
   background: url("../images/sprite_new.png") -150px 0;
   display: inline-block;
@@ -483,59 +485,59 @@ img.selected {
   margin: 20px 10px;
   float: right;
 }
-/* line 420, ../sass/new.scss */
+/* line 422, ../sass/new.scss */
 .ccB else {
   background: url("../images/sprite_new2x.png") -150px 0;
 }
 
-/* line 441, ../sass/new.scss */
+/* line 443, ../sass/new.scss */
 .stand-items img.images {
   margin-top: 10px;
 }
 
-/* line 446, ../sass/new.scss */
+/* line 448, ../sass/new.scss */
 input[type="text"].legal {
   display: inline-block;
   width: 300px;
 }
-/* line 450, ../sass/new.scss */
+/* line 452, ../sass/new.scss */
 input[type="text"].doc {
   display: inline-block;
   width: 200px;
 }
 
-/* line 457, ../sass/new.scss */
+/* line 459, ../sass/new.scss */
 .documents h4 {
   margin-top: 0;
 }
 
-/* line 462, ../sass/new.scss */
+/* line 464, ../sass/new.scss */
 .sub-menu {
   margin: 5px 30px;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
-  /* line 469, ../sass/new.scss */
+  /* line 471, ../sass/new.scss */
   .artBO {
     display: inline-block;
     text-indent: -9999px;
   }
-  /* line 420, ../sass/new.scss */
+  /* line 422, ../sass/new.scss */
   .artBO else {
     background: url("../images/sprite_new2x.png") 0 0;
   }
 
-  /* line 472, ../sass/new.scss */
+  /* line 474, ../sass/new.scss */
   .ccB {
     display: inline-block;
     text-indent: -9999px;
   }
-  /* line 420, ../sass/new.scss */
+  /* line 422, ../sass/new.scss */
   .ccB else {
     background: url("../images/sprite_new2x.png") 0 0;
   }
 }
-/* line 478, ../sass/new.scss */
+/* line 480, ../sass/new.scss */
 .reveal-modal {
   background-color: #e8e8e8;
   width: 70%;
@@ -547,7 +549,7 @@ input[type="text"].doc {
   left: 0;
 }
 
-/* line 489, ../sass/new.scss */
+/* line 491, ../sass/new.scss */
 .qq-upload-button {
   width: 150px;
   background: white;
@@ -574,12 +576,12 @@ input[type="text"].doc {
   -o-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
 }
-/* line 505, ../sass/new.scss */
+/* line 507, ../sass/new.scss */
 .qq-upload-button:hover {
   border-bottom: 4px solid gray;
 }
 
-/* line 510, ../sass/new.scss */
+/* line 512, ../sass/new.scss */
 .qq-drop-processing {
   display: none;
 }

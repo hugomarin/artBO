@@ -10,8 +10,12 @@ if (isset($_GET[0]))
 <div class="container">
 	<div class="row"><!-- Row -->	
 		<div class="six columns centered"><!-- six columns -->
-		<div class="languages"><span class="label round"><a href="#">English</a> | <a href="#">Español</a></span></div>
+<<<<<<< HEAD
+			<div class="languages"><span class="label round"><a href="#">English</a> | <a href="#">Español</a></span></div>
+			<span class="artBO">Artbo</span><span class="ccB">CCB</span>
+=======
 			<span class="artBO">artBO</span><span class="ccB">CCB</span>
+>>>>>>> 7b9cba0bf13aadb7cd4368047bf94ba6efeb7492
 			<form action="<?php echo APPLICATION_URL?>user.controller/login.html"  method="post">
 				<div class="panel radius">
 					<h3>Inicio de Sesión</h3>

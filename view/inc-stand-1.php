@@ -15,7 +15,7 @@
             <p>USD$15.498.00</p>
 	            
 	            <div class="mid-input standname-data">
-					<label>Nombre para la cornisa del stand</label>	
+					<label>Nombre para la cornisa del <em>stand</em></label>	
 					<input type="text" name="cornisa_1" class="expand input-text" value="<?php echo $user->__get('user_space_name');?>" title="Indique el nombre que deberá aparecer en la cornisa del stand"  />
 				</div><!--/directorname-data-->
 				
@@ -29,7 +29,7 @@
             <p>USD$14.301.00</p>
             
 	            <div class="mid-input standname-data">
-					<label>Nombre para la cornisa del stand</label>	
+					<label>Nombre para la cornisa del <em>stand</em></label>	
 					<input type="text" name="cornisa_2" class="expand input-text" value="<?php echo $user->__get('user_space_name');?>" title="Indique el nombre que deberá aparecer en la cornisa del stand"  />
 				</div><!--/directorname-data-->
             
@@ -43,7 +43,7 @@
             <p>USD$10.215.00</p>
             
 	            <div class="mid-input standname-data">
-					<label>Nombre para la cornisa del stand</label>	
+					<label>Nombre para la cornisa del <em>stand</em></label>	
 					<input type="text" name="cornisa_3" class="expand input-text" value="<?php echo $user->__get('user_space_name');?>" title="Indique el nombre que deberá aparecer en la cornisa del stand"  />
 				</div><!--/directorname-data--> 
            
@@ -56,7 +56,7 @@
             <h4>31,50 mts<sup>2</sup></h4>
             <p>USD$ 7.749.00</p>
  	            <div class="mid-input standname-data">
-					<label>Nombre para la cornisa del stand</label>	
+					<label>Nombre para la cornisa del <em>stand</em></label>	
 					<input type="text" name="cornisa_5" class="expand input-text" value="<?php echo $user->__get('user_space_name');?>" title="Indique el nombre que deberá aparecer en la cornisa del stand"  />
 				</div><!--/directorname-data-->
             <a href="javascript:void(0);" data-stand="5" class="round small button <?php if ($user->__get('user_stand_type') == 5) echo 'nulled'; ?>">Seleccionar</a>
@@ -71,7 +71,7 @@
 			<h4>21 mts2</h4>
 			<p>USD$ 5.166.00</p>
 			<div class="mid-input standname-data">
-				<label>Nombre para la cornisa del stand</label>	
+				<label>Nombre para la cornisa del <em>stand</em></label>	
 				<input type="text" name="cornisa_1" class="expand input-text" value="<?php echo $user->__get('user_space_name');?>" title="Indique el nombre que deberá aparecer en la cornisa del stand"  />
 			</div>
 			<a href="javascript:void(0);" data-stand="6" class="round small button <?php if ($user->__get('user_stand_type') == 6) echo 'nulled'; ?>">Seleccionar</a>

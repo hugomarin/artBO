@@ -2,8 +2,8 @@
 include_once('header-login.php'); 
 $ferias		= FeriaHelper::retrieveFerias(" AND user_id = ". $user->__get('user_id'));
 $artbo		= explode("|", $user->__get('user_artbo'));
-if	(count($artbo) < 7)
-for ($i=0; $i < 7; $i++)
+if	(count($artbo) < 8)
+for ($i=0; $i < 8; $i++)
 	$artbo[$i]	= 0;
 $countries	= CountryHelper::retrieveCountries(" AND country_activated = 1 ORDER by country_name");
 include_once('menu.php'); 

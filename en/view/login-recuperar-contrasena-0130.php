@@ -16,7 +16,7 @@
 					
 				    	<!-- casilla de alerta -->
 				    	<div class="alert-box error">
-				    		Las contraseñas no coinciden. Prueba de nuevo.
+				    		Las claves no coinciden. Prueba de nuevo.
 				    		<a href="" class="close" title="Cerrar">&times;</a>
 				    	</div>
 				    	<!-- END  casilla de alerta -->

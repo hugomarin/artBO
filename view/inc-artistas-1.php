@@ -72,7 +72,7 @@
                                     <input type="hidden" id="artist_residency_1" class="no-margin" name="artist_residency_1" value="" />
                                     <input type="hidden" id="artist_review_1" class="no-margin" name="artist_review_1" value="" />
                                     <!-- END nacionalidad -->
-                                    <!-- <label for="checkbox3a"><input class="revealer-new" type="checkbox" id="checkbox-1" name="artist_artbo_1"><strong>Este artista participará en Artbo</strong></label> -->
+                                    <!-- <label for="checkbox3a"><input class="revealer-new" type="checkbox" id="checkbox-1" name="artist_artbo_1"><strong>Este artista participará en artBO</strong></label> -->
                                     <!-- boton para modal de artista -->
                                     <a href="#" class="revelar-a revealer-new " id="link-<?php echo $i?>" data-reveal-id="artista" >Más información sobre el artista</a>
                                     <!-- END boton para modal de artista -->
