@@ -510,3 +510,24 @@ only screen and (min-device-pixel-ratio: 2) {
 .qq-drop-processing{
   display:none;
 }
+
+ 
+.languages{
+  span.label{
+    background-color:rgba(#FFF,.3);
+    position: absolute;
+    right: 20px;
+  }
+  a{
+    color:#fff;
+  }
+  position:relative;
+  height: 15px;
+  margin-bottom: 10px;
+}
+
+.standname-data{
+  input{
+    display:none;
+  }
+}

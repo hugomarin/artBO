@@ -7,6 +7,7 @@
 <div class="container">
 	<div class="row "><!-- Row -->	
 		<div class="six columns centered ">
+			<div class="languages"><span class="label round"><a href="#">English</a> | <a href="#">Español</a></span></div>
 			<span class="artBO">Artbo</span><span class="ccB">CCB</span>
 			<div class="alert-box success">
 				Felicitaciones. Haz cambiado tu contraseña.

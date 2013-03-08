@@ -583,3 +583,25 @@ input[type="text"].doc {
 .qq-drop-processing {
   display: none;
 }
+
+/* line 515, ../sass/new.scss */
+.languages {
+  position: relative;
+  height: 15px;
+  margin-bottom: 10px;
+}
+/* line 516, ../sass/new.scss */
+.languages span.label {
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  right: 20px;
+}
+/* line 521, ../sass/new.scss */
+.languages a {
+  color: #fff;
+}
+
+/* line 530, ../sass/new.scss */
+.standname-data input {
+  display: none;
+}

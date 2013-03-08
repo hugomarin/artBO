@@ -10,6 +10,7 @@ if (isset($_GET[0]))
 <div class="container">
 	<div class="row"><!-- Row -->	
 		<div class="six columns centered"><!-- six columns -->
+			<div class="languages"><span class="label round"><a href="#">English</a> | <a href="#">Español</a></span></div>
 			<span class="artBO">Artbo</span><span class="ccB">CCB</span>
 			<form action="<?php echo APPLICATION_URL?>user.controller/login.html"  method="post">
 				<div class="panel radius">

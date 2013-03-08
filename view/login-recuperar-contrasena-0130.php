@@ -17,6 +17,7 @@ print_r ($_SESSION);
 <div class="container">
 	<div class="row"><!-- Row -->	
 		<div class="six columns centered"><!-- six columns -->
+			<div class="languages"><span class="label round"><a href="#">English</a> | <a href="#">Español</a></span></div>
 			<span class="artBO">Artbo</span><span class="ccB">CCB</span>
 	    	<div class="alert-box error">
 	    		Las contraseñas no coinciden. Prueba de nuevo.
