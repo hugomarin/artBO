@@ -13,7 +13,7 @@ else
 
 ?>
 
-<body>
+<body class="bigpic2">
 <!-- content -->
 <div class="container">
 	<div class="row"><!-- Row -->	

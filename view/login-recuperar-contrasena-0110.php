@@ -2,7 +2,7 @@
 include_once('header-nologin2.php'); 
 ?>
 
-<body>
+<body class="bigpic4">
 <!-- content -->
 <div class="container">
 	<div class="row"><!-- Row -->	

@@ -7,7 +7,7 @@ if ((isset($_GET[0])) && ($_GET[1] == 0))
 	$error	= '<div class="alert-box error" id="alert">Hay un error en los datos suministrados.<a href="javascript:void(0);" onClick="document.getElementById(\'alert\').style.display=\'none\';" class="close">&times;</a></div>';
 ?>
 
-<body style="background-color:#000">
+<body style="background-color:#000" class="bigpic1">
 <!-- content -->
 <div class="container">
 	<div class="row"><!-- Row -->	
@@ -37,7 +37,7 @@ if ((isset($_GET[0])) && ($_GET[1] == 0))
 <!-- End content -->
 			
 
+<?php include_once('randomizer.php'); ?>
 <!-- 3. footer -->			
 <?php include_once('footer.php'); ?>
 <!-- 3. End footer -->
-<?php include_once('randomizer.php'); ?>
