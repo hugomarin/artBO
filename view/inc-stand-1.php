@@ -2,7 +2,7 @@
                 
 <div class="row">
 	<div class="twelve columns">
-	<ul class="block-grid five-up stand-items">
+	<ul class="block-grid four-up stand-items">
 	
     <?php
 	if ($user->__get('user_gallery_type') != 2)

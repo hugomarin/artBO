@@ -243,12 +243,13 @@ function decide($field, $required, $user)
 			
 			<div class="six columns">
 				<div class="mid-input directorname-data">
-					<label><span class="asterix">*</span>Nombre completo del director</label>	
+					<label><span class="asterix">*</span>Nombre(s) completo del director</label>	
 					<input type="text" name="user_director_name" class="expand input-text <?php echo decide('user_director_name', $required, $user);?>" title="Digite el nombre completo del director" value="<?php echo $user->__get('user_director_name');?>" />
+					<caption class="caption">Nota: Si hay más de un director o persona de contacto, separe los datos con comas.</caption>
 				</div><!--/directorname-data-->
 					
 				<div class="mid-input emaildirector-data">
-					<label><span class="asterix">*</span>Correo electrónico del director</label>	
+					<label><span class="asterix">*</span>Correo(s) electrónico del director</label>	
 					<input type="text" name="user_director_email" class="expand input-text <?php echo decide('user_director_email', $required, $user);?>" title="Digite el correo electrónico del director" value="<?php echo $user->__get('user_director_email');?>" />
 				</div><!--/emaildirector-data-->
 					
@@ -258,7 +259,7 @@ function decide($field, $required, $user)
 				</div><!--/contactname-data-->
 				
 				<div class="mid-input contactmail-data">
-					<label><span class="asterix">*</span>Correo electrónico contacto</label>	
+					<label><span class="asterix">*</span>Correo(s) electrónico contacto</label>	
 					<input type="text" name="user_contact_email" class="expand input-text <?php echo decide('user_contact_email', $required, $user);?>" title="Correo electrónico persona contacto" value="<?php echo $user->__get('user_contact_email');?>" />
 				</div><!--/contactmail-data-->
 			</div><!--/six columns-->
