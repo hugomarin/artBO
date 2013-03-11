@@ -1,6 +1,9 @@
-
 <!-- modal general -->
+<script>
+	uploaders = new Array();
+</script>
 <?php
+$dir = 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8_decode($user->__get('user_name'))) . '/artistas/';
 for($i = 1; $i <= count($artists); $i++)
 {
 	$artist 	= $artists[($i - 1)]; 
@@ -10,7 +13,7 @@ for($i = 1; $i <= count($artists); $i++)
 
 
 	<a class="close-reveal-modal">×</a><!-- modal close tag -->
-		<h3><?php echo $artist->__get('artist_name')?> <?php echo $artist->__get('artist_lastName')?></h3>
+		<h3><?php echo $artist->__get('artist_name')?></h3>
 		<!-- row -->
 		
 		<!-- END columns 1/2 -->
@@ -30,7 +33,7 @@ for($i = 1; $i <= count($artists); $i++)
 			<div class="six columns">
 			
 				<label>Reseña del artista<label>
-				<p><em>(Descripción de la propuesta artística, exposiciones destacadas desde el 2007, obras en colecciones. Máximo 500 palabras)</em></p>
+				<i>(Descripción de la propuesta artística, exposiciones destacadas desde el 2007, obras en colecciones. Máximo 500 palabras)</i>
 				<textarea class="grande" name="artist_review" rows="7"><?php echo $artist->__get('artist_review')?></textarea>
 			</div>
 			
@@ -50,13 +53,16 @@ for($i = 1; $i <= count($artists); $i++)
 					for($j=1; $j<=3; $j++)
 					{
 						$file = '';
-						if(isset($artistWork[($j - 1)]))
+						if(isset($artistWork[($j - 1)]) && ($artistWork[($j - 1)]->__get('artist_work_file') != ''))
 						{
-							$file = APPLICATION_FULL_URL . 'resources/images/' . $artistWork[($j - 1)]->__get('artist_work_file');
+							
+							$file = file_exists($dir . $artistWork[($j - 1)]->__get('artist_work_file')) ? APPLICATION_URL . $dir . $artistWork[($j - 1)]->__get('artist_work_file') : '';
 						}
 						else
 							$artistWork[($j - 1)] = new ArtistWork();
+						$key 		= ($artistWork[($j - 1)]->__get('artist_work_key') != '') ? $artistWork[($j - 1)]->__get('artist_work_key') : md5(date('YmdHis') . $i . '-' . $j);
 						?>
+						<input type="hidden" name="artist_work_key_<?php echo $j?>" value="<?php echo $key?>">
 						<div class="four columns obra">
 							<?php
 							if($file != '')
@@ -74,12 +80,29 @@ for($i = 1; $i <= count($artists); $i++)
 							<input type="text" title="Dimensiones <?php echo $j?>" name="artist_work_dimensions_<?php echo $j?>" value="<?php echo $artistWork[($j - 1)]->__get('artist_work_dimensions')?>">
 							<label>Año de realización</label>
 							<input type="text" title="Año de realización <?php echo $j?>" name="artist_work_year_<?php echo $j?>" value="<?php echo $artistWork[($j - 1)]->__get('artist_work_year')?>">
-							<input type="file" title="Archivo <?php echo $j?>" name="artist_work_file_<?php echo $j?>" />
+							<div id="artist_work_file_<?php echo $key . '_' . $j?>" name="artist_work_file_<?php echo $key . '_' . $j?>"></div>
 						</div>
+						<script>
+					      $(document).ready(function() {
+					      	eval('var uploaders<?php echo $key?> = { uploader<?php echo $j?>: null };');
+					      	eval('var currentUploader = uploaders<?php echo $key?>.uploader<?php echo $j?>;');
+					        var currentUploader = uploaders[<?php echo $i . $j?>] = new qq.FineUploader({
+							  debug: true, 												 
+					          element: $('#artist_work_file_<?php echo $key . '_' . $j?>')[0],
+					          request: {
+					            endpoint: '<?php echo APPLICATION_URL;?>upload_works.controller/<?php echo $_SESSION['user_id'];?>/artist_<?php echo $key?>_image_<?php echo $j?>/<?php echo $key?>.html'
+					          },
+					          autoUpload: true,
+					          text: {
+					            uploadButton: '<i class="icon-plus icon-white"></i> Seleccione archivo'
+					          }
+					        });	
+					      });
+					   </script>  
 						<?php
 					}
 					?>
-				<caption>Puede subir máximo tres imágenes de sus obras en .jpg, .png o .gif</caption>
+				<span>Puede subir máximo tres imagenes de sus obras en .jpg, .png o .gif</span>
 				</div>
 				<!-- END panel de imagen -->
 				
@@ -105,22 +128,25 @@ for($i = 1; $i <= count($artists); $i++)
 		<h3>Artista</h3>
 		<!-- row -->
 		<form class="" id="new_artist_form" enctype="multipart/form-data" action="<?php echo APPLICATION_URL?>user.controller.html" method="post">
-		<input type="hidden" name="action" value="insertArtist">		
+		<input type="hidden" name="action" value="insertArtist">	
 		<!-- END columns 1/2 -->
 		<div class="row">
 			<!-- columns 2/2 -->
 			<!-- reseña de artista -->
 			<div class="six columns">
 							<label>Fecha de nacimiento (YYYY-MM-DD)</label>
-							<input type="text" name="artist_birthday" value="<?php echo $artist->__get('artist_birthday')?>" class="small datepicker"/>
+							<input type="text" name="artist_birthday" value="" class="small datepicker"/>
 							<label>Lugar de residencia</label>
-							<input type="text" name="artist_residency" value="<?php echo $artist->__get('artist_residency')?>" class="small"/>
+							<input type="text" name="artist_residency" value="" class="small"/>
+							<input type="hidden" name="artist_name" id="artist_name_new" value="" class="small"/>
+							<input type="hidden" name="artist_surname" id="artist_surname_new" value="" class="small"/>
+							<input type="hidden" name="artist_nationality" id="artist_nationality_new" value="" class="small"/>
 						</div>
 						<div class="six columns">
 						
 							<label>Reseña del artista<label>
 							<i>(Descripción de la propuesta artística, exposiciones destacadas desde el 2007, obras en colecciones. Máximo 500 palabras)</i>
-							<textarea class="grande" name="artist_review" rows="7"><?php echo $artist->__get('artist_review')?></textarea>
+							<textarea class="grande" name="artist_review" rows="7"></textarea>
 						</div>
 			
 			<!-- END reseña de artista -->
@@ -136,20 +162,39 @@ for($i = 1; $i <= count($artists); $i++)
 				<div class="row">
 
 					<?php
-					for($i=1; $i<=3; $i++)
+					for($j=1; $j<=3; $j++)
 					{
+						$key 		= md5(date('YmdHis') . 'new' . $j);
 						?>
+						<input type="hidden" name="artist_work_key_<?php echo $j?>" value="<?php echo $key?>">
 						<div class="four columns obra">
 							<label>Nombre de la obra</label>
-							<input type="text" title="Nombre de la obra <?php echo $i?>" name="artist_work_name_<?php echo $i?>">
+							<input type="text" title="Nombre de la obra <?php echo $j?>" name="artist_work_name_<?php echo $j?>">
 							<label>Técnica</label>
-							<input type="text" title="Técnica <?php echo $i?>" name="artist_work_technique_<?php echo $i?>">
+							<input type="text" title="Técnica <?php echo $j?>" name="artist_work_technique_<?php echo $j?>">
 							<label>Dimensiones</label>
-							<input type="text" title="Dimensiones <?php echo $i?>" name="artist_work_dimensions_<?php echo $i?>">
+							<input type="text" title="Dimensiones <?php echo $j?>" name="artist_work_dimensions_<?php echo $j?>">
 							<label>Año de realización</label>
-							<input type="text" title="Año de realización <?php echo $i?>" name="artist_work_year_<?php echo $i?>">
-							<input type="file" title="Archivo <?php echo $i?>" name="artist_work_file_<?php echo $i?>" />
+							<input type="text" title="Año de realización <?php echo $j?>" name="artist_work_year_<?php echo $j?>">
+							<div name="artist_work_file_<?php echo $key . '_' . $j?>" id="artist_work_file_<?php echo $key . '_' . $j?>"></div>
 						</div>
+						<script>
+					      $(document).ready(function() {
+					      	eval('var uploaders<?php echo $key?> = { uploader<?php echo $j?>: null };');
+					      	eval('var currentUploader = uploaders<?php echo $key?>.uploader<?php echo $j?>;');
+					        var currentUploader = new qq.FineUploader({
+							  debug: true, 												 
+					          element: $('#artist_work_file_<?php echo $key . '_' . $j?>')[0],
+					          request: {
+					            endpoint: '<?php echo APPLICATION_URL;?>upload_works.controller/<?php echo $_SESSION['user_id'];?>/artist_<?php echo $key?>_image_<?php echo $j?>/<?php echo $key?>.html'
+					          },
+					          autoUpload: true,
+					          text: {
+					            uploadButton: '<i class="icon-plus icon-white"></i> Seleccione archivo'
+					          }
+					        });	
+					      });
+					   </script> 
 						<?php
 					}
 					?>

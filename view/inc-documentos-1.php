@@ -1,5 +1,6 @@
 <?php
 $default	= 'http://cambelt.co/icon/document/230x170?color=b71632,fefefe';
+$dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8_decode($user->__get('user_name'))).'/';
 ?>
 	<h5>Adjunte copias de los documentos en formato JPG o PDF únicamente. Con un peso máximo de 1000KB</h5>
 	

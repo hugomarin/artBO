@@ -32,8 +32,7 @@ function decide($field, $required, $user)
 				<!-- <i>Imagen del espacio expositivo</i>
 				<br /> -->
                 <?php
-				$image	= ($user->__get('user_gallery_image') != '') ? APPLICATION_URL.$dir.$user->__get('user_gallery_image') : $default;
-					
+				$image	= (($user->__get('user_gallery_image') != '') && (!file_exists(APPLICATION_URL.$dir.$user->__get('user_gallery_image')))) ? APPLICATION_URL.$dir.$user->__get('user_gallery_image') : $default;
 				?>
 				<img src="<?php echo $image;?>" class="images" title="Imagen de la Galería">                
 				<caption class="caption">Puede subir imagen de la última exposición realizada en su galería en .JPG, .PDF o .PNG. El archivo no debe superar los 1000 KB.</caption><br />
@@ -208,7 +207,7 @@ function decide($field, $required, $user)
 				<div class="six columns">
 					<div class="mid-input galleryprofile-data">
 						<label><span class="asterix">*</span>Perfil  de la galería</label>
-						<select name="user_gallery_profile" title="Seleccione el perfil de la galería" class="<?php echo decide('user_gallery_profile', $required, $user);?>">
+						<select name="user_gallery_profile" title="Seleccione el perfil de la galería" class="<?php echo decide('user_gallery_profile', $required, $user);?>" onchange="if (this.value == 'Otro') { document.getElementById('hiddenField').style.display=''; } else { document.getElementById('hiddenField').style.display='none'; } ">
 						  <option value="NULL">Seleccione</option>
                           <option value="Moderno" <?php if ($user->__get('user_gallery_profile') == 'Moderno') echo 'SELECTED="SELECTED"';?>>Moderno</option>
                           <option value="Contemporáneo" <?php if ($user->__get('user_gallery_profile') == 'Contemporáneo') echo 'SELECTED="SELECTED"';?>>Contemporáneo</option>
@@ -216,9 +215,11 @@ function decide($field, $required, $user)
                           <option value="Experimental/nuevos medios" <?php if ($user->__get('user_gallery_profile') == 'Experimental/nuevos medios') echo 'SELECTED="SELECTED"';?>>Experimental/nuevos medios</option>
                           <option value="Otro" <?php if ($user->__get('user_gallery_profile') == 'Otro') echo 'SELECTED="SELECTED"';?>>Otro</option>
 						</select>
+                        <div id="hiddenField" <?php if ($user->__get('user_gallery_profile') != 'Otro') { echo 'style="display:none;"'; } ?>>
 						<label><span class="asterix">*</span>¿Cuál?</label>
-						<input name="" type="text" title="" value="" class="small input-text expand" />
-					</div><!--/year-data-->
+						<input name="user_other" type="text" title="" value="<?php echo $user->__get('user_other');?>" class="small input-text expand" />
+						</div>
+                    </div><!--/year-data-->
 				</div>
 				
 			</div><!--/row-->
@@ -231,7 +232,7 @@ function decide($field, $required, $user)
 				<div class="mid-input director-image">
 					<label><span class="asterix">*</span>Foto del director</label>
 					<?php
-                    $image	= ($user->__get('user_director_image') != '') ? APPLICATION_URL.$dir.$user->__get('user_director_image') : $default;
+                    $image	= (($user->__get('user_director_image') != '') && (!file_exists(APPLICATION_URL.$dir.$user->__get('user_director_image')))) ? APPLICATION_URL.$dir.$user->__get('user_director_image') : $default;
                         
                     ?>
                     <img src="<?php echo $image;?>" class="images" title="Imagen del director">                
