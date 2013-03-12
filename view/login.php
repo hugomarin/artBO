@@ -14,7 +14,7 @@ if (isset($_GET[0]))
 			<span class="artBO">artBO</span><span class="ccB">CCB</span>
 			<form action="<?php echo APPLICATION_URL?>user.controller/login.html"  method="post">
 				<div class="panel radius">
-					<h3>Inicio de Sesión</h3>
+					<h3>Inicio de sesión</h3>
 					 <p>Si nunca se ha registrado en artBO, incluida la última versión, 
 					haga clic <a class="underline" href="<?php echo APPLICATION_URL?>register.html">aquí.</a></p>
 					<?php if (isset($error)) echo $error;?>

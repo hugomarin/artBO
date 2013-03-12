@@ -35,7 +35,7 @@ include_once('menu.php');
 						<h5>Recuerde que su propuesta de artistas para artBO 2013 debe ser acorde al tamaño del <em>stand</em> que ha seleccionado. Por cada 10 mts², sólo podrá exhibir un artista.</h5>
 						
 						
-						<h6>Propuesta artística para artBO 2013 (opcional) (máximo 250 palabras)</h6>
+						<h6>Propuesta artística para artBO 2013 (opcional, máximo 250 palabras)</h6>
 						
 												  <textarea name="user_gallery_proposal" placeholder="Digite la información de la propuesta artística para presentar en su stand en artBO" rows="8" cols="40"><?php echo $user->__get('user_gallery_proposal')?></textarea>
 						

@@ -179,7 +179,7 @@ function decide($field, $required, $user)
 				</div>
 				<div class="six columns">	
 					<div class="mid-input area-data">
-						<label><span class="asterix">*</span>Área de exposición de la galería (m2)</label>
+						<label><span class="asterix">*</span>Área de exposición de la galería (mts<sup>2</sup>)</label>
 						<input name="user_area" type="text" title=": Indique el área de exposición de la galería" value="<?php echo $user->__get('user_area');?>" class="small input-text expand <?php echo decide('user_area', $required, $user);?>" />
 					</div><!--/area-data-->
 				</div>
