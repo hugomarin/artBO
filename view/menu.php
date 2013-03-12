@@ -41,7 +41,7 @@
 	    </li>
 	     <li id="5">
 	     	<span class="spriteArrow"></span>
-			<a href="<?php echo APPLICATION_URL?>registro-espacio-0450.html" class="main" title="Tipo de Stand"><span class="number-menu">5</span>Tipo de Stand</a>
+			<a href="<?php echo APPLICATION_URL?>registro-espacio-0450.html" class="main" title="Tipo de Stand"><span class="number-menu">5</span>Tipo de <em>Stand</em></a>
 	    </li>
 	    <li id="6">
 	    	<span class="spriteArrow"></span>
