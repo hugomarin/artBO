@@ -70,7 +70,7 @@ function decide($field, $required, $user)
 					<input type="text" name="user_gallery_document" class="expand input-text <?php echo decide('user_gallery_document', $required, $user);?>" value="<?php echo $user->__get('user_gallery_document');?>" title="Digite el número del documento"/>
 				</div><!--/companyname-data-->
 			</div>
-			<caption class="caption"><strong>Nota:</strong> Tenga en cuenta que con número de identificación, también se registrará el ingreso de mercancía de sus obras, equipos y otros a Corferias.</caption>
+			<p class="caption"><strong>Nota:</strong> Tenga en cuenta que con número de identificación, también se registrará el ingreso de mercancía de sus obras, equipos y otros a Corferias.</p>
 			
 			<div class="mid-input website-data">
 				<label>Página web</label>	

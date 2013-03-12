@@ -66,7 +66,7 @@ include_once('menu.php');
 						<br />
 						<br />
 
-						<h6>Otros artistas representados</h6>
+						<h6>Otros artistas representados (por la galería)</h6>
 
 							<textarea name="user_represented_artists" rows="8" cols="40" placeholder="Digite la información correspondiente a artistas representados"><?php echo $user->__get('user_represented_artists');?></textarea>
 						</form>
