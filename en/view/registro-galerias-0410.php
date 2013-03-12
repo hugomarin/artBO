@@ -11,7 +11,7 @@ include_once('menu.php'); ?>
 			<div class="inner-header">
 				<div class="row">
 					<div class="eight columns title">
-						<strong class="redtext bold">Galería</strong>
+						<strong class="redtext bold">Gallery</strong>
 						<h2><?php echo $user->__get('user_gallery_comname');?></h2>
 					</div><!--/title-->
 					
