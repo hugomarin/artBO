@@ -2,7 +2,7 @@
 $default	= 'http://cambelt.co/icon/document/230x170?color=b71632,fefefe';
 $dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8_decode($user->__get('user_name'))).'/';
 ?>
-	<h5>Adjunte copias de los documentos en formato JPG o PDF únicamente. Con un peso máximo de 1000KB</h5>
+	<h5>Adjunte imágenes de los documentos en formato JPG o PDF únicamente. Con un peso máximo de 1000KB.</h5>
 	
 	<div class="row">
 		<div class="twelve columns">
@@ -28,8 +28,8 @@ $dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8
 	        <li>
 				<div class="row">
 					<div class="nine columns">		
-						<h4><span class="asterix">*</span>RUT o Identificación Fiscal</h4>
-						<p>El RUT es un documento exigido paras las galerías colombianas, Las extranjeras deben enviar identificación fiscal.</p>
+						<h4><span class="asterix">*</span>RUT o identificación fiscal</h4>
+						<p>El RUT es un documento exigido paras las galerías colombianas. Las extranjeras deben enviar identificación fiscal.</p>
 	            	</div>
 	            	<div class="three columns">
 						<?php
@@ -65,7 +65,7 @@ $dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8
 				<div class="row">
 					<div class="nine columns">		
 						<h4><span class="asterix">*</span>Registro de pago</h4>
-						<p>Copia del pago de los derechos de inscripción por USD $160</p>
+						<p>Copia del pago de los derechos de inscripción por USD $160.</p>
 	            	</div>
 	            	<div class="three columns">
 						<?php
