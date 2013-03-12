@@ -28,7 +28,7 @@ print_r ($_SESSION);
 			<div class="panel"><!-- Panel -->
 			<h3>Restablecer clave</h3>
 				<!-- login form -->
-				    	<p>Introduce una nueva clave para tu cuenta de artBO.</p>
+				    	<p>Introduzca una nueva clave para su cuenta de artBO.</p>
 				    
 				    	<div class="mid-input-div"><!-- Div Input -->
 				    		<label>Clave</label>

@@ -15,7 +15,7 @@ if ((isset($_GET[0])) && ($_GET[1] == 0))
 		<div class="languages"><span class="label round"><a href="#">English</a> | <a href="#">Español</a></span></div>
 			<span class="artBO">artBO</span><span class="ccB">CCB</span>
 			<header class="intro">
-				<h2>Proceso de aplicación a artBO 2013</h2>
+				<h2>Proceso de aplicación artBO 2013</h2>
 				<h5>Abierto hasta el 30 de abril. Esta aplicación es para galerías nacionales e internacionales constituidas legalmente.</h5>
 			</header>
 			<div class="options">
