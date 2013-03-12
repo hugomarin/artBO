@@ -15,13 +15,13 @@ $email = urldecode($_GET[0]);
 				<a href="#" class="close">&times;</a>
 			</div>
 			<div class="panel">
-				<h3>Restablecer clave</h3>
+				<h3>Reset password</h3>
 				<p>Hemos enviado un correo a <a class="bold" href="mailto:<?php echo $email?>"><?php echo $email?> </a> con instrucciones. Revise su carpeta de <strong>Spam</strong> si no lo encuentra.</p>
-				<p>Para enviar nuevamente el correo haga clic <a href="<?php echo APPLICATION_URL?>login-recuperar-contrasena-0110.html" title="Restablecer clave"><strong>aquí</strong></a></p>
+				<p>Para enviar nuevamente el correo haga clic <a href="<?php echo APPLICATION_URL?>login-recuperar-contrasena-0110.html" title="Reset password"><strong>aquí</strong></a></p>
 			</div>
 			<div class="row">
 				<div class="eight columns"></div>
-				<div class="four columns"><a class="button radius right" href="<?php echo APPLICATION_URL?>login.html" title="Inicia Sesion">Inicia sesión</a></div>
+				<div class="four columns"><a class="button radius right" href="<?php echo APPLICATION_URL?>login.html" title="Login">Login</a></div>
 			</div>
 		</div>
 	</div>

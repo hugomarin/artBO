@@ -14,18 +14,18 @@ if (isset($_GET[0]))
 			<a href="home.html"><span class="artBO">artBO</span></a><a href="home.html"><span class="ccB">CCB</span></a>
 			<form action="<?php echo APPLICATION_URL?>user.controller/login.html"  method="post">
 				<div class="panel radius">
-					<h3>Inicio de sesión</h3>
+					<h3>Login</h3>
 					 <p>Si nunca se ha registrado en artBO, incluida la última versión, 
 					haga clic <a class="underline" href="<?php echo APPLICATION_URL?>register.html">aquí.</a></p>
 					<?php if (isset($error)) echo $error;?>
-					<label for="name">Correo electrónico</label>
+					<label for="name">Email</label>
 					<input type="email"  name="user_email" title="Digite el correo electrónico" required="required"/>
-					<label for="name">Clave</label>
+					<label for="name">Password</label>
 					<input type="password" name="user_password" title="Digite su clave" required="required"/>
 				</div>
 				<div class="row">
-					<div class="six columns"><a href="<?php echo APPLICATION_URL?>login-recuperar-contrasena-0110.html" title="Haga clic aquí para recordar su clave" class="whitetxt bold">&iquest;Olvidó su clave?</a></div>
-					<div class="six columns"><input type="submit" class="button radius right" title="Haga clic aquí para iniciar sesión" value="Inicio de sesión"></div>
+					<div class="six columns"><a href="<?php echo APPLICATION_URL?>login-recuperar-contrasena-0110.html" title="Haga clic aquí para recordar su clave" class="whitetxt bold">&iquest;Forgot your password?</a></div>
+					<div class="six columns"><input type="submit" class="button radius right" title="Haga clic aquí para iniciar sesión" value="Login"></div>
 				</div>
 			</form>
 		</div><!-- END six columns -->
