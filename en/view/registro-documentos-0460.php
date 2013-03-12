@@ -23,15 +23,15 @@ function alertNotYet()
 			<div class="inner-header">
 				<div class="row">
 				<div class="eight columns title">
-					<span class="redtext bold">Documentos</span>
+					<span class="redtext bold">Documents</span>
 					<h2><?php echo $user->__get('user_gallery_comname');?></h2>
 				</div><!--/title-->
 				
 				<div class="four columns mini-nav-header">
 					<dl class="sub-nav">
-						<dd><a title="Anterior" class="prev" href="<?php echo APPLICATION_URL?>registro-espacio-0450.html">Anterior</a></dd>
+						<dd><a title="Previous" class="prev" href="<?php echo APPLICATION_URL?>registro-espacio-0450.html">Previous</a></dd>
 						<dd><h4>6/6</h4></dd>
-						<dd><a title="Guardar" class="save" href="javascript:void(0);" onClick="document.getElementById('validable').submit();">Guardar</a></dd>
+						<dd><a title="Save" class="save" href="javascript:void(0);" onClick="document.getElementById('validable').submit();">Save</a></dd>
 					</dl>
 				</div>
 			</div><!--/row inner-header-->
@@ -52,8 +52,8 @@ function alertNotYet()
 						</div>
 						<div class="four columns">
 							<div class="right">
-								<a href="<?php echo APPLICATION_URL?>registro-espacio-0450.html" class="graytxt">Anterior</a>  
-                                <a  href="javascript:void(0);" onClick="<?php echo $action;?>" class="button radius <?php echo $class;?>">Finalizar</a>
+								<a href="<?php echo APPLICATION_URL?>registro-espacio-0450.html" class="graytxt">Previous</a>  
+                                <a  href="javascript:void(0);" onClick="<?php echo $action;?>" class="button radius <?php echo $class;?>">Finish</a>
 							</div>
 						</div>
 					</div>
@@ -74,7 +74,7 @@ if (isset($_GET[0]))
 {
 ?>
 	<script language="JavaScript">
-        alert('Al hacer click declaro conocer y aceptar las condiciones y el reglamento de participaciónen artBO. Ha terminado de registrar su galería. Muchas gracias.');
+        alert('Al hacer click declaro conocer y aceptar las condiciones y el reglamento de participación en artBO. Ha terminado de registrar su galería. Muchas gracias.');
     </script>
 <?php
 }

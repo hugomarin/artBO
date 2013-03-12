@@ -2,7 +2,7 @@
 $default	= 'http://cambelt.co/icon/document/230x170?color=b71632,fefefe';
 $dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8_decode($user->__get('user_name'))).'/';
 ?>
-	<h5>Adjunte imágenes de los documentos en formato JPG o PDF únicamente. Con un peso máximo de 1000KB.</h5>
+	<h5>Upload a copy of the following documents in .jpg, .pdf or .png formats and not exceeding 1000KB.</h5>
 	
 	<div class="row">
 		<div class="twelve columns">
@@ -10,8 +10,8 @@ $dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8
 			<li>
 				<div class="row">
 					<div class="nine columns">		
-						<h4><span class="asterix">*</span>Certificado de existencia</h4>
-						<p>Expedido por la Cámara de Comercio de Bogotá (Original, no mayor a 90 días de expedición) o documento correspondiente de constitución expedido por el ente respectivo de su país.</p>
+						<h4><span class="asterix">*</span>Certificate of incorporation</h4>
+						<p>The certificate of incorporation issued by the respective authority of your country.</p>
 	            	</div>
 	            	<div class="three columns">
 						<?php
@@ -28,8 +28,8 @@ $dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8
 	        <li>
 				<div class="row">
 					<div class="nine columns">		
-						<h4><span class="asterix">*</span>RUT o identificación fiscal</h4>
-						<p>El RUT es un documento exigido paras las galerías colombianas. Las extranjeras deben enviar identificación fiscal.</p>
+						<h4><span class="asterix">*</span>Tax Identification</h4>
+						<p>The tax identification issued by the respective authority of your country.</p>
 	            	</div>
 	            	<div class="three columns">
 						<?php
@@ -46,8 +46,8 @@ $dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8
 	       	<li>
 				<div class="row">
 					<div class="nine columns">		
-						<h4><span class="asterix">*</span>Documento de identidad</h4>
-						<p>Documento de identidad del representante legal de la galería (c&eacute;dula de ciudadanía o de extranjer&iacute;a para las galerías colombianas, el pasaporte para las galerías internacionales).</p>
+						<h4><span class="asterix">*</span>Identity Document</h4>
+						<p>The passport of the legal representative of the gallery.</p>
 	            	</div>
 	            	<div class="three columns">
 						<?php
@@ -64,8 +64,8 @@ $dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8
 	       	<li>
 				<div class="row">
 					<div class="nine columns">		
-						<h4><span class="asterix">*</span>Registro de pago</h4>
-						<p>Copia del pago de los derechos de inscripción por USD $160.</p>
+						<h4><span class="asterix">*</span>Copy of payment</h4>
+						<p>Receipt of payment for the application fee in the amount of USD $160.</p>
 	            	</div>
 	            	<div class="three columns">
 						<?php
@@ -85,9 +85,9 @@ $dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8
 	<br />
 	<!-- aceptación de terminos -->
 	<div class="panel-2">
-	<p> Yo <input type="text" class="legal" placeholder="Nombre del Director o Representante legal" name="user_name_accept" value="<?php echo $user->__get('user_name_accept');?>" /> Identificado con
+	<p> I <input type="text" class="legal" placeholder="Nombre del Director o Representante legal" name="user_name_accept" value="<?php echo $user->__get('user_name_accept');?>" />Identified with
 		<input type="text" class="doc" placeholder="Número de Cédula" name="user_document_accept" value="<?php echo $user->__get('user_document_accept');?>"   /> 
-	declaro conocer y aceptar <a href="documentos/Reglamento.pdf" title="Reglamento de participación en artBO" target="_blank">las condiciones y el reglamento de participación</a> en artBO.
+	declare to have knowledge and accept<a href="documentos/Reglamento.pdf" title="Reglamento de participación en artBO" target="_blank">the conditions and participation regulations </a> of artBO.
 	</p>
 	
 	<input type="checkbox" name="user_accept" value="1" <?php if($user->__get('user_accept') == 1) { echo 'checked="checked"'; }?> /><span> Acepto las condiciones y el reglamento de participación en artBO</span>

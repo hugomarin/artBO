@@ -21,10 +21,10 @@ include_once('menu.php');
 					</div>
 					<div class="four columns mini-nav-header">
 						<dl class="sub-nav">
-							<dd><a class="save" title="Guardar" href="javascript:void(0);" onclick="$('#validable').submit();" >Guardar</a></dd>
+							<dd><a class="save" title="Save" href="javascript:void(0);" onclick="$('#validable').submit();" >Save</a></dd>
 							<dd><a class="prev" title="Registro Ferias" href="<?php echo APPLICATION_URL?>registro-ferias-0430.html">Anterior</a></dd>
 							<dd><h4>4/6</h4></dd>
-							<dd><a class="next" title="Registro espacio" href="<?php echo APPLICATION_URL?>registro-espacio-0450.html" >Siguiente</a></dd>
+							<dd><a class="next" title="Registro espacio" href="<?php echo APPLICATION_URL?>registro-espacio-0450.html" >Next</a></dd>
 						</dl>	
 					</div>
 				</div>
@@ -83,7 +83,7 @@ include_once('menu.php');
 						</div>
 						<div class="four columns">
 							<div class="right">
-								<a title="Registro ferias" href="<?php echo APPLICATION_URL?>registro-ferias-0430.html" class="graytxt">Anterior</a>  <a href="javascript:void(0);" onclick="$('#validable').submit();" title="Registro Tipo de Stand" class="button radius">Siguiente: Tipo de <em>Stand</em></a>
+								<a title="Registro ferias" href="<?php echo APPLICATION_URL?>registro-ferias-0430.html" class="graytxt">Previous</a>  <a href="javascript:void(0);" onclick="$('#validable').submit();" title="Registro Tipo de Stand" class="button radius">Next: Tipo de <em>Stand</em></a>
 							</div>
 						</div>
 					</div>

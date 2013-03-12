@@ -25,10 +25,10 @@ include_once('menu.php');
 					</div>
 					<div class="four columns mini-nav-header">
 						<dl class="sub-nav">
-							<dd><a class="save" title="Guardar" href="javascript:void(0);" onclick="$('#validable').attr('action','<?php echo APPLICATION_URL?>user.controller/createFeria/stay.html'); $('#validable').submit();">Guardar</a></dd>
-							<dd><a class="prev" title="Registro Exposiciones" href="<?php echo APPLICATION_URL?>registro-exposiciones-0420.html">Anterior</a></dd>
+							<dd><a class="save" title="Save" href="javascript:void(0);" onclick="$('#validable').attr('action','<?php echo APPLICATION_URL?>user.controller/createFeria/stay.html'); $('#validable').submit();">Save</a></dd>
+							<dd><a class="prev" title="Registro Exposiciones" href="<?php echo APPLICATION_URL?>registro-exposiciones-0420.html">Previous</a></dd>
 							<dd><h4>3/6</h4></dd>
-							<dd><a  class="next" title="Registro Artistas" href="<?php echo APPLICATION_URL?>registro-artistas-0440.html" >Siguiente</a></dd>
+							<dd><a  class="next" title="Registro Artistas" href="<?php echo APPLICATION_URL?>registro-artistas-0440.html" >Next</a></dd>
 						</dl>	
 					</div>
 				</div>	<!-- END titulo row -->
@@ -54,7 +54,7 @@ include_once('menu.php');
 						</div>
 						<div class="four columns">
 							<div class="right">
-								<a href="<?php echo APPLICATION_URL?>registro-exposiciones-0420.html" title="Registro Ferias" class="graytxt">Anterior</a>  <a href="javascript:void(0);" onclick="$('#validable').submit();" class="button radius">Siguiente: Artistas</a>
+								<a href="<?php echo APPLICATION_URL?>registro-exposiciones-0420.html" title="Registro Ferias" class="graytxt">Previous</a>  <a href="javascript:void(0);" onclick="$('#validable').submit();" class="button radius">Next: Artistas</a>
 							</div>
 						</div>
 					</div>

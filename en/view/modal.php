@@ -111,7 +111,7 @@ for($i = 1; $i <= count($artists); $i++)
 		</form>	
 
 			<hr />
-			<a href="javascript:void(0);" class="nice radius button right save-artist" onclick="document.getElementById('artist_form_<?php echo $artist->__get('artist_id')?>').submit()">Guardar</a>
+			<a href="javascript:void(0);" class="nice radius button right save-artist" onclick="document.getElementById('artist_form_<?php echo $artist->__get('artist_id')?>').submit()">Save</a>
 			<div class="loading">icon</div>
 		</div>
 		<!-- END modal general -->
@@ -208,7 +208,7 @@ for($i = 1; $i <= count($artists); $i++)
 		</form>
 
 			<hr />
-			<a href="javascript:void(0);" class="nice radius button right save-artist" onclick="document.getElementById('new_artist_form').submit()">Guardar</a>
+			<a href="javascript:void(0);" class="nice radius button right save-artist" onclick="document.getElementById('new_artist_form').submit()">Save</a>
 			<div class="loading">icon</div>
 		</div>
 		

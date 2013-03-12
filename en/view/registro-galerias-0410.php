@@ -17,10 +17,10 @@ include_once('menu.php'); ?>
 					
 					<div class="four columns mini-nav-header">
 						<dl class="sub-nav">
-							<dd><a title="Guardar" class="save" href="javascript:void(0);" onclick="$('#validable2').attr('action','<?php echo APPLICATION_URL?>user.controller/first/stay.html'); $('#validable2').submit();">Guardar</a></dd>
-							<dd><a title="Inicio" class="prev" href="<?php echo APPLICATION_URL?>registro-inicio-0400.html">Anterior</a></dd>
+							<dd><a title="Save" class="save" href="javascript:void(0);" onclick="$('#validable2').attr('action','<?php echo APPLICATION_URL?>user.controller/first/stay.html'); $('#validable2').submit();">Save</a></dd>
+							<dd><a title="Inicio" class="prev" href="<?php echo APPLICATION_URL?>registro-inicio-0400.html">Previous</a></dd>
 							<dd><h4>1/6</h4></dd>
-							<dd><a title="Registro Exposiciones" class="next" href="<?php echo APPLICATION_URL?>registro-exposiciones-0420.html">Siguiente</a></dd>
+							<dd><a title="Registro Exposiciones" class="next" href="<?php echo APPLICATION_URL?>registro-exposiciones-0420.html">Next</a></dd>
 						</dl>	
 					</div>
 				</div><!--/row inner-header-->
@@ -43,8 +43,8 @@ include_once('menu.php'); ?>
 						</div>
 						<div class="four columns">
 							<div class="right">
-								<a title="Anterior" href="<?php echo APPLICATION_URL;?>registro-inicio-0400.html" class="graytxt">Anterior</a>  
-                                <a href="javascript:void(0);" onclick="$('#validable2').submit();" title="Siguiente: Exposiciones" class="button radius">Siguiente: Exposiciones</a>
+								<a title="Previous" href="<?php echo APPLICATION_URL;?>registro-inicio-0400.html" class="graytxt">Anterior</a>  
+                                <a href="javascript:void(0);" onclick="$('#validable2').submit();" title="Next: Exposiciones" class="button radius">Next: Exposiciones</a>
 							</div>
 						</div>
 					</div>
