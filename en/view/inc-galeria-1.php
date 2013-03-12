@@ -35,7 +35,11 @@ function decide($field, $required, $user)
 				$image	= (($user->__get('user_gallery_image') != '') && (!file_exists(APPLICATION_URL.$dir.$user->__get('user_gallery_image')))) ? APPLICATION_URL.$dir.$user->__get('user_gallery_image') : $default;
 				?>
 				<img src="<?php echo $image;?>" class="images" title="Imagen de la Galería">                
+<<<<<<< HEAD
 				<p class="caption">Puede subir imagen de la última exposición realizada en su galería en .JPG, .PDF o .PNG. El archivo no debe superar los 1000 KB.</p><br />
+=======
+				<caption class="caption">Puede subir imagen de la última exposición realizada en su galería en .JPG, .PDF o .PNG. El archivo no debe superar los 1000 KB.</caption><br />
+>>>>>>> 9dd5fd397751defdb95b3c7f9c4b37df907603b9
                 <div id="user_gallery_image"></div>
                                             
                 <br />
@@ -53,7 +57,11 @@ function decide($field, $required, $user)
 				<div class="mid-input companyname-data">
 					<label><span class="asterix">*</span>Nombre de la empresa o razón social</label>	
 					<input type="text" name="user_gallery_razon" class="expand input-text <?php echo decide('user_gallery_razon', $required, $user);?>" value="<?php echo $user->__get('user_gallery_razon');?>" title="Digite el nombre de la empresa o razón social"/>
+<<<<<<< HEAD
 					<p class="caption"><strong>Nota:</strong> Con esta información se procederá a realizar la facturación correspondiente.</p>
+=======
+					<caption class="caption"><strong>Nota:</strong> Con esta información se procederá a realizar la facturación correspondiente.</caption>
+>>>>>>> 9dd5fd397751defdb95b3c7f9c4b37df907603b9
 				</div><!--/companyname-data-->
 			<div class="block">	
 				<div class="mid-input doctype-data">
@@ -236,7 +244,11 @@ function decide($field, $required, $user)
                         
                     ?>
                     <img src="<?php echo $image;?>" class="images" title="Imagen del director">                
+<<<<<<< HEAD
                     <p class="caption">Puede subir imagen de la última exposición realizada en su galería en .JPG, .PDF o .PNG. El archivo no debe superar los 1000 KB.</p><br />
+=======
+                    <caption class="caption">Puede subir imagen de la última exposición realizada en su galería en .JPG, .PDF o .PNG. El archivo no debe superar los 1000 KB.</caption><br />
+>>>>>>> 9dd5fd397751defdb95b3c7f9c4b37df907603b9
                     <div id="user_director_image"></div>                    
 				</div><!--/gallery-image-->
 			</div><!--/six columns-->
@@ -245,7 +257,11 @@ function decide($field, $required, $user)
 				<div class="mid-input directorname-data">
 					<label><span class="asterix">*</span>Nombre(s) completo del director</label>	
 					<input type="text" name="user_director_name" class="expand input-text <?php echo decide('user_director_name', $required, $user);?>" title="Digite el nombre completo del director" value="<?php echo $user->__get('user_director_name');?>" />
+<<<<<<< HEAD
 					<p class="caption">Nota: Si hay más de un director o persona de contacto, separe los datos con comas.</p>
+=======
+					<caption class="caption">Nota: Si hay más de un director o persona de contacto, separe los datos con comas.</caption>
+>>>>>>> 9dd5fd397751defdb95b3c7f9c4b37df907603b9
 				</div><!--/directorname-data-->
 					
 				<div class="mid-input emaildirector-data">
@@ -294,4 +310,8 @@ function decide($field, $required, $user)
 	
 	
 	
+<<<<<<< HEAD
 	
+=======
+	
+>>>>>>> 9dd5fd397751defdb95b3c7f9c4b37df907603b9

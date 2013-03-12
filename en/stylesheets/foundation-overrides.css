@@ -203,15 +203,25 @@ div.alert-box.success {
 .nav-bar li a {
   margin: 0 16px;
   height: 40px;
+<<<<<<< HEAD
   cursor: pointer;
 }
 
 /* line 155, ../sass/foundation-overrides.scss */
+=======
+}
+
+/* line 154, ../sass/foundation-overrides.scss */
+>>>>>>> 9dd5fd397751defdb95b3c7f9c4b37df907603b9
 .block-grid.five-up h4 {
   margin: 2px 0;
 }
 
+<<<<<<< HEAD
 /* line 159, ../sass/foundation-overrides.scss */
+=======
+/* line 158, ../sass/foundation-overrides.scss */
+>>>>>>> 9dd5fd397751defdb95b3c7f9c4b37df907603b9
 a:focus {
   outline-color: lightgray;
 }

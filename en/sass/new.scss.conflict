@@ -514,10 +514,13 @@ only screen and (min-device-pixel-ratio: 2) {
   display:none;
 }
 
+<<<<<<< HEAD
 .qq-upload-finished{
   padding:0;
 }
 
+=======
+>>>>>>> 9dd5fd397751defdb95b3c7f9c4b37df907603b9
 .qq-upload-drop-area{
   height:20px;
   display:inline-block;
@@ -526,6 +529,7 @@ only screen and (min-device-pixel-ratio: 2) {
 
 ul.qq-upload-list{
   li{
+<<<<<<< HEAD
     list-style-type: none; 
     span{
       &.qq-upload-file, &.qq-upload-cancel, &.qq-upload-retry, &.qq-upload-delete{
@@ -534,6 +538,16 @@ ul.qq-upload-list{
       &.qq-upload-size{
         padding: 0px;
         font-size: 19px; 
+=======
+    list-style-type: none ;
+    span{
+        padding:0 10px;
+      &.qq-upload-file{
+        padding:0 10px;
+      }
+      &.qq-upload-size{
+        padding:0 10px;
+>>>>>>> 9dd5fd397751defdb95b3c7f9c4b37df907603b9
       } 
     }
     a{ 

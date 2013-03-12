@@ -138,4 +138,9 @@ counterArtist = counterArtist+1;
 });							
 // end nueva expo
 });
+<<<<<<< HEAD
 </script>	
+=======
+</script>	
+
+>>>>>>> 9dd5fd397751defdb95b3c7f9c4b37df907603b9
