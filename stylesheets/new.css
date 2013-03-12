@@ -291,86 +291,87 @@ header.intro h5 {
 label {
   font-weight: bold;
   margin: 15px 0 8px;
+  cursor: default;
 }
 
-/* line 262, ../sass/new.scss */
+/* line 263, ../sass/new.scss */
 .intitle {
   padding: 5px 0;
 }
-/* line 265, ../sass/new.scss */
+/* line 266, ../sass/new.scss */
 .intitle ul li {
   float: left;
   list-style-type: none;
 }
-/* line 270, ../sass/new.scss */
+/* line 271, ../sass/new.scss */
 .intitle ul.expos li {
   width: 20%;
 }
-/* line 272, ../sass/new.scss */
+/* line 273, ../sass/new.scss */
 .intitle ul.expos li:first-child {
   margin-left: 60px;
   width: 51%;
 }
-/* line 279, ../sass/new.scss */
+/* line 280, ../sass/new.scss */
 .intitle ul.ferias li {
   width: 18%;
 }
-/* line 281, ../sass/new.scss */
+/* line 282, ../sass/new.scss */
 .intitle ul.ferias li:first-child {
   margin-left: 60px;
   width: 36%;
 }
-/* line 288, ../sass/new.scss */
+/* line 289, ../sass/new.scss */
 .intitle ul.artistas li {
   width: 29.4%;
 }
-/* line 290, ../sass/new.scss */
+/* line 291, ../sass/new.scss */
 .intitle ul.artistas li:first-child {
   margin-left: 60px;
 }
 
-/* line 299, ../sass/new.scss */
+/* line 300, ../sass/new.scss */
 .inner-footer {
   background-color: #eee;
 }
-/* line 301, ../sass/new.scss */
+/* line 302, ../sass/new.scss */
 .inner-footer strong {
   line-height: 3;
 }
-/* line 304, ../sass/new.scss */
+/* line 305, ../sass/new.scss */
 .inner-footer a {
   margin: 0 5px;
   font-weight: bold;
 }
 
-/* line 310, ../sass/new.scss */
+/* line 311, ../sass/new.scss */
 .graytxt {
   color: #4C4C4C;
 }
 
-/* line 314, ../sass/new.scss */
+/* line 315, ../sass/new.scss */
 .advisory {
   margin-bottom: 30px;
 }
-/* line 316, ../sass/new.scss */
+/* line 317, ../sass/new.scss */
 .advisory span {
   font-size: 12px;
   color: #5b5b5b;
   display: block;
   line-height: 1.4;
 }
-/* line 322, ../sass/new.scss */
+/* line 323, ../sass/new.scss */
 .advisory a {
   color: #000;
   text-decoration: underline;
 }
 
-/* line 328, ../sass/new.scss */
+/* line 329, ../sass/new.scss */
 .redtxt {
   color: #BB0C35;
 }
 
-/* line 335, ../sass/new.scss */
+/* line 336, ../sass/new.scss */
 .nav-bar li span.spriteArrow {
   background: url("../images/spriteArrow.jpg");
   height: 39px;
@@ -378,41 +379,41 @@ label {
   display: inline-block;
   float: left;
 }
-/* line 342, ../sass/new.scss */
+/* line 343, ../sass/new.scss */
 .nav-bar li span.number-menu {
   padding: 3px 8px;
 }
-/* line 346, ../sass/new.scss */
+/* line 347, ../sass/new.scss */
 .nav-bar li:hover {
   background: transparent;
   cursor: pointer;
 }
-/* line 349, ../sass/new.scss */
+/* line 350, ../sass/new.scss */
 .nav-bar li:hover a {
   color: #fff;
 }
-/* line 352, ../sass/new.scss */
+/* line 353, ../sass/new.scss */
 .nav-bar li:hover span.number-menu {
   color: #bbb;
 }
-/* line 356, ../sass/new.scss */
+/* line 357, ../sass/new.scss */
 .nav-bar li.active {
   background: #BB0C35;
 }
-/* line 358, ../sass/new.scss */
+/* line 359, ../sass/new.scss */
 .nav-bar li.active:last-child {
   float: right;
 }
-/* line 362, ../sass/new.scss */
+/* line 363, ../sass/new.scss */
 .nav-bar li.active span.spriteArrow {
   background-position: 0 -40px;
 }
-/* line 368, ../sass/new.scss */
+/* line 369, ../sass/new.scss */
 .nav-bar li.active + li span.spriteArrow {
   background-position: 0 -80px;
 }
 
-/* line 378, ../sass/new.scss */
+/* line 379, ../sass/new.scss */
 .doctype-data {
   width: 45%;
   float: left;
@@ -420,7 +421,7 @@ label {
   display: inline-block;
 }
 
-/* line 385, ../sass/new.scss */
+/* line 386, ../sass/new.scss */
 .docnumber-data {
   width: 38%;
   float: right;
@@ -428,7 +429,7 @@ label {
   display: inline-block;
 }
 
-/* line 392, ../sass/new.scss */
+/* line 393, ../sass/new.scss */
 .caption, caption {
   color: #808080;
   margin: 10px 0;
@@ -437,18 +438,18 @@ label {
   line-height: 1.4em;
 }
 
-/* line 400, ../sass/new.scss */
+/* line 401, ../sass/new.scss */
 .block {
   display: block;
   height: 80px;
 }
 
-/* line 405, ../sass/new.scss */
+/* line 406, ../sass/new.scss */
 input[type="file"] {
   margin: 15px 0;
 }
 
-/* line 410, ../sass/new.scss */
+/* line 411, ../sass/new.scss */
 img.selected {
   border: 0;
   -webkit-box-shadow: rgba(187, 12, 53, 0.2) 0 0 10px;
@@ -461,7 +462,7 @@ img.selected {
   transform: rotate(-3deg);
 }
 
-/* line 429, ../sass/new.scss */
+/* line 430, ../sass/new.scss */
 .artBO {
   background: url("../images/sprite_new.png") 0 0;
   display: inline-block;
@@ -470,12 +471,12 @@ img.selected {
   width: 145px;
   margin: 20px 10px;
 }
-/* line 422, ../sass/new.scss */
+/* line 423, ../sass/new.scss */
 .artBO else {
   background: url("../images/sprite_new2x.png") 0 0;
 }
 
-/* line 435, ../sass/new.scss */
+/* line 436, ../sass/new.scss */
 .ccB {
   background: url("../images/sprite_new.png") -150px 0;
   display: inline-block;
@@ -485,59 +486,59 @@ img.selected {
   margin: 20px 10px;
   float: right;
 }
-/* line 422, ../sass/new.scss */
+/* line 423, ../sass/new.scss */
 .ccB else {
   background: url("../images/sprite_new2x.png") -150px 0;
 }
 
-/* line 443, ../sass/new.scss */
+/* line 444, ../sass/new.scss */
 .stand-items img.images {
   margin-top: 10px;
 }
 
-/* line 448, ../sass/new.scss */
+/* line 449, ../sass/new.scss */
 input[type="text"].legal {
   display: inline-block;
   width: 300px;
 }
-/* line 452, ../sass/new.scss */
+/* line 453, ../sass/new.scss */
 input[type="text"].doc {
   display: inline-block;
   width: 200px;
 }
 
-/* line 459, ../sass/new.scss */
+/* line 460, ../sass/new.scss */
 .documents h4 {
   margin-top: 0;
 }
 
-/* line 464, ../sass/new.scss */
+/* line 465, ../sass/new.scss */
 .sub-menu {
   margin: 5px 30px;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
-  /* line 471, ../sass/new.scss */
+  /* line 472, ../sass/new.scss */
   .artBO {
     display: inline-block;
     text-indent: -9999px;
   }
-  /* line 422, ../sass/new.scss */
+  /* line 423, ../sass/new.scss */
   .artBO else {
     background: url("../images/sprite_new2x.png") 0 0;
   }
 
-  /* line 474, ../sass/new.scss */
+  /* line 475, ../sass/new.scss */
   .ccB {
     display: inline-block;
     text-indent: -9999px;
   }
-  /* line 422, ../sass/new.scss */
+  /* line 423, ../sass/new.scss */
   .ccB else {
     background: url("../images/sprite_new2x.png") 0 0;
   }
 }
-/* line 480, ../sass/new.scss */
+/* line 481, ../sass/new.scss */
 .reveal-modal {
   background-color: #e8e8e8;
   width: 70%;
@@ -549,7 +550,7 @@ input[type="text"].doc {
   left: 0;
 }
 
-/* line 491, ../sass/new.scss */
+/* line 492, ../sass/new.scss */
 .qq-upload-button {
   width: 150px;
   background: white;
@@ -576,34 +577,34 @@ input[type="text"].doc {
   -o-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
 }
-/* line 507, ../sass/new.scss */
+/* line 508, ../sass/new.scss */
 .qq-upload-button:hover {
   border-bottom: 4px solid gray;
 }
 
-/* line 512, ../sass/new.scss */
+/* line 513, ../sass/new.scss */
 .qq-drop-processing {
   display: none;
 }
 
-/* line 515, ../sass/new.scss */
+/* line 518, ../sass/new.scss */
 .languages {
   position: relative;
   height: 15px;
   margin-bottom: 10px;
 }
-/* line 516, ../sass/new.scss */
+/* line 519, ../sass/new.scss */
 .languages span.label {
   background-color: rgba(255, 255, 255, 0.3);
   position: absolute;
   right: 20px;
 }
-/* line 521, ../sass/new.scss */
+/* line 524, ../sass/new.scss */
 .languages a {
   color: #fff;
 }
 
-/* line 530, ../sass/new.scss */
+/* line 533, ../sass/new.scss */
 .standname-data input {
   display: none;
 }
