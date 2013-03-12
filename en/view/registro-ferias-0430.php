@@ -20,7 +20,7 @@ include_once('menu.php');
 			<div class="inner-header">
 				<div class="row">
 					<div class="eight columns title">
-						<span class="redtext bold">Ferias</span>
+						<span class="redtext bold">Fairs</span>
 						<h2><?php echo $user->__get('user_gallery_comname');?> </h2>	
 					</div>
 					<div class="four columns mini-nav-header">
@@ -40,7 +40,7 @@ include_once('menu.php');
 					<form action="<?php echo APPLICATION_URL?>user.controller/createFeria.html" id="validable" class="" method="post">
 						<?php include_once('inc-ferias-1.php'); ?>
 					</form>
-					<a href="#" id="add-feria" class="label secondary round" title="Agregar Feria">Agregar una nueva feria</a>
+					<a href="#" id="add-feria" class="label secondary round" title="Agregar Feria">Add a new Fair</a>
 				</div>
 			</div>
 		</div>
@@ -54,7 +54,7 @@ include_once('menu.php');
 						</div>
 						<div class="four columns">
 							<div class="right">
-								<a href="<?php echo APPLICATION_URL?>registro-exposiciones-0420.html" title="Registro Ferias" class="graytxt">Previous</a>  <a href="javascript:void(0);" onclick="$('#validable').submit();" class="button radius">Next: Artistas</a>
+								<a href="<?php echo APPLICATION_URL?>registro-exposiciones-0420.html" title="Registro Ferias" class="graytxt">Previous</a>  <a href="javascript:void(0);" onclick="$('#validable').submit();" class="button radius">Next: Artist</a>
 							</div>
 						</div>
 					</div>
