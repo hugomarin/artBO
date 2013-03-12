@@ -15,19 +15,19 @@ if ((isset($_GET[0])) && ($_GET[1] == 0))
 		<div class="languages"><span class="label round"><a href="#">English</a> | <a href="#">Español</a></span></div>
 			<a href="home.html"><span class="artBO">artBO</span></a><a href="home.html"><span class="ccB">CCB</span></a>
 			<header class="intro">
-				<h2>Proceso de aplicación artBO 2013</h2>
-				<h5>Abierto hasta el 30 de abril. Esta aplicación es para galerías nacionales e internacionales constituidas legalmente.</h5>
+				<h2>Application Process artBO 2013</h2>
+				<h5>Open until April 30th.  This application is for galleries that are legally constituted.</h5>
 			</header> 
 			<div class="options">
 				<div class="login">
-					<h3>Inicio de sesión</h3>
-					<h5>Si ya se registró para artBO 2012 o artBO 2013.</h5>
-					<a href="<?php echo APPLICATION_URL?>login.html" class="button radius">Inicio de sesión</a>
+					<h3>Login</h3>
+					<h5>If you registered in artBO 2012 or artBO 2013.</h5>
+					<a href="<?php echo APPLICATION_URL?>login.html" class="button radius">Login</a>
 				</div>
 				<div class="register">
-					<h3>Registro</h3>
-					<h5>Si nunca se ha registrado en artBO.</h5>
-					<a href="<?php echo APPLICATION_URL?>register.html" class="button radius">Registrarse</a>
+					<h3>Register</h3>
+					<h5>If you have never registered in artBO</h5>
+					<a href="<?php echo APPLICATION_URL?>register.html" class="button radius">Register</a>
 				</div>
 			</div>
 								
