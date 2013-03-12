@@ -23,7 +23,7 @@ include_once('header-nologin2.php');
 			<form action="<?php echo APPLICATION_URL?>user.controller/recover_password.html" class="nice" method="post" id="validable">
 				<div class="panel"><!-- Panel -->
 					<h3>Restablecer clave</h3>
-					<p>Introduce el correo electrónico que utilizas para tu cuenta de artBO y te enviaremos un enlace para restablecer tu clave.</p>
+					<p>Introduzca el correo electrónico que utiliza para su cuenta de artBO y le enviaremos un enlace para restablecer su clave.</p>
 			    	<div class="mid-input-div"><!-- Div Input -->
 			    		<label>Correo electrónico</label>
 			        	<input type="email" class="expand input-text" name="user_email" title="Digite el correo electrónico" required="required">

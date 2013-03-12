@@ -10,12 +10,12 @@
 		<div class="languages"><span class="label round"><a href="#">English</a> | <a href="#">Español</a></span></div>
 			<a href="home.html"><span class="artBO">artBO</span></a><a href="home.html"><span class="ccB">CCB</span></a>
 			<div class="alert-box success">
-				Felicitaciones. Haz cambiado tu clave.
+				Felicitaciones. Ha cambiado su clave.
 				<a href="" class="close" title="Cerrar">&times;</a>
 			</div>
 			<div class="panel"><!-- Panel -->
 				<h3>Restablecer clave</h3>
-				<p>Ahora puedes ingresar</p>
+				<p>Ahora puede ingresar</p>
 			</div>  <!-- End Panel -->
 			<a href="<?php echo APPLICATION_URL?>login.html" title="Restablecer clave" class="button radius right">Ir a inicio de sesión</a>
 		</div> <!-- end six columns -->
