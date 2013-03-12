@@ -16,7 +16,7 @@ include_once('menu.php');
 			<div class="inner-header">
 				<div class="row">
 					<div class="eight columns title">
-						<span class="redtext bold">Artistas</span>
+						<span class="redtext bold">Artist</span>
 						<h2><?php echo $user->__get('user_gallery_comname');?></h2>	
 					</div>
 					<div class="four columns mini-nav-header">
@@ -32,41 +32,41 @@ include_once('menu.php');
 			<div class="container">
 				<div class="row form-data">	
 					<div class="twelve columns">
-						<h5>Recuerde que su propuesta de artistas para artBO 2013 debe ser acorde al tamaño del <em>stand</em> que ha seleccionado. Por cada 10 mts², sólo podrá exhibir un artista.</h5>
+						<h5>The number of artists you propose for artBO 2013 should be in accordance to the size of stand you have selected. For every 10mt2 you can display an artist.</h5>
 						
 						
-						<h6>Propuesta artística para artBO 2013 (opcional, máximo 250 palabras)</h6>
+						<h6>Artistic Proposal for artBO 2013 (optional, 250 words maximum)</h6>
 						
 												  <textarea name="user_gallery_proposal" placeholder="Digite la información de la propuesta artística para presentar en su stand en artBO" rows="8" cols="40"><?php echo $user->__get('user_gallery_proposal')?></textarea>
 						
 						<br />
 						<br />
 						<br />
-						<h6>Artistas representados propuestos para artBO<h6>
+						<h6>Represented Artists Proposed for artBO 2013<h6>
 						
 						<div class="intitle">
 							<!-- .row>.one.column+.four.columns+three.columns+.three.columns+.one.columns -->
 							<ul class="artistas">
 								<li>
-									<span class="asterix">*</span><strong>Nombre</strong>
+									<span class="asterix">*</span><strong>Name</strong>
 								</li>
 								<li>
-									<span class="asterix">*</span><strong>Apellido</strong>
+									<span class="asterix">*</span><strong>Last Name</strong>
 								</li>
 								<li>
-									<span class="asterix">*</span><strong>Nacionalidad</strong>
+									<span class="asterix">*</span><strong>Nationality</strong>
 								</li>
 							</ul>
 						</div>
 						<form action="<?php echo APPLICATION_URL?>user.controller/createArtist.html" id="validable" class="" method="post">
 							<?php include_once('inc-artistas-1.php'); ?>
 
-						<a href="#" id="add-artist" class="label secondary round">Agregar un nuevo artista </a>
+						<a href="#" id="add-artist" class="label secondary round">Add a new artist</a>
 						<br />
 						<br />
 						<br />
 
-						<h6>Otros artistas representados por la galería</h6>
+						<h6>Other artists represented by the Gallery</h6>
 
 							<textarea name="user_represented_artists" rows="8" cols="40" placeholder="Digite la información correspondiente a artistas representados"><?php echo $user->__get('user_represented_artists');?></textarea>
 						</form>
@@ -83,7 +83,7 @@ include_once('menu.php');
 						</div>
 						<div class="four columns">
 							<div class="right">
-								<a title="Registro ferias" href="<?php echo APPLICATION_URL?>registro-ferias-0430.html" class="graytxt">Previous</a>  <a href="javascript:void(0);" onclick="$('#validable').submit();" title="Registro Tipo de Stand" class="button radius">Next: Tipo de <em>Stand</em></a>
+								<a title="Registro ferias" href="<?php echo APPLICATION_URL?>registro-ferias-0430.html" class="graytxt">Previous</a>  <a href="javascript:void(0);" onclick="$('#validable').submit();" title="Registro Tipo de Stand" class="button radius">Next: Type of stand</a>
 							</div>
 						</div>
 					</div>
@@ -109,7 +109,7 @@ $(document).ready(function() {
 counterArtist = <?php echo (count($artists) > 0) ? count($artists)+1 : 2; ?>;
 $("#add-artist").click(function(){
 
-$(".link_list").hide().append('<li class="link_default"><ul class="no-bullet artist"><li class="handler"><img src="<?php echo APPLICATION_URL?>images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr"></li><li><input type="text" name="artist_name_'+counterArtist+'" id="artist_name_'+counterArtist+'"  /></li><li><input type="text" name="artist_surname_'+counterArtist+'" id="artist_surname_'+counterArtist+'" /></li><li><input type="text" class="no-margin" name="artist_nationality_'+counterArtist+'" id="artist_nationality_'+counterArtist+'" /><a href="#" class="revelar-a revealer-new " id="link-'+counterArtist+'" data-reveal-id="artista" >Agregue más información sobre el artista</a></li><li class="handler"><a href="#" class="delete-artist"><img src="<?php echo APPLICATION_URL?>images/trash.gif" alt="Eliminar artista" title="Eliminar artista" width="37" height="37" /></a></li></ul></li>').fadeIn(1000);
+$(".link_list").hide().append('<li class="link_default"><ul class="no-bullet artist"><li class="handler"><img src="<?php echo APPLICATION_URL?>images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr"></li><li><input type="text" name="artist_name_'+counterArtist+'" id="artist_name_'+counterArtist+'"  /></li><li><input type="text" name="artist_surname_'+counterArtist+'" id="artist_surname_'+counterArtist+'" /></li><li><input type="text" class="no-margin" name="artist_nationality_'+counterArtist+'" id="artist_nationality_'+counterArtist+'" /><a href="#" class="revelar-a revealer-new " id="link-'+counterArtist+'" data-reveal-id="artista" >Add more information about the artist</a></li><li class="handler"><a href="#" class="delete-artist"><img src="<?php echo APPLICATION_URL?>images/trash.gif" alt="Delete artist" title="Delete artsit" width="37" height="37" /></a></li></ul></li>').fadeIn(1000);
 	$(".revealer-new").each(function(item){
 		$(this).unbind('click');
 		$(this).click(function () {
