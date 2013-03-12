@@ -134,7 +134,7 @@ for($i = 1; $i <= count($artists); $i++)
 			<!-- columns 2/2 -->
 			<!-- reseña de artista -->
 			<div class="six columns">
-							<label>Fecha de nacimiento (YYYY-MM-DD)</label>
+							<label>Fecha de nacimiento (AAAA-MM-DD)</label>
 							<input type="text" name="artist_birthday" value="" class="small datepicker"/>
 							<label>Lugar de residencia</label>
 							<input type="text" name="artist_residency" value="" class="small"/>
@@ -199,7 +199,7 @@ for($i = 1; $i <= count($artists); $i++)
 					}
 					?>
 
-				<span>Puede subir máximo tres imágenes de sus obras en .jpg, .png o .gif</span>
+				<span>Puede subir máximo tres imágenes de sus obras en .JPG, .PNG o .PDF</span>
 				</div>
 				<!-- END panel de imagen -->
 				

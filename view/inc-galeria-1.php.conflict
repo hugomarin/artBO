@@ -70,7 +70,7 @@ function decide($field, $required, $user)
 					<input type="text" name="user_gallery_document" class="expand input-text <?php echo decide('user_gallery_document', $required, $user);?>" value="<?php echo $user->__get('user_gallery_document');?>" title="Digite el número del documento"/>
 				</div><!--/companyname-data-->
 			</div>
-			<p class="caption"><strong>Nota:</strong> Tenga en cuenta que con número de identificación, también se registrará el ingreso de mercancía de sus obras, equipos y otros a Corferias.</p>
+			<p class="caption"><strong>Nota:</strong> Con este número de identificación también se registrará el ingreso de mercancía de sus obras, equipos y otros a Corferias.</p>
 			
 			<div class="mid-input website-data">
 				<label>Página web</label>	
@@ -164,7 +164,7 @@ function decide($field, $required, $user)
 		<div class="six columns">
 			<div class="mid-input review-data">
 				<label><span class="asterix">*</span>Reseña de la galería</label>
-				<span class="caption"><strong>Nota: </strong>Un breve texto (máximo 500 palabras) sobre la Galería</span>
+				<p class="caption"><strong>Nota: </strong>Un breve texto (máximo 500 palabras) sobre la Galería</p>
 				<textarea name="user_abstract" title="Digite el texto correspondiente a la reseña de la galería"  class="expand <?php echo decide('user_abstract', $required, $user);?>" rows="10" ><?php echo $user->__get('user_abstract');?></textarea>
 			</div><!--/review-data-->
 		</div><!--/six columns-->
@@ -245,7 +245,11 @@ function decide($field, $required, $user)
 				<div class="mid-input directorname-data">
 					<label><span class="asterix">*</span>Nombre(s) completo del director</label>	
 					<input type="text" name="user_director_name" class="expand input-text <?php echo decide('user_director_name', $required, $user);?>" title="Digite el nombre completo del director" value="<?php echo $user->__get('user_director_name');?>" />
+<<<<<<< HEAD
+					<span class="caption">Nota: Si hay más de un director o persona de contacto, separe los datos con comas.</span>
+=======
 					<p class="caption">Nota: Si hay más de un director o persona de contacto, separe los datos con comas.</p>
+>>>>>>> 81e45d2ae1bf68a968c1ca6eca186053cdc36ef7
 				</div><!--/directorname-data-->
 					
 				<div class="mid-input emaildirector-data">

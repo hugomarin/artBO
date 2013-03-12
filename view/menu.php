@@ -12,7 +12,8 @@
 <div class="row">
 	<div class="twelve columns">
 		<div class="right">
-			El registro de <span class="redtxt">Galerías </span> vence para el <span class="red label radius"><?php //echo $days ?> 30</span>  de <strong><!-- días -->  Abril</strong>
+		
+			El registro de <span class="redtxt">Galerías </span> vence en <span class="red label radius"><?php echo $days;?></span> <strong>días</strong> <span>(30 de abril 2013)</span>
 		</div>
 	</div>
 </div>
