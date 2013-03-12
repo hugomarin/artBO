@@ -37,19 +37,19 @@
 		}else if ($("#sortable").is('*')) {
 			
 		$( "#sortable" ).sortable();
-		$( "#sortable" ).disableSelection();
+		//$( "#sortable" ).disableSelection();
 			
 		}else if ($(".link_list").is('*')) {
 			
 		$(".link_list").sortable({
 			placeholder: "ui-state-highlight"
 		});
-		$(".link_list").disableSelection();
+		//$(".link_list").disableSelection();
 			
 		}else if  ($(".link_list").is('*')) {
 		
 		$( ".products-li" ).sortable();
-		$( ".products-li" ).disableSelection();		
+		//$( ".products-li" ).disableSelection();		
 		
 		}
 		

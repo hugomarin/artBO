@@ -10,14 +10,14 @@ if ((isset($_GET[0])) && ($_GET[1] == 0))
 <body style="background-color:#000" class="bigpic1">
 <!-- content -->
 <div class="container">
-	<div class="row"><!-- Row -->	
+	<div class="row"><!-- Row -->	 
 		<div class="eight columns centered"><!-- six columns -->
 		<div class="languages"><span class="label round"><a href="#">English</a> | <a href="#">Español</a></span></div>
-			<span class="artBO">artBO</span><span class="ccB">CCB</span>
+			<a href="home.html"><span class="artBO">artBO</span></a><a href="home.html"><span class="ccB">CCB</span></a>
 			<header class="intro">
 				<h2>Proceso de aplicación a artBO 2013</h2>
 				<h5>Abierto hasta el 30 de abril. Esta aplicación es para galerías nacionales e internacionales constituidas legalmente.</h5>
-			</header>
+			</header> 
 			<div class="options">
 				<div class="login">
 					<h3>Inicio de sesión</h3>
