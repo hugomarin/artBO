@@ -275,7 +275,7 @@ function decide($field, $required, $user)
           },
           autoUpload: true,
           text: {
-            uploadButton: '<i class="icon-plus icon-white"></i> Seleccione archivo'
+            uploadButton: '<i class="icon-plus icon-white"></i> Select file'
           }
         });
         var seconduploader = new qq.FineUploader({
@@ -286,7 +286,7 @@ function decide($field, $required, $user)
           },
           autoUpload: true,
           text: {
-            uploadButton: '<i class="icon-plus icon-white"></i> Seleccione archivo'
+            uploadButton: '<i class="icon-plus icon-white"></i> Select file'
           }
         });		
       });

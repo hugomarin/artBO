@@ -19,7 +19,7 @@ $dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8
 						if (strpos($image, '.pdf')  !== false) $image	= 'http://cambelt.co/icon/document/230x170?color=3fc46b,fefefe';
                             
                         ?>	            		
-                        <img src="<?php echo $image;?>" class="images right" title="Certificado de existencia">
+                        <img src="<?php echo $image;?>" class="images right" title="Certificate of incorporation">
  						<div id="user_certificate"></div>	            	
                     </div>
 				</div>
@@ -37,7 +37,7 @@ $dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8
 						if (strpos($image, '.pdf')  !== false) $image	= 'http://cambelt.co/icon/document/230x170?color=3fc46b,fefefe';
                             
                         ?>	                    
-	            		<img src="<?php echo $image;?>" class="images right" title="Identificación Fiscal">
+	            		<img src="<?php echo $image;?>" class="images right" title="Tax Identification">
                         <div id="user_rut"></div>	
 	            	</div>
 				</div>
@@ -55,7 +55,7 @@ $dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8
 						if (strpos($image, '.pdf')  !== false) $image	= 'http://cambelt.co/icon/document/230x170?color=3fc46b,fefefe';
                             
                         ?>	                    
-	            		<img src="<?php echo $image;?>" class="images right" title="Documento de identidad">
+	            		<img src="<?php echo $image;?>" class="images right" title="Identity Document">
                         <div id="user_document"></div>                                            
 	            	</div>
 				</div>
@@ -73,7 +73,7 @@ $dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8
 						if (strpos($image, '.pdf')  !== false) $image	= 'http://cambelt.co/icon/document/230x170?color=3fc46b,fefefe';
                             
                         ?>	                    
-	            		<img src="<?php echo $image;?>" class="images right" title="Registro de pago">
+	            		<img src="<?php echo $image;?>" class="images right" title="Copy of payment">
                         <div id="user_payment"></div>                                              
 	            	</div>
 				</div>
@@ -86,7 +86,7 @@ $dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8
 	<!-- aceptación de terminos -->
 	<div class="panel-2">
 	<p> I <input type="text" class="legal" placeholder="Nombre del Director o Representante legal" name="user_name_accept" value="<?php echo $user->__get('user_name_accept');?>" />Identified with
-		<input type="text" class="doc" placeholder="Número de Cédula" name="user_document_accept" value="<?php echo $user->__get('user_document_accept');?>"   /> 
+		<input type="text" class="doc" placeholder="Identity Document" name="user_document_accept" value="<?php echo $user->__get('user_document_accept');?>"   /> 
 	declare to have knowledge and accept<a href="documentos/Reglamento.pdf" title="Reglamento de participación en artBO" target="_blank">the conditions and participation regulations </a> of artBO.
 	</p>
 	
@@ -103,7 +103,7 @@ $dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8
           },
           autoUpload: true,
           text: {
-            uploadButton: '<i class="icon-plus icon-white"></i> Seleccione archivo'
+            uploadButton: '<i class="icon-plus icon-white"></i> Select file'
           }
         });
         var seconduploader = new qq.FineUploader({
@@ -114,7 +114,7 @@ $dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8
           },
           autoUpload: true,
           text: {
-            uploadButton: '<i class="icon-plus icon-white"></i> Seleccione archivo'
+            uploadButton: '<i class="icon-plus icon-white"></i> Select file'
           }
         });	
         var thirduploader = new qq.FineUploader({
@@ -125,7 +125,7 @@ $dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8
           },
           autoUpload: true,
           text: {
-            uploadButton: '<i class="icon-plus icon-white"></i> Seleccione archivo'
+            uploadButton: '<i class="icon-plus icon-white"></i> Select file'
           }
         });			
         var thirduploader = new qq.FineUploader({
@@ -136,7 +136,7 @@ $dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8
           },
           autoUpload: true,
           text: {
-            uploadButton: '<i class="icon-plus icon-white"></i> Seleccione archivo'
+            uploadButton: '<i class="icon-plus icon-white"></i> Select file'
           }
         });				
       });

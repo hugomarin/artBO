@@ -94,7 +94,7 @@ for($i = 1; $i <= count($artists); $i++)
 					          },
 					          autoUpload: true,
 					          text: {
-					            uploadButton: '<i class="icon-plus icon-white"></i> Seleccione archivo'
+					            uploadButton: '<i class="icon-plus icon-white"></i> Select file'
 					          }
 					        });	
 					      });
@@ -190,7 +190,7 @@ for($i = 1; $i <= count($artists); $i++)
 					          },
 					          autoUpload: true,
 					          text: {
-					            uploadButton: '<i class="icon-plus icon-white"></i> Seleccione archivo'
+					            uploadButton: '<i class="icon-plus icon-white"></i> Select file'
 					          }
 					        });	
 					      });
