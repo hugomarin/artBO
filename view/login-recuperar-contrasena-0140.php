@@ -8,7 +8,7 @@
 	<div class="row "><!-- Row -->	
 		<div class="six columns centered ">
 		<div class="languages"><span class="label round"><a href="#">English</a> | <a href="#">Español</a></span></div>
-			<span class="artBO">artBO</span><span class="ccB">CCB</span>
+			<a href="home.html"><span class="artBO">artBO</span></a><a href="home.html"><span class="ccB">CCB</span></a>
 			<div class="alert-box success">
 				Felicitaciones. Ha cambiado su clave.
 				<a href="" class="close" title="Cerrar">&times;</a>
