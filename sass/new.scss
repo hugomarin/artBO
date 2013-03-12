@@ -514,6 +514,29 @@ only screen and (min-device-pixel-ratio: 2) {
   display:none;
 }
 
+.qq-upload-drop-area{
+  height:20px;
+  display:inline-block;
+  padding:5px;
+}
+
+ul.qq-upload-list{
+  li{
+    list-style-type: none ;
+    span{
+        padding:0 10px;
+      &.qq-upload-file{
+        padding:0 10px;
+      }
+      &.qq-upload-size{
+        padding:0 10px;
+      } 
+    }
+    a{ 
+      padding:0 10px;
+    }
+  }
+}
  
 .languages{
   span.label{
