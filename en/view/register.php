@@ -43,7 +43,7 @@ else
 				</div>
 				<div class="row">
 					<div class="six columns"><span class="whitetxt bold"><span class="asterix">*</span> Datos requeridos</span></div>
-					<div class="six columns"><input type="submit" class="button radius right" value="Register" title="Registrarse" onClick="javascript:void(0);"></div>
+					<div class="six columns"><input type="submit" class="button radius right" value="Register" title="Register" onClick="javascript:void(0);"></div>
 				</div>
 			</form>
 			<br />

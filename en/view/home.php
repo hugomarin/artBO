@@ -16,7 +16,7 @@ if ((isset($_GET[0])) && ($_GET[1] == 0))
 			<a href="home.html"><span class="artBO">artBO</span></a><a href="home.html"><span class="ccB">CCB</span></a>
 			<header class="intro">
 				<h2>Application Process artBO 2013</h2>
-				<h5>Open until April 30th.  This application is for galleries that are legally constituted.</h5>
+				<h5>Open until April 30th. This application is for galleries that are legally constituted.</h5>
 			</header> 
 			<div class="options">
 				<div class="login">
@@ -26,7 +26,7 @@ if ((isset($_GET[0])) && ($_GET[1] == 0))
 				</div>
 				<div class="register">
 					<h3>Register</h3>
-					<h5>If you have never registered in artBO</h5>
+					<h5>If you have never registered in artBO.</h5>
 					<a href="<?php echo APPLICATION_URL?>register.html" class="button radius">Register</a>
 				</div>
 			</div>

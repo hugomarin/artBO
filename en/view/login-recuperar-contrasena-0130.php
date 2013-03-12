@@ -26,24 +26,24 @@ print_r ($_SESSION);
 	    	<!-- END  casilla de alerta -->
 	    	<form action="#">
 			<div class="panel"><!-- Panel -->
-			<h3>Restablecer clave</h3>
+			<h3>Reset password</h3>
 				<!-- login form -->
 				    	<p>Introduzca una nueva clave para su cuenta de artBO.</p>
 				    
 				    	<div class="mid-input-div"><!-- Div Input -->
-				    		<label>Clave</label>
+				    		<label>Password</label>
 				        	<input type="password" class="expand input-text" name="pass" required="required">
 				    	</div><!-- END Div Input -->
 				    	
 				    	<div class="mid-input-div"><!-- Div Input -->
-				    		<label>Confirmar clave</label>
+				    		<label>Confirm password</label>
 				        	<input type="password" class="expand input-text" name="confirmar" required="required">
 				    	</div><!-- END Div Input -->
 
 			</div>  <!-- End Panel -->
 			<div class="row">
-				<div class="six columns"><a href="<?php echo APPLICATION_URL?>home.html" class="bold whitetxt" title="Restablecer clave">Cancelar</a></div>
-				<div class="six columns"><input type="button" class="button radius right" value="Restablecer contaseña"></div>
+				<div class="six columns"><a href="<?php echo APPLICATION_URL?>home.html" class="bold whitetxt" title="Restablecer clave">Cancel</a></div>
+				<div class="six columns"><input type="button" class="button radius right" value="Reset pasword"></div>
 			</div>
 			</form>
 		</div><!-- six columns -->

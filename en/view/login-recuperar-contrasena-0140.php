@@ -14,10 +14,10 @@
 				<a href="" class="close" title="Cerrar">&times;</a>
 			</div>
 			<div class="panel"><!-- Panel -->
-				<h3>Restablecer clave</h3>
+				<h3>Reset password</h3>
 				<p>Ahora puede ingresar</p>
 			</div>  <!-- End Panel -->
-			<a href="<?php echo APPLICATION_URL?>login.html" title="Restablecer clave" class="button radius right">Ir a inicio de sesión</a>
+			<a href="<?php echo APPLICATION_URL?>login.html" title="login" class="button radius right">Ir a inicio de sesión</a>
 		</div> <!-- end six columns -->
 	</div><!-- End Row -->
 </div>

@@ -13,10 +13,10 @@ include_once('menu.php'); ?>
 					
 					<div class="four columns mini-nav-header">
 						<dl class="sub-nav">
-							<dd><a title="Guardar" class="save" href="javascript:void(0);" onClick="$('#validable2').attr('action','<?php echo APPLICATION_URL?>user.controller/selectStand/stay.html'); $('#validable2').submit();">Guardar</a></dd>
-							<dd><a title="Registro Artistas" class="prev" href="<?php echo APPLICATION_URL?>registro-artistas-0440.html">Anterior</a></dd>
+							<dd><a title="Save" class="save" href="javascript:void(0);" onClick="$('#validable2').attr('action','<?php echo APPLICATION_URL?>user.controller/selectStand/stay.html'); $('#validable2').submit();">Save</a></dd>
+							<dd><a title="Registro Artistas" class="prev" href="<?php echo APPLICATION_URL?>registro-artistas-0440.html">Previous</a></dd>
 							<dd><h4>5/6</h4></dd>
-							<dd><a title="Registro Documentos" class="next" href="<?php echo APPLICATION_URL?>registro-documentos-0460.html">Siguiente</a></dd>
+							<dd><a title="Registro Documentos" class="next" href="<?php echo APPLICATION_URL?>registro-documentos-0460.html">Next</a></dd>
 						</dl>	
 					</div>
 				</div><!--/row inner-header-->
@@ -41,8 +41,8 @@ include_once('menu.php'); ?>
 						</div>
 						<div class="four columns">
 							<div class="right">
-								<a title="Registro Artistas" href="<?php echo APPLICATION_URL?>registro-artistas-0440.html" class="graytxt">Anterior</a>  
-                                <a title="Registro Documentos" href="javascript:void(0);" onclick=" $('#validable2').submit();" class="button radius">Siguiente: Documentos</a>
+								<a title="Registro Artistas" href="<?php echo APPLICATION_URL?>registro-artistas-0440.html" class="graytxt">Previous</a>  
+                                <a title="Registro Documentos" href="javascript:void(0);" onclick=" $('#validable2').submit();" class="button radius">Next: Documentos</a>
 							</div>
 						</div>
 					</div>
