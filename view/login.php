@@ -5,7 +5,7 @@ if (isset($_GET[0]))
 
 ?>
 
-<body>
+<body class="bigpic3">
 <!-- content -->
 <div class="container">
 	<div class="row"><!-- Row -->	

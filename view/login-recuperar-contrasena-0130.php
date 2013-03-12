@@ -13,7 +13,7 @@ else
 print_r ($_SESSION);
 ?>		
 
-<body>
+<body class="bigpic6">
 <div class="container">
 	<div class="row"><!-- Row -->	
 		<div class="six columns centered"><!-- six columns -->
