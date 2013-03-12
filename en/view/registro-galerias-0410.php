@@ -39,11 +39,11 @@ include_once('menu.php'); ?>
 				<div class="container">
 					<div class="row">
 						<div class="eight columns">
-							<strong><span class="asterix">*</span>Datos requeridos</strong>
+							<strong><span class="asterix">*</span>Data required</strong>
 						</div>
 						<div class="four columns">
 							<div class="right">
-								<a title="Previous" href="<?php echo APPLICATION_URL;?>registro-inicio-0400.html" class="graytxt">Anterior</a>  
+								<a title="Previous" href="<?php echo APPLICATION_URL;?>registro-inicio-0400.html" class="graytxt">Previous</a>  
                                 <a href="javascript:void(0);" onclick="$('#validable2').submit();" title="Next: Exposiciones" class="button radius">Next: Exposiciones</a>
 							</div>
 						</div>

@@ -13,7 +13,7 @@ include_once('menu.php');
 			<div class="inner-header">
 				<div class="row">
 					<div class="eight columns title">
-						<strong class="redtext bold">Exposiciones</strong>
+						<strong class="redtext bold">Exhibitions</strong>
 						<h2><?php echo $user->__get('user_gallery_comname');?></h2>
 					</div>
 					<div class="four columns mini-nav-header">
@@ -29,18 +29,18 @@ include_once('menu.php');
 			<div class="container">
 				<div class="row form-data">	
 					<div class="twelve columns">
-						<h5>Registre las exposiciones realizadas entre el 2011 y el 2013, en orden cronológico, incluyendo las exposiciones que tiene planeadas para el próximo año.</h5>
+						<h5>List exhibitions the gallery held and are programmed between 2011 and 2013 in chronological order.</h5>
 						<div class="intitle">
 							<!-- .row>.one.column+.four.columns+three.columns+.three.columns+.one.columns -->
 							<ul class="expos">
 								<li>
-									<span class="asterix">*</span><strong>Nombre de la exposición</strong>
+									<span class="asterix">*</span><strong>Name of the exhibitions</strong>
 								</li>
 								<li>
-									<span class="asterix">*</span><strong>Año</strong>
+									<span class="asterix">*</span><strong>Year</strong>
 								</li>
 								<li>
-									<span class="asterix">*</span><strong>Mes</strong>
+									<span class="asterix">*</span><strong>Month</strong>
 								</li>
 							</ul>
 						</div>
@@ -49,7 +49,7 @@ include_once('menu.php');
 							<?php include_once('inc-exposiciones-1.php'); ?>
 						</form>
 						<!-- /formulario -->
-						<a href="#" id="add-expo" class="label secondary round">Agregar una nueva exposición</a>
+						<a href="#" id="add-expo" class="label secondary round">Add a new exhibition</a>
 					</div>
 				</div>
 			</div>
@@ -59,7 +59,7 @@ include_once('menu.php');
 				<div class="container">
 					<div class="row">
 						<div class="eight columns">
-							<strong><span class="asterix">*</span>Datos requeridos</strong>
+							<strong><span class="asterix">*</span>Data Required</strong>
 						</div>
 						<div class="four columns">
 							<div class="right">
@@ -72,7 +72,7 @@ include_once('menu.php');
 	</div><!-- END Main: Panel -->
 	<div class="advisory">
 		<span>Recomendamos visualizar en: IE 9.0 - Firefox 10.0 - Safari 5.1 - Chrome 17.0     |     Optimizada 1024 x 768</span>
-		<span><a href="#">Términos y Condiciones</a> del Sitio</span>
+		<span>Website <a href="#">Terms and Conditions</a></span>
 	</div>
 </div><!-- 3. END Main: Row -->
 <!-- 3. footer -->

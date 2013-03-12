@@ -13,7 +13,7 @@
 	<div class="twelve columns">
 		<div class="right">
 		
-			El registro de <span class="redtxt">Galerías </span> vence en <span class="red label radius"><?php echo $days;?></span> <strong>días</strong> <span>(30 de abril 2013)</span>
+			<span class="redtxt">Gallery </span> registration expires in <span class="red label radius"><?php echo $days;?></span> <strong>days</strong> <span>(April 30 / 2013)</span>
 		</div>
 	</div>
 </div>
