@@ -37,7 +37,7 @@ include_once('menu.php');
 						
 						<h6>Propuesta artística para artBO 2013 (opcional, máximo 250 palabras)</h6>
 						
-												  <textarea name="user_gallery_proposal" placeholder="Digite la información de la propuesta artística para presentar en su stand en artBO" rows="8" cols="40"><?php echo $user->__get('user_gallery_proposal')?></textarea>
+												  <textarea name="user_gallery_proposal" placeholder="Digite la información de la propuesta artística para presentar en artBO" rows="8" cols="40"><?php echo $user->__get('user_gallery_proposal')?></textarea>
 						
 						<br />
 						<br />
@@ -67,7 +67,6 @@ include_once('menu.php');
 						<br />
 
 						<h6>Otros artistas representados (por la galería)</h6>
-
 							<textarea name="user_represented_artists" rows="8" cols="40" placeholder="Digite la información correspondiente a artistas representados"><?php echo $user->__get('user_represented_artists');?></textarea>
 						</form>
 

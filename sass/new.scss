@@ -514,6 +514,10 @@ only screen and (min-device-pixel-ratio: 2) {
   display:none;
 }
 
+.qq-upload-finished{
+  padding:0;
+}
+
 .qq-upload-drop-area{
   height:20px;
   display:inline-block;
@@ -522,14 +526,14 @@ only screen and (min-device-pixel-ratio: 2) {
 
 ul.qq-upload-list{
   li{
-    list-style-type: none ;
+    list-style-type: none; 
     span{
-        padding:0 10px;
-      &.qq-upload-file{
-        padding:0 10px;
+      &.qq-upload-file, &.qq-upload-cancel, &.qq-upload-retry, &.qq-upload-delete{
+        padding:0 5px;
       }
       &.qq-upload-size{
-        padding:0 10px;
+        padding: 0px;
+        font-size: 19px; 
       } 
     }
     a{ 

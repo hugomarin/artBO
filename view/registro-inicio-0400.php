@@ -32,9 +32,9 @@
 					<li class="thin">Las  imágenes deben subirse en formato .JPG, .PDF o .PNG y de un máximo de 1.000 KB (1 MB)</li>
 				</ul>
 				<p>
-					Si tiene inquietudes, contáctenos en <a href="mailto:artbo@ccb.org.co">artbo@ccb.org.co</a>
+					Si tiene inquietudes, contáctenos en <a href="mailto:artbo@ccb.org.co">artbo@ccb.org.co.</a>
 				</p>
-				<p>Gracias por su participación</p>
+				<p>Gracias por su participación.</p>
 				</div>
 
 				</div>

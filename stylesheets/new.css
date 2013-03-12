@@ -587,24 +587,54 @@ input[type="text"].doc {
   display: none;
 }
 
-/* line 518, ../sass/new.scss */
+/* line 517, ../sass/new.scss */
+.qq-upload-finished {
+  padding: 0;
+}
+
+/* line 521, ../sass/new.scss */
+.qq-upload-drop-area {
+  height: 20px;
+  display: inline-block;
+  padding: 5px;
+}
+
+/* line 528, ../sass/new.scss */
+ul.qq-upload-list li {
+  list-style-type: none;
+}
+/* line 531, ../sass/new.scss */
+ul.qq-upload-list li span.qq-upload-file, ul.qq-upload-list li span.qq-upload-cancel, ul.qq-upload-list li span.qq-upload-retry, ul.qq-upload-list li span.qq-upload-delete {
+  padding: 0 5px;
+}
+/* line 534, ../sass/new.scss */
+ul.qq-upload-list li span.qq-upload-size {
+  padding: 0px;
+  font-size: 19px;
+}
+/* line 539, ../sass/new.scss */
+ul.qq-upload-list li a {
+  padding: 0 10px;
+}
+
+/* line 545, ../sass/new.scss */
 .languages {
   position: relative;
   height: 15px;
   margin-bottom: 10px;
 }
-/* line 519, ../sass/new.scss */
+/* line 546, ../sass/new.scss */
 .languages span.label {
   background-color: rgba(255, 255, 255, 0.3);
   position: absolute;
   right: 20px;
 }
-/* line 524, ../sass/new.scss */
+/* line 551, ../sass/new.scss */
 .languages a {
   color: #fff;
 }
 
-/* line 533, ../sass/new.scss */
+/* line 560, ../sass/new.scss */
 .standname-data input {
   display: none;
 }
