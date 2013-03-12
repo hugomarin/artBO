@@ -1,194 +1,103 @@
 <?php 
-include_once('header-login.php'); 
+include_once('header-login.php');
+// include_once('header-nologin.php');  
 $expositions	= ExpositionHelper::retrieveExpositions(" AND user_id = ". $user->__get('user_id') . " ORDER by exposition_year, exposition_month");
 include_once('menu.php'); 
 ?>
 <!-- 2. End menu -->
-			
-	<!--3. Row main-->
-	<div class="row">	
-		<!-- panel -->
-		<div class="panel">
-				
-			<div class="row"><!-- titulo row -->
-				<div class="eight columns">
-					<span class="rojo">Registration</span>
-					<h2><span class="quitarH2"> Exhibitions:</span> <?php echo $user->__get('user_name');?></h2>
+	<div class="row main-row">
+		 <!-- <div class="alert-box error">
+	    	<a href="#" class="close">×</a>
+		</div> -->
+		<div class="panel nopadding">
+			<div class="inner-header">
+				<div class="row">
+					<div class="eight columns title">
+						<strong class="redtext bold">Exposiciones</strong>
+						<h2><?php echo $user->__get('user_gallery_comname');?></h2>
+					</div>
+					<div class="four columns mini-nav-header">
+						<dl class="sub-nav">
+							<dd><a class="save" title="Guardar" href="javascript:void(0);" onclick="$('#validable').attr('action','<?php echo APPLICATION_URL?>user.controller/createExpo/stay.html'); $('#validable').submit();">Guardar</a></dd>
+							<dd><a class="prev" title="Registro Galerias" href="<?php echo APPLICATION_URL?>registro-galerias-0410.html">Anterior</a></dd>
+							<dd><h4>2/6</h4></dd>
+							<dd><a class="next" title="Registro Ferias" href="<?php echo APPLICATION_URL?>registro-ferias-0430.html">Siguiente</a></dd>
+						</dl>	
+					</div>
 				</div>
-				<!-- button back save forward -->
-				<div class="two columns offset-by-two">
-					<a title="Registro Galerias" href="<?php echo APPLICATION_URL?>registro-galerias-0410.html" class="back"></a>
-					<a title="Guardar" href="javascript:void(0);" onClick="document.getElementById('validable').submit();" class="save"></a>
-					<a title="Registro Ferias" href="<?php echo APPLICATION_URL?>registro-ferias-0430.html" class="forward"></a>
+			</div>
+			<div class="container">
+				<div class="row form-data">	
+					<div class="twelve columns">
+						<h5>Registre las exposiciones realizadas entre el 2011 y el 2013, en orden cronológico, incluyendo las exposiciones que tiene planeadas para el próximo año.</h5>
+						<div class="intitle">
+							<!-- .row>.one.column+.four.columns+three.columns+.three.columns+.one.columns -->
+							<ul class="expos">
+								<li>
+									<span class="asterix">*</span><strong>Nombre de la exposición</strong>
+								</li>
+								<li>
+									<span class="asterix">*</span><strong>Año</strong>
+								</li>
+								<li>
+									<span class="asterix">*</span><strong>Mes</strong>
+								</li>
+							</ul>
+						</div>
+						<!-- formulario -->
+						<form action="<?php echo APPLICATION_URL?>user.controller/createExpo.html" id="validable" method="post">		
+							<?php include_once('inc-exposiciones-1.php'); ?>
+						</form>
+						<!-- /formulario -->
+						<a href="#" id="add-expo" class="label secondary round">Agregar una nueva exposición</a>
+					</div>
 				</div>
-				<!-- END button back save forward -->
-			</div>	<!-- END titulo row -->
-				<hr />
-				<p><em>List exhibitions the gallery held in 2011 and 2012 in chronological order.</em></p>
-				
-				<!-- formulario -->
-				<form action="<?php echo APPLICATION_URL?>user.controller/createExpo.html" id="validable" class="" method="post">		
-                    <ul class="link_list ui-sortable">
-                    <!-- expo -->
-                    	<?php
-						if (count($expositions) > 0)
-						{
-							$i = 1;
-							foreach ($expositions as $exposition)
-							{
-							?>
-							<li class="link_default">
-                                <div class="row">
-                                <!-- move img -->
-                                <div class="one columns">
-                                    <img src="images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr">
-                                </div>
-                                <!-- END move img -->
-                                <!-- nombre -->
-                                <div class="six columns">
-                                    <label><strong> Name of the exhibition</strong> </label>	
-                                    <input name="expo_nombre_<?php echo $i?>" class="large input-text" type="text" value="<?php echo $exposition->__get('exposition_name');?>" />
-                                </div>
-                                <!-- END nombre -->
-                                <!-- Año -->
-                                <div class="two columns offset-by-three">
-                                    <label>Year</label>	
-                                    <select name="expo_fecha_<?php echo $i?>">
-                                        <option value="2012" <?php if ($exposition->__get('exposition_year') == 2012) echo 'selected="selected"';?>>2012</option>
-                                        <option value="2011" <?php if ($exposition->__get('exposition_year') == 2011) echo 'selected="selected"';?>>2011</option>
-                                    </select>
-                                </div>
-                                <div class="two columns offset-by-three">
-                                    <label>Month</label>	
-                                    <select name="expo_mes_<?php echo $i?>">
-                                        <option value="01" <?php if ($exposition->__get('exposition_month') == 01) echo 'selected="selected"';?>>01</option>
-                                        <option value="02" <?php if ($exposition->__get('exposition_month') == 02) echo 'selected="selected"';?>>02</option>
-                                        <option value="03" <?php if ($exposition->__get('exposition_month') == 03) echo 'selected="selected"';?>>03</option>
-                                        <option value="04" <?php if ($exposition->__get('exposition_month') == 04) echo 'selected="selected"';?>>04</option>
-                                        <option value="05" <?php if ($exposition->__get('exposition_month') == 05) echo 'selected="selected"';?>>05</option>
-                                        <option value="06" <?php if ($exposition->__get('exposition_month') == 06) echo 'selected="selected"';?>>06</option>
-                                        <option value="07" <?php if ($exposition->__get('exposition_month') == 07) echo 'selected="selected"';?>>07</option>
-                                        <option value="08" <?php if ($exposition->__get('exposition_month') == 08) echo 'selected="selected"';?>>08</option>
-                                        <option value="09" <?php if ($exposition->__get('exposition_month') == 09) echo 'selected="selected"';?>>09</option>
-                                        <option value="10" <?php if ($exposition->__get('exposition_month') == 10) echo 'selected="selected"';?>>10</option>
-                                        <option value="11" <?php if ($exposition->__get('exposition_month') == 11) echo 'selected="selected"';?>>11</option>
-                                        <option value="12" <?php if ($exposition->__get('exposition_month') == 12) echo 'selected="selected"';?>>12</option>
-                                    </select>
-                                </div>                                
-                                <!-- END Año -->
-                                </div>	
-                            </li>                            
-                       	<?php
-							$i++;
-							}
-						}
-						else
-						{
-						?>
-							<li class="link_default">
-                                <div class="row">
-                                <!-- move img -->
-                                <div class="one columns">
-                                    <img src="<?php echo APPLICATION_URL?>images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr">
-                                </div>
-                                <!-- END move img -->
-                                <!-- nombre -->
-                                <div class="six columns">
-                                    <label><strong> Name of the exhibition</strong> </label>	
-                                    <input name="expo_nombre_1" class="large input-text" type="text" />
-                                </div>
-                                <!-- END nombre -->
-                                <!-- Año -->
-                                <div class="two columns offset-by-three">
-                                    <label>Year</label>	
-                                    <select name="expo_fecha_1">
-                                        <option>2012</option>
-                                        <option>2011</option>
-                                    </select>
-                                </div>
-                                <!-- END Año -->
-                                <div class="two columns offset-by-three">
-                                    <label>Month</label>	
-                                    <select name="expo_mes_1">
-                                        <option value="01">01</option>
-                                        <option value="02">02</option>
-                                        <option value="03">03</option>
-                                        <option value="04">04</option>
-                                        <option value="05">05</option>
-                                        <option value="06">06</option>
-                                        <option value="07">07</option>
-                                        <option value="08">08</option>
-                                        <option value="09">09</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option>
-                                    </select>
-                                </div>                                  
-                                </div>	
-                            </li>                        
-                        <?php
-						}
-						?>
-                    <!-- end Expo --> 
-                    </ul>	
-				</form>
-				<!-- END formulario -->
-			<a href="#" id="add-expo"><strong>+</strong> Add a new exhibition</a>
-			<hr />
-		
+			</div>
+			<br />
 			<!-- botones anterior guardar siguiente -->
+			<div class="inner-footer">
+				<div class="container">
 					<div class="row">
-					<table class="right">
-						<tr>
-							<td>
-								<div class="anterior left"><!-- anterior -->
-									<a title="Registro Galerías" href="<?php echo APPLICATION_URL?>registro-galerias-0410.html">Back</a>
-								</div><!-- END anterior -->
-							</td>
-							<td>
-								<div class="save left"> <!-- guardar -->
-									<a  title="Guardar" href="javascript:void(0);" onClick="document.getElementById('validable').submit();" class="guardar">Save</a>
-								</div><!-- END guardar -->
-							</td>
-							<td>
-								<div class="siguiente left"><!-- siguiente -->
-									<a title="Register fairs" href="<?php echo APPLICATION_URL?>registro-ferias-0430.html">Next</a>
-								</div> <!-- END siguiente -->
-							</td>
-						</tr>
-                        <?php 
-						if (isset($_GET[0]))
-						{
-						?>
-						<tr>
-							<td colspan="3"><p class="text-center azul">Your registration has been saved</p></td>
-						</tr>
-                        <?php
-						}
-						?>
-					</table>
-					</div>	
-					<!-- END botones anterior guardar siguiente -->
-	
+						<div class="eight columns">
+							<strong><span class="asterix">*</span>Datos requeridos</strong>
+						</div>
+						<div class="four columns">
+							<div class="right">
+								<a href="#" class="graytxt">Anterior</a>  <a href="javascript:void(0);" onclick="$('#validable').submit();" class="button radius">Siguiente: Ferias</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!--/inner-footer-->
 	</div><!-- END Main: Panel -->
-	<img src="<?php echo APPLICATION_URL?>images/resources/sombraFinal.png" class="top-sombra" width="980" height="17" alt="sombra"/><!-- Sombra final del panel -->
+	<div class="advisory">
+		<span>Recomendamos visualizar en: IE 9.0 - Firefox 10.0 - Safari 5.1 - Chrome 17.0     |     Optimizada 1024 x 768</span>
+		<span><a href="#">Términos y Condiciones</a> del Sitio</span>
+	</div>
 </div><!-- 3. END Main: Row -->
 <!-- 3. footer -->
+<?php include_once('footer.php'); ?>
+<!-- 3. End footer -->
 <script language="javascript">
 $(document).ready(function() 
 						   {
 							   
-							// nueva expo
-							var counterExpo = <?php echo (count($expositions) > 0) ? count($expositions)+1 : 2; ?>;
-							$("#add-expo").click(function(){
-							$(".link_list").hide().append('<!-- expo --><li class="link_default"><div class="row"><!-- move img --><div class="one columns"><img src="images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr"></div><!-- END move img --><!-- nombre --><div class="six columns"><label><strong> Name of the exhibition</strong></label>	<input class="large input-text" type="text"  name="expo_nombre_'+counterExpo+'" /></div><!-- END nombre --><!-- Año --><div class="two columns offset-by-three"><label>Year</label>	<select name="expo_fecha_'+counterExpo+'"><option value="2012">2012</option><option value="2011">2011</option></select></div><!-- END Año --><div class="two columns offset-by-three">  <label>Month</label>	  <select name="expo_mes_'+counterExpo+'">   <option value="01">01</option>   <option value="02">02</option>   <option value="03">03</option>   <option value="04">04</option>   <option value="05">05</option>   <option value="06">06</option>   <option value="07">07</option>   <option value="08">08</option>   <option value="09">09</option>   <option value="10">10</option>   <option value="11">11</option>   <option value="12">12</option>  </select> </div>	</li><!-- end Expo --> ').fadeIn(1000);
-							counterExpo = counterExpo+1;});
-							// end nueva expo
-						   
-						    });
-</script>
-<?php include_once('footer.php'); ?>
-<!-- 3. End footer -->
+	// nueva expo
+	var counterExpo = <?php echo (count($expositions) > 0) ? count($expositions)+1 : 2; ?>;
+	$("#add-expo").click(function(){
+	event.preventDefault();
+$(".link_list").hide().append('<!-- expo --><li class="link_default"><ul class="no-bullet expo"><li class="handler"><img src="<?php echo APPLICATION_URL?>images/drag_handle.gif" alt="drag_handle" width="50" height="51" class="image_handle nsr"></li><li><input name="expo_nombre_'+counterExpo+'" class="large input-text alert" type="text"  /></li><li class="date"><select name="expo_fecha_'+counterExpo+'"><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option></select></li><li class="date"><select name="expo_mes_'+counterExpo+'"><option value="01" >01</option><option value="02" >02</option><option value="03" >03</option><option value="04" >04</option><option value="05" >05</option><option value="06" >06</option><option value="07" >07</option><option value="08" >08</option><option value="09" >09</option><option value="10" >10</option><option value="11">11</option><option value="12" >12</option></select></li><li class="handler"><a href="javascript:void(0)" onClick=" $(this).parent().parent().parent().remove(); Validator();"><img src="<?php echo APPLICATION_URL?>images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a></li></ul></li><!-- end Expo --> ').fadeIn(1000);							  
+	counterExpo++;
+	validInst = new Validator(1, '', true);
+	});
+	// end nueva expo
+   
+});
 
+function callValidator() 
+{
+	validInst = new Validator(1, "", true);	
+}
+</script>
 
 

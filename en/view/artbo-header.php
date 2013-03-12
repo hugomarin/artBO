@@ -1,4 +1,5 @@
 <div class="encabezado">
+		<!-- header artbo logo -->
 	<div class="row superior-2">	
 		<!-- columns 1/2 -->
 		<div class="four columns">
@@ -11,20 +12,19 @@
 			<div class="perfil-data">
 				<div class="perfil left">
 					<?php 
-					if (isset($user))
+					if (isset($user)) 
 					{
 					?>
-                    <img src="<?php echo APPLICATION_FULL_URL?>resources/images/26x26/<?php echo $user->__get('user_image');?>" class="left"  height="26" width="26" alt="Avatar"/>
-					<p class="left"><strong><?php echo $user->__get('user_name');?></strong><br />
-											<?php echo $user->__get('user_director_name');?><br />
-					<a href="<?php echo APPLICATION_URL?>exit.html" title="Salir"><strong>Salir</strong></a></p>
+                    <!-- <a href="<?php echo APPLICATION_URL?>datos-galeria-0300.html"><img src="<?php echo APPLICATION_FULL_URL?>resources/images/26x26/<?php echo $user->__get('user_image');?>" class="left"  height="36" width="36" alt="perfil"/></a> -->
+                    <a href="<?php echo APPLICATION_URL?>datos-galeria-0300.html"><img src="<?php echo APPLICATION_URL?>images/person.jpg" class="left"  height="36" width="36" alt="perfil"/></a>
+					<p class="left"><?php echo '<strong>'.$user->__get('user_gallery_comname').'</strong>';?><br />
+					<a href="<?php echo APPLICATION_URL?>datos-galeria-0300.html" title="Clic aquí para editar información de la galería">Editar perfil</a> | <a href="<?php echo APPLICATION_URL?>exit.html" title="Salir">Salir</a></p>
 					<?php
 					}
 					?>
                 </div>
-
 				<div class="idiomas left">
-					<p><a href="<?php echo APPLICATION_URL?>../home.html" title="artBO English">Español</a> / English</p>
+					<p>Español | <a href="<?php echo APPLICATION_URL?>en/home.html" title="artBO English">English</a></p>
 				</div>
 			</div>
 		</div>

@@ -1,80 +1,103 @@
 <?php include_once('header-login.php'); ?>
-
+<script language="javascript">
+function validate()
+{
+	var ret	= true;
+	if (document.getElementById("rep_contrasena").value != document.getElementById('contrasena').value) 
+	{ 
+		alert ('Las claves no coinciden.'); 
+		ret	= false; 
+	}
+	else if (document.getElementById('contrasena').value == '')
+	{
+		alert ('Escribe una contraseña.');
+		ret = false;
+	}
+	return ret;
+}
+<?php 
+if (isset($_GET[0]))
+	echo 'alert ("Sus datos fueron actualizados");';
+?>
+</script>
 	<div class="row contenido"><!-- Row -->	
-		
 		<!-- columna 1/2 -->
 		<div class="six columns centered">
-			<div class="panel"><!-- panel -->
-				<h2 class="text-center">Create your profile</h2>
-				<hr />
-				<h4 class="text-center">Gallery</h4>
-                <form action="<?php echo APPLICATION_URL?>user.controller/basic.html" id="validable" class="" method="post" enctype="multipart/form-data">
-				<!-- row -->
+			<form action="<?php echo APPLICATION_URL;?>user.controller/changePassword.html" method="post" accept-charset="utf-8">
+				<div class="panel"><!-- panel -->
+					<h2>Editar su perfil</h2>
+					<label for="contraseña">Nueva clave</label>
+					<input type="password" name="contrasena" value="" id="contrasena"/>
+					<label for="Repetir contraseña">Repetir clave</label>
+					<input type="password" name="rep_contrasena" value="" id="rep_contrasena"/>
+				</div>
 				<div class="row">
-					<!-- columna 1/1 -->
+					<div class="six columns"><a class="bold" title="volver" href="<?php echo APPLICATION_URL?>registro-inicio-0400.html">Volver</a></div>
+					<div class="six columns"><input title="guardar" onClick="return validate();" type="submit" name="cambiar" value="Guardar" class="button radius right"/></div>
+				</div>
+			</form>
+			<!-- <form action="<?php echo APPLICATION_URL?>user.controller/basic.html" id="validable" class="" method="post" enctype="multipart/form-data">
+				
+				<div class="row">
+				
 					<div class="twelve columns">
-						<!-- imagen galeria -->
-						<label><strong>Image of the Gallery</strong></label>
+				
+						<label><strong>Imagen de la Galería</strong></label>
 						<br />
 						<div class="text-center">
-							
-							
-					<img src="<?php echo APPLICATION_URL?>images/resources/200X200/perfil.png" alt="perfil" width="200" height="200" class="images"><br />
+						<?php
+							$image	= ($user->__get('user_image') != '') ? $user->__get('user_image') : 'perfil.png';
+						?>	
+					<img src="<?php echo APPLICATION_URL?>images/resources/perfil.png" alt="perfil" width="200" height="200" class="images"><br />
 					
 							<input type="file" name="user_image" class=""/><br /><br/>
-							<p>You can upload an image of the last exhibition in your gallery in.jpg, .png or .gif. The file must not exceed 1000 KB.</p>
+							<p>Puede subir imagen  de la última exposición realizada en su  galería en .jpg, .png o .gif. El archivo no debe superar los 1000 KB.</p>
 							<hr />
 						</div>
 						
-						<!-- END imagen galeria -->
-						<!-- Nombre de la galería -->
+						
 						<div class="mid-input">
-							<label><strong>Name of the Gallery *</strong></label>
-							<input type="text" name="user_name" class="expand input-text only" />
+							<label><strong>Nombre de la Galería*</strong></label>
+							<input type="text" name="user_name" class="expand input-text only" value="<?php echo $user->__get('user_name');?>" />
 						</div>
-						<!-- End Nombre de la galería -->
-						<!-- pagina web -->
-						<label><strong>Web page </strong> </label>
-						<input type="text" name="user_website" class="expand input-text only" />
-						<!-- END pagina web -->
+						
+						<label><strong>Pagina web</strong> </label>
+						<input type="text" name="user_website" class="expand input-text only" value="<?php echo $user->__get('user_website');?>" />
+						
 						<br />
-						<!-- documento -->
+						
 						<div class="row">
-							<!-- columns 1/2 -->
+						
 							<div class="seven columns">
-							<label><strong>Type of document*</strong></label>
+							<label><strong>Tipo de documento*</strong></label>
 							<select name="user_document_type">
-								<option value="NULL">Select</option>
-								<option value="RUT">Tax identification number in your country</option>
+								<option value="NULL">Seleccione</option>
+								<option value="NIT" <?php if ($user->__get('user_document_type') == 'NIT') echo 'selected="SELECTED"';?>>NIT</option>
+								<option value="RUT" <?php if ($user->__get('user_document_type') == 'RUT') echo 'selected="SELECTED"';?>>No. de identificación fiscal de su país</option>
 							</select>
 							</div>
-							<!-- END columns 1/2 -->
-							<!-- columns 2/2 -->
+						
 							<div class="five columns ">
-								<label><strong>Number of the Document*</strong></label>
-								<input type="text" name="user_gallery_document" class="small input-text" />
+								<label><strong>Número de Documento*</strong></label>
+								<input type="text" name="user_gallery_document" class="small input-text" value="<?php echo $user->__get('user_gallery_document');?>" />
 							</div>
-							<!-- END columns 2/2 -->
+						
 						</div>
 					
-						<!-- END documento -->
-						<span>Note: Remember that with this number you will register the entry of the works, goods and equipment to Corferias, the fair venue.</span><br /><br />
-						<span><strong>*Data required</strong></span>
-						<!-- botones -->
+						
+						<span>Nota: Tenga en cuenta que con el mismo número de identificación también registrará el ingreso de mercancía de sus obras, equipos y otros a Corferias.</span><br /><br />
+						<span><strong>*Datos requeridos</strong></span>
+						
 						<hr />
 						<div class="text-center">
-							<a href="javascript:void(0);" onClick="document.getElementById('validable').submit();" class="button round">Next</a>
+							<a href="javascript:void(0);" onClick="document.getElementById('validable').submit();" class="button round">Siguiente</a>
 						</div>
-						<!-- END botones -->
+						
 						<br />
 					</div>
-					<!-- END columna 1/1 -->
 				</div>
-				<!-- END row -->
-				</form>	
+			</form>	 -->
 	
-			</div><!-- End panel -->
-			<div class="shadow>"><img src="<?php echo APPLICATION_URL?>images/resources/sombraFinalDatos.png" class="top-sombra" width="470" height="12" alt="sombra"/></div><!-- Sombra final del panel -->
 		</div><!-- END columna 1/2 -->
 	</div><!-- End Row -->
 			

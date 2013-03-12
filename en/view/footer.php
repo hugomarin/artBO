@@ -1,29 +1,57 @@
-	<?php
-			$currentFile = $_SERVER["PHP_SELF"];
-			$parts = Explode('/', $currentFile);
-			$name = $parts[count($parts) - 1];
-	?>
+
+	<script src="<?php echo APPLICATION_URL?>javascripts/jquery.min.js"></script>
+	<script src="<?php echo APPLICATION_URL?>javascripts/jquery-ui-1.8.18.custom.min.js"></script>
+	<script src="<?php echo APPLICATION_URL?>javascripts/modernizr.foundation.js"></script>
+	<script src="<?php echo APPLICATION_URL?>javascripts/foundation.js"></script>
+	<script src="<?php echo APPLICATION_URL?>javascripts/app.js"></script>	
+	<script src="<?php echo APPLICATION_URL?>javascripts/validator.js"></script>
+    <script src="<?php echo APPLICATION_URL?>javascripts/fileuploader.js"></script>
+	<script src="<?php echo APPLICATION_URL?>javascripts/fileuploader/util.js"></script>
+	<script src="<?php echo APPLICATION_URL?>javascripts/fileuploader/button.js"></script>
+    <script src="<?php echo APPLICATION_URL?>javascripts/fileuploader/ajax.requester.js"></script>
+    <script src="<?php echo APPLICATION_URL?>javascripts/fileuploader/deletefile.ajax.requester.js"></script>
+    <script src="<?php echo APPLICATION_URL?>javascripts/fileuploader/handler.base.js"></script>
+    <script src="<?php echo APPLICATION_URL?>javascripts/fileuploader/window.receive.message.js"></script>
+    <script src="<?php echo APPLICATION_URL?>javascripts/fileuploader/handler.form.js"></script>
+    <script src="<?php echo APPLICATION_URL?>javascripts/fileuploader/handler.xhr.js"></script>
+    <script src="<?php echo APPLICATION_URL?>javascripts/fileuploader/uploader.basic.js"></script>
+    <script src="<?php echo APPLICATION_URL?>javascripts/fileuploader/dnd.js"></script>
+    <script src="<?php echo APPLICATION_URL?>javascripts/fileuploader/uploader.js"></script>
+    <script src="<?php echo APPLICATION_URL?>javascripts/fileuploader/jquery-plugin.js"></script>
+	<?php $name = explode("/", $path); ?>
 
 	<!-- Included JS Files -->
 	<script type="text/javascript">
-		
+	var ApplicationUrl = '<?php echo APPLICATION_URL?>';	
 	$(function() {
+		
+		if ($(".datepicker").is('*')) {
+
 		$( ".datepicker" ).datepicker({
 			showOn: "button",
-			buttonImage: "images/calendar.png",
-			buttonImageOnly: true
+			buttonImage: ApplicationUrl + "images/calendar.png",
+			buttonImageOnly: true,
+			dateFormat: "yy-mm-dd" 
 		});
-		
+ 
+		}else if ($("#sortable").is('*')) {
+			
 		$( "#sortable" ).sortable();
-		$( "#sortable" ).disableSelection();
-		
+		//$( "#sortable" ).disableSelection();
+			
+		}else if ($(".link_list").is('*')) {
+			
 		$(".link_list").sortable({
 			placeholder: "ui-state-highlight"
 		});
-		$(".link_list").disableSelection();
+		//$(".link_list").disableSelection();
+			
+		}else if  ($(".link_list").is('*')) {
 		
 		$( ".products-li" ).sortable();
-		$( ".products-li" ).disableSelection();
+		//$( ".products-li" ).disableSelection();		
+		
+		}
 		
 	});
 	
@@ -110,16 +138,16 @@
 				if(toggle) {	
 					$('#artista-' + this.id.split('-')[1]).reveal();
 				}	
-				$("#link-" + this.id.split('-')[1]).slideToggle();
+				//$("#link-" + this.id.split('-')[1]).slideToggle();
 			});
 
 		});
 		
 		$(".revealer-new").each(function(item){
 			$(this).click(function () {
-				$("#artist_name_new").value = $("#atist_name_" + (counterArtist - 1)).value;
-				$("#artist_surname_new").value = $("#atist_surname_" + (counterArtist - 1)).value;
-				$("#artist_nationality_new").value = $("#atist_nationality_" + (counterArtist - 1)).value;
+				$("#artist_name_new").val($("#artist_name_" + (counterArtist - 1)).val());
+				$("#artist_surname_new").val($("#artist_surname_" + (counterArtist - 1)).val());
+				$("#artist_nationality_new").val($("#artist_nationality_" + (counterArtist - 1)).val());
 				var toggle = true;
 				if(this.nodeName.toLowerCase() == 'input')
 				{
@@ -130,7 +158,7 @@
 					
 					$('#artista-new').reveal();
 				}	
-	
+				//$("#link-" + (counterArtist - 1)).slideToggle();
 			});
 		});
 		
@@ -143,6 +171,11 @@
 		
 		});
 		
+		$('.delete-artist').unbind('click');
+		$('.delete-artist').click(function () {
+			$(this).parent().parent().parent().remove();
+			$(document).ready(function () { validInst = new Validator(1, '', true); });
+		});		
 		// datos - galeria slide to 
 		
 		// nuevo artista 
@@ -151,21 +184,25 @@
 		
 		
 		
-		switch ('<?php echo $name ?>' ) {	
-			case 'registro-ferias-430.php':$('#3').addClass('active');
+		
+		switch ('<?php echo $name[1] ?>' ) {
+			case 'registro-inicio-0400':$('#0').addClass('active');
+			break;	
+			case 'registro-ferias-0430':$('#3').addClass('active');
 			break;
-			case 'registro-exposiciones-0420.php':$('#2').addClass('active');
+			case 'registro-exposiciones-0420':$('#2').addClass('active');
 			break;
-			case 'registro-galerias-0410.php':$('#1').addClass('active');
+			case 'registro-galerias-0410':$('#1').addClass('active');
 			break;
-			case 'registro-artistas-0440.php':$('#4').addClass('active');
+			case 'registro-artistas-0440':$('#4').addClass('active');
 			break;
-			case 'registro-espacio-0450.php':$('#5').addClass('active');
+			case 'registro-espacio-0450':$('#5').addClass('active');
 			break;
-			case 'registro-documentos-0460.php':$('#6').addClass('active');
+			case 'registro-documentos-0460':$('#6').addClass('active');
 			break;
 			
 			}
+			
 		
 	 });
 	</script>

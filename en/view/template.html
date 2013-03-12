@@ -1,0 +1,60 @@
+<?php 
+include_once('header-login.php');  
+include_once('menu.php'); ?>
+			
+	<div class="row main-row">	
+		<div class="panel">
+			
+			<div class="row inner-header">
+				<div class="eight columns title">
+					<span class="redtext">Registro</span>
+					<h2>Nombre de la Sección</h2>
+				</div><!--/title-->
+				
+				<div class="four columns mini-nav">
+					<dl class="sub-nav">
+						<dd><a href="<?php echo APPLICATION_URL?" class="back"></a></dd>
+						<dd><a href="javascript:void(0);" onClick="document.getElementById('validable').submit();" class="save"></a></dd>
+						<dd><a href="<?php echo APPLICATION_URL?>" class="forward"></a></dd>
+					</dl>	
+				</div>
+			</div><!--/row inner-header-->
+			
+			<hr />
+			
+			<div class="row form-data">	
+				<form action="" id="" class="" method="post" enctype="">
+					
+
+						
+				</form>	
+			</div>
+				
+			<hr />
+				
+			<div class="row inner-footer">
+				<div class="eight columns note">
+					<span><strong><span class="asterix">*</span>Datos requeridos</strong></span>
+				</div><!--/note-->
+				
+				<div class="four columns mini-nav">
+					<dl class="sub-nav">
+						<dd class="prev"><a href="<?php echo APPLICATION_URL?>">Anterior</a></dd>
+						<dd class="save"><a href="javascript:void(0);" onClick="document.getElementById('validable').submit();" class="guardar">Guardar</a></dd>
+						<dd class="next"><a href="<?php echo APPLICATION_URL?>">Siguiente</a></dd>
+					</dl>
+				<?php 
+					if (isset($_GET[0]))
+					{
+					?>
+				<p class="text-center bluetxt">Su registro ha sido guardado</p>
+				<?php
+					}
+					?>
+				</div><!--/mini-nav-->
+			</div><!--/inner-footer-->
+			
+		</div><!--panel-->
+	</div><!--/row main-row-->
+			
+<?php include_once('footer.php'); ?>

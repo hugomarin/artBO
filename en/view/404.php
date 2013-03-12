@@ -9,8 +9,8 @@
 			
 				<div class="row">
 				
-				<h2>Document not found</h2>
-				    <p>The document does not exist, has been moved <a href="<?php echo APPLICATION_URL?>registro-inicio-0400.html" class="main" title="Inicio">Back to main</a></p>
+				<h2>Documento no encontrado</h2>
+				    <p>El documento no existe, se ha trasladado o nunca deber&iacute;a haber pasado este error <a href="<?php echo APPLICATION_URL?>registro-inicio-0400.html" class="main" title="Inicio">Volver al inicio</a></p>
 							   
 
 			
