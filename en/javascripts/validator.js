@@ -13,7 +13,6 @@ var validInst ; // VARIABLE DE INSTANCIACION DE LA CLASE
 // RECIBE DIV (STRING, DIV ID)
 function Validator(msgAlertType, div, extra)
 {
-	
 	// INSTANCIACION DE VARIABLES GLOBALES
 	this.msgAlertType  = msgAlertType ? msgAlertType : 1 ;
 	this.div           = div ? div : '' ;
@@ -329,8 +328,10 @@ Validator.prototype.throwAlert = function()
 										case 1:
 												// CONSTRUYE EL MENSAJE CON LOS CAMPOS INVALIDOS 
 												// Y REMPLZA EL {LINEBREAK} POR \R\N
-												msg += '\r\n' + this.validatorMsg.replace(/{linebreak}/g, "\r\n");					
-												alert(msg) ;
+												// msg += '\r\n' + this.validatorMsg.replace(/{linebreak}/g, "\r\n");					
+												// alert(msg) ;
+												// console.log(msg) ;
+												$('.nopadding').prepend('<div class="alert-box error">' + msg + '<a href="#" class="close">×</a> </div>').show();
 										break;
 										case 2:
 											var target = document.getElementById(this.div);
@@ -340,7 +341,7 @@ Validator.prototype.throwAlert = function()
 											{
 												target.style.display = '';
 											}
-
+											console.log(msg);
 											// CONSTRUYE EL MENSAJE CON LOS CAMPOS INVALIDOS 
 											// Y REMPLZA EL {LINEBREAK} POR <BR/>	
 											target.innerHTML = msg + '<br>' + this.validatorMsg.replace(/{linebreak}/g, "<br/>");	

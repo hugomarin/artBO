@@ -6,196 +6,137 @@ include_once('menu.php');
 <!-- 2. End menu -->
 			
 	<!--3. Row main-->
-	<div class="row">	
-		<!-- panel -->
-		<div class="panel">
 				
-			<div class="row"><!-- titulo row -->
-				<div class="eight columns">
-					<span class="rojo">Registration</span>
-					<h2><span class="quitarH2"> Artists:</span> <?php echo $user->__get('user_name');?></h2>	
+	<div class="row main-row">	
+		<!-- <div class="alert-box success">
+	    	Sus datos han sido guardados
+	    	<a href="" class="close">×</a>
+		</div> -->
+		<div class="panel nopadding">
+			<div class="inner-header">
+				<div class="row">
+					<div class="eight columns title">
+						<span class="redtext bold">Artistas</span>
+						<h2><?php echo $user->__get('user_gallery_comname');?></h2>	
+					</div>
+					<div class="four columns mini-nav-header">
+						<dl class="sub-nav">
+							<dd><a class="save" title="Guardar" href="javascript:void(0);" onclick="$('#validable').submit();" >Guardar</a></dd>
+							<dd><a class="prev" title="Registro Ferias" href="<?php echo APPLICATION_URL?>registro-ferias-0430.html">Anterior</a></dd>
+							<dd><h4>4/6</h4></dd>
+							<dd><a class="next" title="Registro espacio" href="<?php echo APPLICATION_URL?>registro-espacio-0450.html" >Siguiente</a></dd>
+						</dl>	
+					</div>
 				</div>
-				<!-- button back save forward -->
-				<div class="two columns offset-by-two">
-					<a href="<?php echo APPLICATION_URL?>registro-ferias-0430.html" class="back"></a>
-					<a href="javascript:void(0);" onClick="document.getElementById('validable').submit();" class="save"></a>
-					<a href="<?php echo APPLICATION_URL?>registro-espacio-0450.html" class="forward"></a>                                    
-				</div>
-				<!-- END button back save forward -->
 			</div>	<!-- END titulo row -->
-				<hr />
-                <p><em>Remember that your artists proposal for artBO 2012 should be in accordance to the size of stand you have selected. For every 10 square meters, can only display an artist.</em></p>
-                <p><em>To indicate that the artist participated in artBO 2012 should select the check box.</em></p>
-                
-			<form action="<?php echo APPLICATION_URL?>user.controller/createArtist.html" id="validable" class="" method="post">
-			<ul class="link_list ui-sortable">
-			<!-- artista -->
-				<?php
-                if (count($artists) > 0)
-                {
-                    $i = 1;
-                    foreach ($artists as $artist)
-                    {
-                    ?>            
-                        <li class="link_default">
-                            <div class="row">
-                                <!-- nombre -->
-                                <div class="three columns">
-                                    <img src="images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr">
-                                    <label>Name</label><br />	
-                                    <input type="text" name="artist_name_<?php echo $i;?>" value="<?php echo $artist->__get('artist_name');?>" />
-                                </div>
-                                <!-- END nombre -->
-                                <!-- Apellido -->
-                                <div class="three columns">
-                                    <label>Last Name</label><br />	
-                                    <input type="text" name="artist_surname_<?php echo $i;?>" value="<?php echo $artist->__get('artist_surname');?>" />
-                                </div>
-                                <!-- END Apellido -->
-                                
-                                
-                                <!-- checkboxes -->
-                                <div class="six columns">
-                                    <!-- nacionalidad -->
-                                    <label>Nationality</label><br />	
-                                    <input type="text" name="artist_nationality_<?php echo $i;?>" value="<?php echo $artist->__get('artist_nationality');?>" />
-                                    <!-- END nacionalidad -->
-                                    
-                                    
-                                    <label for="checkbox3a"><input class="revealer" type="checkbox" name="artist_artbo_<?php echo $i;?>" <?php if ($artist->__get('artist_artbo') == 1) echo 'checked="CHECKED"';?>  id="checkbox-<?php echo $i?>"> <strong>This artist will participate in artBO</strong></label>
-                                    <!-- boton para modal de artista -->
-                                    <a href="#" class="revelar-a <?php if ($artist->__get('artist_artbo') != 1) echo 'hidden"';?> revealer" id="link-<?php echo $i?>" data-reveal-id="artista" >Editar</a>
-                                    <!-- END boton para modal de artista -->
-                                </div>
-                            </div>
-                        </li>
-					<?php
-                        $i++;
-                        }
-                    }
-                    else
-                    {
-                    ?>
-                    	<li class="link_default">
-                            <div class="row">
-                                <!-- nombre -->
-                                <div class="three columns">
-                                    <img src="images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr">
-                                    <label>Name</label><br />	
-                                    <input type="text" name="artist_name_1" />
-                                </div>
-                                <!-- END nombre -->
-                                <!-- Apellido -->
-                                <div class="three columns">
-                                    <label>Last Name</label><br />	
-                                    <input type="text" name="artist_surname_1" />
-                                </div>
-                                <!-- END Apellido -->
-                                
-                                
-                                <!-- checkboxes -->
-                                <div class="six columns">
-                                    <!-- nacionalidad -->
-                                    <label>Nationality</label><br />	
-                                    <input type="text" name="artist_nationality_1" />
-                                    <!-- END nacionalidad -->
-                                    
-                                    
-                                    <label for="checkbox3a"><input class="revealer-new" type="checkbox" id="checkbox-1" name="artist_artbo_1"><strong>This artist will participate in artBO</strong></label>
-                                    <!-- boton para modal de artista -->
-                                    <!-- END boton para modal de artista -->
-                                </div>
-                            </div>
-                        </li>  
-				   <?php
-                    }
-                    ?>                                          
-			<!-- END artista -->  
-			</ul>	
-			<a href="#" id="add-artist"><strong>+</strong> Add a new artist</a> <!-- agregar una nueva expo -->
-			</form>
-            <hr />
-			<!-- botones anterior guardar siguiente -->
-					<div class="row">                  
-					<table class="right">
-						<tr>
-							<td>
-								<div class="anterior left"><!-- anterior -->
-									<a href="<?php echo APPLICATION_URL?>registro-ferias-0430.html">Back</a>
-								</div><!-- END anterior -->
-							</td>
-							<td>
-								<div class="save left"> <!-- guardar -->
-									<a href="javascript:void(0);" onClick="document.getElementById('validable').submit();" class="guardar">Save</a>
-								</div><!-- END guardar -->
-							</td>
-							<td>
-								<div class="siguiente left"><!-- siguiente -->
-									<a title="Register Artist" href="<?php echo APPLICATION_URL?>registro-espacio-0450.html">Next</a>
-								</div> <!-- END siguiente -->
-							</td>
-						</tr>
-                        <?php 
-						if (isset($_GET[0]))
-						{
-						?>
-						<tr>
-							<td colspan="3"><p class="text-center azul">Your registration has been saved</p></td>
-						</tr>
-                        <?php
-						}
-						?>
-					</table>
-					</div>	
-					<!-- END botones anterior guardar siguiente -->
-				
+			<div class="container">
+				<div class="row form-data">	
+					<div class="twelve columns">
+						<h5>Recuerde que su propuesta de artistas para artBO 2013 debe ser acorde al tamaño del <em>stand</em> que ha seleccionado. Por cada 10 mts², sólo podrá exhibir un artista.</h5>
+						
+						
+						<h6>Propuesta artística para artBO 2013 (opcional, máximo 250 palabras)</h6>
+						
+												  <textarea name="user_gallery_proposal" placeholder="Digite la información de la propuesta artística para presentar en su stand en artBO" rows="8" cols="40"><?php echo $user->__get('user_gallery_proposal')?></textarea>
+						
+						<br />
+						<br />
+						<br />
+						<h6>Artistas representados propuestos para artBO<h6>
+						
+						<div class="intitle">
+							<!-- .row>.one.column+.four.columns+three.columns+.three.columns+.one.columns -->
+							<ul class="artistas">
+								<li>
+									<span class="asterix">*</span><strong>Nombre</strong>
+								</li>
+								<li>
+									<span class="asterix">*</span><strong>Apellido</strong>
+								</li>
+								<li>
+									<span class="asterix">*</span><strong>Nacionalidad</strong>
+								</li>
+							</ul>
+						</div>
+						<form action="<?php echo APPLICATION_URL?>user.controller/createArtist.html" id="validable" class="" method="post">
+							<?php include_once('inc-artistas-1.php'); ?>
+
+						<a href="#" id="add-artist" class="label secondary round">Agregar un nuevo artista </a>
+						<br />
+						<br />
+						<br />
+
+						<h6>Otros artistas representados por la galería</h6>
+
+							<textarea name="user_represented_artists" rows="8" cols="40" placeholder="Digite la información correspondiente a artistas representados"><?php echo $user->__get('user_represented_artists');?></textarea>
+						</form>
+
+					</div>
+				</div>
+			</div>
+			
+			<div class="inner-footer">
+				<div class="container">
+					<div class="row">
+						<div class="eight columns">
+							<strong><span class="asterix">*</span>Datos requeridos</strong>
+						</div>
+						<div class="four columns">
+							<div class="right">
+								<a title="Registro ferias" href="<?php echo APPLICATION_URL?>registro-ferias-0430.html" class="graytxt">Anterior</a>  <a href="javascript:void(0);" onclick="$('#validable').submit();" title="Registro Tipo de Stand" class="button radius">Siguiente: Tipo de <em>Stand</em></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!--/inner-footer-->
+		</div><!-- END Main: Panel -->
+		<div class="advisory">
+			<span>Recomendamos visualizar en: IE 9.0 - Firefox 10.0 - Safari 5.1 - Chrome 17.0     |     Optimizada 1024 x 768</span>
+			<span><a href="#">Términos y Condiciones</a> del Sitio</span>
 		</div>
-		<!-- End Row -->
-		<img src="<?php echo APPLICATION_URL?>images/resources/sombraFinal.png" class="top-sombra" width="980" height="17" alt="sombra"/><!-- Sombra final del panel -->
-	</div><!-- END Main: Row  -->
+	</div><!--/row main-row-->
 <!-- 2. End content -->
 <!-- modal del artista -->
 <?php include_once 'modal.php'; ?>
 <!-- END modal del artista -->
 <!-- 3. footer -->		
-<script language="javascript">
-var counterArtist;
-$(document).ready(function() 
-						   {
-							   
-							// nueva expo
-							counterArtist = <?php echo (count($artists) > 0) ? count($artists)+1 : 2; ?>;
-							$("#add-artist").click(function(){
-					
-							$(".link_list").hide().append('<li class="link_default"><div class="row"><div class="three columns"><img src="<?php echo APPLICATION_URL?>images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr"><label>Name</label><br /><input type="text" class="" id="artist_name_'+counterArtist+'" name="artist_name_'+counterArtist+'" /></div><div class="three columns"><label>Last Name</label><br /><input type="text" name="artist_surname_'+counterArtist+'" id="artist_surname_'+counterArtist+'" /></div><div class="six columns"><label>Nationality</label><br /><input type="text" name="artist_nationality_'+counterArtist+'" id="artist_nationality_'+counterArtist+'" /><label for="checkbox3a"><input type="checkbox" id="checkbox-' + counterArtist + '" class="revealer-new"  name="artist_artbo_'+counterArtist+'"> <strong>This artist will participate in artBO</strong></label></div></div></li>').fadeIn(1000);
-								$(".revealer-new").each(function(item){
-									$(this).click(function () {
-										$("#artist_name").val($("#artist_name_" + (counterArtist - 1)).val());
-										$("#artist_surname").val($("#artist_surname_" + (counterArtist - 1)).val());
-										$("#artist_nationality").val($("#artist_nationality_" + (counterArtist - 1)).val());
-										var toggle = true;
-										if(this.nodeName.toLowerCase() == 'input')
-										{
-											if(!$(this).attr("checked"))
-												toggle = false;
-										}
-										if(toggle) {
-											
-											$('#artista-new').reveal();
-										}	
-										$(".revelar-a").slideToggle();	
-									});
-								});	
-							counterArtist = counterArtist+1;						
-							});							
-							// end nueva expo
-
-						    });
-
-
-</script>	
 <?php include_once('footer.php'); ?>
 <!-- 3. End footer -->
+<script language="javascript">
+var counterArtist;
+$(document).ready(function() {
+// nueva expo
+counterArtist = <?php echo (count($artists) > 0) ? count($artists)+1 : 2; ?>;
+$("#add-artist").click(function(){
 
-
+$(".link_list").hide().append('<li class="link_default"><ul class="no-bullet artist"><li class="handler"><img src="<?php echo APPLICATION_URL?>images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr"></li><li><input type="text" name="artist_name_'+counterArtist+'" id="artist_name_'+counterArtist+'"  /></li><li><input type="text" name="artist_surname_'+counterArtist+'" id="artist_surname_'+counterArtist+'" /></li><li><input type="text" class="no-margin" name="artist_nationality_'+counterArtist+'" id="artist_nationality_'+counterArtist+'" /><a href="#" class="revelar-a revealer-new " id="link-'+counterArtist+'" data-reveal-id="artista" >Agregue más información sobre el artista</a></li><li class="handler"><a href="#" class="delete-artist"><img src="<?php echo APPLICATION_URL?>images/trash.gif" alt="Eliminar artista" title="Eliminar artista" width="37" height="37" /></a></li></ul></li>').fadeIn(1000);
+	$(".revealer-new").each(function(item){
+		$(this).unbind('click');
+		$(this).click(function () {
+			$("#artist_name").val($("#artist_name_" + (counterArtist - 1)).val());
+			$("#artist_surname").val($("#artist_surname_" + (counterArtist - 1)).val());
+			$("#artist_nationality").val($("#artist_nationality_" + (counterArtist - 1)).val());
+			var toggle = true;
+			if(this.nodeName.toLowerCase() == 'input')
+			{
+				if(!$(this).attr("checked"))
+					toggle = false;
+			}
+			
+			if(toggle) {
+				$('#artista-new').reveal();
+			}	
+			//$(".revelar-a").slideToggle();	
+		});
+		$('.delete-artist').unbind('click');
+		$('.delete-artist').click(function () {
+			$(this).parent().parent().parent().remove();
+			$(document).ready(function () { validInst = new Validator(1, '', true); });
+		});
+	});	
+counterArtist = counterArtist+1;						
+});							
+// end nueva expo
+});
+</script>	
 

@@ -7,34 +7,34 @@
 	<div class="row">	
 		<!-- panel -->
 		<div class="panel">
-			<h2>Type of application</h2>
-			<p>Select to begin the process</p>
+			<h2>Tipo de aplicación</h2>
+			<p>Seleccione para iniciar el proceso</p>
 			<hr />
 				<div class="row">
 				
 					<!-- Col 1/3 -->				
 					<div class="six columns">
 							
-						<h3>Galleries</h3>
-						<p class="min-height">This main section is for galleries that have more than 3 years of operations and comply with the organization’s quality criteria. The stands available in this section are Plus 63mt², 63 mt², 45mt², 33.75 mt² y 31.5 mt².</p>
-						<a href="<?php echo APPLICATION_URL?>user.controller/gallerySelect/1.html" class="round  button" title="Select">Select</a>
+						<h3>Galerías</h3>
+						<p class="min-height">Esta sección principal es para galerías con más de tres años de trayectoria que cumplen con los criterios de calidad que la organización ha determinado. En esta sección se pueden encontrar stands de Plus 63 mts², 63 mts², 45mts², 33.75 mts² y 31.5 mts².</p>
+						<a href="<?php echo APPLICATION_URL?>user.controller/gallerySelect/1.html" class="round  button" title="Seleccionar">Seleccionar</a>
 					</div>
 					<!-- End Col 1/3 -->
 					<!-- Col 2/3 -->				
 					<div class="six columns">
 							
-						<h3>New Galleries</h3>
-						<p class="min-height">This section is for galleries that represent emerging artists, have less than 3 years of operation and comply with the organization’s quality criteria. The stand measures 21 m².  Only one will be assigned per gallery.</p>
-						<a href="<?php echo APPLICATION_URL?>user.controller/gallerySelect/2.html" class="round  button" title="Select">Select</a>
+						<h3>Nuevas Galerías</h3>
+						<p class="min-height">Este sección es para galerías que representa artistas emergentes con menos de tres años de actividades y que cumplen con los criterios de calidad que la organización ha determinado. Los stands son de 21 m² y sólo se asignará un espacio por galería.</p>
+						<a href="<?php echo APPLICATION_URL?>user.controller/gallerySelect/2.html" class="round  button" title="Seleccionar">Seleccionar</a>
 					</div>
 					<!-- End Col 2/3 -->
 					<!-- Col 3/3 -->				
 					<!--
 <div class="four columns">
 							
-						<h3>Individual Projects</h3>
-						<p class="min-height">Spaces in this section will be assigned by invitation only by the curator designated by the organization. </p>
-						<a href="<?php echo APPLICATION_URL?>user.controller/gallerySelect/3.html" class="round  button" title="Select">Select</a>
+						<h3>Proyectos individuales</h3>
+						<p class="min-height">Los espacios de esta sección sólo serán asignados por invitación directa del curador designado por artBO.</p>
+						<a href="<?php echo APPLICATION_URL?>user.controller/gallerySelect/3.html" class="round  button" title="Seleccionar">Seleccionar</a>
 					</div>
 -->
 					<!-- End Col 4/4 -->

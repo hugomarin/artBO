@@ -1,45 +1,39 @@
+<?php 
+include_once('header-nologin2.php'); 
+?>
 
-<?php include_once('header-nologin.php'); ?>
+<body class="bigpic4">
 <!-- content -->
-<div class="container superior">
+<div class="container">
 	<div class="row"><!-- Row -->	
 		<div class="six columns centered"><!-- six columns -->
-			<div class="panel"><!-- Panel -->
-			
-				<h3>Restablecer contraseña</h3>
-				<!-- login form -->
-				<form action="<?php echo APPLICATION_URL?>user.controller/recover_password.html" class="nice" method="post" id="validable"> 
-				    	
-						<p>Enter the email that you use for your artBOs account and we will send you a link to reset your password.</p>
-				    	
-				    	<!-- casilla de alerta -->
-                        <?php
-						if (isset($_GET[0]))
-						{
-						?>
-                            <div class="alert-box error">
-                               The password or the email does not match our records.<a href="" class="close">&times;</a>
-                            </div>
-                        <?php
-						}
-						?>
-				    	<!-- END  casilla de alerta -->
-				    
-				    	<div class="mid-input-div"><!-- Div Input -->
-				    		<label>Email</label>
-				        	<input type="text" class="expand input-text" name="user_email">
-				    	</div>
-				    
-				    	<!--  Input Button & Recuperar Contrase&ntilde;a-->
-				    		<input type="submit" class="button round" value="Reset your password">
-				    		<a href="<?php echo APPLICATION_URL?>home.html" title="Home">Cancel</a>	
-				    	<!--  END Input Button & Recuperar Contrase&ntilde;a-->		
-				</form>
-				<!-- END login form -->
-				    			
-	
-			</div>  <!-- End Panel -->
-								
+		<div class="languages"><span class="label round"><a href="#">English</a> | <a href="#">Español</a></span></div>
+			<a href="home.html"><span class="artBO">artBO</span></a><a href="home.html"><span class="ccB">CCB</span></a>
+			<!-- casilla de alerta -->
+	        <?php
+			if (isset($_GET[0]))
+			{
+			?>
+	            <div class="alert-box error">
+	                Nuestro sistema no tiene registro del correo electrónico.<a href="" class="close">&times;</a>
+	            </div>
+	        <?php
+			}
+			?>
+			<form action="<?php echo APPLICATION_URL?>user.controller/recover_password.html" class="nice" method="post" id="validable">
+				<div class="panel"><!-- Panel -->
+					<h3>Restablecer clave</h3>
+					<p>Introduzca el correo electrónico que utiliza para su cuenta de artBO y le enviaremos un enlace para restablecer su clave.</p>
+			    	<div class="mid-input-div"><!-- Div Input -->
+			    		<label>Correo electrónico</label>
+			        	<input type="email" class="expand input-text" name="user_email" title="Digite el correo electrónico" required="required">
+			    	</div>
+				</div>
+				<div class="row">
+					<div class="six columns"><a class="whitetxt bold" href="<?php echo APPLICATION_URL?>login.html" title="Volver al inicio">Volver al inicio</a></div>
+					<div class="six columns"><input type="submit" class="button radius right" value="Restablecer clave"></div>
+				</div>
+			</form>
 		</div><!-- six columns -->
 	</div><!-- End Row -->
 </div>	
@@ -47,4 +41,4 @@
 <!-- 3. footer -->			
 <?php include_once('footer.php'); ?>
 <!-- 3. End footer -->
-
+<?php include_once('randomizer.php'); ?>

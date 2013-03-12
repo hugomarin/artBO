@@ -4,7 +4,7 @@ switch ($action):
 
 	case 'newContact':
 		$newContact = new Content();
-		//Guardo la informaciï¿½n
+		//Guardo la información
 		foreach($_POST as $key => $value)
 			$newContact->__set($key,$value);
 		$asunto = new Content($_POST['content_extra_varchar_1']); 
@@ -38,7 +38,7 @@ switch ($action):
 	
 	case 'newCotizacion':
 		$newContact = new Content();
-		//Guardo la informaciï¿½n
+		//Guardo la información
 		foreach($_POST as $key => $value)
 			$newContact->__set($key,$value);
 		$newContact->__set('content_datetime_creation',date('Y-m-d H:i:s'));
@@ -72,7 +72,7 @@ switch ($action):
 		header('Content-Type: text/html; charset=ISO-8859-1');
 		$cities	= CityHelper::retrieveCities(' AND state_id = '.escape($_GET[1]).' ORDER BY city_name');
 		?>
-		<label>*Ciudad</label>
+		<label>Ciudad:</label>
 		<select title="Ciudad" name="content_varchar_5">
 			<option value="NULL">-Seleccione-</option>
 			<?php

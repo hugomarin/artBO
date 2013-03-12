@@ -32,14 +32,43 @@ jQuery(document).ready(function ($) {
 	}
 
 	/* ALERT BOXES ------------ */
-	$(".alert-box").delegate("a.close", "click", function(event) {
+	$(document).delegate("a.close", "click", function(event) {
     event.preventDefault();
-	  $(this).closest(".alert-box").fadeOut(function(event){
+	  $(".alert-box").fadeOut(function(event){
 	    $(this).remove();
 	  });
 	});
+	
+	function escape_Input(){
+		if($('.nulled').is('*')){
+			console.log($('.nulled').parent().find('input.input-text'));
+			$('.standname-data').each(function (index) {
+				$(this).find('input').hide();
+			});
+			$('.nulled').parent().find('input.input-text').show();
+		}
+	}
+	
+	escape_Input();
+	
+	$('.stand-items li a.button').live('click', function(e) {
+		var stand = $(this).data('stand');
+		document.getElementById('selectedStand').value=stand;
+		removeAll();
+		$(this).addClass('nulled');
+		$(this).parent().find('input.expand').show();
+		$(this).parent().find('img').addClass('selected');
+	});
 
-
+	function removeAll()
+	{
+		$('.button').each(function (index) {
+			$(this).removeClass('nulled');
+			$(this).parent().find('input.expand').hide();
+			$(this).parent().find('img').removeClass('selected');						
+		});
+	}
+	
 	/* PLACEHOLDER FOR FORMS ------------- */
 	/* Remove this and jquery.placeholder.min.js if you don't need :) */
 
@@ -91,5 +120,22 @@ jQuery(document).ready(function ($) {
 	/* DISABLED BUTTONS ------------- */
 	/* Gives elements with a class of 'disabled' a return: false; */
   
+  
+  // $(".alert-box").on("click", "a.close", function() {
+		// console.log($(this));
+		  // event.preventDefault();
+		  // $(".alert-box").fadeOut(function(event){
+		    // $(this).remove();
+		  // });
+	// });
 
 });
+
+
+// $(".alert-box").on("click", "a.close", function() {
+		// console.log($(this));
+		  // event.preventDefault();
+		  // $(".alert-box").fadeOut(function(event){
+		    // $(this).remove();
+		  // });
+	// });

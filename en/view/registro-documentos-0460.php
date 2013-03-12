@@ -1,132 +1,81 @@
-
-
-<?php include_once('header-login.php'); ?>
-
-
-		
-<!-- 2.menu-->
-<?php include_once('menu.php'); ?>
-<!-- 2. End menu -->
-			
-	<!--3. Row main-->
-	<div class="row">	
-		<!-- panel -->
-		<div class="panel">
-			<div class="row"><!-- titulo row -->
-				<div class="nine columns">
-					<span class="rojo">Registration</span>
-					<h2><span class="quitarH2">  Documents:</span> <?php echo $user->__get('user_name');?></h2>	
-				</div>
-				<!-- button back save forward -->
-				<div class="two columns offset-by-one">
-					<a href="<?php echo APPLICATION_URL?>registro-espacio-0450.html"class="back"></a>
-					<a href="javascript:void(0);" onClick="document.getElementById('validable').submit();" class="save"></a>
-				</div>
-				<!-- END button back save forward -->
-			</div>	<!-- END titulo row -->
-			<hr />
-			<form action="<?php echo APPLICATION_URL?>user.controller/uploadDocuments.html" id="validable" class="" method="post" enctype="multipart/form-data" onSubmit="return Validator.prototype.checkRequiredFields();">
-			<p>Upload a copy of the following documents in .jpg, .pdf or .png formats and not exceeding 1000KB.</p>
-				
-				<!-- row -->
-				<div class="row">
-				
-					<!-- Col 1/4-->				
-					<div class="three columns">
-							
-						<h4>Certificate of incorporation*</h4>
-						<input type="file" name="user_certificate">
-						<p>The certificate of incorporation issued by the respective authority of your country.</p>
-					</div>
-					<!-- End Col 1/4 -->
-					<!-- Col 2/4-->				
-					<div class="three columns">
-							
-						<h4>Tax Identification*</h4>
-						<input type="file" name="user_rut">
-						<p>The tax identification issued by the respective authority of your country.</p>
-					</div>
-					<!-- End Col 2/4 -->
-					<!-- Col 3/4-->				
-					<div class="three columns">
-							
-						<h4>Identity Document*</h4>
-						<input type="file" name="user_document">
-                        <p>The passport of the legal representative of the gallery.</p>
-					</div>
-					<!-- End Col 3/4 -->
-					<!-- Col 4/4-->				
-					<div class="three columns">
-							
-						<h4>Copy of payment*</h4>
-						<input type="file" name="user_payment">
-						<p>Receipt of payment for the application fee in the amount of USD $160.</p>
-					</div>
-					<!-- End Col 4/4 -->
-				
-				</div>
-				<br />
-				<!-- aceptación de terminos -->
-				<div class="panel-2">
-				<p> I <input type="text" class="medium" placeholder="Representative" name="user_name_accept" value="<?php echo $user->__get('user_name_accept');?>" /> Identified with
-					<input type="text" class="small" placeholder="Number of identity" name="user_document_accept" value="<?php echo $user->__get('user_document_accept');?>"   /> 
-				declare to have knowledge and accept <a href="documentos/Reglamento.pdf" title="Reglamento de participación en artBO" target="_blank">the conditions and participation regulations </a> of artBO.
-				</p>
-				
-				<input type="checkbox" name="user_accept" value="1" <?php if($user->__get('user_accept') == 1) { echo 'checked="checked"'; }?> /><span> Acepto</span>
-				</div>
-				<!-- aceptación de terminos -->
-
-				<!-- END row -->
-                </form>
-				<hr />
-				<span><strong>*Data required</strong></span>
-			<!-- botones anterior guardar siguiente -->
-					<div class="row">
-					<table class="right">
-						<tr>
-							<td>
-								<div class="anterior left"><!-- anterior -->
-									<a href="<?php echo APPLICATION_URL?>registro-espacio-0450.html">Back</a>
-								</div><!-- END anterior -->
-							</td>
-							<td>
-								<div class="save left"> <!-- guardar -->
-									<a href="javascript:void(0);" onClick="document.getElementById('validable').submit();" class="Finish">Finish</a>
-								</div><!-- END guardar -->
-							</td>
-						</tr>
-                        <?php 
-						if (isset($_GET[0]))
-						{
-						?>
-						<tr>
-							<td colspan="3"><p class="text-center azul">Your registration has been saved</p></td>
-						</tr>
-                        <?php
-						}
-						?>
-					</table>
-					</div>	
-					<!-- END botones anterior guardar siguiente -->
-		
-			
+<?php 
+include_once('header-login.php');  
+include_once('menu.php'); 
+$userForms	= UserFormHelper::retrieveUserForms(" AND user_id = ".escape($_SESSION['user_id']));
+$class		= 'nulled';
+if (count($userForms) == 5)
+{
+	$action		= "document.getElementById('validable').submit();";
+	$class		= '';
+}
+else
+	$action		= "alertNotYet()";
 	
-	</div><!-- END Main: Panel -->
-	<img src="<?php echo APPLICATION_URL?>images/resources/sombraFinal.png" class="top-sombra" width="980" height="17" alt="sombra" /><!-- Sombra final del panel -->
-</div>	><!-- 3. END Main: Row -->
-
-<!-- 3. footer -->			
+?>
+<script language="javascript">
+function alertNotYet()
+{
+	alert ('Debe completar los pasos anteriores antes de guardar su formulario');
+}
+</script>
+<div class="row main-row">	
+		<div class="panel nopadding">
+			<div class="inner-header">
+				<div class="row">
+				<div class="eight columns title">
+					<span class="redtext bold">Documentos</span>
+					<h2><?php echo $user->__get('user_gallery_comname');?></h2>
+				</div><!--/title-->
+				
+				<div class="four columns mini-nav-header">
+					<dl class="sub-nav">
+						<dd><a title="Anterior" class="prev" href="<?php echo APPLICATION_URL?>registro-espacio-0450.html">Anterior</a></dd>
+						<dd><h4>6/6</h4></dd>
+						<dd><a title="Guardar" class="save" href="javascript:void(0);" onClick="document.getElementById('validable').submit();">Guardar</a></dd>
+					</dl>
+				</div>
+			</div><!--/row inner-header-->
+			
+			<div class="row form-data">	
+				<div class="twelve columns">
+					<form action="<?php echo APPLICATION_URL?>user.controller/uploadDocuments.html" id="validable" class="" method="post" enctype="multipart/form-data" onSubmit="return Validator.prototype.checkRequiredFields();">
+					<?php include_once('inc-documentos-1.php'); ?>
+					</form>
+				</div><!--/twelve columns-->
+			</div><!--/form-data-->
+		</div>
+			<div class="inner-footer">
+				<div class="container">
+					<div class="row">
+						<div class="eight columns">
+							<strong><span class="asterix">*</span>Datos requeridos</strong>
+						</div>
+						<div class="four columns">
+							<div class="right">
+								<a href="<?php echo APPLICATION_URL?>registro-espacio-0450.html" class="graytxt">Anterior</a>  
+                                <a  href="javascript:void(0);" onClick="<?php echo $action;?>" class="button radius <?php echo $class;?>">Finalizar</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!--/inner-footer-->
+		</div><!-- END Main: Panel -->
+		<div class="advisory">
+			<span>Recomendamos visualizar en: IE 9.0 - Firefox 10.0 - Safari 5.1 - Chrome 17.0     |     Optimizada 1024 x 768</span>
+			<span><a href="#">Términos y Condiciones</a> del Sitio</span>
+		</div>
+	</div><!--/row main-row-->
+			
 <?php include_once('footer.php'); ?>
-<!-- 3. End footer -->
+
 
 <?php 
 if (isset($_GET[0]))
 {
 ?>
-<script language="JavaScript">
-	alert('You declare to have knowledge and accept the conditions and participation regulations of artBO. You has finished registering your gallery. Thank you very much.');
-</script>
+	<script language="JavaScript">
+        alert('Al hacer click declaro conocer y aceptar las condiciones y el reglamento de participaciónen artBO. Ha terminado de registrar su galería. Muchas gracias.');
+    </script>
 <?php
 }
 ?>

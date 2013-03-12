@@ -2,8 +2,8 @@
 include_once('header-login.php'); 
 $ferias		= FeriaHelper::retrieveFerias(" AND user_id = ". $user->__get('user_id'));
 $artbo		= explode("|", $user->__get('user_artbo'));
-if	(count($artbo) < 6)
-for ($i=0; $i < 6; $i++)
+if	(count($artbo) < 8)
+for ($i=0; $i < 8; $i++)
 	$artbo[$i]	= 0;
 $countries	= CountryHelper::retrieveCountries(" AND country_activated = 1 ORDER by country_name");
 include_once('menu.php'); 
@@ -11,254 +11,86 @@ include_once('menu.php');
 <!-- 2. End menu -->
 			
 	<!--3. Row main-->
-	<div class="row">	
-		<!-- panel -->
-		<div class="panel">
-			<div class="row"><!-- titulo row -->
-				<div class="eight columns">
-					<span class="rojo">Registration</span>
-					<h2><span class="quitarH2">Fairs:</span>  <?php echo $user->__get('user_name');?> </h2>	
-				</div>
-				<!-- button back save forward -->
-				<div class="two columns offset-by-two">
-					<a title="Registro Exposiciones" href="<?php echo APPLICATION_URL?>registro-exposiciones-0420.html" class="back"></a>
-					<a title="Guardar" href="javascript:void(0);" onClick="document.getElementById('validable').submit();" class="save"></a>
-					<a title="Registro Artistas" href="<?php echo APPLICATION_URL?>registro-artistas-0440.html" class="forward"></a>
-				</div>
-				<!-- END button back save forward -->
-			</div>	<!-- END titulo row -->
-			<hr />
-			
-				<!-- formulario -->
-				<form action="<?php echo APPLICATION_URL?>user.controller/createFeria.html" id="validable" class="" method="post">
-					<!-- panel 2 -->
-					<div class="panel-2">
-						
-						<h2>artBO</h2>
-						
-						<label>Have you participated in any artBO Fair?</label>
-						<div class="row">
-							<!-- columns artBo 1/4 -->
-							<div class="three columns">
-								<input type="checkbox" name="artbo_11" <?php if ($artbo[0] == 1) echo 'checked="checked"';?>/> artBO 2011
-							</div>
-							<!-- END columns artBo 1/4 -->
-							<!-- columns artBo 2/4 -->
-							<div class="three columns">
-								<input type="checkbox" name="artbo_10" <?php if ($artbo[1] == 1) echo 'checked="checked"';?>/> artBO 2010
-							</div>
-							<!-- END columns artBo 2/4 -->
-							<!-- columns artBo 3/4 -->
-							<div class="three columns">
-								<input type="checkbox" name="artbo_09" <?php if ($artbo[2] == 1) echo 'checked="checked"';?>/> artBO 2009
-							</div>
-							<!-- columns artBo 3/4 -->
-							<!-- END columns artBo 4/4 -->
-							<div class="three columns">
-								<input type="checkbox" name="artbo_08" <?php if ($artbo[3] == 1) echo 'checked="checked"';?>/> artBO 2008
-							</div>
-							<!-- END columns artBo 4/4 -->
-						</div>	
-						<div class="row">
-							<!-- columns artBo 1/4 -->
-							<div class="three columns">
-								<input type="checkbox" name="artbo_07" <?php if ($artbo[4] == 1) echo 'checked="checked"';?>/> artBO 2007
-							</div>
-							<!-- END columns artBo 1/4 -->
-								<!-- columns artBo 2/4 -->
-							<div class="three columns">
-								<input type="checkbox" name="artbo_06" <?php if ($artbo[5] == 1) echo 'checked="checked"';?>/> artBO 2006
-							</div>
-							<!-- END columns artBo 2/4 -->
-							<!-- columns artBo 3/4 -->
-							<div class="three columns">
-							</div>
-							<!-- END columns artBo 3/4 -->
-							<!-- columns artBo 4/4 -->
-							<div class="three columns">
-							</div>
-							<!-- END columns artBo 4/4 -->
-						</div>	
+	<div class="row main-row">
+		<!-- <div class="alert-box success">
+			Sus datos han sido guardados
+			<a href="" class="close">×</a>
+		</div>	 -->
+		<div class="panel nopadding">
+			<div class="inner-header">
+				<div class="row">
+					<div class="eight columns title">
+						<span class="redtext bold">Ferias</span>
+						<h2><?php echo $user->__get('user_gallery_comname');?> </h2>	
 					</div>
-						<hr />
-					<!-- END panel 2 -->
-					<h2>Participation in other fairs</h2>
-					<p><em>List the fairs in which the gallery participated in 2011 and 2012.</em></p>
-				<!-- END formulario -->
-			<ul class="link_list ui-sortable">
-			  
-			<!-- expo -->
-                    	<?php
-						if (count($ferias) > 0)
-						{
-							$i = 1;
-							foreach ($ferias as $feria)
-							{
-						?>            
-                                <li class="link_default">
-                                    <div class="row">                  
-                                        <div class="one columns">
-                                            <img src="<?php echo APPLICATION_URL?>images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr">	
-                                        </div>	
-                                    <!-- nombre -->
-                                        <div class="four columns">
-                                            <label>Name of the fair</label>	
-                                            <input class="expand input-text" type="text" name="feria_name_<?php echo $i;?>" value="<?php echo $feria->__get('feria_name');?>"/>
-                                        </div>
-                                    <!-- END nombre -->
-                                    <!-- ciudad -->
-                                        <div class="three columns">
-                                            <label>City</label>	
-                                            <input type="text"  name="feria_city_<?php echo $i;?>" class="expand input-text" value="<?php echo $feria->__get('feria_city');?>"/>
-                                        </div>
-                                    <!-- END ciudad -->
-                                    <!-- pais-->
-                                        <div class="two columns">
-                                            <label>Country</label>	
-                                            <select name="country_id_<?php echo $i;?>">
-                                                <?php
-                                                foreach ($countries as $country)
-                                                {
-                                                    $selected = ($country->__get('country_id') == $user->__get('country_id')) ? 'selected="selected"' : '';
-                                                ?>
-                                                    <option value="<?php echo $country->__get('country_id')?>" <?php echo $selected;?>><?php echo utf8_encode($country->__get('country_name'));?></option>
-                                                <?php
-                                                }
-                                                ?>
-                                            </select>
-                                        </div>
-                                    <!-- END País -->
-                                    <!-- Año-->
-                                        <div class="two columns">
-                                            <label>Año</label>	
-                                            <select name="feria_year_<?php echo $i;?>">
-                                                <option value="2012" <?php if ($feria->__get('feria_year') == 2012)  echo 'selected="selected"';?>>2012</option>
-                                                <option value="2011" <?php if ($feria->__get('feria_year') == 2011)  echo 'selected="selected"';?>>2011</option>
-                                            </select>
-                                        </div>
-                                <!-- END Año -->
-                                    </div>
-                                </li>
-                    	<?php
-								$i++;
-							}
-						}
-						else
-						{
-						?>
-                                <li class="link_default">
-                                    <div class="row">                  
-                                        <div class="one columns">
-                                            <img src="<?php echo APPLICATION_URL?>images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr">	
-                                        </div>	
-                                    <!-- nombre -->
-                                        <div class="four columns">
-                                            <label>Name of the fair</label>	
-                                            <input class="expand input-text" type="text" name="feria_name_1" />
-                                        </div>
-                                    <!-- END nombre -->
-                                    <!-- ciudad -->
-                                        <div class="three columns">
-                                            <label>City</label>	
-                                            <input type="text"  name="feria_city_1" class="expand input-text"/>
-                                        </div>
-                                    <!-- END ciudad -->
-                                    <!-- pais-->
-                                        <div class="two columns">
-                                            <label>Country</label>	
-                                            <select name="country_id_1">
-                                                <?php
-                                                foreach ($countries as $country)
-                                                {
-                                                ?>
-                                                    <option value="<?php echo $country->__get('country_id')?>"><?php echo utf8_encode($country->__get('country_name'));?></option>
-                                                <?php
-                                                }
-                                                ?>
-                                            </select>
-                                        </div>
-                                    <!-- END País -->
-                                    <!-- Año-->
-                                        <div class="two columns">
-                                            <label>Año</label>	
-                                            <select name="feria_year_1">
-                                                <option value="2012">2012</option>
-                                                <option value="2011">2011</option>
-                                            </select>
-                                        </div>
-                                <!-- END Año -->
-                                    </div>
-                                </li>                        
-                        <?php
-						}
-						?>            
-                                
-			<!-- end Expo --> 
-			</ul>	
-			</form>
+					<div class="four columns mini-nav-header">
+						<dl class="sub-nav">
+							<dd><a class="save" title="Guardar" href="javascript:void(0);" onclick="$('#validable').attr('action','<?php echo APPLICATION_URL?>user.controller/createFeria/stay.html'); $('#validable').submit();">Guardar</a></dd>
+							<dd><a class="prev" title="Registro Exposiciones" href="<?php echo APPLICATION_URL?>registro-exposiciones-0420.html">Anterior</a></dd>
+							<dd><h4>3/6</h4></dd>
+							<dd><a  class="next" title="Registro Artistas" href="<?php echo APPLICATION_URL?>registro-artistas-0440.html" >Siguiente</a></dd>
+						</dl>	
+					</div>
+				</div>	<!-- END titulo row -->
+			</div>
+		<div class="container">
+			<div class="row form-data">	
+				<div class="twelve columns">
+					<!-- formulario -->
+					<form action="<?php echo APPLICATION_URL?>user.controller/createFeria.html" id="validable" class="" method="post">
+						<?php include_once('inc-ferias-1.php'); ?>
+					</form>
+					<a href="#" id="add-feria" class="label secondary round" title="Agregar Feria">Agregar una nueva feria</a>
+				</div>
+			</div>
+		</div>
 			<!-- END formulario -->
-			<hr />
-
-			<a href="#" id="add-feria" title="Agregar Feria"><strong>+</strong> Add a new fair</a>
 			<!-- botones anterior guardar siguiente -->
-         
+			<div class="inner-footer">
+				<div class="container">
 					<div class="row">
-					<table class="right">
-						<tr>
-							<td>
-								<div class="anterior left"><!-- anterior -->
-									<a title="Registro Exposiciones" href="<?php echo APPLICATION_URL?>registro-exposiciones-0420.html">Back</a>
-								</div><!-- END anterior -->
-							</td>
-							<td>
-								<div class="save left"> <!-- guardar -->
-									<a title="Guardar" href="javascript:void(0);" onClick="document.getElementById('validable').submit();" class="guardar">Save</a>
-								</div><!-- END guardar -->
-							</td>
-							<td>
-								<div class="siguiente left"><!-- siguiente -->
-									<a title="Register Artists" href="<?php echo APPLICATION_URL?>registro-artistas-0440.html">Next</a>
-								</div> <!-- END siguiente -->
-							</td>
-						</tr>
-
-						
-                        <?php 
-						if (isset($_GET[0]))
-						{
-						?>
-						<tr>
-							<td colspan="3"><p class="text-center azul">Your registration has been saved</p></td>
-						</tr>
-                        <?php
-						}
-						?>
-					</table>
-					</div>	
-					<!-- END botones anterior guardar siguiente -->
-		
-	
+						<div class="eight columns">
+							<strong><span class="asterix">*</span>Datos requeridos</strong>
+						</div>
+						<div class="four columns">
+							<div class="right">
+								<a href="<?php echo APPLICATION_URL?>registro-exposiciones-0420.html" title="Registro Ferias" class="graytxt">Anterior</a>  <a href="javascript:void(0);" onclick="$('#validable').submit();" class="button radius">Siguiente: Artistas</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!--/inner-footer-->
 	</div><!-- END Main: Panel -->
-	<img src="<?php echo APPLICATION_URL?>images/resources/sombraFinal.png" class="top-sombra" width="980" height="17" alt="sombra" /><!-- Sombra final del panel -->
-</div>	<!-- 3. END Main: Row -->
-<script language="javascript">
-$(document).ready(function() 
-						   {
-							   
-							// nueva expo
-							var counterFeria 	= <?php echo (count($ferias) > 0) ? count($ferias)+1 : 2; ?>;
-							// nueva feria
-							var countryOptions	= '<?php foreach($countries as $country) {?><option value="<?php echo $country->__get('country_id');?>"><?php echo utf8_encode($country->__get('country_name'));?></option><?php } ?>';
-							$("#add-feria").click(function(){
-							$(".link_list").hide().append('<!-- expo --><li class="link_default"><div class="row"><div class="one columns"><img src="<?php echo APPLICATION_URL?>images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr">	</div>	<!-- nombre --><div class="four columns"><label>Name of the fair</label>	<input class="expand input-text" type="text" name="feria_name_'+counterFeria+'" /></div><!-- END nombre --><!-- ciudad --><div class="three columns"><label>City</label>	<input type="text"  class="expand input-text" name="feria_city_'+counterFeria+'"/></div><!-- END ciudad --><!-- pais--><div class="two columns"><label>Country</label>	<select name="country_id_'+counterFeria+'">'+countryOptions+'</select></div><!-- END País --><!-- Año--><div class="two columns"><label>Año</label><select name="feria_year_'+counterFeria+'"><option value="2012">2012</option><option value="2011">2011</option><option>2010</option></select></div><!-- END Año --></li><!-- end Expo --> ').fadeIn(1000);
-							counterFeria = counterFeria + 1;
-							});// end nueva feria
+	<div class="advisory">
+		<span>Recomendamos visualizar en: IE 9.0 - Firefox 10.0 - Safari 5.1 - Chrome 17.0     |     Optimizada 1024 x 768</span>
+		<span><a href="#">Términos y Condiciones</a> del Sitio</span>
+	</div>
+</div><!-- 3. END Main: Row -->
+</div>
 
-						   
-						    });
-</script>
 <!-- 3. footer -->			
 <?php include_once('footer.php'); ?>
 <!-- 3. End footer -->
 
+<script language="javascript">
+$(document).ready(function() 
+   {
+	   
+	// nueva expo
+	var counterFeria 	= <?php echo (count($ferias) > 0) ? count($ferias)+1 : 2; ?>;
+	// nueva feria
+	var countryOptions	= '<?php foreach($countries as $country) {?><option value="<?php echo $country->__get('country_id');?>"><?php echo utf8_encode($country->__get('country_name'));?></option><?php } ?>';
+	$("#add-feria").click(function(){
+	$(".link_list").hide().append('<li class="link_default" ><ul class="no-bullet fairs"><li class="handler"><img src="<?php echo APPLICATION_URL?>images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr">	</li>	<!-- nombre --><li class="name"><input class="expand input-text" type="text" name="feria_name_'+counterFeria+'" /></li><!-- END nombre --><!-- ciudad --><li><input type="text"  name="feria_city_'+counterFeria+'" class="expand input-text"/></li><!-- END ciudad --><!-- pais--><li><select name="country_id_'+counterFeria+'"><?php foreach ($countries as $country){?><option value="<?php echo $country->__get('country_id')?>"><?php echo utf8_encode($country->__get('country_name'));?></option><?php } ?></select></li><!-- END País --><!-- Año--><li><select name="feria_year_'+counterFeria+'"><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option></select></li><!-- / Año --><li class="handler"><a href="javascript:void(0)" onClick=" $(this).parent().parent().parent().remove(); Validator();"><img src="<?php echo APPLICATION_URL;?>images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a></li></ul></li>').fadeIn(1000);
+	counterFeria = counterFeria + 1;
+	validInst = new Validator(1, '', true);
+	});// end nueva feria
 
+   	
+    });
+
+function callValidator() 
+{
+	validInst = new Validator(1, "", true);	
+}
+</script>
