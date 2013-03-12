@@ -22,28 +22,28 @@ else
 			<?php echo $error;?>
 			<form action="<?php echo APPLICATION_URL?>user.controller/create.html" method="post" id="validable">
 				<div class="panel">
-					<h3>Registro</h3>
+					<h3>Register</h3>
 					<!-- <p>Si nunca te haz registrado en artBO, incluida la última versión.<br />
 					Ya te registráste en artBO, haz clic <a class="underline" href="login.html">aquí.</a></p> -->
 				
-					<label for="name"><span class="asterix">*</span>Nombre de la galería</label>
+					<label for="name"><span class="asterix">*</span>Gallery</label>
 					<input type="text" name="gallery_name" title="Digite el nombre de la galería"/>
-					<label for="name"><span class="asterix">*</span>Nombre</label>
+					<label for="name"><span class="asterix">*</span>Name</label>
 					<input type="text" name="user_name" title="Digite su(s) nombre(s)"/>
-					<label for="name"><span class="asterix">*</span>Apellido</label>
+					<label for="name"><span class="asterix">*</span>Last name</label>
 					<input type="text" name="userlast_name" title="Digite su(s) apellido(s)"/>
-					<label for="name"><span class="asterix">*</span>Correo electrónico</label>
+					<label for="name"><span class="asterix">*</span>Email</label>
 					<input type="email" name="user_email"  title="Digite el correo electrónico"/>
-					<label for="name"><span class="asterix">*</span>Confirmar correo electrónico</label>
+					<label for="name"><span class="asterix">*</span>Confirm Email</label>
 					<input type="email" name="user_email_confirm"  alt="email" title="Confirme el correo electrónico digitado"/>
-					<label for="name"><span class="asterix">*</span>Clave</label>
+					<label for="name"><span class="asterix">*</span>Password</label>
 					<input type="password" name="user_password" title="Digite su clave"/>
-					<label for="name"><span class="asterix">*</span>Confirmar clave</label>
+					<label for="name"><span class="asterix">*</span>Confirm password</label>
 					<input type="password" name="user_password_confirm" alt="Confirme la clave digitada" title="Contrase&ntilde;a (repetir)"/>
 				</div>
 				<div class="row">
 					<div class="six columns"><span class="whitetxt bold"><span class="asterix">*</span> Datos requeridos</span></div>
-					<div class="six columns"><input type="submit" class="button radius right" value="Registrarse" title="Registrarse" onClick="javascript:void(0);"></div>
+					<div class="six columns"><input type="submit" class="button radius right" value="Register" title="Registrarse" onClick="javascript:void(0);"></div>
 				</div>
 			</form>
 			<br />
