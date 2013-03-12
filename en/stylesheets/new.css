@@ -587,7 +587,6 @@ input[type="text"].doc {
   display: none;
 }
 
-<<<<<<< HEAD
 /* line 517, ../sass/new.scss */
 .qq-upload-finished {
   padding: 0;
@@ -619,38 +618,23 @@ ul.qq-upload-list li a {
 }
 
 /* line 545, ../sass/new.scss */
-=======
-/* line 518, ../sass/new.scss */
->>>>>>> 9dd5fd397751defdb95b3c7f9c4b37df907603b9
 .languages {
   position: relative;
   height: 15px;
   margin-bottom: 10px;
 }
-<<<<<<< HEAD
 /* line 546, ../sass/new.scss */
-=======
-/* line 519, ../sass/new.scss */
->>>>>>> 9dd5fd397751defdb95b3c7f9c4b37df907603b9
 .languages span.label {
   background-color: rgba(255, 255, 255, 0.3);
   position: absolute;
   right: 20px;
 }
-<<<<<<< HEAD
 /* line 551, ../sass/new.scss */
-=======
-/* line 524, ../sass/new.scss */
->>>>>>> 9dd5fd397751defdb95b3c7f9c4b37df907603b9
 .languages a {
   color: #fff;
 }
 
-<<<<<<< HEAD
 /* line 560, ../sass/new.scss */
-=======
-/* line 533, ../sass/new.scss */
->>>>>>> 9dd5fd397751defdb95b3c7f9c4b37df907603b9
 .standname-data input {
   display: none;
 }
