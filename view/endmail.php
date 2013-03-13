@@ -154,7 +154,7 @@ $html	.= "<h3>Tipo de Stands</h3>";
 
 $html	.= "<p>
 
-Tipo de stand: <em>".$stand."</em>,
+Tipo de stand: <em>".$stand."</em><br>
 Nombre para la cornisa del stand: <em>".$user->__get('user_space_name')."</em>,
 </p>
 ";
@@ -164,10 +164,10 @@ Nombre para la cornisa del stand: <em>".$user->__get('user_space_name')."</em>,
 $html	.= "<h3>Documentos</h3>";
 
 $html	.= "<p>
-Certificado de existencia: <em>".APPLICATION_FULL_URL.$dir.$user->__get('user_certificate')."</em>,
-RUT o identificaci&oacute;n fiscal: <em>".APPLICATION_FULL_URL.$dir.$user->__get('user_rut')."</em>,
-Documento de identidad: <em>".APPLICATION_FULL_URL.$dir.$user->__get('user_document')."</em>,
-Registro de pago: <em>".APPLICATION_FULL_URL.$dir.$user->__get('user_payment')."</em>,
+Certificado de existencia: <em>".APPLICATION_FULL_URL.$dir.$user->__get('user_certificate')."</em><br>
+RUT o identificaci&oacute;n fiscal: <em>".APPLICATION_FULL_URL.$dir.$user->__get('user_rut')."</em><br>
+Documento de identidad: <em>".APPLICATION_FULL_URL.$dir.$user->__get('user_document')."</em><br>
+Registro de pago: <em>".APPLICATION_FULL_URL.$dir.$user->__get('user_payment')."</em><br>
 </p>
 ";
 
