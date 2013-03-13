@@ -16,15 +16,15 @@ qq.FineUploader = function(o){
             disableDefaultDropzone: false
         },
         text: {
-            uploadButton: 'Subir un archivo',
-            cancelButton: 'Cancelar',
-            retryButton: 'Reintentar',
-            deleteButton: 'Borrar',
-            failUpload: 'Subir a fallado',
-            dragZone: 'Arrastre sus archivos aca para subir',
-            dropProcessing: 'Procesando archivos arrastrados',
+            uploadButton: 'Upload file',
+            cancelButton: 'Cancel',
+            retryButton: 'Retry',
+            deleteButton: 'Delete',
+            failUpload: 'Upload fail',
+            dragZone: 'drop you files here',
+            dropProcessing: 'Process',
             formatProgress: "{percent}% de {total_size}",
-            waitingForResponse: "Procesando..."
+            waitingForResponse: "Process..."
             
         },
         template: '<div class="qq-uploader">' +
