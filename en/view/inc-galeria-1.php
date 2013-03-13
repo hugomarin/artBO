@@ -28,7 +28,7 @@ function decide($field, $required, $user)
 	<div class="row">
 		<div class="six columns">
 			<div class="mid-input gallery-image">
-				<label title="Cargue la imagen correspondiente a su galería"><span class="asterix">*</span>Gallery image</label>
+				<label title="Upload Gallery image"><span class="asterix">*</span>Gallery image</label>
 				<!-- <i>Imagen del espacio expositivo</i>
 				<br /> -->
                 <?php
@@ -53,7 +53,7 @@ function decide($field, $required, $user)
 				<div class="mid-input companyname-data">
 					<label><span class="asterix">*</span>Company Name or Business Name</label>	
 					<input type="text" name="user_gallery_razon" class="expand input-text <?php echo decide('user_gallery_razon', $required, $user);?>" value="<?php echo $user->__get('user_gallery_razon');?>" title="Enter the company name or business name"/>
-					<p class="caption"><strong>Note:</strong> Note that this name will be used for billing.</p>
+					<p class="caption"><strong>Note:</strong> This name will be used for billing.</p>
 				</div><!--/companyname-data-->
 			<div class="block">	
 				<div class="mid-input doctype-data">

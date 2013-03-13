@@ -15,7 +15,7 @@ switch ($action):
 			$insert	= $user->save();
 			$_SESSION['user_id']	= $insert['insert_id'];
 			redirectUrl(APPLICATION_URL.'registro-inicio-0400.html');
-			$html 		= '<div style="background: #f5f5f5; padding-bottom: 30px;margin-top: 0; width: 600px; font-family: Arial;"><div style="background: #9c1a36; padding: 10px 50px;"><img src="http://i.imgur.com/pUNnGGF.png" alt="artBO" /></div><div style="margin-top: 30px; padding: 10px 50px;"><h1 style="margin-bottom:30px;">Le damos la Bienvenida al proceso de aplicación de artBO 2013</h1><p style="margin-bottom:30px;">A partir de ahora, usted podr&aacute; adelantar su proceso de registro e inscripci&oacute;n en el pabell&oacute;n de su inter&eacute;s</p><p>artBO, Feria Internacional de Arte de Bogot&aacute;</p></div>'; 
+			$html 		= '<div style="background: #f5f5f5; padding-bottom: 30px;margin-top: 0; width: 600px; font-family: Arial;"><div style="background: #9c1a36; padding: 10px 50px;"><img src="http://i.imgur.com/pUNnGGF.png" alt="artBO" /></div><div style="margin-top: 30px; padding: 10px 50px;"><h1 style="margin-bottom:30px;">Le damos la bienvenida al proceso de aplicación de artBO 2013</h1><p style="margin-bottom:30px;">A partir de ahora, usted podr&aacute; adelantar su proceso de registro e inscripci&oacute;n en el pabell&oacute;n de su inter&eacute;s</p><p>artBO, Feria Internacional de Arte de Bogot&aacute;</p></div>'; 
 			$subject	= utf8_decode('Registro exitoso');
 			$from		= 'artbo@ccb.org.co';
 			$to			= $user->__get('user_email');
