@@ -37,7 +37,7 @@ include_once('menu.php');
 						
 						<h6>Artistic Proposal for artBO 2013 (optional, 250 words maximum)</h6>
 						
-												  <textarea name="user_gallery_proposal" placeholder="Digite la información de la propuesta artística para presentar en su stand en artBO" rows="8" cols="40"><?php echo $user->__get('user_gallery_proposal')?></textarea>
+												  <textarea name="user_gallery_proposal" placeholder="Description of your artistic proposal for your stand artBO 2013" rows="8" cols="40"><?php echo $user->__get('user_gallery_proposal')?></textarea>
 						
 						<br />
 						<br />
@@ -68,7 +68,7 @@ include_once('menu.php');
 
 						<h6>Other artists represented by the Gallery</h6>
 
-							<textarea name="user_represented_artists" rows="8" cols="40" placeholder="Digite la información correspondiente a artistas representados"><?php echo $user->__get('user_represented_artists');?></textarea>
+							<textarea name="user_represented_artists" rows="8" cols="40" placeholder="List other artists represented by the gallery"><?php echo $user->__get('user_represented_artists');?></textarea>
 						</form>
 
 					</div>
@@ -79,7 +79,7 @@ include_once('menu.php');
 				<div class="container">
 					<div class="row">
 						<div class="eight columns">
-							<strong><span class="asterix">*</span>Datos requeridos</strong>
+							<strong><span class="asterix">*</span>Data required</strong>
 						</div>
 						<div class="four columns">
 							<div class="right">

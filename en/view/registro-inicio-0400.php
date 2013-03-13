@@ -13,18 +13,18 @@
 				<p>You can fill in the required information step by step or begin by any of the sections. Please remember always to save any changes you make.  If you applied to artBO 2012, the information you previously registered has been saved to your profile.</p>
 				<p><strong>Your application will only be valid if you pay the application fee in the amount of USD$ 160.00. <a href="http://servicios.corferias.com/inscripcion/?ano=2013&evento=23" target="_blank"> Please pay here.</a></strong></p>
 				
-				<p>Consult the Rule and Conditions of Participation  <a href="" target="_blank"> here.</a></p>
+				<p>Consult the Terms and Conditions of Participation  <a href="" target="_blank"> here.</a></p>
 				<h5>This is a brief description of information requested in each section:</h5>
 				<ul class="no-bullet">
 					<li class="thin">1. <strong>Gallery </strong> Basic information about the gallery.</li>
 					<li class="thin">2. <strong>Exhibitions:</strong> List of the exhibitions held between 2011 and 2013.</li>
 					<li class="thin">3. <strong>Fairs : </strong>Participation in previous editions or artBO and in other international fairs.</li>
 					<li class="thin">4. <strong>Artists:</strong> The artists that you propose for your stand at artBO 2013 and other artists represented by your gallery. Please remember that according to the size of the stand you select, you can propose an artist every 10 mt². For every artist proposed you may upload three images.</li>
-					<li class="thin">5. <strong>Type of <em>Stand </em>:</strong> Plus 63mt<sup>2</sup>, 63mt<sup>2</sup>, 45mt<sup>2</sup> y 31.50mt<sup>2</sup>. Download a PDF document with the specifications <a href="#"> here.</a></li>
-					<li class="thin">6. <strong>Required documents:</strong>
+					<li class="thin">5. <strong>Type of Stand:</strong> Plus 63mt<sup>2</sup>, 63mt<sup>2</sup>, 45mt<sup>2</sup> y 31.50mt<sup>2</sup>. Download a PDF document with the specifications <a href="#"> here.</a></li>
+					<li class="thin">6. <strong>Documents Required:</strong>
 						<ul class="sub-menu">
-							<li class="thin">Copy of the Certificate of Incorporation of your company</li>
-							<li class="thin">Copy of the Tax Identification document of your gallery</li>
+							<li class="thin">Copy of the certificate of incorporation of your company</li>
+							<li class="thin">Copy of the tax identification document of your gallery</li>
 							<li class="thin">Copy of the passport of the legal representative of the gallery</li>
 							<li class="thin">Copy of the payment of the application fee</li>
 						</ul>
