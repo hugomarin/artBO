@@ -31,14 +31,14 @@ function alertNotYet()
 					<dl class="sub-nav">
 						<dd><a title="Anterior" class="prev" href="<?php echo APPLICATION_URL?>registro-espacio-0450.html">Anterior</a></dd>
 						<dd><h4>6/6</h4></dd>
-						<dd><a title="Guardar" class="save" href="javascript:void(0);" onClick="document.getElementById('validable').submit();">Guardar</a></dd>
+						<dd><a title="Guardar" class="save" href="javascript:void(0);" onClick="$('#validable2').attr('action','<?php echo APPLICATION_URL?>user.controller/saveDocuments.html'); document.getElementById('validable2').submit();">Guardar</a></dd>
 					</dl>
 				</div>
 			</div><!--/row inner-header-->
 			
 			<div class="row form-data">	
 				<div class="twelve columns">
-					<form action="<?php echo APPLICATION_URL?>user.controller/uploadDocuments.html" id="validable" class="" method="post" enctype="multipart/form-data" onSubmit="return Validator.prototype.checkRequiredFields();">
+					<form action="<?php echo APPLICATION_URL?>user.controller/uploadDocuments.html" id="validable2" class="" method="post" enctype="multipart/form-data" onSubmit="return Validator.prototype.checkRequiredFields();">
 					<?php include_once('inc-documentos-1.php'); ?>
 					</form>
 				</div><!--/twelve columns-->
