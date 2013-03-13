@@ -9,9 +9,9 @@
 		<div class="inner-header">
 			<div class="row">
 				<div class="twelve columns">
-					<h3>Gracias por participar en la convocatoria del <strong>Pabellón Artecámara en artBO 2013.</strong></h3> 
+					<h3>Gracias por participar en la convocatoria de <strong> artBO 2013.</strong></h3> 
 					
-					<p>En breve, recibira un correo electrónico de confirmación. El listado de los artistas seleccionados se publicará en <a href="http://www.artboonline.com" target="_blank">www.artboonline.com</a> a partir del <strong>5 de junio de 2013.</strong></p>					
+					<p>En breve, recibira un correo electrónico de confirmación. de su proceso de registro.</p>					
 				</div>
 			</div>
 			<?php

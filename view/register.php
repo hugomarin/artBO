@@ -18,6 +18,7 @@ else
 <div class="container">
 	<div class="row"><!-- Row -->	
 		<div class="six columns centered"><!-- six columns -->
+		<div class="languages"><span class="label round"><a href="<?php echo APPLICATION_URL?>en/register.html">English</a> | Español</span></div>
 			<a href="home.html"><span class="artBO">artBO</span></a><a href="home.html"><span class="ccB">CCB</span></a>
 			<?php echo $error;?>
 			<form action="<?php echo APPLICATION_URL?>user.controller/create.html" method="post" id="validable">
