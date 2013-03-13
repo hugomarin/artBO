@@ -138,22 +138,26 @@ switch ($action):
 				
 		}																						   
 		$user->update();
-		$userForms	= UserFormHelper::selectUserForms(" AND user_id = ".escape($_SESSION['user_id'])." AND form_number = 1");
+		
 		if ($userForms['num_rows'] == 0)
 		{
 			$accept		= true;
 			$fields		= UserFieldHelper::retrieveUserFields();
 			foreach ($fields as $field)
 			{
-				if (($user->__get($field) == '') || ($user->__get($field) == 0) || ($user->__get($field) == 'NULL'))
-				$accept	= false;
+				if (($user->__get($field->__get('field_name')) == '') || ($user->__get($field->__get('field_name')) == '0') || ($user->__get($field->__get('field_name')) == 'NULL'))
+					$accept	= false;
 			}
 			if ($accept)
 			{
-				$form	= new UserForm();
-				$form->__set('user_id', $_SESSION['user_id']);
-				$form->__set('form_number', 1);
-				$form->save();
+				$userForms	= UserFormHelper::selectUserForms(" AND user_id = ".escape($_SESSION['user_id'])." AND form_number = 1");
+				if ($userForms['num_rows'] == 0)
+				{				
+					$form	= new UserForm();
+					$form->__set('user_id', $_SESSION['user_id']);
+					$form->__set('form_number', 1);
+					$form->save();
+				}
 			}
 		}
 		if (!isset($_GET[1]))
@@ -408,9 +412,8 @@ switch ($action):
 			foreach ($_POST as $key => $value)
 				$user->__set($key, $value);	
 			$user->__set('user_finalizado', 1);	
-			$user->update();			
+			$user->update();		
 			require_once(SITE_VIEW.'endmail.php');
-			
 			$subject	= utf8_decode('Finalizado registro');
 			$from		= 'artbo@ccb.org.co';
 			$to			= $user->__get('user_email');

@@ -170,10 +170,4 @@ Registro de pago: <em>".APPLICATION_FULL_URL.$dir.$user->__get('user_payment')."
 </p>
 ";
 
-echo $html;
 ?>
-
-
-
-
-

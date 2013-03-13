@@ -5,7 +5,7 @@ $userForms	= UserFormHelper::retrieveUserForms(" AND user_id = ".escape($_SESSIO
 $class		= 'nulled';
 if (count($userForms) == 5)
 {
-	$action		= "document.getElementById('validable').submit();";
+	$action		= "document.getElementById('validable2').submit();";
 	$class		= '';
 }
 else
