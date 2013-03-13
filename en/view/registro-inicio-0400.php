@@ -47,7 +47,7 @@
 							<div class="row">
 								<div class="twelve columns">
 									<div class="right">
-										<a title="Next: Galeria" href="<?php echo APPLICATION_URL?>registro-galerias-0410.html" class="button radius">Next: Galería</a>
+										<a title="Next: Gallery" href="<?php echo APPLICATION_URL?>registro-galerias-0410.html" class="button radius">Next: Gallery</a>
 									</div>
 								</div>
 							</div>
