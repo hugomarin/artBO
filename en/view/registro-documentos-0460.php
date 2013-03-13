@@ -15,7 +15,7 @@ else
 <script language="javascript">
 function alertNotYet()
 {
-	alert ('Debe completar los pasos anteriores antes de guardar su formulario');
+	alert ('Your must complete the required information in order to submit your application');
 }
 </script>
 <div class="row main-row">	
@@ -48,7 +48,7 @@ function alertNotYet()
 				<div class="container">
 					<div class="row">
 						<div class="eight columns">
-							<strong><span class="asterix">*</span>Datos requeridos</strong>
+							<strong><span class="asterix">*</span>Data required</strong>
 						</div>
 						<div class="four columns">
 							<div class="right">

@@ -87,10 +87,10 @@ $dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8
 	<div class="panel-2">
 	<p> I <input type="text" class="legal" placeholder="Nombre del Director o Representante legal" name="user_name_accept" value="<?php echo $user->__get('user_name_accept');?>" />Identified with
 		<input type="text" class="doc" placeholder="Identity Document" name="user_document_accept" value="<?php echo $user->__get('user_document_accept');?>"   /> 
-	declare to have knowledge and accept<a href="documentos/Reglamento.pdf" title="Reglamento de participación en artBO" target="_blank">the conditions and participation regulations </a> of artBO.
+	declare to have knowledge and accept<a href="documentos/Reglamento.pdf" title="Reglamento de participación en artBO" target="_blank"> the Terms and Conditions of Participation regulations </a> of artBO.
 	</p>
 	
-	<input type="checkbox" name="user_accept" value="1" <?php if($user->__get('user_accept') == 1) { echo 'checked="checked"'; }?> /><span> Acepto las condiciones y el reglamento de participación en artBO</span>
+	<input type="checkbox" name="user_accept" value="1" <?php if($user->__get('user_accept') == 1) { echo 'checked="checked"'; }?> /><span> I accept the terms and conditions of participation of artBO.</span>
 	</div>
 
 	<script>

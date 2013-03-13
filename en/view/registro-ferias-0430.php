@@ -50,7 +50,7 @@ include_once('menu.php');
 				<div class="container">
 					<div class="row">
 						<div class="eight columns">
-							<strong><span class="asterix">*</span>Datos requeridos</strong>
+							<strong><span class="asterix">*</span>Data required</strong>
 						</div>
 						<div class="four columns">
 							<div class="right">
