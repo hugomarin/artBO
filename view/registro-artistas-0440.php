@@ -21,7 +21,7 @@ include_once('menu.php');
 					</div>
 					<div class="four columns mini-nav-header">
 						<dl class="sub-nav">
-							<dd><a class="save" title="Guardar" href="javascript:void(0);" onclick="$('#validable').submit();" >Guardar</a></dd>
+							<dd><a class="save" title="Guardar" href="javascript:void(0);" onclick="$('#validable2').attr('action','<?php echo APPLICATION_URL?>user.controller/createArtist/stay.html'); $('#validable2').submit();" >Guardar</a></dd>
 							<dd><a class="prev" title="Registro Ferias" href="<?php echo APPLICATION_URL?>registro-ferias-0430.html">Anterior</a></dd>
 							<dd><h4>4/6</h4></dd>
 							<dd><a class="next" title="Registro espacio" href="<?php echo APPLICATION_URL?>registro-espacio-0450.html" >Siguiente</a></dd>
@@ -31,6 +31,7 @@ include_once('menu.php');
 			</div>	<!-- END titulo row -->
 			<div class="container">
 				<div class="row form-data">	
+                <form action="<?php echo APPLICATION_URL?>user.controller/createArtist.html" id="validable2" class="" method="post">
 					<div class="twelve columns">
 						<h5>Recuerde que su propuesta de artistas para artBO 2013 debe ser acorde al tamaño del <em>stand</em> que ha seleccionado. Por cada 10 mts², sólo podrá exhibir un artista.</h5>
 						
@@ -58,7 +59,7 @@ include_once('menu.php');
 								</li>
 							</ul>
 						</div>
-						<form action="<?php echo APPLICATION_URL?>user.controller/createArtist.html" id="validable" class="" method="post">
+						
 							<?php include_once('inc-artistas-1.php'); ?>
 
 						<a href="#" id="add-artist" class="label secondary round">Agregar un nuevo artista </a>
@@ -83,7 +84,7 @@ include_once('menu.php');
 						</div>
 						<div class="four columns">
 							<div class="right">
-								<a title="Registro ferias" href="<?php echo APPLICATION_URL?>registro-ferias-0430.html" class="graytxt">Anterior</a>  <a href="javascript:void(0);" onclick="$('#validable').submit();" title="Registro Tipo de Stand" class="button radius">Siguiente: Tipo de <em>Stand</em></a>
+								<a title="Registro ferias" href="<?php echo APPLICATION_URL?>registro-ferias-0430.html" class="graytxt">Anterior</a>  <a href="javascript:void(0);" onclick="$('#validable2').submit();" title="Registro Tipo de Stand" class="button radius">Siguiente: Tipo de <em>Stand</em></a>
 							</div>
 						</div>
 					</div>

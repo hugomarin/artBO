@@ -24,7 +24,7 @@
 					?>
                 </div>
 				<div class="idiomas left">
-					<p>Español | <a href="<?php echo APPLICATION_URL?>en/home.html" title="artBO English">English</a></p>
+					<p>Español | <a href="<?php echo APPLICATION_URL?>en/<?php echo str_replace("view/", "", $path);?>.html" title="artBO English">English</a></p>
 				</div>
 			</div>
 		</div>

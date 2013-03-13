@@ -55,22 +55,22 @@
                                     <img src="<?php echo APPLICATION_URL?>images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr">
                                </li>
                                <li>
-                                    <input type="text" id="artist_name_1" name="artist_name_1" />
+                                    <input type="text" id="artist_name_1" name="artist_name_1" class="error" />
 								</li>
                                 <!-- END nombre -->
                                 <!-- Apellido -->
                                 <li>
-                                    <input type="text" id="artist_surname_1" name="artist_surname_1" />
+                                    <input type="text" id="artist_surname_1" name="artist_surname_1" class="error" />
                                 </li>
                                 <!-- END Apellido --> 
                                 <!-- checkboxes -->
                                 <li>
-                                    <input type="text" id="artist_nationality_1" class="no-margin" name="artist_nationality_1" />
-                                    <input type="hidden" id="artist_id_1" class="no-margin" name="artist_id_1" value="" />
+                                    <input type="text" id="artist_nationality_1" class="no-margin error" name="artist_nationality_1"  />
+                                    <input type="hidden" id="artist_id_1" class="no-margin  error" name="artist_id_1" value="" />
                                     
-                                    <input type="hidden" id="artist_birthday_1" class="no-margin" name="artist_birthday_1" value="" />
-                                    <input type="hidden" id="artist_residency_1" class="no-margin" name="artist_residency_1" value="" />
-                                    <input type="hidden" id="artist_review_1" class="no-margin" name="artist_review_1" value="" />
+                                    <input type="hidden" id="artist_birthday_1" class="no-margin  error" name="artist_birthday_1" value="" />
+                                    <input type="hidden" id="artist_residency_1" class="no-margin  error" name="artist_residency_1" value="" />
+                                    <input type="hidden" id="artist_review_1" class="no-margin error" name="artist_review_1" value="" />
                                     <!-- END nacionalidad -->
                                     <!-- <label for="checkbox3a"><input class="revealer-new" type="checkbox" id="checkbox-1" name="artist_artbo_1"><strong>Este artista participará en artBO</strong></label> -->
                                     <!-- boton para modal de artista -->
