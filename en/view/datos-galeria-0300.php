@@ -5,19 +5,19 @@ function validate()
 	var ret	= true;
 	if (document.getElementById("rep_contrasena").value != document.getElementById('contrasena').value) 
 	{ 
-		alert ('Las claves no coinciden.'); 
+		alert ('Data does not match.'); 
 		ret	= false; 
 	}
 	else if (document.getElementById('contrasena').value == '')
 	{
-		alert ('Escribe una contraseña.');
+		alert ('Write a password.');
 		ret = false;
 	}
 	return ret;
 }
 <?php 
 if (isset($_GET[0]))
-	echo 'alert ("Sus datos fueron actualizados");';
+	echo 'alert ("Your data have been saved");';
 ?>
 </script>
 	<div class="row contenido"><!-- Row -->	
@@ -25,15 +25,15 @@ if (isset($_GET[0]))
 		<div class="six columns centered">
 			<form action="<?php echo APPLICATION_URL;?>user.controller/changePassword.html" method="post" accept-charset="utf-8">
 				<div class="panel"><!-- panel -->
-					<h2>Editar su perfil</h2>
-					<label for="contraseña">Nueva clave</label>
+					<h2>Edit your profile</h2>
+					<label for="contraseña">New password</label>
 					<input type="password" name="contrasena" value="" id="contrasena"/>
-					<label for="Repetir contraseña">Repetir clave</label>
+					<label for="Repetir contraseña">Confirm password</label>
 					<input type="password" name="rep_contrasena" value="" id="rep_contrasena"/>
 				</div>
 				<div class="row">
-					<div class="six columns"><a class="bold" title="volver" href="<?php echo APPLICATION_URL?>registro-inicio-0400.html">Volver</a></div>
-					<div class="six columns"><input title="guardar" onClick="return validate();" type="submit" name="cambiar" value="Guardar" class="button radius right"/></div>
+					<div class="six columns"><a class="bold" title="volver" href="<?php echo APPLICATION_URL?>registro-inicio-0400.html">Cancel</a></div>
+					<div class="six columns"><input title="save" onClick="return validate();" type="submit" name="cambiar" value="Save" class="button radius right"/></div>
 				</div>
 			</form>
 			<!-- <form action="<?php echo APPLICATION_URL?>user.controller/basic.html" id="validable" class="" method="post" enctype="multipart/form-data">

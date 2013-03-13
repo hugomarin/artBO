@@ -85,7 +85,7 @@ $dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8
 	<br />
 	<!-- aceptación de terminos -->
 	<div class="panel-2">
-	<p> I <input type="text" class="legal" placeholder="Nombre del Director o Representante legal" name="user_name_accept" value="<?php echo $user->__get('user_name_accept');?>" />Identified with
+	<p> I <input type="text" class="legal" placeholder="Name of Director or Legal representative" name="user_name_accept" value="<?php echo $user->__get('user_name_accept');?>" />Identified with
 		<input type="text" class="doc" placeholder="Identity Document" name="user_document_accept" value="<?php echo $user->__get('user_document_accept');?>"   /> 
 	declare to have knowledge and accept<a href="documentos/Reglamento.pdf" title="Reglamento de participación en artBO" target="_blank"> the Terms and Conditions of Participation regulations </a> of artBO.
 	</p>

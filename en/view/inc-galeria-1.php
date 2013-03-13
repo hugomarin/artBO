@@ -34,7 +34,7 @@ function decide($field, $required, $user)
                 <?php
 				$image	= (($user->__get('user_gallery_image') != '') && (!file_exists(APPLICATION_URL.$dir.$user->__get('user_gallery_image')))) ? APPLICATION_URL.$dir.$user->__get('user_gallery_image') : $default;
 				?>
-				<img src="<?php echo $image;?>" class="images" title="Imagen de la Galería">                
+				<img src="<?php echo $image;?>" class="images" title="Gallery image">                
 				<p class="caption">You can upload an image of the last exhibition held at your gallery in .jpg, .png or .gif. The file must not exceed 1000 KB.</p><br />
                 <div id="user_gallery_image"></div>
                                             
@@ -45,7 +45,7 @@ function decide($field, $required, $user)
 		
 		<div class="six columns">
 			<div class="mid-input galleryname-data">
-				<label><span class="asterix">*</span>Comercial Name of the Gallery</label>	
+				<label><span class="asterix">*</span>Commercial Name of the Gallery</label>	
 				<input type="text" name="user_gallery_comname" class="expand input-text <?php echo decide('user_gallery_comname', $required, $user);?>" value="<?php echo $user->__get('user_gallery_comname');?>" title="Enter the commercial name of the gallery"/>
 			</div><!--/ galleryname-data-->
 			

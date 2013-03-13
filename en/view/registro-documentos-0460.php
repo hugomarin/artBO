@@ -61,8 +61,8 @@ function alertNotYet()
 			</div><!--/inner-footer-->
 		</div><!-- END Main: Panel -->
 		<div class="advisory">
-			<span>Recomendamos visualizar en: IE 9.0 - Firefox 10.0 - Safari 5.1 - Chrome 17.0     |     Optimizada 1024 x 768</span>
-			<span><a href="#">Términos y Condiciones</a> del Sitio</span>
+			<span>We recommend viewing in: IE 9.0 - 10.0 Firefox - Safari 5.1 - 17.0 Chrome | 1024 x 768 Optimized</span>
+			<span>Site <a href="#">Site Terms and Conditions</a></span>
 		</div>
 	</div><!--/row main-row-->
 			
