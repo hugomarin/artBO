@@ -5,7 +5,7 @@ $userForms	= UserFormHelper::retrieveUserForms(" AND user_id = ".escape($_SESSIO
 $class		= 'nulled';
 if (count($userForms) == 5)
 {
-	$action		= "document.getElementById('validable').submit();";
+	$action		= "document.getElementById('validable2').submit();";
 	$class		= '';
 }
 else
@@ -31,14 +31,14 @@ function alertNotYet()
 					<dl class="sub-nav">
 						<dd><a title="Previous" class="prev" href="<?php echo APPLICATION_URL?>registro-espacio-0450.html">Previous</a></dd>
 						<dd><h4>6/6</h4></dd>
-						<dd><a title="Save" class="save" href="javascript:void(0);" onClick="document.getElementById('validable').submit();">Save</a></dd>
+						<dd><a title="Save" class="save" href="javascript:void(0);" onClick="$('#validable2').attr('action','<?php echo APPLICATION_URL?>user.controller/saveDocuments.html'); document.getElementById('validable2').submit();">Save</a></dd>
 					</dl>
 				</div>
 			</div><!--/row inner-header-->
 			
 			<div class="row form-data">	
 				<div class="twelve columns">
-					<form action="<?php echo APPLICATION_URL?>user.controller/uploadDocuments.html" id="validable" class="" method="post" enctype="multipart/form-data" onSubmit="return Validator.prototype.checkRequiredFields();">
+					<form action="<?php echo APPLICATION_URL?>user.controller/uploadDocuments.html" id="validable2" class="" method="post" enctype="multipart/form-data" onSubmit="return Validator.prototype.checkRequiredFields();">
 					<?php include_once('inc-documentos-1.php'); ?>
 					</form>
 				</div><!--/twelve columns-->

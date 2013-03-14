@@ -1,5 +1,4 @@
 <?php
-
 $default	= 'http://cambelt.co/icon/camera/480x360?color=b71632,fefefe';
 $dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8_decode($user->__get('user_name'))).'/'
 ?>
@@ -23,12 +22,8 @@ $dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8
                     <!-- <a href="<?php echo APPLICATION_URL?>datos-galeria-0300.html"><img src="<?php echo APPLICATION_FULL_URL?>resources/images/26x26/<?php echo $user->__get('user_image');?>" class="left"  height="36" width="36" alt="perfil"/></a> -->
                     <?php
 					$image	= (($user->__get('user_gallery_image') != '') && (!file_exists(APPLICATION_URL.$dir.$user->__get('user_gallery_image')))) ? APPLICATION_URL.$dir.$user->__get('user_gallery_image') : $default;
-					{
 					?>        
                     	<a href="<?php echo APPLICATION_URL?>datos-galeria-0300.html"><img src="<?php echo $image?>" class="left"  height="36" width="36" alt="perfil"/></a>
-					<?php
-					}
-					?>
                     <p class="left"><?php echo '<strong>'.$user->__get('user_gallery_comname').'</strong>';?><br />
 					<a href="<?php echo APPLICATION_URL?>datos-galeria-0300.html" title="Clic aquí para editar información de la galería">Editar perfil</a> | <a href="<?php echo APPLICATION_URL?>exit.html" title="Salir">Salir</a></p>
 					<?php
