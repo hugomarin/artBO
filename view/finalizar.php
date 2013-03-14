@@ -11,7 +11,7 @@
 				<div class="twelve columns">
 					<h3>Gracias por participar en la convocatoria de <strong> artBO 2013.</strong></h3> 
 					
-					<p>En breve, recibirá un correo electrónico de confirmación. de su proceso de registro.</p>					
+					<p>A continuación, puede ver los datos registrados. Para futuras referencias, <strong>recuerde imprimir esta pantalla pues no es posible acceder a ella ni a su perfil nuevamente</strong></p>					
 				</div>
 			</div>
 			<?php

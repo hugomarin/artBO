@@ -35,7 +35,7 @@ function decide($field, $required, $user)
 				$image	= (($user->__get('user_gallery_image') != '') && (!file_exists(APPLICATION_IMAGE_URL.$dir.$user->__get('user_gallery_image')))) ? APPLICATION_IMAGE_URL.$dir.$user->__get('user_gallery_image') : $default;
 				?>
 				<img src="<?php echo $image;?>" class="images" title="Gallery image">                
-				<p class="caption">You can upload an image of the last exhibition held at your gallery in .jpg, .png or .gif. The file must not exceed 1000 KB.</p><br />
+				<p class="caption">You can upload an image of the last exhibition held at your gallery in .JPG, .PNG. The file must not exceed 1000 KB.</p><br />
                 <div id="user_gallery_image"></div>
                                             
                 <br />
