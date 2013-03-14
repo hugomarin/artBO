@@ -6,7 +6,7 @@
                     $i = 1;
                     foreach ($artists as $artist)
                     {
-						$class = ($artist->__get('artist_name') == '') ? 'class="error"' : '';
+						$class = ($artist->__get('artist_name') == '') ? 'error"' : '';
                     ?>            
                         <li class="link_default">
                            <ul class="no-bullet artist">
@@ -15,18 +15,18 @@
                                 </li>
                                 <!-- nombre -->
                                 <li>
-                                    <input type="text" name="artist_name_<?php echo $i;?>" value="<?php echo $artist->__get('artist_name');?>" <?php echo $class;?> />
+                                    <input type="text" name="artist_name_<?php echo $i;?>" value="<?php echo $artist->__get('artist_name');?>" class="<?php echo $class;?>" />
                                 </li>
                                 <!-- /nombre -->
                                 <!-- Apellido -->
                                 <li>
-                                    <input type="text" name="artist_surname_<?php echo $i;?>" value="<?php echo $artist->__get('artist_surname');?>" <?php echo $class;?> />
+                                    <input type="text" name="artist_surname_<?php echo $i;?>" value="<?php echo $artist->__get('artist_surname');?>" class="<?php echo $class;?>" />
                                 </li>
                                 <!-- /Apellido -->
                                 <!-- checkboxes -->
                                 <li>
                                     <!-- nacionalidad -->
-                                    <input type="text" class="no-margin" name="artist_nationality_<?php echo $i;?>" value="<?php echo $artist->__get('artist_nationality');?>" <?php echo $class;?> />
+                                    <input type="text" class="no-margin <?php echo $class;?>" name="artist_nationality_<?php echo $i;?>" value="<?php echo $artist->__get('artist_nationality');?>"  />
                                     <input type="hidden" id="artist_id_<?php echo $i;?>" class="no-margin" name="artist_id_<?php echo $i;?>" value="<?php echo $artist->__get('artist_id')?>" />
                                     
                                     <input type="hidden" id="artist_birthday_<?php echo $i;?>" class="no-margin" name="artist_birthday_<?php echo $i;?>" value="<?php echo $artist->__get('artist_birthday')?>" />

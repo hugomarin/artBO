@@ -31,12 +31,12 @@ $artistWorkArray    = ArtistWorkHelper::retrieveArtistWorks("AND artist_work_key
 $artistWork 		= (count($artistWorkArray) > 0) ? $artistWorkArray[0] : new ArtistWork();
 
 $uploader 			= new qqFileUploader();
-if(!file_exists('resources/galerias/'. $user->__get('user_id'). '-' . makeUrlClear(utf8_decode($user->__get('user_name'))) . '/artistas'))
+if(!file_exists('../resources/galerias/'. $user->__get('user_id'). '-' . makeUrlClear(utf8_decode($user->__get('user_name'))) . '/artistas'))
 {
 	
-	mkdir('resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8_decode($user->__get('user_name'))) . '/artistas', 0755, true);
+	mkdir('../resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8_decode($user->__get('user_name'))) . '/artistas', 0755, true);
 }
-$dir	= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8_decode($user->__get('user_name'))) . '/artistas';
+$dir	= '../resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8_decode($user->__get('user_name'))) . '/artistas';
 // Specify the list of valid extensions, ex. array("jpeg", "xml", "bmp")
 $uploader->allowedExtensions = array();
 

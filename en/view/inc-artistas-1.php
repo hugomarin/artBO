@@ -6,6 +6,7 @@
                     $i = 1;
                     foreach ($artists as $artist)
                     {
+						$class = ($artist->__get('artist_name') == '') ? 'error' : '';
                     ?>            
                         <li class="link_default">
                            <ul class="no-bullet artist">
@@ -14,18 +15,18 @@
                                 </li>
                                 <!-- nombre -->
                                 <li>
-                                    <input type="text" name="artist_name_<?php echo $i;?>" value="<?php echo $artist->__get('artist_name');?>" />
+                                    <input type="text" name="artist_name_<?php echo $i;?>" value="<?php echo $artist->__get('artist_name');?>" class="<?php echo $class;?>" />
                                 </li>
                                 <!-- /nombre -->
                                 <!-- Apellido -->
                                 <li>
-                                    <input type="text" name="artist_surname_<?php echo $i;?>" value="<?php echo $artist->__get('artist_surname');?>" />
+                                    <input type="text" name="artist_surname_<?php echo $i;?>" value="<?php echo $artist->__get('artist_surname');?>" class="<?php echo $class;?>" />
                                 </li>
                                 <!-- /Apellido -->
                                 <!-- checkboxes -->
                                 <li>
                                     <!-- nacionalidad -->
-                                    <input type="text" class="no-margin" name="artist_nationality_<?php echo $i;?>" value="<?php echo $artist->__get('artist_nationality');?>" />
+                                    <input type="text" class="no-margin <?php echo $class;?>" name="artist_nationality_<?php echo $i;?>" value="<?php echo $artist->__get('artist_nationality');?>"  />
                                     <input type="hidden" id="artist_id_<?php echo $i;?>" class="no-margin" name="artist_id_<?php echo $i;?>" value="<?php echo $artist->__get('artist_id')?>" />
                                     
                                     <input type="hidden" id="artist_birthday_<?php echo $i;?>" class="no-margin" name="artist_birthday_<?php echo $i;?>" value="<?php echo $artist->__get('artist_birthday')?>" />
@@ -55,18 +56,18 @@
                                     <img src="<?php echo APPLICATION_URL?>images/drag_handle.gif" alt="drag_handle" width="11" height="11" class="image_handle nsr">
                                </li>
                                <li>
-                                    <input type="text" id="artist_name_1" name="artist_name_1" />
+                                    <input type="text" id="artist_name_1" name="artist_name_1" class="error" />
 								</li>
                                 <!-- END nombre -->
                                 <!-- Apellido -->
                                 <li>
-                                    <input type="text" id="artist_surname_1" name="artist_surname_1" />
+                                    <input type="text" id="artist_surname_1" name="artist_surname_1" class="error" />
                                 </li>
                                 <!-- END Apellido --> 
                                 <!-- checkboxes -->
                                 <li>
-                                    <input type="text" id="artist_nationality_1" class="no-margin" name="artist_nationality_1" />
-                                    <input type="hidden" id="artist_id_1" class="no-margin" name="artist_id_1" value="" />
+                                    <input type="text" id="artist_nationality_1" class="no-margin" name="artist_nationality_1" class="error" />
+                                    <input type="hidden" id="artist_id_1" class="no-margin error" name="artist_id_1" value="" />
                                     
                                     <input type="hidden" id="artist_birthday_1" class="no-margin" name="artist_birthday_1" value="" />
                                     <input type="hidden" id="artist_residency_1" class="no-margin" name="artist_residency_1" value="" />

@@ -15,7 +15,7 @@ $dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8
 	            	</div>
 	            	<div class="five columns">
 						<?php
-                        $image	= ($user->__get('user_certificate') != '') ? APPLICATION_URL.$dir.$user->__get('user_certificate') : $default;
+                        $image	= ($user->__get('user_certificate') != '') ? APPLICATION_IMAGE_URL.$dir.$user->__get('user_certificate') : $default;
 						if (strpos($image, '.pdf')  !== false) $image	= 'http://cambelt.co/icon/document/230x170?color=3fc46b,fefefe';
                             
                         ?>	            		
@@ -33,7 +33,7 @@ $dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8
 	            	</div>
 	            	<div class="five columns">
 						<?php
-                        $image	= ($user->__get('user_rut') != '') ? APPLICATION_URL.$dir.$user->__get('user_rut') : $default;
+                        $image	= ($user->__get('user_rut') != '') ? APPLICATION_IMAGE_URL.$dir.$user->__get('user_rut') : $default;
 						if (strpos($image, '.pdf')  !== false) $image	= 'http://cambelt.co/icon/document/230x170?color=3fc46b,fefefe';
                             
                         ?>	                    
@@ -51,7 +51,7 @@ $dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8
 	            	</div>
 	            	<div class="five columns">
 						<?php
-                        $image	= ($user->__get('user_document') != '') ? APPLICATION_URL.$dir.$user->__get('user_document') : $default;
+                        $image	= ($user->__get('user_document') != '') ? APPLICATION_IMAGE_URL.$dir.$user->__get('user_document') : $default;
 						if (strpos($image, '.pdf')  !== false) $image	= 'http://cambelt.co/icon/document/230x170?color=3fc46b,fefefe';
                             
                         ?>	                    
@@ -69,7 +69,7 @@ $dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8
 	            	</div>
 	            	<div class="five columns">
 						<?php
-                        $image	= ($user->__get('user_payment') != '') ? APPLICATION_URL.$dir.$user->__get('user_payment') : $default;
+                        $image	= ($user->__get('user_payment') != '') ? APPLICATION_IMAGE_URL.$dir.$user->__get('user_payment') : $default;
 						if (strpos($image, '.pdf')  !== false) $image	= 'http://cambelt.co/icon/document/230x170?color=3fc46b,fefefe';
                             
                         ?>	                    

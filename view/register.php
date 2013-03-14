@@ -27,7 +27,7 @@ else
 					Ya te registráste en artBO, haz clic <a class="underline" href="login.html">aquí.</a></p> -->
 				
 					<label for="name"><span class="asterix">*</span>Nombre de la galería</label>
-					<input type="text" name="gallery_name" title="Digite el nombre de la galería"/>
+					<input type="text" name="user_gallery_comname" title="Digite el nombre de la galería"/>
 					<label for="name"><span class="asterix">*</span>Nombre</label>
 					<input type="text" name="user_name" title="Digite su(s) nombre(s)"/>
 					<label for="name"><span class="asterix">*</span>Apellido</label>

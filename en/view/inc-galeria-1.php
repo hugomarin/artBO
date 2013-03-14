@@ -32,7 +32,7 @@ function decide($field, $required, $user)
 				<!-- <i>Imagen del espacio expositivo</i>
 				<br /> -->
                 <?php
-				$image	= (($user->__get('user_gallery_image') != '') && (!file_exists(APPLICATION_URL.$dir.$user->__get('user_gallery_image')))) ? APPLICATION_URL.$dir.$user->__get('user_gallery_image') : $default;
+				$image	= (($user->__get('user_gallery_image') != '') && (!file_exists(APPLICATION_IMAGE_URL.$dir.$user->__get('user_gallery_image')))) ? APPLICATION_IMAGE_URL.$dir.$user->__get('user_gallery_image') : $default;
 				?>
 				<img src="<?php echo $image;?>" class="images" title="Gallery image">                
 				<p class="caption">You can upload an image of the last exhibition held at your gallery in .jpg, .png or .gif. The file must not exceed 1000 KB.</p><br />
@@ -91,7 +91,7 @@ function decide($field, $required, $user)
 					{
 						$selected = ($country->__get('country_id') == $user->__get('country_id')) ? 'selected="selected"' : '';
 					?>
-			        	<option value="<?php echo $country->__get('country_id')?>" <?php echo $selected;?>><?php echo utf8_encode($country->__get('country_name'));?></option>
+			        	<option value="<?php echo $country->__get('country_id')?>" <?php echo $selected;?>><?php echo utf8_encode($country->__get('country_name_en'));?></option>
 			        <?php
 					}
 					?>
@@ -174,7 +174,7 @@ function decide($field, $required, $user)
 				<div class="six columns">
 					<div class="mid-input schedule-data">
 						<label><span class="asterix">*</span>Hours open to the public (0:00 - 24:00)</label>
-						<input name="user_open_time" type="text" title="Enter Hours open to the public <?php echo decide('user_abstract', $required, $user);?>" value="<?php echo $user->__get('user_open_time');?>" class="small input-text expand" />
+						<input name="user_open_time" type="text" title="Enter Hours open to the public " value="<?php echo $user->__get('user_open_time');?>" class="small input-text expand <?php echo decide('user_abstract', $required, $user);?>" />
 					</div><!--/schedule-data-->
 				</div>
 				<div class="six columns">	
@@ -232,7 +232,7 @@ function decide($field, $required, $user)
 				<div class="mid-input director-image">
 					<label><span class="asterix">*</span>Photo of Director</label>
 					<?php
-                    $image	= (($user->__get('user_director_image') != '') && (!file_exists(APPLICATION_URL.$dir.$user->__get('user_director_image')))) ? APPLICATION_URL.$dir.$user->__get('user_director_image') : $default;
+                    $image	= (($user->__get('user_director_image') != '') && (!file_exists(APPLICATION_IMAGE_URL.$dir.$user->__get('user_director_image')))) ? APPLICATION_IMAGE_URL.$dir.$user->__get('user_director_image') : $default;
                         
                     ?>
                     <img src="<?php echo $image;?>" class="images" title="Imagen del director">                

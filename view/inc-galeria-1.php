@@ -174,7 +174,7 @@ function decide($field, $required, $user)
 				<div class="six columns">
 					<div class="mid-input schedule-data">
 						<label><span class="asterix">*</span>Horario de apertura al público (0:00 - 24:00)</label>
-						<input name="user_open_time" type="text" title="Digite los horarios de apertura <?php echo decide('user_abstract', $required, $user);?>" value="<?php echo $user->__get('user_open_time');?>" class="small input-text expand" />
+						<input name="user_open_time" type="text" title="Digite los horarios de apertura" value="<?php echo $user->__get('user_open_time');?>" class="small input-text expand <?php echo decide('user_abstract', $required, $user);?>" />
 					</div><!--/schedule-data-->
 				</div>
 				<div class="six columns">	

@@ -104,7 +104,7 @@
                                                 {
                                                     $selected = ($country->__get('country_id') == $feria->__get('country_id')) ? 'selected="selected"' : '';
                                                 ?>
-                                                    <option value="<?php echo $country->__get('country_id')?>" <?php echo $selected;?>><?php echo utf8_encode($country->__get('country_name'));?></option>
+                                                    <option value="<?php echo $country->__get('country_id')?>" <?php echo $selected;?>><?php echo utf8_encode($country->__get('country_name_en'));?></option>
                                                 <?php
                                                 }
                                                 ?>
@@ -154,7 +154,7 @@
                                                 foreach ($countries as $country)
                                                 {
                                                 ?>
-                                                    <option value="<?php echo $country->__get('country_id')?>"><?php echo utf8_encode($country->__get('country_name'));?></option>
+                                                    <option value="<?php echo $country->__get('country_id')?>"><?php echo utf8_encode($country->__get('country_name_en'));?></option>
                                                 <?php
                                                 }
                                                 ?>
