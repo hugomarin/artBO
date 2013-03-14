@@ -16,7 +16,7 @@ switch ($action):
 			$_SESSION['user_id']	= $insert['insert_id'];
 			redirectUrl(APPLICATION_URL.'registro-inicio-0400.html');
 			$html 		= '<div style="background: #f5f5f5; padding-bottom: 30px;margin-top: 0; width: 600px; font-family: Arial;"><div style="background: #9c1a36; padding: 10px 50px;"><img src="http://i.imgur.com/pUNnGGF.png" alt="artBO" /></div><div style="margin-top: 30px; padding: 10px 50px;"><h1 style="margin-bottom:30px;">Welcome to the application process of ArtBo 2013</h1><p style="margin-bottom:30px;">From now on, you can make the registration process in the pavilion of your interest.</p><p>artBO, International Art Fair of Bogot&aacute;.</p></div>'; 
-			$subject	= utf8_decode('Registro exitoso');
+			$subject	= utf8_decode('Succesfull Application');
 			$from		= 'artbo@ccb.org.co';
 			$to			= $user->__get('user_email');
 			$fromName	= 'artBO';
@@ -46,7 +46,7 @@ switch ($action):
 			$user->__set('user_verification', md5($password));
 			$user->update();
 			$html  	   .= '<div style="background: #f5f5f5; padding-bottom: 30px;margin-top: 0; width: 600px; font-family: Arial;"><div style="background: #9c1a36; padding: 10px 50px;"><img src="http://i.imgur.com/pUNnGGF.png" alt="artBO" /></div><div style="margin-top: 30px; padding: 10px 50px;"><h1 style="margin-bottom:30px;">Reset Password</h1><p style="margin-bottom:30px;">We received a request to reset your password. To complete the process, please visit the following url:</p><a style="text-decoration: none; color: #3a6cdd;" href="http://activemgmd.com/ccb/ccb-galerias/restablecer-contrasena/'.md5($password).'.html">http://activemgmd.com/ccb/ccb-galerias/restablecer-contrasena/'.md5($password).'.html</a><br /><p>If you did not request this change please ignore this mail.</p><p>artBO,  International Art Fair of Bogot&aacute;</p></div>'; 
-			$subject	= utf8_decode('Recuperar clave');
+			$subject	= utf8_decode('Reset Password');
 			$from		= 'artbo@ccb.org.co';
 			$to			= $user->__get('user_email');
 			$fromName	= 'artBO';
@@ -414,7 +414,7 @@ switch ($action):
 			$user->__set('user_finalizado', 1);	
 			$user->update();		
 			require_once(SITE_VIEW.'endmail.php');
-			$subject	= utf8_decode('Finalizado registro');
+			$subject	= utf8_decode('Completed Application');
 			$from		= 'artbo@ccb.org.co';
 			$to			= $user->__get('user_email');
 			$fromName	= 'artBO';

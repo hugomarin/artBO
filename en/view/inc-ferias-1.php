@@ -58,18 +58,18 @@
 							<div class="intitle">
 						<ul class="ferias">
 							<li>
-								<span class="asterix">*</span><strong>
+								<strong>
 								Name of the fair
 								</strong>
 							</li>
 							<li>
-								<span class="asterix">*</span><strong>City</strong>
+								<strong>City</strong>
 							</li>
 							<li>
-								<span class="asterix">*</span><strong>Country</strong>
+								<strong>Country</strong>
 							</li>
 							<li>
-								<span class="asterix">*</span><strong>Year</strong>
+								<strong>Year</strong>
 							</li>
 						</ul>
 					</div>
