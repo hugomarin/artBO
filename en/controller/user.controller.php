@@ -15,7 +15,7 @@ switch ($action):
 			$insert	= $user->save();
 			$_SESSION['user_id']	= $insert['insert_id'];
 			redirectUrl(APPLICATION_URL.'registro-inicio-0400.html');
-			$html 		= '<div style="background: #f5f5f5; padding-bottom: 30px;margin-top: 0; width: 600px; font-family: Arial;"><div style="background: #9c1a36; padding: 10px 50px;"><img src="http://i.imgur.com/pUNnGGF.png" alt="artBO" /></div><div style="margin-top: 30px; padding: 10px 50px;"><h1 style="margin-bottom:30px;">Le damos la bienvenida al proceso de aplicación de artBO 2013</h1><p style="margin-bottom:30px;">A partir de ahora, usted podr&aacute; adelantar su proceso de registro e inscripci&oacute;n en el pabell&oacute;n de su inter&eacute;s</p><p>artBO, Feria Internacional de Arte de Bogot&aacute;</p></div>'; 
+			$html 		= '<div style="background: #f5f5f5; padding-bottom: 30px;margin-top: 0; width: 600px; font-family: Arial;"><div style="background: #9c1a36; padding: 10px 50px;"><img src="http://i.imgur.com/pUNnGGF.png" alt="artBO" /></div><div style="margin-top: 30px; padding: 10px 50px;"><h1 style="margin-bottom:30px;">Welcome to the application process of ArtBo 2013</h1><p style="margin-bottom:30px;">From now on, you can make the registration process in the pavilion of your interest.</p><p>artBO, International Art Fair of Bogot&aacute;.</p></div>'; 
 			$subject	= utf8_decode('Registro exitoso');
 			$from		= 'artbo@ccb.org.co';
 			$to			= $user->__get('user_email');
@@ -45,7 +45,7 @@ switch ($action):
 			$user 		=& $users[0];
 			$user->__set('user_verification', md5($password));
 			$user->update();
-			$html  	   .= '<div style="background: #f5f5f5; padding-bottom: 30px;margin-top: 0; width: 600px; font-family: Arial;"><div style="background: #9c1a36; padding: 10px 50px;"><img src="http://i.imgur.com/pUNnGGF.png" alt="artBO" /></div><div style="margin-top: 30px; padding: 10px 50px;"><h1 style="margin-bottom:30px;">Restablecer Clave</h1><p style="margin-bottom:30px;">Hemos recibido una petici&oacute;n para restablecer su clave. Para completar el proceso de restablecer su clave visite la siguiente url:</p><a style="text-decoration: none; color: #3a6cdd;" href="http://activemgmd.com/ccb/ccb-galerias/restablecer-contrasena/'.md5($password).'.html">http://activemgmd.com/ccb/ccb-galerias/restablecer-contrasena/'.md5($password).'.html</a><br /><p>Si usted no ha solicitado este cambio por favor ignore este correo.</p><p>artBO, Feria Internacional de Arte de Bogot&aacute;</p></div>'; 
+			$html  	   .= '<div style="background: #f5f5f5; padding-bottom: 30px;margin-top: 0; width: 600px; font-family: Arial;"><div style="background: #9c1a36; padding: 10px 50px;"><img src="http://i.imgur.com/pUNnGGF.png" alt="artBO" /></div><div style="margin-top: 30px; padding: 10px 50px;"><h1 style="margin-bottom:30px;">Reset Password</h1><p style="margin-bottom:30px;">We received a request to reset your password. To complete the process, please visit the following url:</p><a style="text-decoration: none; color: #3a6cdd;" href="http://activemgmd.com/ccb/ccb-galerias/restablecer-contrasena/'.md5($password).'.html">http://activemgmd.com/ccb/ccb-galerias/restablecer-contrasena/'.md5($password).'.html</a><br /><p>If you did not request this change please ignore this mail.</p><p>artBO,  International Art Fair of Bogot&aacute;</p></div>'; 
 			$subject	= utf8_decode('Recuperar clave');
 			$from		= 'artbo@ccb.org.co';
 			$to			= $user->__get('user_email');
@@ -89,7 +89,7 @@ switch ($action):
 			{
 			?>
             	<script language="javascript">
-					alert('El archivo cargado excede 1000kb');
+					alert('The uploaded file exceeds 1000kb');
 					window.history.go(-1);
                 </script>
             <?
@@ -129,7 +129,7 @@ switch ($action):
 			{
 			?>
             	<script language="javascript">
-					alert('El archivo cargado excede 1000kb');
+					alert('The uploaded file exceeds 1000kb');
 					window.history.go(-1);
                 </script>
             <?
@@ -441,7 +441,7 @@ switch ($action):
 		{
 		?>
 			<script language="javascript">
-                alert ('Debe subir todos los documentos solicitados en esta página');
+                alert ('You must upload all requested documents on this page');
                 window.location.href="<?php echo APPLICATION_URL;?>registro-documentos-0460.html";
             </script>
         <?php

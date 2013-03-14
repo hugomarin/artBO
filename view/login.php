@@ -12,7 +12,6 @@ else if ((isset($_GET[0])) && ($_GET[0] == 'finalizado'))
 <div class="container">
 	<div class="row"><!-- Row -->	
 		<div class="six columns centered"><!-- six columns -->
-		<div class="languages"><span class="label round"><a href="<?php echo APPLICATION_URL?>en/login.html">English</a> | Español</span></div>
 			<a href="home.html"><span class="artBO">artBO</span></a><a href="home.html"><span class="ccB">CCB</span></a>
 			<form action="<?php echo APPLICATION_URL?>user.controller/login.html"  method="post">
 				<div class="panel radius">

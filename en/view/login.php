@@ -3,7 +3,7 @@ include_once('header-nologin2.php');
 if ((isset($_GET[0])) && ($_GET[0] == 'error'))
 	$error	= '<div class="alert-box error" id="alert">Data does not match.<a href="javascript:void(0);" onClick="document.getElementById(\'alert\').style.display=\'none\';" class="close">&times;</a></div>';
 else if ((isset($_GET[0])) && ($_GET[0] == 'finalizado'))
-	$error	= '<div class="alert-box error" id="alert">Su proceso de aplicación en artBO 2013 ha finalizado. Gracias.<a href="javascript:void(0);" onClick="document.getElementById(\'alert\').style.display=\'none\';" class="close">&times;</a></div>';
+	$error	= '<div class="alert-box error" id="alert">Your application process is complete.<a href="javascript:void(0);" onClick="document.getElementById(\'alert\').style.display=\'none\';" class="close">&times;</a></div>';
 
 ?>
 
