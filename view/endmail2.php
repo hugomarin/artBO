@@ -39,9 +39,9 @@ foreach ($expositions as $exposition)
 {
 	$html	.= "
 	<p>
-	<strong>Nombre de la exposici&oacute;n</strong>: <em>".$exposition->__get('exposition_name')."</em>
-	<strong>A&ntilde;o</strong>: <em>".$exposition->__get('exposition_year')."</em>
-	<strong>Mes</strong>: <em>".$exposition->__get('exposition_month')."</em>
+	<strong>".$exposition->__get('exposition_name')."</strong>,
+	<em>".$exposition->__get('exposition_year')."</em>,
+	<em>".$exposition->__get('exposition_month')."</em>
 	</p>";
 }
 //FERIAS
@@ -74,10 +74,10 @@ foreach ($ferias as $feria)
 	$country	= new Country($feria->__get('country_id'));
 	$html	.= "
 	<p><!--Esto por cada feria-->
-	<strong>Nombre de la feria</strong>: <em>".$feria->__get('feria_name')."</em>,
-	<strong>Ciudad</strong>: <em>".$feria->__get('feria_city')."</em>,
-	<strong>Pa&iacute;s</strong>: <em>".$country->__get('country_id')."</em>,
-	<strong>A&ntilde;o</strong>: <em>".$feria->__get('feria_year')." </em>,
+	<strong>".$feria->__get('feria_name')."</strong>,
+	<em>".$feria->__get('feria_city')."</em>,
+	<em>".$country->__get('country_id')."</em>,
+	<em>".$feria->__get('feria_year')." </em>,
 	</p>";
 }
 
