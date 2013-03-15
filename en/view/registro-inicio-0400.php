@@ -32,7 +32,7 @@
 					<li class="thin">You can upload images in .jpg, .png or .gif formats. The file must not exceed 1000 KB.</li>
 				</ul>
 				<p>
-					If you need more information please contact us at <a href="mailto:artbo@ccb.org.co">artbo@ccb.org.co.</a> or <tel>+(57)(1)383-0300</tel> ext. 2734.
+					If you need more information please contact us at <a href="mailto:artbo@ccb.org.co">artbo@ccb.org.co</a>.
 				</p>
 				<p>Thank you for your participation.</p>
 				</div>
