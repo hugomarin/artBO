@@ -8,26 +8,26 @@ $country		= new Country('country_id');
 
 $html	.= "<h3>Informaci&oacute;n de la galer&iacute;a</h3>
 <p>
-Imagen de la galer&iacute;a: <em>$imagenGaleria</em><br>
-Nombre comercial de la galer&iacute;a: <em> ".$user->__get('user_gallery_comname')." </em><br>
-Nombre de la empresa o raz&oacute;n social: <em> ".$user->__get('user_gallery_razon')." </em><br>
-Tipo de documento: <em> ".$user->__get('user_document_type')." </em><br>
-N&uacute;mero de documento: <em> ".$user->__get('user_gallery_document')." </em><br>
-Pa&iacute;s: <em>".$country->__get('country_id')."</em><br>
-Ciudad: <em> ".$user->__get('user_city')." </em><br>
-Direcci&oacute;n: <em> ".$user->__get('user_address')." </em><br>
-C&oacute;digo postal: <em> ".$user->__get('user_postal_code')." </em><br>
-Rese&ntilde;a de la galer&iacute;a: <em> ".$user->__get('user_gallery_comname')." </em><br>
-Tel&eacute;fono: <em> ".$user->__get('user_phone')." </em><br>
-Horario de apertura al p&uacute;blico (0:00 - 24:00): <em> ".$user->__get('user_open_time')." </em><br>
-&aacute;rea de exposici&oacute;n de la galer&iacute;a (mts2): <em> ".$user->__get('user_gallery_comname')." </em><br>
-A&ntilde;o de apertura: <em>".$user->__get('user_area')." </em><br>
-Perfil de la galer&iacute;a: <em> ".$user->__get('user_gallery_profile')."</em><br>
-Foto del director: <em>".$imagenDirector." </em><br>
-Nombre(s) completo del director: <em>".$user->__get('user_director_name')." </em><br>
-Correo(s) electr&oacute;nico del director: <em>".$user->__get('user_director_email')." </em><br>
-Nombre(s) persona contacto: <em>".$user->__get('user_contact_name')." </em><br>
-Correo(s) electr&oacute;nico contacto: <em>".$user->__get('user_contact_email')." </em><br>
+<strong>Imagen de la galer&iacute;a</strong>: <em>$imagenGaleria</em><br>
+<strong>Nombre comercial de la galer&iacute;a</strong>: <em> ".$user->__get('user_gallery_comname')." </em><br>
+<strong>Nombre de la empresa o raz&oacute;n social</strong>: <em> ".$user->__get('user_gallery_razon')." </em><br>
+<strong>Tipo de documento</strong>: <em> ".$user->__get('user_document_type')." </em><br>
+<strong>N&uacute;mero de documento</strong>: <em> ".$user->__get('user_gallery_document')." </em><br>
+<strong>Pa&iacute;s</strong>: <em>".$country->__get('country_id')."</em><br>
+<strong>Ciudad</strong>: <em> ".$user->__get('user_city')." </em><br>
+<strong>Direcci&oacute;n</strong>: <em> ".$user->__get('user_address')." </em><br>
+<strong>C&oacute;digo postal</strong>: <em> ".$user->__get('user_postal_code')." </em><br>
+<strong>Rese&ntilde;a de la galer&iacute;a</strong>: <em> ".$user->__get('user_gallery_comname')." </em><br>
+<strong>Tel&eacute;fono</strong>: <em> ".$user->__get('user_phone')." </em><br>
+<strong>Horario de apertura al p&uacute;blico (0:00 - 24:00)</strong>: <em> ".$user->__get('user_open_time')." </em><br>
+<strong>&aacute;rea de exposici&oacute;n de la galer&iacute;a (mts2)</strong>: <em> ".$user->__get('user_gallery_comname')." </em><br>
+<strong>A&ntilde;o de apertura</strong>: <em>".$user->__get('user_area')." </em><br>
+<strong>Perfil de la galer&iacute;a</strong>: <em> ".$user->__get('user_gallery_profile')."</em><br>
+<strong>Foto del director</strong>: <em>".$imagenDirector." </em><br>
+<strong>Nombre(s) completo del director</strong>: <em>".$user->__get('user_director_name')." </em><br>
+<strong>Correo(s) electr&oacute;nico del director</strong>: <em>".$user->__get('user_director_email')." </em><br>
+<strong>Nombre(s) persona contacto</strong>: <em>".$user->__get('user_contact_name')." </em><br>
+<strong>Correo(s) electr&oacute;nico contacto</strong>: <em>".$user->__get('user_contact_email')." </em><br>
 </p>
 ";
 //EXPOSICIONES
@@ -39,9 +39,9 @@ foreach ($expositions as $exposition)
 {
 	$html	.= "
 	<p>
-	Nombre de la exposici&oacute;n: <em>".$exposition->__get('exposition_name')."</em>,
-	A&ntilde;o: <em>".$exposition->__get('exposition_year')."</em>,
-	Mes: <em>".$exposition->__get('exposition_month')."</em>,
+	<strong>Nombre de la exposici&oacute;n</strong>: <em>".$exposition->__get('exposition_name')."</em>
+	<strong>A&ntilde;o</strong>: <em>".$exposition->__get('exposition_year')."</em>
+	<strong>Mes</strong>: <em>".$exposition->__get('exposition_month')."</em>
 	</p>";
 }
 //FERIAS
@@ -55,7 +55,7 @@ for ($i=0; $i < 8; $i++)
 $html	.= "<h3>Ferias</h3>";
 
 $html	.= "<p>
-Participaci&oacute;n en artBO <em> ";
+<strong>Participaci&oacute;n en artBO</strong>: <em> ";
 	$html	.= ($artbo[6] == 1) ? "2012<br>" : '';
 	$html	.= ($artbo[0] == 1) ? "2011<br>" : '';
 	$html	.= ($artbo[1] == 1) ? "2010<br>" : '';
@@ -64,7 +64,7 @@ Participaci&oacute;n en artBO <em> ";
 	$html	.= ($artbo[4] == 1) ? "2007<br>" : '';
 	$html	.= ($artbo[5] == 1) ? "2006<br>" : '';
 	$html	.= ($artbo[7] == 1) ? "2005<br>" : '';
-$html	.= "</em>,
+$html	.= "</em>
 </p>";
 
 $html	.= "<h4>Participaci&oacute;n en otras ferias</h4>";
@@ -74,10 +74,10 @@ foreach ($ferias as $feria)
 	$country	= new Country($feria->__get('country_id'));
 	$html	.= "
 	<p><!--Esto por cada feria-->
-	Nombre de la feria: <em>".$feria->__get('feria_name')."</em>,
-	Ciudad: <em>".$feria->__get('feria_city')."</em>,
-	Pa&iacute;s: <em>".$country->__get('country_id')."</em>,
-	A&ntilde;o: <em>".$feria->__get('feria_year')." </em>,
+	<strong>Nombre de la feria</strong>: <em>".$feria->__get('feria_name')."</em>,
+	<strong>Ciudad</strong>: <em>".$feria->__get('feria_city')."</em>,
+	<strong>Pa&iacute;s</strong>: <em>".$country->__get('country_id')."</em>,
+	<strong>A&ntilde;o</strong>: <em>".$feria->__get('feria_year')." </em>,
 	</p>";
 }
 
@@ -89,7 +89,7 @@ $html	.= "<h3>Artistas</h3>";
 $html	.= "
 
 <p>
-Propuesta art&iacute;stica para artBO 2013 (opcional, m&aacute;ximo 250 palabras): <em>".$user->__get('user_gallery_proposal')." </em>,
+<strong>Propuesta art&iacute;stica para artBO 2013</strong>: <em>".$user->__get('user_gallery_proposal')." </em>,
 </p>";
 
 $html	.= "<h4>Artistas representados propuestos para artBO</h4>";
