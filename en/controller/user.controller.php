@@ -434,7 +434,35 @@ switch ($action):
 								'fromName'	=> $fromName,
 								'replyTo'	=> $replyTo);	
 	
-			EmailHelper::sendMail($args);			
+			EmailHelper::sendMail($args);		
+			require_once('html2pdf.php');
+			//ob_start();
+			require(SITE_VIEW.'endmail2.php');
+			//$content = ob_get_clean();
+			//echo $content;
+			try
+			{
+				$dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8_decode($user->__get('user_name'))).'/';
+				// init HTML2PDF
+				$html2pdf = new HTML2PDF('P', 'A4', 'en', true, 'UTF-8', array(20, 20, 20, 20));
+			
+				// display the full page
+				$html2pdf->pdf->SetDisplayMode('fullpage');
+			
+				// convert
+				$html2pdf->writeHTML($html);
+			
+				// add the automatic index
+				//$html2pdf->createIndex('Sommaire', 30, 12, false, true, 2);
+			
+				// send the PDF
+				$html2pdf->Output($dir.'finalizar.pdf', 'F');
+			}
+			catch(HTML2PDF_exception $e) 
+			{
+				//echo $e;
+				exit;
+			}				
 			redirectUrl(APPLICATION_URL.'finalizar.html');
 		}
 		else

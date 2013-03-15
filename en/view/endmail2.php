@@ -119,11 +119,10 @@ $html	.= "
 			Media: <em>".$artistWork[($j - 1)]->__get('artist_work_technique')."</em><br>
 			Dimensions: <em>".$artistWork[($j - 1)]->__get('artist_work_dimensions')."</em><br>
 			Year: <em>". $artistWork[($j - 1)]->__get('artist_work_year')."</em><br>
-			Image: <em>". $file."</em><br>
-			
-			</p>";
+			Image: <em>". $file."</em><br>";
 		}		
 	}
+	$html	. = "</p>";
 }
 
 $html	.= "<h4>Other artists represented by the Gallery</h4>";

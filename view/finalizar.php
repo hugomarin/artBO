@@ -1,5 +1,8 @@
 
-<?php include_once(SITE_VIEW.'header-login.php'); ?>
+<?php 
+include_once(SITE_VIEW.'header-login.php'); 
+$dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8_decode($user->__get('user_name'))).'/';
+?>
 
 
 
@@ -16,9 +19,9 @@
 			</div>
 			<?php
 			echo '<h2>Su registro es el n&uacute;mero '.$user->__get('user_id').'</h2>';
-            require_once(SITE_VIEW.'endmail2.php');
-            echo utf8_decode($html);
-
+           // require_once(SITE_VIEW.'endmail2.php');
+            //echo utf8_decode($html);
+			echo '<p><a href="'.$dir.'finalizar.pdf">Descargue su pdf</a>';
             ?>            
 		</div>
 		<div class="inner-footer">
