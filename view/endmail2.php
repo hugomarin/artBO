@@ -1,6 +1,6 @@
 <?php
 $dir			= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8_decode($user->__get('user_name'))).'/';
-$html			= '';
+$html			= '<img src="http://www.activemgmd.com/ccb/ccb-galerias/images/logo-bw.jpg">';
 // FIRST
 $imagenGaleria	= APPLICATION_FULL_URL.$dir.$user->__get('user_gallery_image');
 $imagenDirector	= APPLICATION_FULL_URL.$dir.$user->__get('user_director_image');
@@ -101,12 +101,12 @@ for($i = 1; $i <= count($artists); $i++)
 	$artistWork	= ArtistWorkHelper::retrieveArtistWorks("AND artist_id = " . $artist->__get('artist_id'));
 $html	.= "
 	<p>
-	Nombre: <em> </em><br>
-	Apellido: <em> </em><br>
-	Nacionalidad: <em> </em><br>
-	Fecha de nacimiento: <em>".$artist->__get('artist_birthday')." </em><br>
-	Lugar de residencia: <em>". $artist->__get('artist_residency')." </em><br>
-	Rese&ntilde;a del artista: <em>".$artist->__get('artist_review')." </em><br>";
+	<strong>Nombre</strong>: <em> </em><br>
+	<strong>Apellido</strong>: <em> </em><br>
+	<strong>Nacionalidad</strong>: <em> </em><br>
+	<strong>Fecha de nacimiento</strong>: <em>".$artist->__get('artist_birthday')." </em><br>
+	<strong>Lugar de residencia</strong>: <em>". $artist->__get('artist_residency')." </em><br>
+	<strong>Rese&ntilde;a del artista</strong>: <em>".$artist->__get('artist_review')." </em><br>";
 
 	for($j=1; $j<=3; $j++)
 	{		
@@ -115,11 +115,11 @@ $html	.= "
 		{
 			
 			$file = file_exists($dir2 . $artistWork[($j - 1)]->__get('artist_work_file')) ? APPLICATION_FULL_URL . $dir2 . $artistWork[($j - 1)]->__get('artist_work_file') : '';
-			$html	.= "Nombre de la obra: <em>".$artistWork[($j - 1)]->__get('artist_work_name')."</em><br>
-			T&eacute;cnica: <em>".$artistWork[($j - 1)]->__get('artist_work_technique')."</em><br>
-			Dimensiones: <em>".$artistWork[($j - 1)]->__get('artist_work_dimensions')."</em><br>
-			A&ntilde;o de realizaci&oacute;n: <em>". $artistWork[($j - 1)]->__get('artist_work_year')."</em><br>
-			Imagen: <em>". $file."</em><br>";
+			$html	.= "<strong>Nombre de la obra</strong>: <em>".$artistWork[($j - 1)]->__get('artist_work_name')."</em><br>
+			<strong>T&eacute;cnica</strong>: <em>".$artistWork[($j - 1)]->__get('artist_work_technique')."</em><br>
+			<strong>Dimensiones</strong>: <em>".$artistWork[($j - 1)]->__get('artist_work_dimensions')."</em><br>
+			<strong>A&ntilde;o de realizaci&oacute;n</strong>: <em>". $artistWork[($j - 1)]->__get('artist_work_year')."</em><br>
+			<strong>Imagen</strong>: <em>". $file."</em><br>";
 			
 		}		
 	}
@@ -154,7 +154,7 @@ $html	.= "<h3>Tipo de Stands</h3>";
 $html	.= "<p>
 
 Tipo de stand: <em>".$stand."</em><br>
-Nombre para la cornisa del stand: <em>".$user->__get('user_space_name')."</em>,
+<strong>Nombre para la cornisa del stand</strong>: <em>".$user->__get('user_space_name')."</em>
 </p>
 ";
 
@@ -163,10 +163,10 @@ Nombre para la cornisa del stand: <em>".$user->__get('user_space_name')."</em>,
 $html	.= "<h3>Documentos</h3>";
 
 $html	.= "<p>
-Certificado de existencia: <em>".APPLICATION_FULL_URL.$dir.$user->__get('user_certificate')."</em><br>
-RUT o identificaci&oacute;n fiscal: <em>".APPLICATION_FULL_URL.$dir.$user->__get('user_rut')."</em><br>
-Documento de identidad: <em>".APPLICATION_FULL_URL.$dir.$user->__get('user_document')."</em><br>
-Registro de pago: <em>".APPLICATION_FULL_URL.$dir.$user->__get('user_payment')."</em><br>
+<strong>Certificado de existencia</strong>: <em>".APPLICATION_FULL_URL.$dir.$user->__get('user_certificate')."</em><br>
+<strong>RUT o identificaci&oacute;n fiscal</strong>: <em>".APPLICATION_FULL_URL.$dir.$user->__get('user_rut')."</em><br>
+<strong>Documento de identidad</strong>: <em>".APPLICATION_FULL_URL.$dir.$user->__get('user_document')."</em><br>
+<strong>Registro de pago</strong>: <em>".APPLICATION_FULL_URL.$dir.$user->__get('user_payment')."</em><br>
 </p>
 ";
 
