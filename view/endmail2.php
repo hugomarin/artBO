@@ -6,7 +6,13 @@ $imagenGaleria	= APPLICATION_FULL_URL.$dir.$user->__get('user_gallery_image');
 $imagenDirector	= APPLICATION_FULL_URL.$dir.$user->__get('user_director_image');
 $country		= new Country('country_id');
 
-$html	.= "<h3>Informaci&oacute;n de la galer&iacute;a</h3>
+$html	.= "
+
+<br>
+<h1>Aplicación artBO 2013</h1>
+<br>
+<br>
+<h3>Informaci&oacute;n de la galer&iacute;a</h3>
 <p>
 <strong>Imagen de la galer&iacute;a</strong>: <em>$imagenGaleria</em><br>
 <strong>Nombre comercial de la galer&iacute;a</strong>: <em> ".$user->__get('user_gallery_comname')." </em><br>
