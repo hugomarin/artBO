@@ -4,7 +4,7 @@ $html			= '';
 // FIRST
 $imagenGaleria	= APPLICATION_FULL_URL.$dir.$user->__get('user_gallery_image');
 $imagenDirector	= APPLICATION_FULL_URL.$dir.$user->__get('user_director_image');
-$country		= new Country('country_id');
+$country		= new Country($user->__get('country_id'));
 
 $html	.= "<h3>Informaci&oacute;n de la galer&iacute;a</h3>
 <p>
