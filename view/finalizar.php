@@ -14,14 +14,14 @@ $dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8
 				<div class="twelve columns">
 					<h3>Gracias por participar en la convocatoria par galerías artBO 2013</h3> 
 					
-					<p>A continuación puede ver los datos registrados. Para futuras referencias, <strong>recuerde imprimir esta pantalla pues no es posible acceder a ella ni a su perfil nuevamente. El listado de las galerías seleccionadas se publicará en <a href="http://www.artboonline.com" target="_blank">www.artboonline.com</a>.</strong></p>					
+					<p>El listado de las galerías seleccionadas se publicará en <a href="http://www.artboonline.com" target="_blank">www.artboonline.com</a>.</p>					
 				</div>
 			</div>
 			<?php
-			echo '<h2>Su registro es el n&uacute;mero '.$user->__get('user_id').'</h2>';
+			echo '<h4>Su registro es el n&uacute;mero: '.$user->__get('user_id').'</h4>';
            // require_once(SITE_VIEW.'endmail2.php');
             //echo utf8_decode($html);
-			echo '<p><a href="'.$dir.'finalizar.pdf">Descargue su pdf</a>';
+			echo '<h5><strong><a href="'.$dir.'finalizar.pdf">Descargue su pdf</a></strong>';
             ?>            
 		</div>
 		<div class="inner-footer">
