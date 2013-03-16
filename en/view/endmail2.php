@@ -4,7 +4,7 @@ $html			= '<img src="http://www.activemgmd.com/ccb/ccb-galerias/images/logo-bw.j
 // FIRST
 $imagenGaleria	= APPLICATION_FULL_URL.$dir.$user->__get('user_gallery_image');
 $imagenDirector	= APPLICATION_FULL_URL.$dir.$user->__get('user_director_image');
-$country		= new Country('country_id');
+$country		= $country  = new Country($user->__get('country_id'));
 
 $html	.= "<h3>Gallery</h3>
 
