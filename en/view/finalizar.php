@@ -13,13 +13,13 @@ $dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8
 		<div class="inner-header">
 			<div class="row">
 				<div class="twelve columns">
-					<h3>Thank you for participating in <strong> ArtBo 2013.</strong></h3> 
+					<h3>Thank you for participating in ArtBo 2013.</h3> 
 					
 					<p>The list of selected galleries will be published in <a href="http://www.artboonline.com" target="_blank">www.artboonline.com</a>.</p>					
 				</div>
 			</div>
 			<?php
-			echo '<h2>Your registry number is '.$user->__get('user_id').'</h2>';
+			echo '<h4>Your registry number is: '.$user->__get('user_id').'</h4>';
             //require_once(SITE_VIEW.'endmail2.php');
             //echo utf8_decode($html);
 			echo '<h5><strong><a href="'.$dir.'finalizar.pdf">Download your registry info</a></strong>';
