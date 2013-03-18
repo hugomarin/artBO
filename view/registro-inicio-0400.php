@@ -13,7 +13,7 @@
 				<p>Puede ir completando la información solicitada paso a paso o empezar por cualquiera de las secciones. Guarde siempre los cambios realizados. Si aplicó a artBO 2012, la información que registró se guardó en su perfil.</p>
 				<p><strong>Su aplicación será válida cuando realice el pago de los derechos de inscripción por un valor de USD $160.00. <a href="http://servicios.corferias.com/inscripcion/?ano=2013&evento=23" target="_blank"> Pague aquí.</a></strong></p>
 				
-				<p>Consulte el Reglamento de Participación de artBO <a href="" target="_blank">aquí.</a></p>
+				<p>Consulte el Reglamento de Participación de artBO <a href="http://www.artboonline.com/documentos/2130_reglamento_participacion_2013.pdf" target="_blank">aquí.</a></p>
 				<h5>Información que deberá completar en cada sección:</h5>
 				<ul class="no-bullet">
 					<li class="thin">1. <strong>Galería:</strong> información básica de la galería.</li>
@@ -56,10 +56,10 @@
 				</div><!-- END Main: Panel -->
 				<div class="advisory">
 					<span>Recomendamos visualizar en: IE 9.0 - Firefox 10.0 - Safari 5.1 - Chrome 17.0     |     Optimizada 1024 x 768</span>
-					<span><a href="#">Términos y Condiciones</a> del Sitio</span>
+					<span><a href="http://www.artboonline.com/documentos/2130_reglamento_participacion_2013.pdf" target="_blank">Términos y Condiciones</a> del Sitio</span>
 				</div>
 		</div>
-	<!-- 3. END Row main -->
+	<!-- 3. END Row main --> 
 		
 <!-- 4. footer -->			
 <?php include_once('footer.php'); ?>
