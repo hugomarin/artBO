@@ -19,7 +19,7 @@ $html	.= "
 <strong>Nombre de la empresa o raz&oacute;n social</strong>: <em> ".$user->__get('user_gallery_razon')." </em><br>
 <strong>Tipo de documento</strong>: <em> ".$user->__get('user_document_type')." </em><br>
 <strong>N&uacute;mero de documento</strong>: <em> ".$user->__get('user_gallery_document')." </em><br>
-<strong>Pa&iacute;s</strong>: <em>".$country->__get('country_id')."</em><br>
+<strong>Pa&iacute;s</strong>: <em>".$country->__get('country_name')."</em><br>
 <strong>Ciudad</strong>: <em> ".$user->__get('user_city')." </em><br>
 <strong>Direcci&oacute;n</strong>: <em> ".$user->__get('user_address')." </em><br>
 <strong>C&oacute;digo postal</strong>: <em> ".$user->__get('user_postal_code')." </em><br>
@@ -107,9 +107,9 @@ for($i = 1; $i <= count($artists); $i++)
 	$artistWork	= ArtistWorkHelper::retrieveArtistWorks("AND artist_id = " . $artist->__get('artist_id'));
 $html	.= "
 	<p>
-	<strong>Nombre</strong>: <em> </em><br>
-	<strong>Apellido</strong>: <em> </em><br>
-	<strong>Nacionalidad</strong>: <em> </em><br>
+	<strong>Nombre</strong>: <em>". $artist->__get('artist_name')."</em><br>
+	<strong>Apellido</strong>: <em>".$artist->__get('artist_surname') ."</em><br>
+	<strong>Nacionalidad</strong>: <em>".$artist->__get('artist_nationality')."</em><br>
 	<strong>Fecha de nacimiento</strong>: <em>".$artist->__get('artist_birthday')." </em><br>
 	<strong>Lugar de residencia</strong>: <em>". $artist->__get('artist_residency')." </em><br>
 	<strong>Rese&ntilde;a del artista</strong>: <em>".$artist->__get('artist_review')." </em><br>";
