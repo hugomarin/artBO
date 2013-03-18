@@ -22,7 +22,7 @@ $dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8
 			echo '<h4>Your registry number is: '.$user->__get('user_id').'</h4>';
             //require_once(SITE_VIEW.'endmail2.php');
             //echo utf8_decode($html);
-			echo '<h5><strong><a href="'.$dir.'finalizar.pdf">Download your registry info</a></strong>';
+			echo '<h5><strong><a href="'.$dir.'finalizar.pdf" target="_blank">Download your registry info</a></strong>';
             ?>            
 		</div>
 		<div class="inner-footer">

@@ -79,7 +79,7 @@ foreach ($ferias as $feria)
 	Name of the Fair: <em>".$feria->__get('feria_name')."</em>,
 	City: <em>".$feria->__get('feria_city')."</em>,
 	Country: <em>".$country->__get('country_id')."</em>,
-	Year: <em>".$feria->__get('feria_year')." </em>,
+	Year: <em>".$feria->__get('feria_year')." </em><br />
 	</p>";
 }
 

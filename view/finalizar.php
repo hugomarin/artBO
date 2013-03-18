@@ -21,7 +21,7 @@ $dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8
 			echo '<h4>Su registro es el n&uacute;mero: '.$user->__get('user_id').'</h4>';
            // require_once(SITE_VIEW.'endmail2.php');
             //echo utf8_decode($html);
-			echo '<h5><strong><a href="'.$dir.'finalizar.pdf">Descargue su pdf</a></strong>';
+			echo '<h5><strong><a href="'.$dir.'finalizar.pdf" target="_blank">Descargue su pdf</a></strong>';
             ?>            
 		</div>
 		<div class="inner-footer">

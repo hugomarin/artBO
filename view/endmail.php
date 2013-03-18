@@ -77,7 +77,7 @@ foreach ($ferias as $feria)
 	Nombre de la feria: <em>".$feria->__get('feria_name')."</em>,
 	Ciudad: <em>".$feria->__get('feria_city')."</em>,
 	Pa&iacute;s: <em>".$country->__get('country_id')."</em>,
-	A&ntilde;o: <em>".$feria->__get('feria_year')." </em>,
+	A&ntilde;o: <em>".$feria->__get('feria_year')." </em><br />
 	</p>";
 }
 
