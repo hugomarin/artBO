@@ -62,8 +62,8 @@ include_once('menu.php');
 			</div><!--/inner-footer-->
 	</div><!-- END Main: Panel -->
 	<div class="advisory">
-		<span>Recomendamos visualizar en: IE 9.0 - Firefox 10.0 - Safari 5.1 - Chrome 17.0     |     Optimizada 1024 x 768</span>
-		<span><a href="http://www.artboonline.com/documentos/2130_reglamento_participacion_2013.pdf" target="_blank">Términos y Condiciones</a> del Sitio</span>
+		<span>We recommend viewing in: IE 9.0 - 10.0 Firefox - Safari 5.1 - 17.0 Chrome | 1024 x 768 Optimized</span>
+		<span>Website <a href="http://english.artboonline.com/documentos/2131_terms_and_conditions_galleries.pdf" target="_blank">Terms and Conditions</a></span>
 	</div>
 </div><!-- 3. END Main: Row -->
 </div>

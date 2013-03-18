@@ -13,7 +13,7 @@
 				<p>You can fill in the required information step by step or begin by any of the sections. Please remember always to save any changes you make.  If you applied to artBO 2012, the information you previously registered has been saved to your profile.</p>
 				<p><strong>Your application will only be valid if you pay the application fee in the amount of USD$ 160.00. <a href="http://servicios.corferias.com/inscripcion/?ano=2013&evento=23" target="_blank"> Please pay here.</a></strong></p>
 				
-				<p>Consult the Terms and Conditions of Participation  <a href="" target="_blank"> here.</a></p>
+				<p>Consult the Terms and Conditions of Participation  <a href="http://english.artboonline.com/documentos/2131_terms_and_conditions_galleries.pdf" target="_blank"> here.</a></p>
 				<h5>This is a brief description of information requested in each section:</h5>
 				<ul class="no-bullet">
 					<li class="thin">1. <strong>Gallery </strong> Basic information about the gallery.</li>
@@ -54,9 +54,9 @@
 						</div>
 					</div><!--/inner-footer-->
 				</div><!-- END Main: Panel -->
-				<div class="advisory">
-					<span>Recomendamos visualizar en: IE 9.0 - Firefox 10.0 - Safari 5.1 - Chrome 17.0     |     Optimizada 1024 x 768</span>
-					<span><a href="#">Términos y Condiciones</a> del Sitio</span>
+				<div class="advisory"> 
+					<span>We recommend viewing in: IE 9.0 - 10.0 Firefox - Safari 5.1 - 17.0 Chrome | 1024 x 768 Optimized</span>
+					<span>Website <a href="http://english.artboonline.com/documentos/2131_terms_and_conditions_galleries.pdf" target="_blank">Terms and Conditions</a></span>
 				</div>
 		</div>
 	<!-- 3. END Row main -->
