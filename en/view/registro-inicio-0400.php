@@ -16,7 +16,7 @@
 				<p>Consult the Terms and Conditions of Participation  <a href="http://english.artboonline.com/documentos/2131_terms_and_conditions_galleries.pdf" target="_blank"> here.</a></p>
 				<h5>This is a brief description of information requested in each section:</h5>
 				<ul class="no-bullet">
-					<li class="thin">1. <strong>Gallery </strong> Basic information about the gallery.</li>
+					<li class="thin">1. <strong>Gallery: </strong> Basic information about the gallery.</li>
 					<li class="thin">2. <strong>Exhibitions:</strong> List of the exhibitions held between 2011 and 2013.</li>
 					<li class="thin">3. <strong>Fairs : </strong>Participation in previous editions or artBO and in other international fairs.</li>
 					<li class="thin">4. <strong>Artists:</strong> The artists that you propose for your stand at artBO 2013 and other artists represented by your gallery. Please remember that according to the size of the stand you select, you can propose an artist every 10 mt². For every artist proposed you may upload three images.</li>

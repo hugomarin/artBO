@@ -17,7 +17,7 @@
 				<h5>Información que deberá completar en cada sección:</h5>
 				<ul class="no-bullet">
 					<li class="thin">1. <strong>Galería:</strong> información básica de la galería.</li>
-					<li class="thin">2. <strong>Exposiciones:</strong>lista de las exposiciones realizadas entre el 2011 y el 2013, en orden cronológico.</li>
+					<li class="thin">2. <strong>Exposiciones:</strong> lista de las exposiciones realizadas entre el 2011 y el 2013, en orden cronológico.</li>
 					<li class="thin">3. <strong>Ferias: </strong>participación en otras versiones de artBO y ferias internacionales.</li>
 					<li class="thin">4. <strong>Artistas:</strong> artistas propuestos para versión 2013 y otros artistas representados por su galería. Recuerde que según el tamaño del stand que solicite podrá proponer un artista a partir de cada 10 mt². Por cada artista propuesto para esta versión podrá incluir hasta tres obras.</li>
 					<li class="thin">5. <strong>Tipo de <em>stand</em>:</strong> Plus 63mt², 63mt², 45mt² y 31.50mt². <a href="#">Consulte aquí más información.</a></li>

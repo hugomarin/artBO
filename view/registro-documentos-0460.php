@@ -15,7 +15,7 @@ else
 <script language="javascript">
 function alertNotYet()
 {
-	alert ('Debe completar los pasos anteriores antes de guardar su formulario');
+	alert ('Debe completar los pasos anteriores antes de finalizar su registro.');
 }
 </script>
 <div class="row main-row">	
