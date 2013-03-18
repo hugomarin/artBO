@@ -28,14 +28,14 @@ function decide($field, $required, $user)
 	<div class="row">
 		<div class="six columns">
 			<div class="mid-input gallery-image">
-				<label title="Cargue la imagen correspondiente a su galería"><span class="asterix">*</span>Gallery image</label>
+				<label title="Upload Gallery image"><span class="asterix">*</span>Gallery image</label>
 				<!-- <i>Imagen del espacio expositivo</i>
 				<br /> -->
                 <?php
-				$image	= (($user->__get('user_gallery_image') != '') && (!file_exists(APPLICATION_URL.$dir.$user->__get('user_gallery_image')))) ? APPLICATION_URL.$dir.$user->__get('user_gallery_image') : $default;
+				$image	= (($user->__get('user_gallery_image') != '') && (!file_exists(APPLICATION_IMAGE_URL.$dir.$user->__get('user_gallery_image')))) ? APPLICATION_IMAGE_URL.$dir.$user->__get('user_gallery_image') : $default;
 				?>
-				<img src="<?php echo $image;?>" class="images" title="Imagen de la Galería">                
-				<p class="caption">You can upload an image of the last exhibition held at your gallery in .jpg, .png or .gif. The file must not exceed 1000 KB.</p><br />
+				<img src="<?php echo $image;?>" class="images" title="Gallery image">                
+				<p class="caption">You can upload an image of the last exhibition held at your gallery in .JPG, .PNG. The file must not exceed 1000 KB.</p><br />
                 <div id="user_gallery_image"></div>
                                             
                 <br />
@@ -45,15 +45,15 @@ function decide($field, $required, $user)
 		
 		<div class="six columns">
 			<div class="mid-input galleryname-data">
-				<label><span class="asterix">*</span>Comercial Name of the Gallery</label>	
-				<input type="text" name="user_gallery_comname" class="expand input-text <?php echo decide('user_gallery_comname', $required, $user);?>" value="<?php echo $user->__get('user_gallery_comname');?>" title="Digite el nombre comercial de la galería"/>
+				<label><span class="asterix">*</span>Commercial Name of the Gallery</label>	
+				<input type="text" name="user_gallery_comname" class="expand input-text <?php echo decide('user_gallery_comname', $required, $user);?>" value="<?php echo $user->__get('user_gallery_comname');?>" title="Enter the commercial name of the gallery"/>
 			</div><!--/ galleryname-data-->
 			
 			
 				<div class="mid-input companyname-data">
 					<label><span class="asterix">*</span>Company Name or Business Name</label>	
-					<input type="text" name="user_gallery_razon" class="expand input-text <?php echo decide('user_gallery_razon', $required, $user);?>" value="<?php echo $user->__get('user_gallery_razon');?>" title="Digite el nombre de la empresa o razón social"/>
-					<p class="caption"><strong>Note:</strong> Note that this name will be used for billing.</p>
+					<input type="text" name="user_gallery_razon" class="expand input-text <?php echo decide('user_gallery_razon', $required, $user);?>" value="<?php echo $user->__get('user_gallery_razon');?>" title="Enter the company name or business name"/>
+					<p class="caption"><strong>Note:</strong> This name will be used for billing.</p>
 				</div><!--/companyname-data-->
 			<div class="block">	
 				<div class="mid-input doctype-data">
@@ -67,14 +67,14 @@ function decide($field, $required, $user)
 			
 				<div class="mid-input docnumber-data">
 					<label><span class="asterix">*</span> Number of the Document</label>	
-					<input type="text" name="user_gallery_document" class="expand input-text <?php echo decide('user_gallery_document', $required, $user);?>" value="<?php echo $user->__get('user_gallery_document');?>" title="Digite el número del documento"/>
+					<input type="text" name="user_gallery_document" class="expand input-text <?php echo decide('user_gallery_document', $required, $user);?>" value="<?php echo $user->__get('user_gallery_document');?>" title="Enter the number of your document"/>
 				</div><!--/companyname-data-->
 			</div>
 			<p class="caption"><strong>Note:</strong>This number will be used to register the entry of the works, goods and equipment to Corferias, the fair venue.</p>
 			
 			<div class="mid-input website-data">
 				<label>Webpage</label>
-				<input type="text" name="user_gallery_website" class="expand input-text" value="<?php echo $user->__get('user_gallery_website');?>" title="Digite la dirección electrónica de su página web"/>
+				<input type="text" name="user_gallery_website" class="expand input-text" value="<?php echo $user->__get('user_gallery_website');?>" title="Enter the webpage"/>
 			</div><!--/website-data-->
 		</div><!--/six columns-->
 	</div><!--/row-->
@@ -84,14 +84,14 @@ function decide($field, $required, $user)
 			
 			<div class="mid-input country-data">
 			<label><span class="asterix">*</span>Country</label>	
-				<select name="country_id" title="Seleccione el país" class="<?php echo decide('country_id', $required, $user);?>">
+				<select name="country_id" title="Enter the country" class="<?php echo decide('country_id', $required, $user);?>">
 					<option value="NULL">Select</option>
 					<?php
 					foreach ($countries as $country)
 					{
 						$selected = ($country->__get('country_id') == $user->__get('country_id')) ? 'selected="selected"' : '';
 					?>
-			        	<option value="<?php echo $country->__get('country_id')?>" <?php echo $selected;?>><?php echo utf8_encode($country->__get('country_name'));?></option>
+			        	<option value="<?php echo $country->__get('country_id')?>" <?php echo $selected;?>><?php echo utf8_encode($country->__get('country_name_en'));?></option>
 			        <?php
 					}
 					?>
@@ -100,18 +100,18 @@ function decide($field, $required, $user)
 			
 			<div class="mid-input city-data">
 				<label><span class="asterix">*</span>City</label>	
-				<input type="text" name="user_city" class="expand input-text <?php echo decide('user_city', $required, $user);?>" value="<?php echo $user->__get('user_city');?>" title="Digite la ciudad"/>
+				<input type="text" name="user_city" class="expand input-text <?php echo decide('user_city', $required, $user);?>" value="<?php echo $user->__get('user_city');?>" title="Enter the city"/>
 			</div><!--/city-data-->
 			
 				
 			<div class="mid-input address-data">
 				<label><span class="asterix">*</span>Address</label>	
-				<input type="text"  name="user_address"  class="expand input-text <?php echo decide('user_address', $required, $user);?>" value="<?php echo $user->__get('user_address');?>" title="Digite la dirección"/>
+				<input type="text"  name="user_address"  class="expand input-text <?php echo decide('user_address', $required, $user);?>" value="<?php echo $user->__get('user_address');?>" title="Enter the address"/>
 			</div><!--/address-date-->
 			
 			<div class="mid-input postalcode-data">
 				<label><span class="asterix">*</span>Postal Code</label>	
-				<input type="text"  name="user_postal_code" class="expand input-text <?php echo decide('user_postal_code', $required, $user);?>" value="<?php echo $user->__get('user_postal_code');?>" title="Digite el código postal" 
+				<input type="text"  name="user_postal_code" class="expand input-text <?php echo decide('user_postal_code', $required, $user);?>" value="<?php echo $user->__get('user_postal_code');?>" title="Enter the ZIP code" 
 				/>
 			</div><!--/postalcode-data-->
 
@@ -123,15 +123,15 @@ function decide($field, $required, $user)
 				<div class="row">
 					<div class="four columns">
 						<label>Country code</label>	
-						<input type="text" placeholder="57" name="phone_0" class="small input-text <?php echo decide('user_phone', $required, $user);?>" title="Digite el código de país" value="<?php echo (isset($phone[0])) ? $phone[0] : '';?>"/>
+						<input type="text" placeholder="57" name="phone_0" class="small input-text <?php echo decide('user_phone', $required, $user);?>" title="Enter the country code" value="<?php echo (isset($phone[0])) ? $phone[0] : '';?>"/>
 					</div>
 					<div class="four columns">
 						<label>Area</label>	
-						<input type="text" name="phone_1" class="small input-text <?php echo decide('user_phone', $required, $user);?>" title="Digite el código de área" value="<?php echo (isset($phone[1])) ? $phone[1] : '';?>" />
+						<input type="text" name="phone_1" class="small input-text <?php echo decide('user_phone', $required, $user);?>" title="Enter the area code" value="<?php echo (isset($phone[1])) ? $phone[1] : '';?>" />
 					</div>
 					<div class="four columns">
 						<label>Number</label>	
-						<input type="text" name="phone_2" class="expand input-text <?php echo decide('user_phone', $required, $user);?>" title="Digite el número de teléfono" value="<?php echo (isset($phone[2])) ? $phone[2] : '';?>" />
+						<input type="text" name="phone_2" class="expand input-text <?php echo decide('user_phone', $required, $user);?>" title="Enter the telephone number" value="<?php echo (isset($phone[2])) ? $phone[2] : '';?>" />
 					</div>
 				</div>
 			</div><!--/telephone-data-->
@@ -141,15 +141,15 @@ function decide($field, $required, $user)
 				<div class="row">
 					<div class="four columns">
 						<label>Country Code</label>	
-						<input type="text" placeholder="57" name="mobile_0"  class="small input-text" title="Digite el código de país" value="<?php echo (isset($mobile[0])) ? $mobile[0] : '';?>" />	
+						<input type="text" placeholder="57" name="mobile_0"  class="small input-text" title="Enter the country code" value="<?php echo (isset($mobile[0])) ? $mobile[0] : '';?>" />	
 					</div>
 					<div class="four columns">
 						<label>Area</label>	
-						<input type="text"  class="small input-text" name="mobile_1" title="Digite el código de área" value="<?php echo (isset($mobile[1])) ? $mobile[1] : '';?>" />
+						<input type="text"  class="small input-text" name="mobile_1" title="Enter the area code" value="<?php echo (isset($mobile[1])) ? $mobile[1] : '';?>" />
 					</div>
 					<div class="four columns">
 						<label>Mobile Number</label>	
-						<input type="text" class="expand input-text" name="mobile_2" title="Digite el número de teléfono" value="<?php echo (isset($mobile[2])) ? $mobile[2] : '';?>" />
+						<input type="text" class="expand input-text" name="mobile_2" title="Enter the telephone number" value="<?php echo (isset($mobile[2])) ? $mobile[2] : '';?>" />
 					</div>
 				</div>
 			</div><!--/mobil-data-->
@@ -165,7 +165,7 @@ function decide($field, $required, $user)
 			<div class="mid-input review-data">
 				<label><span class="asterix">*</span>Gallery Review</label>
 				<span class="caption"><strong>Note: </strong>A brief text (500 words maximum) on the gallery</span>
-				<textarea name="user_abstract" title="Digite el texto correspondiente a la reseña de la galería"  class="expand <?php echo decide('user_abstract', $required, $user);?>" rows="10" ><?php echo $user->__get('user_abstract');?></textarea>
+				<textarea name="user_abstract" title="Enter Gallery Review"  class="expand <?php echo decide('user_abstract', $required, $user);?>" rows="10" ><?php echo $user->__get('user_abstract');?></textarea>
 			</div><!--/review-data-->
 		</div><!--/six columns-->
 		
@@ -174,13 +174,13 @@ function decide($field, $required, $user)
 				<div class="six columns">
 					<div class="mid-input schedule-data">
 						<label><span class="asterix">*</span>Hours open to the public (0:00 - 24:00)</label>
-						<input name="user_open_time" type="text" title="Digite los horarios de apertura <?php echo decide('user_abstract', $required, $user);?>" value="<?php echo $user->__get('user_open_time');?>" class="small input-text expand" />
+						<input name="user_open_time" type="text" title="Enter Hours open to the public " value="<?php echo $user->__get('user_open_time');?>" class="small input-text expand <?php echo decide('user_abstract', $required, $user);?>" />
 					</div><!--/schedule-data-->
 				</div>
 				<div class="six columns">	
 					<div class="mid-input area-data">
 						<label><span class="asterix">*</span>Exhibition area of the gallery (mts<sup>2</sup>)</label>
-						<input name="user_area" type="text" title=": Indique el área de exposición de la galería" value="<?php echo $user->__get('user_area');?>" class="small input-text expand <?php echo decide('user_area', $required, $user);?>" />
+						<input name="user_area" type="text" title="Enter Exhibition area of the gallery" value="<?php echo $user->__get('user_area');?>" class="small input-text expand <?php echo decide('user_area', $required, $user);?>" />
 					</div><!--/area-data-->
 				</div>
 			</div><!--/row-->
@@ -189,7 +189,7 @@ function decide($field, $required, $user)
 				<div class="six columns">
 					<div class="mid-input year-data">
 						<label><span class="asterix">*</span>Opening year</label>
-						<select name="user_open_year" title="Seleccione el año de apertura">
+						<select name="user_open_year" title="Enter opening year">
 						  <option SELECTED>Select</option>
 					      <?php 
 						  for ($i = 2012; $i > 1960; $i--)
@@ -207,7 +207,7 @@ function decide($field, $required, $user)
 				<div class="six columns">
 					<div class="mid-input galleryprofile-data">
 						<label><span class="asterix">*</span>Gallery profile</label>
-						<select name="user_gallery_profile" title="Seleccione el perfil de la galería" class="<?php echo decide('user_gallery_profile', $required, $user);?>" onchange="if (this.value == 'Otro') { document.getElementById('hiddenField').style.display=''; } else { document.getElementById('hiddenField').style.display='none'; } ">
+						<select name="user_gallery_profile" title="enter Gallery profile" class="<?php echo decide('user_gallery_profile', $required, $user);?>" onchange="if (this.value == 'Otro') { document.getElementById('hiddenField').style.display=''; } else { document.getElementById('hiddenField').style.display='none'; } ">
 						  <option value="NULL">Select</option>
                           <option value="Modern" <?php if ($user->__get('user_gallery_profile') == 'Moderno') echo 'SELECTED="SELECTED"';?>>Modern</option>
                           <option value="Contemporary" <?php if ($user->__get('user_gallery_profile') == 'Contemporáneo') echo 'SELECTED="SELECTED"';?>>Contemporary</option>
@@ -232,7 +232,7 @@ function decide($field, $required, $user)
 				<div class="mid-input director-image">
 					<label><span class="asterix">*</span>Photo of Director</label>
 					<?php
-                    $image	= (($user->__get('user_director_image') != '') && (!file_exists(APPLICATION_URL.$dir.$user->__get('user_director_image')))) ? APPLICATION_URL.$dir.$user->__get('user_director_image') : $default;
+                    $image	= (($user->__get('user_director_image') != '') && (!file_exists(APPLICATION_IMAGE_URL.$dir.$user->__get('user_director_image')))) ? APPLICATION_IMAGE_URL.$dir.$user->__get('user_director_image') : $default;
                         
                     ?>
                     <img src="<?php echo $image;?>" class="images" title="Imagen del director">                
@@ -244,23 +244,23 @@ function decide($field, $required, $user)
 			<div class="six columns">
 				<div class="mid-input directorname-data">
 					<label><span class="asterix">*</span>Name(s) of the Director</label>	
-					<input type="text" name="user_director_name" class="expand input-text <?php echo decide('user_director_name', $required, $user);?>" title="Digite el nombre completo del director" value="<?php echo $user->__get('user_director_name');?>" />
+					<input type="text" name="user_director_name" class="expand input-text <?php echo decide('user_director_name', $required, $user);?>" title="Enter the full name of the directo" value="<?php echo $user->__get('user_director_name');?>" />
 					<p class="caption"><strong>Note:</strong> If there is more than one director or contact person, please separate the data with comas</p>
 				</div><!--/directorname-data-->
 					
 				<div class="mid-input emaildirector-data">
 					<label><span class="asterix">*</span>Email(s) of the Director</label>	
-					<input type="text" name="user_director_email" class="expand input-text <?php echo decide('user_director_email', $required, $user);?>" title="Digite el correo electrónico del director" value="<?php echo $user->__get('user_director_email');?>" />
+					<input type="text" name="user_director_email" class="expand input-text <?php echo decide('user_director_email', $required, $user);?>" title="Enter the email of the director" value="<?php echo $user->__get('user_director_email');?>" />
 				</div><!--/emaildirector-data-->
 					
 				<div class="mid-input contactname-data">
 					<label><span class="asterix">*</span>Name(s) of the Contact</label>	
-					<input type="text" name="user_contact_name" class="expand input-text <?php echo decide('user_contact_name', $required, $user);?>" title="Digite el(los) nombre(s) de la persona contacto" value="<?php echo $user->__get('user_contact_name');?>" />
+					<input type="text" name="user_contact_name" class="expand input-text <?php echo decide('user_contact_name', $required, $user);?>" title="Enter the name of the contact person" value="<?php echo $user->__get('user_contact_name');?>" />
 				</div><!--/contactname-data-->
 				
 				<div class="mid-input contactmail-data">
 					<label><span class="asterix">*</span>Email Contact</label>	
-					<input type="text" name="user_contact_email" class="expand input-text <?php echo decide('user_contact_email', $required, $user);?>" title="Correo electrónico persona contacto" value="<?php echo $user->__get('user_contact_email');?>" />
+					<input type="text" name="user_contact_email" class="expand input-text <?php echo decide('user_contact_email', $required, $user);?>" title="Enter the email of the contact person" value="<?php echo $user->__get('user_contact_email');?>" />
 				</div><!--/contactmail-data-->
 			</div><!--/six columns-->
 	

@@ -58,16 +58,16 @@
 							<div class="intitle">
 						<ul class="ferias">
 							<li>
-								<span class="asterix">*</span><strong>Nombre de la feria</strong>
+								<strong>Nombre de la feria</strong>
 							</li>
 							<li>
-								<span class="asterix">*</span><strong>Ciudad</strong>
+								<strong>Ciudad</strong>
 							</li>
 							<li>
-								<span class="asterix">*</span><strong>País</strong>
+								<strong>País</strong>
 							</li>
 							<li>
-								<span class="asterix">*</span><strong>Año</strong>
+								<strong>Año</strong>
 							</li>
 						</ul>
 					</div>

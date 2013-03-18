@@ -34,6 +34,7 @@ else
 	ini_set('display_startup_errors', 'Off');
 	ini_set('memory_limit', '250M'); 
 	
+	define ("APPLICATION_IMAGE_URL", "/ccb/ccb-galerias/"); 
 	define ("APPLICATION_URL", "/ccb/ccb-galerias/en/"); 
 	define ("APPLICATION_FULL_URL", "http://activemgmd.com/ccb/ccb-galerias/"); 
 	//LOCALHOST

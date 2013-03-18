@@ -1,7 +1,9 @@
 <?php 
 include_once('header-nologin2.php'); 
-if (isset($_GET[0]))
-	$error	= '<div class="alert-box error" id="alert">Sus datos no coinciden.<a href="javascript:void(0);" onClick="document.getElementById(\'alert\').style.display=\'none\';" class="close">&times;</a></div>';
+if ((isset($_GET[0])) && ($_GET[0] == 'error'))
+	$error	= '<div class="alert-box error" id="alert">Data does not match.<a href="javascript:void(0);" onClick="document.getElementById(\'alert\').style.display=\'none\';" class="close">&times;</a></div>';
+else if ((isset($_GET[0])) && ($_GET[0] == 'finalizado'))
+	$error	= '<div class="alert-box error" id="alert">Your application process is complete.<a href="javascript:void(0);" onClick="document.getElementById(\'alert\').style.display=\'none\';" class="close">&times;</a></div>';
 
 ?>
 
@@ -15,16 +17,16 @@ if (isset($_GET[0]))
 			<form action="<?php echo APPLICATION_URL?>user.controller/login.html"  method="post">
 				<div class="panel radius">
 					<h3>Login</h3>
-					 <p>Si nunca se ha registrado en artBO, incluida la última versión, 
-					haga clic <a class="underline" href="<?php echo APPLICATION_URL?>register.html">aquí.</a></p>
+					 <p>If you have never registered in artBO, including the latest version,
+					 click <a class="underline" href="<?php echo APPLICATION_URL?>register.html">here.</a></p>
 					<?php if (isset($error)) echo $error;?>
 					<label for="name">Email</label>
-					<input type="email"  name="user_email" title="Digite el correo electrónico" required="required"/>
+					<input type="email"  name="user_email" title="Enter your email" required="required"/>
 					<label for="name">Password</label>
-					<input type="password" name="user_password" title="Digite su clave" required="required"/>
+					<input type="password" name="user_password" title="Enter your password" required="required"/>
 				</div>
 				<div class="row">
-					<div class="six columns"><a href="<?php echo APPLICATION_URL?>login-recuperar-contrasena-0110.html" title="Haga clic aquí para recordar su clave" class="whitetxt bold">&iquest;Forgot your password?</a></div>
+					<div class="six columns"><a href="<?php echo APPLICATION_URL?>login-recuperar-contrasena-0110.html" title="Click here to start your session" class="whitetxt bold">&iquest;Forgot your password?</a></div>
 					<div class="six columns"><input type="submit" class="button radius right" title="Haga clic aquí para iniciar sesión" value="Login"></div>
 				</div>
 			</form>

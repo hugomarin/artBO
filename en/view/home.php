@@ -12,7 +12,7 @@ if ((isset($_GET[0])) && ($_GET[1] == 0))
 <div class="container">
 	<div class="row"><!-- Row -->	 
 		<div class="eight columns centered"><!-- six columns -->
-		<div class="languages"><span class="label round"><a href="#">English</a> | <a href="#">Español</a></span></div>
+		<div class="languages"><span class="label round">English | <a href="<?php echo APPLICATION_URL?>../">Español</a></span></div>
 			<a href="home.html"><span class="artBO">artBO</span></a><a href="home.html"><span class="ccB">CCB</span></a>
 			<header class="intro">
 				<h2>Application Process artBO 2013</h2>

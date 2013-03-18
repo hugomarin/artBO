@@ -20,7 +20,7 @@ print_r ($_SESSION);
 		<div class="languages"><span class="label round"><a href="#">English</a> | <a href="#">Español</a></span></div>
 			<a href="home.html"><span class="artBO">artBO</span></a><a href="home.html"><span class="ccB">CCB</span></a>
 	    	<div class="alert-box error">
-	    		Las claves no coinciden. Prueba de nuevo.
+	    		The passwords do not match. Please try again.
 	    		<a href="" class="close" title="Cerrar">&times;</a>
 	    	</div>
 	    	<!-- END  casilla de alerta -->
@@ -28,7 +28,7 @@ print_r ($_SESSION);
 			<div class="panel"><!-- Panel -->
 			<h3>Reset password</h3>
 				<!-- login form -->
-				    	<p>Introduzca una nueva clave para su cuenta de artBO.</p>
+				    	<p>Enter a new password for your artBO account.</p>
 				    
 				    	<div class="mid-input-div"><!-- Div Input -->
 				    		<label>Password</label>

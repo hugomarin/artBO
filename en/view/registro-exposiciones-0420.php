@@ -18,7 +18,7 @@ include_once('menu.php');
 					</div>
 					<div class="four columns mini-nav-header">
 						<dl class="sub-nav">
-							<dd><a class="save" title="Save" href="javascript:void(0);" onclick="$('#validable').attr('action','<?php echo APPLICATION_URL?>user.controller/createExpo/stay.html'); $('#validable').submit();">Save</a></dd>
+							<dd><a class="save" title="Save" href="javascript:void(0);" onclick="$('#validable2').attr('action','<?php echo APPLICATION_URL?>user.controller/createExpo/stay.html'); $('#validable2').submit();">Save</a></dd>
 							<dd><a class="prev" title="Registro Galerias" href="<?php echo APPLICATION_URL?>registro-galerias-0410.html">Previous</a></dd>
 							<dd><h4>2/6</h4></dd>
 							<dd><a class="next" title="Registro Ferias" href="<?php echo APPLICATION_URL?>registro-ferias-0430.html">Next</a></dd>
@@ -45,7 +45,7 @@ include_once('menu.php');
 							</ul>
 						</div>
 						<!-- formulario -->
-						<form action="<?php echo APPLICATION_URL?>user.controller/createExpo.html" id="validable" method="post">		
+						<form action="<?php echo APPLICATION_URL?>user.controller/createExpo.html" id="validable2" method="post">		
 							<?php include_once('inc-exposiciones-1.php'); ?>
 						</form>
 						<!-- /formulario -->
@@ -63,7 +63,7 @@ include_once('menu.php');
 						</div>
 						<div class="four columns">
 							<div class="right">
-								<a href="#" class="graytxt">Previous</a>  <a href="javascript:void(0);" onclick="$('#validable').submit();" class="button radius">Next: Ferias</a>
+								<a href="#" class="graytxt">Previous</a>  <a href="javascript:void(0);" onclick="$('#validable2').submit();" class="button radius">Next: Ferias</a>
 							</div>
 						</div>
 					</div>

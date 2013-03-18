@@ -21,7 +21,7 @@ include_once('menu.php');
 					</div>
 					<div class="four columns mini-nav-header">
 						<dl class="sub-nav">
-							<dd><a class="save" title="Save" href="javascript:void(0);" onclick="$('#validable').submit();" >Save</a></dd>
+							<dd><a class="save" title="Guardar" href="javascript:void(0);" onclick="$('#validable2').attr('action','<?php echo APPLICATION_URL?>user.controller/createArtist/stay.html'); $('#validable2').submit();" >Save</a></dd>
 							<dd><a class="prev" title="Registro Ferias" href="<?php echo APPLICATION_URL?>registro-ferias-0430.html">Anterior</a></dd>
 							<dd><h4>4/6</h4></dd>
 							<dd><a class="next" title="Registro espacio" href="<?php echo APPLICATION_URL?>registro-espacio-0450.html" >Next</a></dd>
@@ -31,13 +31,14 @@ include_once('menu.php');
 			</div>	<!-- END titulo row -->
 			<div class="container">
 				<div class="row form-data">	
+                <form action="<?php echo APPLICATION_URL?>user.controller/createArtist.html" id="validable2" class="" method="post">
 					<div class="twelve columns">
 						<h5>The number of artists you propose for artBO 2013 should be in accordance to the size of stand you have selected. For every 10mt2 you can display an artist.</h5>
 						
 						
 						<h6>Artistic Proposal for artBO 2013 (optional, 250 words maximum)</h6>
 						
-												  <textarea name="user_gallery_proposal" placeholder="Digite la información de la propuesta artística para presentar en su stand en artBO" rows="8" cols="40"><?php echo $user->__get('user_gallery_proposal')?></textarea>
+												  <textarea name="user_gallery_proposal" placeholder="Description of your artistic proposal for your stand artBO 2013" rows="8" cols="40"><?php echo $user->__get('user_gallery_proposal')?></textarea>
 						
 						<br />
 						<br />
@@ -58,7 +59,7 @@ include_once('menu.php');
 								</li>
 							</ul>
 						</div>
-						<form action="<?php echo APPLICATION_URL?>user.controller/createArtist.html" id="validable" class="" method="post">
+						
 							<?php include_once('inc-artistas-1.php'); ?>
 
 						<a href="#" id="add-artist" class="label secondary round">Add a new artist</a>
@@ -68,7 +69,7 @@ include_once('menu.php');
 
 						<h6>Other artists represented by the Gallery</h6>
 
-							<textarea name="user_represented_artists" rows="8" cols="40" placeholder="Digite la información correspondiente a artistas representados"><?php echo $user->__get('user_represented_artists');?></textarea>
+							<textarea name="user_represented_artists" rows="8" cols="40" placeholder="List other artists represented by the gallery"><?php echo $user->__get('user_represented_artists');?></textarea>
 						</form>
 
 					</div>
@@ -79,11 +80,11 @@ include_once('menu.php');
 				<div class="container">
 					<div class="row">
 						<div class="eight columns">
-							<strong><span class="asterix">*</span>Datos requeridos</strong>
+							<strong><span class="asterix">*</span>Data required</strong>
 						</div>
 						<div class="four columns">
 							<div class="right">
-								<a title="Registro ferias" href="<?php echo APPLICATION_URL?>registro-ferias-0430.html" class="graytxt">Previous</a>  <a href="javascript:void(0);" onclick="$('#validable').submit();" title="Registro Tipo de Stand" class="button radius">Next: Type of stand</a>
+								<a title="Registro ferias" href="<?php echo APPLICATION_URL?>registro-ferias-0430.html" class="graytxt">Previous</a>  <a href="javascript:void(0);" onclick="$('#validable2').submit();" title="Registro Tipo de Stand" class="button radius">Next: Type of stand</a>
 							</div>
 						</div>
 					</div>
@@ -91,8 +92,8 @@ include_once('menu.php');
 			</div><!--/inner-footer-->
 		</div><!-- END Main: Panel -->
 		<div class="advisory">
-			<span>Recomendamos visualizar en: IE 9.0 - Firefox 10.0 - Safari 5.1 - Chrome 17.0     |     Optimizada 1024 x 768</span>
-			<span><a href="#">Términos y Condiciones</a> del Sitio</span>
+						<span>We recommend viewing in: IE 9.0 - 10.0 Firefox - Safari 5.1 - 17.0 Chrome | 1024 x 768 Optimized</span>
+			<span>Site <a href="#">Site Terms and Conditions</a></span>
 		</div>
 	</div><!--/row main-row-->
 <!-- 2. End content -->

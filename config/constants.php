@@ -19,8 +19,8 @@ if (TESTMODE)
 	ini_set('display_startup_errors', 'On');
 	ini_set('memory_limit', '250M'); 
 	
-	define ("APPLICATION_URL", "/ccb-galerias/"); 
-	define ("APPLICATION_FULL_URL", "http://190.145.56.83/ccb-galerias/"); 
+	define ("APPLICATION_URL", "/artBO/"); 
+	define ("APPLICATION_FULL_URL", "http://192.168.0.15/artBO/"); 
 	//LOCALHOST
 	define ("DB_NAME", "ccb-galerias");
 	define ("DB_HOST", "localhost"); 

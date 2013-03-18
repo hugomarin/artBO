@@ -15,7 +15,7 @@ switch ($action):
 			$insert	= $user->save();
 			$_SESSION['user_id']	= $insert['insert_id'];
 			redirectUrl(APPLICATION_URL.'registro-inicio-0400.html');
-			$html 		= '<div style="background: #f5f5f5; padding-bottom: 30px;margin-top: 0; width: 600px; font-family: Arial;"><div style="background: #9c1a36; padding: 10px 50px;"><img src="http://i.imgur.com/pUNnGGF.png" alt="artBO" /></div><div style="margin-top: 30px; padding: 10px 50px;"><h1 style="margin-bottom:30px;">Le damos la Bienvenida al proceso de aplicación de artBO 2013</h1><p style="margin-bottom:30px;">A partir de ahora, usted podr&aacute; adelantar su proceso de registro e inscripci&oacute;n en el pabell&oacute;n de su inter&eacute;s</p><p>artBO, Feria Internacional de Arte de Bogot&aacute;</p></div>'; 
+			$html 		= '<div style="background: #f5f5f5; padding-bottom: 30px;margin-top: 0; width: 600px; font-family: Arial;"><div style="background: #9c1a36; padding: 10px 50px;"><img src="http://i.imgur.com/pUNnGGF.png" alt="artBO" /></div><div style="margin-top: 30px; padding: 10px 50px;"><h1 style="margin-bottom:30px;">Le damos la bienvenida al proceso de aplicaci&oacute;n de artBO 2013</h1><p style="margin-bottom:30px;">A partir de ahora, usted podr&aacute; adelantar su proceso de registro e inscripci&oacute;n en el pabell&oacute;n de su inter&eacute;s</p><p>artBO, Feria Internacional de Arte de Bogot&aacute;</p></div>'; 
 			$subject	= utf8_decode('Registro exitoso');
 			$from		= 'artbo@ccb.org.co';
 			$to			= $user->__get('user_email');
@@ -138,22 +138,26 @@ switch ($action):
 				
 		}																						   
 		$user->update();
-		$userForms	= UserFormHelper::selectUserForms(" AND user_id = ".escape($_SESSION['user_id'])." AND form_number = 1");
+		
 		if ($userForms['num_rows'] == 0)
 		{
 			$accept		= true;
 			$fields		= UserFieldHelper::retrieveUserFields();
 			foreach ($fields as $field)
 			{
-				if (($user->__get($field) == '') || ($user->__get($field) == 0) || ($user->__get($field) == 'NULL'))
-				$accept	= false;
+				if (($user->__get($field->__get('field_name')) == '') || ($user->__get($field->__get('field_name')) == '0') || ($user->__get($field->__get('field_name')) == 'NULL'))
+					$accept	= false;
 			}
 			if ($accept)
 			{
-				$form	= new UserForm();
-				$form->__set('user_id', $_SESSION['user_id']);
-				$form->__set('form_number', 1);
-				$form->save();
+				$userForms	= UserFormHelper::selectUserForms(" AND user_id = ".escape($_SESSION['user_id'])." AND form_number = 1");
+				if ($userForms['num_rows'] == 0)
+				{				
+					$form	= new UserForm();
+					$form->__set('user_id', $_SESSION['user_id']);
+					$form->__set('form_number', 1);
+					$form->save();
+				}
 			}
 		}
 		if (!isset($_GET[1]))
@@ -384,6 +388,14 @@ switch ($action):
 		else
 			redirectUrl(APPLICATION_URL.'registro-espacio-0450/saved.html');			
 	break;
+	case 'saveDocuments':
+		$user 		= new User($_SESSION['user_id']);
+		foreach ($_POST as $key => $value)
+			$user->__set($key, $value);	
+		$user->__set('user_finalizado', 1);	
+		$user->update();	
+		redirectUrl(APPLICATION_URL.'registro-documentos-0460.html');
+	break;
 	case 'uploadDocuments':
 		$user 		= new User($_SESSION['user_id']);
 		$finish		= true;
@@ -398,9 +410,10 @@ switch ($action):
 		if ($finish)
 		{
 			foreach ($_POST as $key => $value)
-				$user->__set($key, $value);				
-			$user->update();			
-			$html		= '<div style="background: #f5f5f5; padding-bottom: 30px;margin-top: 0; width: 600px; font-family: Arial;"><div style="background: #9c1a36; padding: 10px 50px;"><img src="http://i.imgur.com/pUNnGGF.png" alt="artBO" /></div><div style="margin-top: 30px; padding: 10px 50px;"><h1 style="margin-bottom:30px;">Ha finalizado su registro</h1><p  style="margin-bottom:30px;">Usted ha completado el proceso de registro de artBO 2013. <br />Agradecemos su participaci&oacute;n en la convocatoria.</p><p>artBO, Feria Internacional de Arte de Bogot&aacute;</p></div>';
+				$user->__set($key, $value);	
+			$user->__set('user_finalizado', 1);	
+			$user->update();		
+			require_once(SITE_VIEW.'endmail.php');
 			$subject	= utf8_decode('Finalizado registro');
 			$from		= 'artbo@ccb.org.co';
 			$to			= $user->__get('user_email');
@@ -413,8 +426,45 @@ switch ($action):
 								'fromName'	=> $fromName,
 								'replyTo'	=> $replyTo);	
 	
-			EmailHelper::sendMail($args);		
-			redirectUrl(APPLICATION_URL.'registro-documentos-0460/saved.html');
+			EmailHelper::sendMail($args);
+			$args 		= array('html'		=> $html,
+								'from'		=> $user->__get('user_email'),
+								'to'		=> $from,
+								'subject'	=> $subject,
+								'fromName'	=> $fromName,
+								'replyTo'	=> $replyTo);	
+	
+			EmailHelper::sendMail($args);			
+			require_once('html2pdf.php');
+			//ob_start();
+			require(SITE_VIEW.'endmail2.php');
+			//$content = ob_get_clean();
+			//echo $content;
+			try
+			{
+				$dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8_decode($user->__get('user_name'))).'/';
+				// init HTML2PDF
+				$html2pdf = new HTML2PDF('P', 'A4', 'en', true, 'UTF-8', array(20, 20, 20, 20));
+			
+				// display the full page
+				$html2pdf->pdf->SetDisplayMode('fullpage');
+			
+				// convert
+				$html2pdf->writeHTML($html);
+			
+				// add the automatic index
+				//$html2pdf->createIndex('Sommaire', 30, 12, false, true, 2);
+			
+				// send the PDF
+				$html2pdf->Output($dir.'finalizar.pdf', 'F');
+			}
+			catch(HTML2PDF_exception $e) 
+			{
+				//echo $e;
+				exit;
+			}			
+			
+			redirectUrl(APPLICATION_URL.'finalizar.html');
 		}
 		else
 		{
@@ -428,7 +478,7 @@ switch ($action):
 	break;
 		
 	case 'login':
-		$user 	= UserHelper::retrieveUsers("AND user_email = '".escape($_POST['user_email']). "' AND user_password = '" .md5($_POST['user_password']) . "'");
+		$user 	= UserHelper::retrieveUsers("AND user_email = '".escape($_POST['user_email']). "' AND user_password = '" .md5($_POST['user_password']) . "' AND user_finalizado = 0");
 		if(count($user) > 0)
 		{
 			if ($user[0]->__get('user_id') != '')	//user_users user
@@ -442,7 +492,10 @@ switch ($action):
 			$user 	= UserHelper::retrieveUsers("AND user_email = '".escape($_POST['user_email'])."'");
 			if(count($user) > 0)
 			{			
-				redirectUrl(APPLICATION_URL."login/error.html");
+				if ($user[0]->__get('user_finalizado') == 0)
+					redirectUrl(APPLICATION_URL."login/error.html");
+				else
+					redirectUrl(APPLICATION_URL."login/finalizado.html");
 			}
 			else
 				redirectUrl(APPLICATION_URL."register/norecord.html");

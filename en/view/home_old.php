@@ -107,7 +107,7 @@ if ((isset($_GET[0])) && ($_GET[1] == 0))
 					    	<!--  END Input Button -->		
 						
 							<div>
-							<span><strong><span class="asterisk">*</span> Datos requeridos</strong></span>
+							<span><strong><span class="asterisk">*</span> Data required</strong></span>
 							</div>
 						
 					</form>

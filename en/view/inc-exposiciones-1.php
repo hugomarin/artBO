@@ -66,12 +66,12 @@
                                 <!-- END move img -->
                                 <!-- nombre -->
                                 <li>
-                                    <input name="expo_nombre_1" class="large input-text" type="text"  />
+                                    <input name="expo_nombre_1" class="large input-text error" type="text"  />
                                 </li>
                                 <!-- END nombre -->
                                 <!-- Año -->
                                <li class="date">
-                                    <select name="expo_fecha_1">
+                                    <select name="expo_fecha_1" class="error">
                                     	<option value="2013">2013</option>
                                         <option value="2012">2012</option>
                                         <option value="2011">2011</option>
@@ -79,7 +79,7 @@
                                 </li>
                                 <!-- END Año -->
                                 <li class="date">
-                                    <select name="expo_mes_1">
+                                    <select name="expo_mes_1" class="error">
                                         <option value="01">01</option>
                                         <option value="02">02</option>
                                         <option value="03">03</option>

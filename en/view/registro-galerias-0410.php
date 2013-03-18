@@ -44,7 +44,7 @@ include_once('menu.php'); ?>
 						<div class="four columns">
 							<div class="right">
 								<a title="Previous" href="<?php echo APPLICATION_URL;?>registro-inicio-0400.html" class="graytxt">Previous</a>  
-                                <a href="javascript:void(0);" onclick="$('#validable2').submit();" title="Next: Exposiciones" class="button radius">Next: Exposiciones</a>
+                                <a href="javascript:void(0);" onclick="$('#validable2').submit();" title="Next: Exposiciones" class="button radius">Next: Exhibitions</a>
 							</div>
 						</div>
 					</div>
@@ -52,8 +52,8 @@ include_once('menu.php'); ?>
 			</div><!--/inner-footer-->
 		</div><!-- END Main: Panel -->
 		<div class="advisory">
-			<span>Recomendamos visualizar en: IE 9.0 - Firefox 10.0 - Safari 5.1 - Chrome 17.0     |     Optimizada 1024 x 768</span>
-			<span><a href="#">Términos y Condiciones</a> del Sitio</span>
+						<span>We recommend viewing in: IE 9.0 - 10.0 Firefox - Safari 5.1 - 17.0 Chrome | 1024 x 768 Optimized</span>
+			<span>Site <a href="#">Site Terms and Conditions</a></span>
 		</div>
 	</div><!--/row main-row-->
 	

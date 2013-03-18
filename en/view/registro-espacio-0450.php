@@ -7,7 +7,7 @@ include_once('menu.php'); ?>
 			<div class="inner-header">
 				<div class="row">
 					<div class="eight columns title">
-						<span class="redtext bold">Type of stand</span>
+						<span class="redtext bold">Type of Stand</span>
 						<h2><?php echo $user->__get('user_gallery_comname');?></h2>
 					</div><!--/title-->
 					
@@ -25,7 +25,7 @@ include_once('menu.php'); ?>
 		<div class="container">
 			<div class="row form-data">	
 					<div class="twelve columns">
-						<h5>Download the <a href="#">pdf</a> document with specifications on the standas at artBO.</h5>
+						<h5>Download the <a href="#">PDF</a> document with specifications on the stands at artBO.</h5>
 						<form action="<?php echo APPLICATION_URL?>user.controller/selectStand.html" id="validable2" class="" method="post">	
 						<?php include_once('inc-stand-1.php'); ?>
 						</form>
@@ -37,7 +37,7 @@ include_once('menu.php'); ?>
 				<div class="container">
 					<div class="row">
 						<div class="eight columns">
-							<strong><span class="asterix">*</span>Datos requeridos</strong>
+							<strong><span class="asterix">*</span>Data required</strong>
 						</div>
 						<div class="four columns">
 							<div class="right">
@@ -50,8 +50,8 @@ include_once('menu.php'); ?>
 			</div><!--/inner-footer-->
 		</div><!-- END Main: Panel -->
 		<div class="advisory">
-			<span>Recomendamos visualizar en: IE 9.0 - Firefox 10.0 - Safari 5.1 - Chrome 17.0     |     Optimizada 1024 x 768</span>
-			<span><a href="#">Términos y Condiciones</a> del Sitio</span>
+						<span>We recommend viewing in: IE 9.0 - 10.0 Firefox - Safari 5.1 - 17.0 Chrome | 1024 x 768 Optimized</span>
+			<span>Site <a href="#">Site Terms and Conditions</a></span>
 		</div>
 	</div><!--/row main-row-->
 			

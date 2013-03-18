@@ -70,7 +70,7 @@ function decide($field, $required, $user)
 					<input type="text" name="user_gallery_document" class="expand input-text <?php echo decide('user_gallery_document', $required, $user);?>" value="<?php echo $user->__get('user_gallery_document');?>" title="Digite el número del documento"/>
 				</div><!--/companyname-data-->
 			</div>
-			<p class="caption"><strong>Nota:</strong> Tenga en cuenta que con número de identificación, también se registrará el ingreso de mercancía de sus obras, equipos y otros a Corferias.</p>
+			<p class="caption"><strong>Nota:</strong> Con esta información se registrará el ingreso de mercancía de sus obras, equipos y otros a Corferias.</p>
 			
 			<div class="mid-input website-data">
 				<label>Página web</label>	
@@ -174,7 +174,7 @@ function decide($field, $required, $user)
 				<div class="six columns">
 					<div class="mid-input schedule-data">
 						<label><span class="asterix">*</span>Horario de apertura al público (0:00 - 24:00)</label>
-						<input name="user_open_time" type="text" title="Digite los horarios de apertura <?php echo decide('user_abstract', $required, $user);?>" value="<?php echo $user->__get('user_open_time');?>" class="small input-text expand" />
+						<input name="user_open_time" type="text" title="Digite los horarios de apertura" value="<?php echo $user->__get('user_open_time');?>" class="small input-text expand <?php echo decide('user_abstract', $required, $user);?>" />
 					</div><!--/schedule-data-->
 				</div>
 				<div class="six columns">	

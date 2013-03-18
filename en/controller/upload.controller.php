@@ -28,12 +28,12 @@ require_once('model/qqFileUploader.model.php');
 $user			= new User($_GET[0]);
 $extraFolder 	= isset($_GET[2]) ? '/' . $_GET[2] : '';
 $uploader 		= new qqFileUploader();
-if(!file_exists('resources/galerias/'. $user->__get('user_id'). '-' . makeUrlClear(utf8_decode($user->__get('user_name'))) . $extraFolder))
+if(!file_exists('../resources/galerias/'. $user->__get('user_id'). '-' . makeUrlClear(utf8_decode($user->__get('user_name'))) . $extraFolder))
 {
-	mkdir('resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8_decode($user->__get('user_name'))) . $extraFolder, 0755);
+	mkdir('../resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8_decode($user->__get('user_name'))) . $extraFolder, 0755);
 }
 
-$dir	= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8_decode($user->__get('user_name'))) . $extraFolder;
+$dir	= '../resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8_decode($user->__get('user_name'))) . $extraFolder;
 // Specify the list of valid extensions, ex. array("jpeg", "xml", "bmp")
 $uploader->allowedExtensions = array();
 

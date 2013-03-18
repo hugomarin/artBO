@@ -5,7 +5,7 @@ $userForms	= UserFormHelper::retrieveUserForms(" AND user_id = ".escape($_SESSIO
 $class		= 'nulled';
 if (count($userForms) == 5)
 {
-	$action		= "document.getElementById('validable').submit();";
+	$action		= "document.getElementById('validable2').submit();";
 	$class		= '';
 }
 else
@@ -15,7 +15,7 @@ else
 <script language="javascript">
 function alertNotYet()
 {
-	alert ('Debe completar los pasos anteriores antes de guardar su formulario');
+	alert ('Your must complete the required information in order to submit your application');
 }
 </script>
 <div class="row main-row">	
@@ -31,14 +31,14 @@ function alertNotYet()
 					<dl class="sub-nav">
 						<dd><a title="Previous" class="prev" href="<?php echo APPLICATION_URL?>registro-espacio-0450.html">Previous</a></dd>
 						<dd><h4>6/6</h4></dd>
-						<dd><a title="Save" class="save" href="javascript:void(0);" onClick="document.getElementById('validable').submit();">Save</a></dd>
+						<dd><a title="Save" class="save" href="javascript:void(0);" onClick="$('#validable2').attr('action','<?php echo APPLICATION_URL?>user.controller/saveDocuments.html'); document.getElementById('validable2').submit();">Save</a></dd>
 					</dl>
 				</div>
 			</div><!--/row inner-header-->
 			
 			<div class="row form-data">	
 				<div class="twelve columns">
-					<form action="<?php echo APPLICATION_URL?>user.controller/uploadDocuments.html" id="validable" class="" method="post" enctype="multipart/form-data" onSubmit="return Validator.prototype.checkRequiredFields();">
+					<form action="<?php echo APPLICATION_URL?>user.controller/uploadDocuments.html" id="validable2" class="" method="post" enctype="multipart/form-data" onSubmit="return Validator.prototype.checkRequiredFields();">
 					<?php include_once('inc-documentos-1.php'); ?>
 					</form>
 				</div><!--/twelve columns-->
@@ -48,7 +48,7 @@ function alertNotYet()
 				<div class="container">
 					<div class="row">
 						<div class="eight columns">
-							<strong><span class="asterix">*</span>Datos requeridos</strong>
+							<strong><span class="asterix">*</span>Data required</strong>
 						</div>
 						<div class="four columns">
 							<div class="right">
@@ -61,8 +61,8 @@ function alertNotYet()
 			</div><!--/inner-footer-->
 		</div><!-- END Main: Panel -->
 		<div class="advisory">
-			<span>Recomendamos visualizar en: IE 9.0 - Firefox 10.0 - Safari 5.1 - Chrome 17.0     |     Optimizada 1024 x 768</span>
-			<span><a href="#">Términos y Condiciones</a> del Sitio</span>
+			<span>We recommend viewing in: IE 9.0 - 10.0 Firefox - Safari 5.1 - 17.0 Chrome | 1024 x 768 Optimized</span>
+			<span>Site <a href="#">Site Terms and Conditions</a></span>
 		</div>
 	</div><!--/row main-row-->
 			

@@ -1,7 +1,9 @@
 <?php 
 include_once('header-nologin2.php'); 
-if (isset($_GET[0]))
+if ((isset($_GET[0])) && ($_GET[0] == 'error'))
 	$error	= '<div class="alert-box error" id="alert">Sus datos no coinciden.<a href="javascript:void(0);" onClick="document.getElementById(\'alert\').style.display=\'none\';" class="close">&times;</a></div>';
+else if ((isset($_GET[0])) && ($_GET[0] == 'finalizado'))
+	$error	= '<div class="alert-box error" id="alert">Su proceso de aplicación en artBO 2013 ha finalizado. Gracias.<a href="javascript:void(0);" onClick="document.getElementById(\'alert\').style.display=\'none\';" class="close">&times;</a></div>';
 
 ?>
 
@@ -10,7 +12,6 @@ if (isset($_GET[0]))
 <div class="container">
 	<div class="row"><!-- Row -->	
 		<div class="six columns centered"><!-- six columns -->
-		<div class="languages"><span class="label round"><a href="#">English</a> | <a href="#">Español</a></span></div>
 			<a href="home.html"><span class="artBO">artBO</span></a><a href="home.html"><span class="ccB">CCB</span></a>
 			<form action="<?php echo APPLICATION_URL?>user.controller/login.html"  method="post">
 				<div class="panel radius">

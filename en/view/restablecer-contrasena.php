@@ -35,30 +35,30 @@ function validate()
 		<div class="six columns centered"><!-- six columns -->
 			<span class="artBO">artBO</span><span class="ccB">CCB</span>
 	    	<div class="alert-box error">
-	    		Las claves no coinciden. Prueba de nuevo.
+	    		The passwords do not match. Please try again.
 	    		<a href="" class="close" title="Cerrar">&times;</a>
 	    	</div>
 	    	<!-- END  casilla de alerta -->
 	    	<form action="<?php echo APPLICATION_URL;?>user.controller/changePasswordOC.html" method="post">
 			<div class="panel"><!-- Panel -->
-			<h3>Restablecer Clave</h3>
+			<h3>Reset Password</h3>
 				<!-- login form -->
-				    	<p>Introduce una nueva clave para tu cuenta de artBO.</p>
+				    	<p>Enter a new password for your artBO account.</p>
 				    
 				    	<div class="mid-input-div"><!-- Div Input -->
-				    		<label>Clave</label>
+				    		<label>Password</label>
 				        	<input type="password" class="expand input-text" name="contrasena" id="contrasena" required="required">
 				    	</div><!-- END Div Input -->
 				    	
 				    	<div class="mid-input-div"><!-- Div Input -->
-				    		<label>Confirmar clave</label>
+				    		<label>Confirm Password</label>
 				        	<input type="password" class="expand input-text" name="confirmar" id="rep_contrasena" required="required">
 				    	</div><!-- END Div Input -->
 
 			</div>  <!-- End Panel -->
 			<div class="row">
-				<div class="six columns"><a href="<?php echo APPLICATION_URL?>home.html" class="bold whitetxt" title="Restablecer clave">Cancelar</a></div>
-				<div class="six columns"><input type="submit" class="button radius right" value="Restablecer contaseña"></div>
+				<div class="six columns"><a href="<?php echo APPLICATION_URL?>home.html" class="bold whitetxt" title="Restablecer clave">Cancel</a></div>
+				<div class="six columns"><input type="submit" class="button radius right" value="Reset Password"></div>
 			</div>
 			</form>
 		</div><!-- six columns -->

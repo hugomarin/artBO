@@ -15,7 +15,7 @@ include_once('header-nologin2.php');
 			{
 			?>
 	            <div class="alert-box error">
-	                Nuestro sistema no tiene registro del correo electrónico.<a href="" class="close">&times;</a>
+	                Our system does not have this email registered.<a href="" class="close">&times;</a>
 	            </div>
 	        <?php
 			}
@@ -23,14 +23,14 @@ include_once('header-nologin2.php');
 			<form action="<?php echo APPLICATION_URL?>user.controller/recover_password.html" class="nice" method="post" id="validable">
 				<div class="panel"><!-- Panel -->
 					<h3>Reset password</h3>
-					<p>Introduzca el correo electrónico que utiliza para su cuenta de artBO y le enviaremos un enlace para restablecer su clave.</p>
+					<p>Please enter your registered email address and we will send you your password.</p>
 			    	<div class="mid-input-div"><!-- Div Input -->
 			    		<label>Email</label>
-			        	<input type="email" class="expand input-text" name="user_email" title="Digite el correo electrónico" required="required">
+			        	<input type="email" class="expand input-text" name="user_email" title="Enter your email" required="required">
 			    	</div>
 				</div>
 				<div class="row">
-					<div class="six columns"><a class="whitetxt bold" href="<?php echo APPLICATION_URL?>login.html" title="Volver al inicio">Volver al inicio</a></div>
+					<div class="six columns"><a class="whitetxt bold" href="<?php echo APPLICATION_URL?>login.html" title="Volver al inicio">Go back to login.</a></div>
 					<div class="six columns"><input type="submit" class="button radius right" value="Reset password"></div>
 				</div>
 			</form>
