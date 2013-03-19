@@ -2,8 +2,8 @@
 $dir			= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8_decode($user->__get('user_name'))).'/';
 $html			= '<img src="http://www.activemgmd.com/ccb/ccb-galerias/images/logo-bw.jpg">';
 // FIRST
-$imagenGaleria	= APPLICATION_FULL_URL.$dir.$user->__get('user_gallery_image');
-$imagenDirector	= APPLICATION_FULL_URL.$dir.$user->__get('user_director_image');
+$imagenGaleria	= APPLICATION_IMAGE_URL.$dir.$user->__get('user_gallery_image');
+$imagenDirector	= APPLICATION_IMAGE_URL.$dir.$user->__get('user_director_image');
 $country		= $country  = new Country($user->__get('country_id'));
 
 $html	.= "<h3>Gallery</h3>
@@ -127,7 +127,7 @@ $html	.= "
 			<strong>Image</strong>: <em>". $file."</em><br>";
 		}		
 	}
-	$html	. = "</p>";
+	$html	.= "</p>";
 }
 
 $html	.= "<h4>Other artists represented by the Gallery</h4>";

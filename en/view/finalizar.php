@@ -1,7 +1,7 @@
 
 <?php 
 include_once(SITE_VIEW.'header-login.php'); 
-$dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8_decode($user->__get('user_name'))).'/';
+$dir		= '../resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8_decode($user->__get('user_name'))).'/';
 
 ?>
 

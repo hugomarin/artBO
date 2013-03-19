@@ -138,9 +138,9 @@ for($i = 1; $i <= count($artists); $i++)
 							<input type="text" name="artist_birthday" value="" class="small datepicker"/>
 							<label>Residence location</label>
 							<input type="text" name="artist_residency" value="" class="small"/>
-							<input type="hidden" name="artist_name" id="artist_name_new" value="" class="small"/>
-							<input type="hidden" name="artist_surname" id="artist_surname_new" value="" class="small"/>
-							<input type="hidden" name="artist_nationality" id="artist_nationality_new" value="" class="small"/>
+							<input type="hidden" name="artist_name" id="artist_name" value="" class="small"/>
+							<input type="hidden" name="artist_surname" id="artist_surname" value="" class="small"/>
+							<input type="hidden" name="artist_nationality" id="artist_nationality" value="" class="small"/>
 						</div>
 						<div class="six columns">
 						

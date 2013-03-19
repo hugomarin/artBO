@@ -442,7 +442,7 @@ switch ($action):
 			//echo $content;
 			try
 			{
-				$dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8_decode($user->__get('user_name'))).'/';
+				$dir		= '../resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8_decode($user->__get('user_name'))).'/';
 				// init HTML2PDF
 				$html2pdf = new HTML2PDF('P', 'A4', 'en', true, 'UTF-8', array(20, 20, 20, 20));
 			
