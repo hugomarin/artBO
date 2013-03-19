@@ -25,7 +25,7 @@ include_once('menu.php'); ?>
 		<div class="container">
 			<div class="row form-data">	
 					<div class="twelve columns">
-						<h5>Download the <a href="#">PDF</a> document with specifications on the stands at artBO.</h5>
+						<h5>Download the <a href="http://english.artboonline.com/documentos/2136_tecnichalspecifications_stands2013.pdf" target="_blank">PDF</a> document with specifications on the stands at artBO.</h5>
 						<form action="<?php echo APPLICATION_URL?>user.controller/selectStand.html" id="validable2" class="" method="post">	
 						<?php include_once('inc-stand-1.php'); ?>
 						</form>
