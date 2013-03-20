@@ -17,12 +17,12 @@ qq.FineUploaderBasic = function(o){
             uuidName: 'qquuid',
             totalFileSizeName: 'qqtotalfilesize'
         },
-        validation: {
-            allowedExtensions: [],
-            sizeLimit: 0,
-            minSizeLimit: 0,
-            stopOnFirstInvalidFile: true
-        },
+		validation: {
+		    allowedExtensions: ['jpg', 'pdf', 'png' ],
+		    sizeLimit: 1000000,
+		    minSizeLimit: 0,
+		    stopOnFirstInvalidFile: true
+		},
         callbacks: {
             onSubmit: function(id, name){},
             onComplete: function(id, name, responseJSON){},

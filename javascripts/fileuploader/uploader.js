@@ -18,10 +18,10 @@ qq.FineUploader = function(o){
         text: {
             uploadButton: 'Subir un archivo',
             cancelButton: 'Cancelar',
-            retryButton: 'Reintentar',
-            deleteButton: 'Borrar',
+            retryButton: '',
+            deleteButton: '',
             failUpload: 'Subir a fallado',
-            dragZone: 'Arrastre sus archivos aca para subir',
+            dragZone: 'Arrastre sus archivos para subir',
             dropProcessing: 'Procesando archivos arrastrados',
             formatProgress: "{percent}% de {total_size}",
             waitingForResponse: "Procesando..."
