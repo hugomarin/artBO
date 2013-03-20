@@ -34,7 +34,7 @@
                                     <input type="hidden" id="artist_review_<?php echo $i;?>" class="no-margin" name="artist_review_<?php echo $i;?>" value="<?php echo $artist->__get('artist_review')?>" />
                                     <!-- END nacionalidad -->
                                     <!-- boton para modal de artista -->
-                                    <a href="#" class="revelar-a revealer " id="link-<?php echo $i?>" data-reveal-id="artista" >Add more information about the artist</a>
+                                    <a href="#" class="revelar-a revealer" id="link-<?php echo $i?>" data-reveal-id="artista" >Add more information about the artist</a>
                                     <!-- END boton para modal de artista -->
                                 </li>
                                 <li class="handler">

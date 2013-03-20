@@ -130,6 +130,10 @@
 		$(".revealer").each(function(item){
 			$(this).click(function () {
 				var toggle = true;
+				$("#artist_name").val($("#artist_name_" + (counterArtist - 1)).val());
+				$("#artist_surname").val($("#artist_surname_" + (counterArtist - 1)).val());
+				$("#artist_nationality").val($("#artist_nationality_" + (counterArtist - 1)).val());
+				
 				if(this.nodeName.toLowerCase() == 'input')
 				{
 					if(!$(this).attr("checked"))
