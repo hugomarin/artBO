@@ -25,7 +25,7 @@ include_once('menu.php'); ?>
 		<div class="container">
 			<div class="row form-data">	
 					<div class="twelve columns">
-						<h5>Descargue <a href="#">PDF</a> con información sobre los <em>stands</em> de artBO.</h5>
+						<h5>Descargue <a href="http://www.artboonline.com/documentos/2135_especificacionestecnicas_stands2013.pdf" target="_blank">PDF</a> con información sobre los <em>stands</em> de artBO.</h5>
 						<form action="<?php echo APPLICATION_URL?>user.controller/selectStand.html" id="validable2" class="" method="post">	
 						<?php include_once('inc-stand-1.php'); ?>
 						</form>
@@ -50,8 +50,9 @@ include_once('menu.php'); ?>
 			</div><!--/inner-footer-->
 		</div><!-- END Main: Panel -->
 		<div class="advisory">
-			<span>We recommend viewing in: IE 9.0 - 10.0 Firefox - Safari 5.1 - 17.0 Chrome | 1024 x 768 Optimized</span>
-			<span>Website <a href="http://english.artboonline.com/documentos/2131_terms_and_conditions_galleries.pdf" target="_blank">Terms and Conditions</a></span>
+			<span>Recomendamos visualizar en: IE 9.0 - Firefox 10.0 - Safari 5.1 - Chrome 17.0
+			Optimizada 1024 x 768</span>
+			<span><a href="http://english.artboonline.com/documentos/2131_terms_and_conditions_galleries.pdf" target="_blank">Términos y Condiciones del </a> del sitio</span>
 		</div>
 	</div><!--/row main-row-->
 			

@@ -17,10 +17,10 @@
 				<h5>Información que deberá completar en cada sección:</h5>
 				<ul class="no-bullet">
 					<li class="thin">1. <strong>Galería:</strong> información básica de la galería.</li>
-					<li class="thin">2. <strong>Exposiciones:</strong>lista de las exposiciones realizadas entre el 2011 y el 2013, en orden cronológico.</li>
+					<li class="thin">2. <strong>Exposiciones:</strong> lista de las exposiciones realizadas entre el 2011 y el 2013, en orden cronológico.</li>
 					<li class="thin">3. <strong>Ferias: </strong>participación en otras versiones de artBO y ferias internacionales.</li>
 					<li class="thin">4. <strong>Artistas:</strong> artistas propuestos para versión 2013 y otros artistas representados por su galería. Recuerde que según el tamaño del stand que solicite podrá proponer un artista a partir de cada 10 mt². Por cada artista propuesto para esta versión podrá incluir hasta tres obras.</li>
-					<li class="thin">5. <strong>Tipo de <em>stand</em>:</strong> Plus 63mt², 63mt², 45mt² y 31.50mt². <a href="#">Consulte aquí más información.</a></li>
+					<li class="thin">5. <strong>Tipo de <em>stand</em>:</strong> Plus 63mt², 63mt², 45mt² y 31.50mt². <a href="http://www.artboonline.com/documentos/2135_especificacionestecnicas_stands2013.pdf" target="_blank">Consulte aquí más información.</a></li>
 					<li class="thin">6. <strong>Documentos requeridos:</strong>
 						<ul class="sub-menu">
 							<li class="thin">Copia del certificado de existencia de su empresa, expedido por el ente respectivo de su país.</li>
@@ -55,8 +55,9 @@
 					</div><!--/inner-footer-->
 				</div><!-- END Main: Panel -->
 				<div class="advisory">
-					<span>Recomendamos visualizar en: IE 9.0 - Firefox 10.0 - Safari 5.1 - Chrome 17.0     |     Optimizada 1024 x 768</span>
-					<span><a href="http://www.artboonline.com/documentos/2130_reglamento_participacion_2013.pdf" target="_blank">Términos y Condiciones</a> del Sitio</span>
+					<span>Recomendamos visualizar en: IE 9.0 - Firefox 10.0 - Safari 5.1 - Chrome 17.0
+					Optimizada 1024 x 768</span>
+					<span><a href="http://english.artboonline.com/documentos/2131_terms_and_conditions_galleries.pdf" target="_blank">Términos y Condiciones del </a> del sitio</span>
 				</div>
 		</div>
 	<!-- 3. END Row main --> 
