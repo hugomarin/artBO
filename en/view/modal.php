@@ -140,7 +140,7 @@ for($i = 1; $i <= count($artists); $i++)
 			<!-- columns 2/2 -->
 			<!-- reseña de artista -->
 			<div class="six columns">
-						<label>Name 2</label>
+						<label>Name</label>
 						<input type="text" name="artist_name"  value="<?php echo $artist->__get('artist_name');?>" class="small"/>
 						<label>Last name</label>
 						<input type="text" name="artist_surname"  value="<?php echo $artist->__get('artist_surname');?>" class="small"/>
