@@ -23,8 +23,8 @@ $dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8
                     <?php
 					$image	= (($user->__get('user_gallery_image') != '') && (!file_exists(APPLICATION_URL.$dir.$user->__get('user_gallery_image')))) ? APPLICATION_URL.$dir.$user->__get('user_gallery_image') : $default;
 					?>        
-                    	<a href="<?php echo APPLICATION_URL?>datos-galeria-0300.html"><img src="<?php echo $image?>" class="left"  height="36" width="36" alt="perfil"/></a>
-                    <p class="left"><?php echo '<strong>'.$user->__get('user_gallery_comname').'</strong>';?><br />
+                    	<a href="<?php echo APPLICATION_URL?>datos-galeria-0300.html" class="imagenlogo"><img src="<?php echo $image?>"  height="36" width="36" alt="perfil"/></a>
+                    <p class="right"><?php echo '<strong>'.$user->__get('user_gallery_comname').'</strong>';?><br />
 					<a href="<?php echo APPLICATION_URL?>datos-galeria-0300.html" title="Clic aquí para editar información de la galería">Editar perfil</a> | <a href="<?php echo APPLICATION_URL?>exit.html" title="Salir">Salir</a></p>
 					<?php
 					}
