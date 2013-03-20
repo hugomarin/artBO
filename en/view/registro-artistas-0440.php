@@ -114,9 +114,9 @@ $(".link_list").hide().append('<li class="link_default"><ul class="no-bullet art
 	$(".revealer-new").each(function(item){
 		$(this).unbind('click');
 		$(this).click(function () {
-			$("#artist_name").val($("#artist_name_" + (counterArtist - 1)).val());
-			$("#artist_surname").val($("#artist_surname_" + (counterArtist - 1)).val());
-			$("#artist_nationality").val($("#artist_nationality_" + (counterArtist - 1)).val());
+			$("#artist_name_new").val($("#artist_name_" + this.id.split('-')[1]).val());
+			$("#artist_surname_new").val($("#artist_surname_" + this.id.split('-')[1]).val());
+			$("#artist_nationality_new").val($("#artist_nationality_" + this.id.split('-')[1]).val());
 			var toggle = true;
 			if(this.nodeName.toLowerCase() == 'input')
 			{
