@@ -12,7 +12,7 @@ $dir		= 'resources/galerias/'. $user->__get('user_id'). '-' .  makeUrlClear(utf8
 		<div class="inner-header">
 			<div class="row">
 				<div class="twelve columns">
-					<h3>Gracias por participar en la convocatoria par galerías artBO 2013</h3> 
+					<h3>Gracias por participar en la convocatoria para galerías artBO 2013</h3> 
 					
 					<p>El listado de las galerías seleccionadas se publicará en <a href="http://www.artboonline.com" target="_blank">www.artboonline.com</a>.</p>					
 				</div>
