@@ -49,7 +49,7 @@ include_once('menu.php');
 							<?php include_once('inc-exposiciones-1.php'); ?>
 						</form>
 						<!-- /formulario -->
-						<a href="#" id="add-expo" class="label secondary round">Agregar una nueva exposición</a>
+						<a href="javascript:void(0);" id="add-expo" class="label secondary round">Agregar una nueva exposición</a>
 					</div>
 				</div>
 			</div>

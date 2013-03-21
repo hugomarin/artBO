@@ -141,11 +141,11 @@ for($i = 1; $i <= count($artists); $i++)
 			<!-- reseña de artista -->
 			<div class="six columns">
 						<label>Name</label>
-						<input type="text" name="artist_name"  id="artist_name_new"  value="<?php echo $artist->__get('artist_name');?>" class="small"/>
+						<input type="text" name="artist_name"  id="artist_name_new"   class="small"/>
 						<label>Last name</label>
-						<input type="text" name="artist_surname" id="artist_surname_new"   value="<?php echo $artist->__get('artist_surname');?>" class="small"/>
+						<input type="text" name="artist_surname" id="artist_surname_new"    class="small"/>
 						<label>Nationality</label>
-						<input type="text" name="artist_nationality" id="artist_nationality_new"   value="<?php echo $artist->__get('artist_nationality');?>" class="small"/>
+						<input type="text" name="artist_nationality" id="artist_nationality_new"   class="small"/>
 							
 							<label>Date of birth (YYYY-MM-DD)</label>
 							<input type="text" name="artist_birthday" value="" class="small datepicker"/>

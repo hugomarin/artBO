@@ -75,7 +75,7 @@
                                     <!-- END nacionalidad -->
                                     <!-- <label for="checkbox3a"><input class="revealer-new" type="checkbox" id="checkbox-1" name="artist_artbo_1"><strong>Este artista participará en artBO</strong></label> -->
                                     <!-- boton para modal de artista -->
-                                    <a href="#" class="revelar-a revealer-new " id="link-<?php echo $i?>" data-reveal-id="artista" >Agregue más información sobre el artista</a>
+                                    <a href="#" class="revelar-a revealer-new " id="link-1" data-reveal-id="artista" >Agregue más información sobre el artista</a>
                                     <!-- END boton para modal de artista -->
                                 </li>
                                 <li class="handler">
