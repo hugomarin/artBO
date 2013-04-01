@@ -1,5 +1,35 @@
 @import "compass";
 
+
+@mixin nclearfix {
+   &:after{
+    content: '';
+    display: table;
+    clear: both;
+    }
+}
+
+@mixin arrowcorner($color:#AAABAD, $bg:#F1F1F1, $bw: 15px , $side: 'right'){ 
+     &:before {
+     content:"";
+     position:relative;
+     float:#{$side};
+     top:0;
+     display:block;
+     background-color: $bg;
+     width:0; /* Firefox 3.0 damage limitation */
+     #{$side}: 0;      
+     border-style:solid;
+       @if $side == 'right' {
+       border-width:0 $bw $bw 0; /*right*/
+       border-color:$bg $bg $color $color;/*right*/
+       } @else if $side == 'left' {
+       border-width:0 0 $bw $bw ; /*left*/
+       border-color:$bg $color $color $bg; /*left*/ 
+      }
+     }
+}
+
 @mixin breakpoint($point) {
   @if $point == ipad {
     @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) { @content; }
@@ -559,5 +589,351 @@ ul.qq-upload-list{
 .standname-data{
   input{
     display:none;
+  }
+}
+
+
+.breadcrumb{
+  letter-spacing:-1px;
+}
+
+.first-header{
+  border-bottom:1px solid white;
+  background-color:#F5F5F5;
+  input[type="text"]{
+    width:auto;
+    margin:23px;
+    width:220px;
+    @include border-radius(25px);
+    float:left;
+  }
+  select{
+    width:auto;
+  }
+  
+  .whomany{
+    margin:23px;
+    float:right;
+  }
+}
+
+.watch{
+  background-color:#F5F5F5;
+    table{
+      background-color:transparent;
+      width:100%;
+      margin:0;
+      padding:0;
+      border:0;
+      thead{
+        background-color:transparent;
+        tr{
+          th{
+            font-weight:normal;
+            a{
+              font-size:11px;
+              color:#3A3A3A;
+            }
+          }
+        }
+      }
+      tbody {
+        tr{
+          background-color:#CCCCCC;
+          td{
+            border-bottom: 2px solid #F5F5F5;
+            padding:9px 10px 0;
+            &:first-child{
+              @include border-left-radius(6px); 
+            }
+            &:last-child{
+              @include border-right-radius(6px); 
+            }
+            span{
+              margin: 0 auto;
+              padding:5px 5px 4px;
+              text-transform:uppercase;
+              font-size:10px;
+              text-align: center;
+              display: block;
+              width: 55%;
+              @include border-radius(3px);
+              &.gray{
+                background-color:#A3A3A3;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+.pag{
+  margin:0 auto;
+  width:50%;
+  display:block;
+}
+
+.change{
+  background-color:#E8E8E8;
+}
+
+
+ul.main-menu{
+  list-style-type: none;
+  li{
+    display:inline-block;
+     width:25%;
+     @include box-sizing(border-box);
+     margin:0;
+     float:left;
+    a{
+      text-transform:uppercase;
+     color:#B2B2B2; 
+     letter-spacing:-1px;
+     span{
+       margin-right:5px;
+     }
+    }
+  }
+}
+
+.documents-info{
+  background-color:#333333;
+  color:white;
+  h3{
+    color:white;
+    letter-spacing:-1px;
+  }
+  ul{
+    list-style-type: none;
+    li{
+      display:inline-block;
+      width:25%;
+      float:left;
+      strong{
+        display:block;
+        margin:0 auto;
+        text-align:center;
+        font-size:40px;
+        font-weight:normal;
+      }
+      span{
+        text-align:center;
+        display:block;
+        margin:0 auto;
+        }
+    }
+  }
+}
+
+.profile-resume{
+  img{
+    float:left;
+    width:60%;
+  }
+  .resum{
+    color:#fff;
+    background-color:#BB0C35;
+    padding:20px;
+    float:right;
+    display:inline-block;
+    width:40%;
+    height:449px;
+    overflow: auto;
+    h4{
+      color:#fff;
+      letter-spacing:-1px;
+      margin:0;
+    }
+    h6{
+      color:#fff;
+      font-weight:normal;
+      margin-top:40px;
+    }
+    a{
+      color:#fff;
+    }
+    span{
+      &.year{
+        position:relative;
+        right: 35px;
+        bottom: 35px;
+        font-size:13px;
+        float:right;
+      }
+    }
+    p{
+      font-size:13px;
+      line-height:1.7;
+    }
+   }
+}
+
+
+.specific{
+  background-color:#333333;
+  img{
+    position: absolute;
+    bottom: -80px;
+    border:5px solid white;
+    width:80%;
+    left: 25px;
+  }
+  ul{
+    margin-top:20px;
+    li{
+      list-style-type:none;
+      display:inline-block;
+      float:left;
+      width:33%;
+      margin-bottom:15px;
+      h6{
+        color:#777777;
+        margin:0;
+        font-size:12px;
+      }
+      span{
+        color:#fff;
+      }
+    }
+  }
+}
+
+
+.participation{
+  background-color:#808080;
+  h5{
+    color:#fff;
+    margin:0;
+    line-height:2.4;
+    font-weight:normal;
+  }
+  ul{
+    margin:0 auto;
+    float:left;
+    li{
+      list-style-type:none;
+      display:inline-block;
+      margin-right:35px; 
+      &:last-child{
+        margin-right:0;
+      }
+      strong{
+        color:#fff;
+        font-size:23px;
+        font-weight:normal;
+        margin-right:5px;
+      }
+      span{
+        color:#fff;
+      }
+    }
+  }
+}
+
+
+.exhibitandfairs{
+  display:block;
+  position:relative;
+  .exhibits{
+    width:50%;
+    @include arrowcorner($color:#808080); 
+    display:inline-block;
+    background-color:#A3A3A3;
+    float:left;
+      h3{
+        color:#fff;
+        letter-spacing:-1px;
+        font-weight:normal;
+      }
+    .real-expos{
+      ul{
+        overflow:auto;
+        height:225px;
+        li{
+          h6{
+            width:50%;
+            color:#E3E3E3;
+            font-size:11px;
+          }
+          list-style-type:none;
+          display:block;
+          width:100%;
+          span{
+            width:40%;
+            display:inline-block;
+            text-align:right;
+            margin-right:10px;
+            margin-bottom:30px;
+            color:#E3E3E3;
+          }
+          strong{
+            width:50%;
+            text-align:left;
+            float:right;
+            color:#fff;
+          }
+        }
+      }
+    }
+  }
+  .fairs{
+    width:50%;
+    display:inline-block;
+    background-color:#D4D4D4;
+    float:right;
+    height:339px;
+     @include arrowcorner();
+     h3{
+       &.mainh3{
+         letter-spacing:-1px;
+         color:#4D4D4D;
+         font-weight:normal;
+       }
+     }
+    .real-fairs{
+      ul{
+        margin-top:40px;
+        li{
+          list-style-type:none;
+          width: 50%;
+          display: inline-block;
+          float: left;
+          margin-bottom:10px;
+          h3{
+             color:#4D4D4D;
+             font-weight:normal;
+             letter-spacing:0;
+             margin:0;
+            span{
+              font-size:14px;
+              margin-left:6px;
+              color:#9E9E9E;
+            }
+          }
+          strong{
+            font-weight:normal;
+            color:#333333;
+          }
+        }
+      }
+    }
+  }
+}
+
+.proposal-artist{
+  background-color:#BB0C35;
+  color:#fff;
+  @include arrowcorner($color:#4B0615);
+  .theproposal{
+    width:40%;
+    display:inline-block;
+  }
+  .theartists{
+    width:50%;
+    display:inline-block;
+    float:right;
   }
 }
