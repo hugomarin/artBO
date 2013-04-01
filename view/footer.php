@@ -128,7 +128,10 @@
 		
 		// revelar reveal registro-artistas
 		$(".revealer").each(function(item){
-			$(this).click(function () {
+			$(this).click(function () {				
+				$("#artist_name__" + this.id.split('-')[1]).val($("#artist_name_" + this.id.split('-')[1]).val());
+				$("#artist_surname__" + this.id.split('-')[1]).val($("#artist_surname_" + this.id.split('-')[1]).val());
+				$("#artist_nationality__" + this.id.split('-')[1]).val($("#artist_nationality_" + this.id.split('-')[1]).val());									
 				var toggle = true;
 				if(this.nodeName.toLowerCase() == 'input')
 				{
@@ -143,6 +146,7 @@
 
 		});
 		
+		/*
 		$(".revealer-new").each(function(item){
 			$(this).click(function () {
 				$("#artist_name_new").val($("#artist_name_" + (counterArtist - 1)).val());
@@ -161,6 +165,7 @@
 				//$("#link-" + (counterArtist - 1)).slideToggle();
 			});
 		});
+		*/
 		
 		// END revelar reveal registro-artistas
 		

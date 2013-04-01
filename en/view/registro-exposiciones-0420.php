@@ -85,7 +85,6 @@ $(document).ready(function()
 	// nueva expo
 	var counterExpo = <?php echo (count($expositions) > 0) ? count($expositions)+1 : 2; ?>;
 	$("#add-expo").click(function(){
-	event.preventDefault();
 $(".link_list").hide().append('<!-- expo --><li class="link_default"><ul class="no-bullet expo"><li class="handler"><img src="<?php echo APPLICATION_URL?>images/drag_handle.gif" alt="drag_handle" width="50" height="51" class="image_handle nsr"></li><li><input name="expo_nombre_'+counterExpo+'" class="large input-text alert" type="text"  /></li><li class="date"><select name="expo_fecha_'+counterExpo+'"><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option></select></li><li class="date"><select name="expo_mes_'+counterExpo+'"><option value="01" >01</option><option value="02" >02</option><option value="03" >03</option><option value="04" >04</option><option value="05" >05</option><option value="06" >06</option><option value="07" >07</option><option value="08" >08</option><option value="09" >09</option><option value="10" >10</option><option value="11">11</option><option value="12" >12</option></select></li><li class="handler"><a href="javascript:void(0)" onClick=" $(this).parent().parent().parent().remove(); Validator();"><img src="<?php echo APPLICATION_URL?>images/trash.gif" alt="caneca" title="caneca" width="37" height="37" /></a></li></ul></li><!-- end Expo --> ').fadeIn(1000);							  
 	counterExpo++;
 	validInst = new Validator(1, '', true);

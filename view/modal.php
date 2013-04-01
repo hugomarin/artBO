@@ -24,6 +24,12 @@ for($i = 1; $i <= count($artists); $i++)
 			<!-- columns 2/2 -->
 			<!-- reseña de artista -->
 			<div class="six columns">
+				<label>Nombre</label>
+				<input type="text" name="artist_name" id="artist_name__<?php echo $i?>"  value="<?php echo $artist->__get('artist_name');?>" class="small"/>
+				<label>Apellido</label>
+				<input type="text" name="artist_surname" id="artist_surname__<?php echo $i?>"  value="<?php echo $artist->__get('artist_surname');?>" class="small"/>
+				<label>Nacionalidad</label>
+				<input type="text" name="artist_nationality" id="artist_nationality__<?php echo $i?>" value="<?php echo $artist->__get('artist_nationality');?>" class="small"/>
 				<label>Fecha de nacimiento (AAAA-MM-DD)</label>
 				<input type="text" name="artist_birthday" value="<?php echo $artist->__get('artist_birthday')?>" class="small datepicker"/>
 				<label>Lugar de residencia</label>
@@ -32,7 +38,7 @@ for($i = 1; $i <= count($artists); $i++)
 
 			<div class="six columns">
 			
-				<label>Reseña del artista<label>
+				<label>Reseña del artsita<label>
 				<i>(Descripción de la propuesta artística, exposiciones destacadas desde el 2007, obras en colecciones. Máximo 500 palabras)</i>
 				<textarea class="grande" name="artist_review" rows="7"><?php echo $artist->__get('artist_review')?></textarea>
 			</div>
@@ -102,7 +108,7 @@ for($i = 1; $i <= count($artists); $i++)
 						<?php
 					}
 					?>
-				<span>Puede subir máximo tres imagenes de sus obras en .JPG, .PNG o .PDF</span>
+				<span>Puede subir máximo tres imágenes de sus obras en .JPG, .PNG o .PDF</span>
 				</div>
 				<!-- END panel de imagen -->
 				
@@ -134,13 +140,17 @@ for($i = 1; $i <= count($artists); $i++)
 			<!-- columns 2/2 -->
 			<!-- reseña de artista -->
 			<div class="six columns">
+						<label>Nombre</label>
+						<input type="text" name="artist_name"  id="artist_name_new"   class="small"/>
+						<label>Apellido</label>
+						<input type="text" name="artist_surname" id="artist_surname_new"    class="small"/>
+						<label>Nacionalidad</label>
+						<input type="text" name="artist_nationality" id="artist_nationality_new"    class="small"/>
+							
 							<label>Fecha de nacimiento (AAAA-MM-DD)</label>
 							<input type="text" name="artist_birthday" value="" class="small datepicker"/>
 							<label>Lugar de residencia</label>
 							<input type="text" name="artist_residency" value="" class="small"/>
-							<input type="hidden" name="artist_name" id="artist_name" value="" class="small"/>
-							<input type="hidden" name="artist_surname" id="artist_surname" value="" class="small"/>
-							<input type="hidden" name="artist_nationality" id="artist_nationality" value="" class="small"/>
 						</div>
 						<div class="six columns">
 						
@@ -168,13 +178,13 @@ for($i = 1; $i <= count($artists); $i++)
 						?>
 						<input type="hidden" name="artist_work_key_<?php echo $j?>" value="<?php echo $key?>">
 						<div class="four columns obra">
-							<label>Nombre de la obra</label>
+							<label>Nombre</label>
 							<input type="text" title="Nombre de la obra <?php echo $j?>" name="artist_work_name_<?php echo $j?>">
 							<label>Técnica</label>
 							<input type="text" title="Técnica <?php echo $j?>" name="artist_work_technique_<?php echo $j?>">
 							<label>Dimensiones</label>
 							<input type="text" title="Dimensiones <?php echo $j?>" name="artist_work_dimensions_<?php echo $j?>">
-							<label>Año de realización</label>
+							<label>Año</label>
 							<input type="text" title="Año de realización <?php echo $j?>" name="artist_work_year_<?php echo $j?>">
 							<div name="artist_work_file_<?php echo $key . '_' . $j?>" id="artist_work_file_<?php echo $key . '_' . $j?>"></div>
 						</div>
@@ -190,7 +200,7 @@ for($i = 1; $i <= count($artists); $i++)
 					          },
 					          autoUpload: true,
 					          text: {
-					            uploadButton: '<i class="icon-plus icon-white"></i> Seleccione archivo'
+					            uploadButton: '<i class="icon-plus icon-white"></i> Seleccione el archivo'
 					          }
 					        });	
 					      });

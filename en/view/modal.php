@@ -25,15 +25,15 @@ for($i = 1; $i <= count($artists); $i++)
 			<!-- reseña de artista -->
 			<div class="six columns">
 				<label>Name</label>
-				<input type="text" name="artist_name" id="artist_name"  value="<?php echo $artist->__get('artist_name');?>" class="small"/>
+				<input type="text" name="artist_name" id="artist_name__<?php echo $i?>"  value="<?php echo $artist->__get('artist_name');?>" class="small"/>
 				<label>Last name</label>
-				<input type="text" name="artist_surname" id="artist_surname"  value="<?php echo $artist->__get('artist_surname');?>" class="small"/>
+				<input type="text" name="artist_surname" id="artist_surname__<?php echo $i?>"  value="<?php echo $artist->__get('artist_surname');?>" class="small"/>
 				<label>Nationality</label>
-				<input type="text" name="artist_nationality" id="artist_nationality" value="<?php echo $artist->__get('artist_nationality');?>" class="small"/>
+				<input type="text" name="artist_nationality" id="artist_nationality__<?php echo $i?>" value="<?php echo $artist->__get('artist_nationality');?>" class="small"/>
 				<label>Date of birth (YYYY-MM-DD)</label>
-				<input type="text" name="artist_birthday"  id="artist_birthday" value="<?php echo $artist->__get('artist_birthday')?>" class="small datepicker"/>
+				<input type="text" name="artist_birthday" value="<?php echo $artist->__get('artist_birthday')?>" class="small datepicker"/>
 				<label>Residence location</label>
-				<input type="text" name="artist_residency" id="artist_residency" value="<?php echo $artist->__get('artist_residency')?>" class="small"/>
+				<input type="text" name="artist_residency" value="<?php echo $artist->__get('artist_residency')?>" class="small"/>
 			</div>
 
 			<div class="six columns">
@@ -141,11 +141,11 @@ for($i = 1; $i <= count($artists); $i++)
 			<!-- reseña de artista -->
 			<div class="six columns">
 						<label>Name</label>
-						<input type="text" name="artist_name"  value="<?php echo $artist->__get('artist_name');?>" class="small"/>
+						<input type="text" name="artist_name"  id="artist_name_new"   class="small"/>
 						<label>Last name</label>
-						<input type="text" name="artist_surname"  value="<?php echo $artist->__get('artist_surname');?>" class="small"/>
+						<input type="text" name="artist_surname" id="artist_surname_new"    class="small"/>
 						<label>Nationality</label>
-						<input type="text" name="artist_nationality"  value="<?php echo $artist->__get('artist_nationality');?>" class="small"/>
+						<input type="text" name="artist_nationality" id="artist_nationality_new"   class="small"/>
 							
 							<label>Date of birth (YYYY-MM-DD)</label>
 							<input type="text" name="artist_birthday" value="" class="small datepicker"/>
