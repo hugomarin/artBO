@@ -181,15 +181,17 @@
 						<div class="seven columns">
 							<div class="theartists">
 								<h3 class="whitetxt">Artistas</h3>
-								<h6>ARTISTAS A REPRESENTAR EN ARTBO 2013</h6>
-								<strong>Monserrat Soto/</strong><span>España</span><a href="#" data-name="Monserrat Soto"><img src="images/mas.png" alt="" width="15" height="14" /></a>
-								<strong>Rogelio López Cuenca/</strong><span>España</span><a href="#" data-icon="+"><img src="images/mas.png" alt="" width="15" height="14" /></a>
-								<strong>Miroslaw Balka/</strong><span>Polonia</span><a href="#" data-icon="+"><img src="images/mas.png" alt="" width="15" height="14" /></a>
-								<strong>Tania Bruguera/</strong><span>Cuba</span><a href="#" data-icon="+"><img src="images/mas.png" alt="" width="15" height="14" /></a>
-								<strong>Sol LeWitt/</strong><span>Estados Unidos</span><a href="#" id="lewitt"><img src="images/mas.png" alt="" width="15" height="14" /></a>
-								<div class="another">
-									<h6>OTROS ARTISTAS REPRESENTADOS</h6>
-									<p>Art&Languaje, Eric Baudelaire, Miguel Ángel Campano, Luis Claramunt, Jonas Dahlberg, Dora García, Cristina García Rodero, Pierre Gonnord,  Federico Herrero, Valeriano López, Yasumasa Morimura</p>
+								<div class="thiso">
+									<h6>ARTISTAS A REPRESENTAR EN ARTBO 2013</h6>
+									<strong>Monserrat Soto/</strong><span>España</span><a href="#" data-name="Monserrat Soto"><img src="images/mas.png" alt="" width="15" height="14" /></a>
+									<strong>Rogelio López Cuenca/</strong><span>España</span><a href="#" data-icon="+"><img src="images/mas.png" alt="" width="15" height="14" /></a>
+									<strong>Miroslaw Balka/</strong><span>Polonia</span><a href="#" data-icon="+"><img src="images/mas.png" alt="" width="15" height="14" /></a>
+									<strong>Tania Bruguera/</strong><span>Cuba</span><a href="#" data-icon="+"><img src="images/mas.png" alt="" width="15" height="14" /></a>
+									<strong>Sol LeWitt/</strong><span>Estados Unidos</span><a href="#" id="lewitt"><img src="images/mas.png" alt="" width="15" height="14" /></a>
+									<div class="another">
+										<h6>OTROS ARTISTAS REPRESENTADOS</h6>
+										<p>Art&Languaje, Eric Baudelaire, Miguel Ángel Campano, Luis Claramunt, Jonas Dahlberg, Dora García, Cristina García Rodero, Pierre Gonnord,  Federico Herrero, Valeriano López, Yasumasa Morimura</p>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -221,7 +223,7 @@
 				</div>
 				<div class="four columns">
 					<div class="middle text-center"> 
-						<a href="#"><span></span>volver al indice</a>
+						<a href="#"><img src="images/smallmenu.png" alt="menu" width="15" height="14" />volver al indice</a>
 					</div>
 				</div>
 				<div class="four columns">

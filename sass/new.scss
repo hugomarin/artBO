@@ -1016,6 +1016,10 @@ ul.main-menu{
     }
   }
   .theartists{
+    .thiso{
+      height: 250px;
+      overflow: auto;
+    }
     h3{
       letter-spacing: -1px;
     }
@@ -1115,4 +1119,12 @@ ul.main-menu{
  position:absolute;
  right: 10px;
  top: 10px; 
+}
+
+.middle{
+  img{
+    position: relative;
+    top: 2px;
+    margin-right: 5px;
+  }
 }
