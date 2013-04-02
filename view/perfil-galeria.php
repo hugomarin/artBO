@@ -1,6 +1,93 @@
-<?php include_once('header-login.php'); ?>
-<!-- 2.menu-->
-<?php include_once('menu-galeria.php'); ?>
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+
+	<meta charset="utf-8" />
+
+	<!-- Set the viewport width to device width for mobile -->
+	<!-- <meta name="viewport" content="width=device-width" /> -->
+
+	<title>artBO</title>
+  
+	<!-- Included CSS Files -->
+	<link rel="stylesheet" href="stylesheets/app.css">
+	<link rel="stylesheet" href="stylesheets/new.css">
+	<link rel="stylesheet" href="stylesheets/phase.css">
+	<link rel="stylesheet" href="stylesheets/foundation-overrides.css">
+	<link rel="stylesheet" href="stylesheets/ui-lightness/jquery-ui-1.8.18.custom.css">
+	<link rel="stylesheet" href="stylesheets/jquery.mCustomScrollbar.css">
+	<script src="javascripts/jquery.min.js"></script>    
+	<script src="javascripts/jquery-ui-1.8.18.custom.min.js"></script>
+
+	<script type="text/javascript" src="//use.typekit.net/fzq1qvs.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="stylesheets/ie.css">
+	<![endif]-->
+
+
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+
+<div class="encabezado">
+		<!-- header artbo logo -->
+	<div class="row superior-2">	
+		<!-- columns 1/2 -->
+		<div class="four columns">
+				<img src="images/resources/logo.png" height="76" width="278" alt="logo" />
+		</div>
+		<!-- END columns 1/2 -->
+		
+		<!-- columns 2/2 -->
+		<div class="eight columns lateralder ">
+			<div class="perfil-data second">
+				<div class="perfil left">
+				
+                   	<a href="datos-galeria-0300.html" class="imagenlogo"><img src="http://cambelt.co/icon/camera/36x26?color=b71632,fefefe"  height="36" width="36" alt="perfil"/></a>
+                    <p class="right"><strong>nombre comercial de la galeria</strong><br />
+					<a href="#" title="Clic aquí para editar información de la galería">Editar perfil</a> | <a href="#" title="Salir">Salir</a></p>
+
+
+                </div>
+				<div class="idiomas left">
+					<p>Español | <a href="#" title="artBO English">English</a></p>
+				</div>
+			</div>
+		</div>
+		<!-- END columns 2/2 -->
+	</div>
+		<!-- END header artbo logo -->
+</div>	
+
+<!-- 2. Navigation -->
+<div class="row breadcrumb">
+	<div class="six columns">
+		<a href="#" class="getback"><span><img src="images/smallarrow.png" alt="" width="17" height="16" /></span>INDICE DE GALERÍAS</a>
+	</div>
+	<div class="six columns">
+		<ul class="main-menu no-bullet">
+			<li><a href="#" class="activo"><span><img src="images/smalldoc.png" alt="" width="12" height="18" /></span>DOCUMENTOS</a></li>
+			<li><a href="#"><span><img src="images/smallfolder.png" alt="" width="17" height="16" /></span>DESCARGAR</a></li>
+			<li><a href="#"><span><img src="images/smalledit.png" alt="" width="17" height="19" /></span>EDITAR</a></li>
+			<li><a href="#" class="activate"><span><img src="images/smallcheck.png" alt="" width="18" height="17" /></span>ACTIVAR</a></li>
+		</ul>
+	</div>
+</div>
+<br />
+
+
 <!-- 2. End menu -->
 
 	<div class="row main-row">	
@@ -25,7 +112,7 @@
 			<div class="profile-resume">
 				<img src="images/galleryprofile.png" alt="" width="597" height="447" />
 				<div class="resum">
-					<h4>Galería Juana de Aizpuru<span class="year">1970</span></h4> 
+					<h4>Galería Juana de Aizpuru<sup>1970</sup></h4> 
 					<a href="#" target="_blank" class="website">www.juanadeaizpuru.com</a>
 					<h6>RESEÑA DE LA GALERÍA</h6>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nunc diam, eleifend eu varius semper, cursus nec ipsum. In at arcu eget massa cursus elementum. Suspendisse id tincidunt purus. Pellentesque vel ligula lorem, sit amet porttitor metus. Quisque sit amet nisl ac lorem molestie pellentesque. Etiam odio massa, iaculis at cursus vel, ultrices imperdiet augue. Cras mi lacus, faucibus quis dictum nec, aliquam vitae justo.Pellentesque ultricies lorem sed est pretium adipiscing. Proin tincidunt varius vehicula. Cras venenatis elementum lorem, id lobortis orci fermentum at. Pellentesque tortor sem, iaculis nec fermentum nec, rhoncus et neque. Nullam faucibus velit at diam iaculis in luctus felis dictum. Sed bibendum, felis vel tincidunt euismod, mauris purus fermentum lorem, a consequat lorem massa commodo ligula. Vivamus commodo tristique neque ullamcorper luctus. Phasellus dapibus venenatis mi vitae adipiscing. Morbi in scelerisque turpis. In semper accumsan velit, vitae laoreet nulla placerat et. Integer sagittis, magna et semper bibendum, mi turpis fermentum libero, a mollis quam sapien vel neque. Sed ullamcorper enim quis dolor eleifend vitae gravida enim sagittis.
@@ -204,7 +291,7 @@
 					<div class="row">
 						<div class="twelve columns">
 							<div class="gallery-name">
-								<strong>Desea activar a: Galería Juana de Aizpuru </strong>
+								<span>Desea activar a: <strong>Galería Juana de Aizpuru </strong></span>
 								<a href="#"><span><img src="images/smallcheck.png" alt="" width="18" height="17" /></span>ACTIVAR</a>
 							</div>
 						</div>
@@ -243,6 +330,9 @@
 				<a href="#"><img src="images/toleft.jpg" alt="" width="20" height="20" /></a><a class="right" href="#"><img src="images/toright.jpg" alt="" width="20" height="20" /></a>
 			</div>
 			<img src="images/artistimage.jpg" title="Model for Brick Structure, 2003, painted foam on board, 12 x 27 x 27" alt="" width="700" height="466" />
+			<div class="resume">
+				Model for Brick Structure, 2003, painted foam on board, 12 x 27 x 27
+			</div>
 		</div>
 		<div class="row">
 			<div class="four columns">
@@ -260,10 +350,50 @@
 		</div>
 		<a class="close-reveal-modal"><img src="images/smallclose.png" alt="" width="21" height="20" /></a>
 	</div>
-		
+		 
 
 <!-- 4. footer -->			
-<?php include_once('footer.php'); ?>
+
+	<script src="javascripts/jquery.min.js"></script>
+	<script src="javascripts/jquery-ui-1.8.18.custom.min.js"></script>
+	<script src="javascripts/modernizr.foundation.js"></script>
+	<script src="javascripts/foundation.js"></script>
+	<script src="javascripts/app.js"></script>	
+    <script src="javascripts/jquery.mousewheel.min.js"></script>
+    <script src="javascripts/jquery.mCustomScrollbar.min.js"></script>
+    
+
+	<!-- Included JS Files -->
+
+	
+ 	<script type="text/javascript" charset="utf-8">
+	 	 $(document).ready(function() {
+	 	
+			 	 $("#lewitt").click(function(e) {
+			 	 	e.preventDefault();
+			    	console.log($(this)); 
+			        $("#SolLeWitt").reveal();
+			    });
+	 	});
+	 </script>
+	 
+	 <script>
+    (function($){
+        $(window).load(function(){
+            $(".resum, .real-expos ul, .real-fairs ul, .this, .artistr p").mCustomScrollbar({
+            	scrollInertia: 150, 
+            	advanced:{
+			        updateOnContentResize: true
+			    }
+            });
+        });
+    })(jQuery);
+	</script>
+
+</body>
+<!-- End Body -->
+</html>
+
 <!-- 4. End footer -->
  
 

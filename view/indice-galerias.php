@@ -1,10 +1,83 @@
-<?php include_once('header-login.php'); ?>
-<!-- 2.menu-->
-<?php include_once('breadcrumbs.php'); ?>
-<!-- 2. End menu -->
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+
+	<meta charset="utf-8" />
+
+	<!-- Set the viewport width to device width for mobile -->
+	<!-- <meta name="viewport" content="width=device-width" /> -->
+
+	<title>artBO</title>
+  
+	<!-- Included CSS Files -->
+	<link rel="stylesheet" href="stylesheets/app.css">
+	<link rel="stylesheet" href="stylesheets/new.css">
+	<link rel="stylesheet" href="stylesheets/phase.css">
+	<link rel="stylesheet" href="stylesheets/foundation-overrides.css">
+	
+	
+	<script src="javascripts/jquery.min.js"></script>
+
+	<script type="text/javascript" src="//use.typekit.net/fzq1qvs.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="stylesheets/ie.css">
+	<![endif]-->
+
+
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+</head>
+
+<div class="encabezado">
+		<!-- header artbo logo -->
+	<div class="row superior-2">	
+		<!-- columns 1/2 -->
+		<div class="four columns">
+				<img src="images/resources/logo.png" height="76" width="278" alt="logo" />
+		</div>
+		<!-- END columns 1/2 -->
+		
+		<!-- columns 2/2 -->
+		<div class="eight columns lateralder ">
+			<div class="perfil-data">
+				<div class="perfil second left">
+				
+                   	<a href="datos-galeria-0300.html" class="imagenlogo"><img src="http://cambelt.co/icon/camera/40x40?color=b71632,fefefe"  height="36" width="36" alt="perfil"/></a>
+                    <p class="right"><strong>nombre comercial de la galeria</strong><br />
+					<a href="#" title="Clic aquí para editar información de la galería">Editar perfil</a> | <a href="#" title="Salir">Salir</a></p>
+
+
+                </div>
+			</div>
+		</div>
+		<!-- END columns 2/2 -->
+	</div>
+		<!-- END header artbo logo -->
+</div>	
+
+<body>
+<div class="row breadcrumb">
+	<div class="twelve columns">
+		<h5 class="redtext">Galerías</h5>
+		<h3>Indice de galerías</h3>
+		<h5>Este es el registro de todas las galerías registradas para artBO 2013</h5>
+	</div>
+</div>
+<br />
+
 
 	<div class="row main-row">	
-		<div class="panel nopadding">
+		<div class="panel nopadding mtop20">
 			<div class="first-header">
 				
 					<div class="row">
@@ -35,7 +108,7 @@
 						<table border="0" cellspacing="0" cellpadding="0">
 							<thead>
 								<tr>
-									<th>Nombre de la galeria <a href="#">▲</a> </th>
+									<th>Nombre de la galería <a href="#">▲</a> </th>
 									<th>Contacto</th>
 									<th>Documento</th>
 									<th>Pais <a href="#">▼</a></th>
@@ -44,77 +117,78 @@
 								</tr>
 							</thead>
 							<tr>
-								<td>Al cuadrado</td>
-								<td>Hola@micorreo</td>
+								<td><a href="#">Al cuadrado</a></td>
+								<td><a href="mailto:Hola@micorreo">Hola@micorreo</a></td>
 								<td>NIT 80089461-1</td>
 								<td>Colombia</td>
 								<td><span class="label red">activo</span></td>
-								<td><img src="images/view.png" alt="" width="24" height="24" /></td>
+								<td><a href="#"><img src="images/view.png" alt="" width="24" height="24" /></a></td>
 							</tr>
 							<tr>
-								<td>casa cuadrada</td>
-								<td>contacto@micorreo</td>
+								<td><a href="#">casa cuadrada</a></td>
+								<td><a href="mailto:contacto@micorreo">contacto@micorreo</a></td>
 								<td>NIT 80089461-1</td>
 								<td>Colombia</td>
 								<td><span class="label gray">inactivo</span></td>
-								<td><img src="images/view.png" alt="" width="24" height="24" /></td>
+								<td><a href="#"><img src="images/view.png" alt="" width="24" height="24" /></a></td>
 							</tr>
 							<tr>
-								<td>casa cuadrada</td>
-								<td>contacto@micorreo</td>
+								<td><a href="">casa cuadrada</a></td>
+								<td><a href="mailto:contacto@micorreo">contacto@micorreo</a></td>
 								<td>NIT 80089461-1</td>
 								<td>Colombia</td>
 								<td><span class="label gray">inactivo</span></td>
-								<td><img src="images/view.png" alt="" width="24" height="24" /></td>
+								<td><a href=""><img src="images/view.png" alt="" width="24" height="24" /></a></td>
 							</tr>
 							<tr>
-								<td>casa cuadrada</td>
-								<td>contacto@micorreo</td>
-								<td>NIT 80089461-1</td>
-								<td>Colombia</td>
-								<td><span class="label gray">inactivo</span></td>
-								<td><img src="images/view.png" alt="" width="24" height="24" /></td>
-							</tr>
-							<tr>
-								<td>Al cuadrado</td>
-								<td>Hola@micorreo</td>
+								<td><a href="#">Al cuadrado</a></td>
+								<td><a href="mailto:Hola@micorreo">Hola@micorreo</a></td>
 								<td>NIT 80089461-1</td>
 								<td>Colombia</td>
 								<td><span class="label red">activo</span></td>
-								<td><img src="images/view.png" alt="" width="24" height="24" /></td>
+								<td><a href="#"><img src="images/view.png" alt="" width="24" height="24" /></a></td>
 							</tr>
 							<tr>
-								<td>casa cuadrada</td>
-								<td>contacto@micorreo</td>
+								<td><a href="#">casa cuadrada</a></td>
+								<td><a href="mailto:contacto@micorreo">contacto@micorreo</a></td>
 								<td>NIT 80089461-1</td>
 								<td>Colombia</td>
 								<td><span class="label gray">inactivo</span></td>
-								<td><img src="images/view.png" alt="" width="24" height="24" /></td>
+								<td><a href="#"><img src="images/view.png" alt="" width="24" height="24" /></a></td>
 							</tr>
 							<tr>
-								<td>Al cuadrado</td>
-								<td>Hola@micorreo</td>
-								<td>NIT 80089461-1</td>
-								<td>Colombia</td>
-								<td><span class="label red">activo</span></td>
-								<td><img src="images/view.png" alt="" width="24" height="24" /></td>
-							</tr>
-							<tr>
-								<td>casa cuadrada</td>
-								<td>contacto@micorreo</td>
+								<td><a href="">casa cuadrada</a></td>
+								<td><a href="mailto:contacto@micorreo">contacto@micorreo</a></td>
 								<td>NIT 80089461-1</td>
 								<td>Colombia</td>
 								<td><span class="label gray">inactivo</span></td>
-								<td><img src="images/view.png" alt="" width="24" height="24" /></td>
+								<td><a href=""><img src="images/view.png" alt="" width="24" height="24" /></a></td>
 							</tr>
 							<tr>
-								<td>Al cuadrado</td>
-								<td>Hola@micorreo</td>
+								<td><a href="#">Al cuadrado</a></td>
+								<td><a href="mailto:Hola@micorreo">Hola@micorreo</a></td>
 								<td>NIT 80089461-1</td>
 								<td>Colombia</td>
 								<td><span class="label red">activo</span></td>
-								<td><img src="images/view.png" alt="" width="24" height="24" /></td>
+								<td><a href="#"><img src="images/view.png" alt="" width="24" height="24" /></a></td>
 							</tr>
+							<tr>
+								<td><a href="#">casa cuadrada</a></td>
+								<td><a href="mailto:contacto@micorreo">contacto@micorreo</a></td>
+								<td>NIT 80089461-1</td>
+								<td>Colombia</td>
+								<td><span class="label gray">inactivo</span></td>
+								<td><a href="#"><img src="images/view.png" alt="" width="24" height="24" /></a></td>
+							</tr>
+							<tr>
+								<td><a href="">casa cuadrada</a></td>
+								<td><a href="mailto:contacto@micorreo">contacto@micorreo</a></td>
+								<td>NIT 80089461-1</td>
+								<td>Colombia</td>
+								<td><span class="label gray">inactivo</span></td>
+								<td><a href=""><img src="images/view.png" alt="" width="24" height="24" /></a></td>
+							</tr>
+							
 						</table>
 					</div>
 				</div>
@@ -149,7 +223,42 @@
 		</div>
 	<!-- 3. END Row main --> 
 		
-<!-- 4. footer -->			
-<?php include_once('footer.php'); ?>
-<!-- 4. End footer -->
+
+	<script src="javascripts/jquery.min.js"></script>
+	<script src="javascripts/jquery-ui-1.8.18.custom.min.js"></script>
+	<script src="javascripts/modernizr.foundation.js"></script>
+	<script src="javascripts/foundation.js"></script>
+	<script src="javascripts/app.js"></script>	
+
+	<!-- Included JS Files -->
+
+	
+ 	<script type="text/javascript" charset="utf-8">
+	 	 $(document).ready(function() {
+	 	
+			 	 $("#lewitt").click(function(e) {
+			 	 	e.preventDefault();
+			    	console.log($(this)); 
+			        $("#SolLeWitt").reveal();
+			    });
+	 	});
+	 </script>
+	 
+	 <script>
+    (function($){
+        $(window).load(function(){
+            $(".resum, .real-expos ul, .real-fairs ul, .this, .artistr p").mCustomScrollbar({
+            	scrollInertia: 150, 
+            	advanced:{
+			        updateOnContentResize: true
+			    }
+            });
+        });
+    })(jQuery);
+	</script>
+
+</body>
+<!-- End Body -->
+</html>
+
 
