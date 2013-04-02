@@ -11,12 +11,13 @@
 							<div class="twelve columns">
 								<h3>Documentos</h3>
 								<ul>
-									<li><strong>F</strong><span>CERTIFICADO DE EXISTENCIA</span></li>
-									<li><strong>F</strong><span>RUT O IDENTIFICACIÓN FISCAL</span></li>
-									<li><strong>F</strong><span>DOCUMENTO DE IDENTIDAD</span></li>
-									<li><strong>F</strong><span>REGISTRO DE PAGO</span></li>
+									<li><img src="images/doc.png" alt="" width="37" height="55" /><span>CERTIFICADO DE EXISTENCIA</span></li>
+									<li><img src="images/doc.png" alt="" width="37" height="55" /><span>RUT O IDENTIFICACIÓN FISCAL</span></li>
+									<li><img src="images/doc.png" alt="" width="37" height="55" /><span>DOCUMENTO DE IDENTIDAD</span></li>
+									<li><img src="images/doc.png" alt="" width="37" height="55" /><span>REGISTRO DE PAGO</span></li>
 								</ul>
 							</div> 
+							<a href="#" class="bigclose"> <img src="images/bigclose.png" alt="" width="30" height="29" /> </a>
 						</div>
 					</div>
 			</div>
@@ -185,133 +186,87 @@
 							<div class="twelve columns">
 								<h3 class="whitetxt">Artistas</h3>
 								<h6>ARTISTAS A REPRESENTAR EN ARTBO 2013</h6>
+								<strong>Monserrat Soto/</strong><span>España</span><a href="#" data-name="Monserrat Soto"><img src="images/mas.png" alt="" width="15" height="14" /></a>
+								<strong>Rogelio López Cuenca/</strong><span>España</span><a href="#" data-icon="+"><img src="images/mas.png" alt="" width="15" height="14" /></a>
+								<strong>Miroslaw Balka/</strong><span>Polonia</span><a href="#" data-icon="+"><img src="images/mas.png" alt="" width="15" height="14" /></a>
+								<strong>Tania Bruguera/</strong><span>Cuba</span><a href="#" data-icon="+"><img src="images/mas.png" alt="" width="15" height="14" /></a>
+								<strong>Sol LeWitt/</strong><span>Estados Unidos</span><a href="#" id="lewitt"><img src="images/mas.png" alt="" width="15" height="14" /></a>
+								<div class="another">
+									<h6>OTROS ARTISTAS REPRESENTADOS</h6>
+									<p>Art&Languaje, Eric Baudelaire, Miguel Ángel Campano, Luis Claramunt, Jonas Dahlberg, Dora García, Cristina García Rodero, Pierre Gonnord,  Federico Herrero, Valeriano López, Yasumasa Morimura</p>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			
-			<div class="inner-header watch">
-				<div class="row">
-			 		<div class="twelve columns">
-						<table border="0" cellspacing="0" cellpadding="0">
-							<thead>
-								<tr>
-									<th>Nombre de la galeria <a href="#">▲</a> </th>
-									<th>Contacto</th>
-									<th>Documento</th>
-									<th>Pais <a href="#">▼</a></th>
-									<th></th>
-									<th></th>
-								</tr>
-							</thead>
-							<tr>
-								<td>Al cuadrado</td>
-								<td>Hola@micorreo</td>
-								<td>NIT 80089461-1</td>
-								<td>Colombia</td>
-								<td><span class="label red">activo</span></td>
-								<td><img src="images/view.png" alt="" width="24" height="24" /></td>
-							</tr>
-							<tr>
-								<td>casa cuadrada</td>
-								<td>contacto@micorreo</td>
-								<td>NIT 80089461-1</td>
-								<td>Colombia</td>
-								<td><span class="label gray">inactivo</span></td>
-								<td><img src="images/view.png" alt="" width="24" height="24" /></td>
-							</tr>
-							<tr>
-								<td>casa cuadrada</td>
-								<td>contacto@micorreo</td>
-								<td>NIT 80089461-1</td>
-								<td>Colombia</td>
-								<td><span class="label gray">inactivo</span></td>
-								<td><img src="images/view.png" alt="" width="24" height="24" /></td>
-							</tr>
-							<tr>
-								<td>casa cuadrada</td>
-								<td>contacto@micorreo</td>
-								<td>NIT 80089461-1</td>
-								<td>Colombia</td>
-								<td><span class="label gray">inactivo</span></td>
-								<td><img src="images/view.png" alt="" width="24" height="24" /></td>
-							</tr>
-							<tr>
-								<td>Al cuadrado</td>
-								<td>Hola@micorreo</td>
-								<td>NIT 80089461-1</td>
-								<td>Colombia</td>
-								<td><span class="label red">activo</span></td>
-								<td><img src="images/view.png" alt="" width="24" height="24" /></td>
-							</tr>
-							<tr>
-								<td>casa cuadrada</td>
-								<td>contacto@micorreo</td>
-								<td>NIT 80089461-1</td>
-								<td>Colombia</td>
-								<td><span class="label gray">inactivo</span></td>
-								<td><img src="images/view.png" alt="" width="24" height="24" /></td>
-							</tr>
-							<tr>
-								<td>Al cuadrado</td>
-								<td>Hola@micorreo</td>
-								<td>NIT 80089461-1</td>
-								<td>Colombia</td>
-								<td><span class="label red">activo</span></td>
-								<td><img src="images/view.png" alt="" width="24" height="24" /></td>
-							</tr>
-							<tr>
-								<td>casa cuadrada</td>
-								<td>contacto@micorreo</td>
-								<td>NIT 80089461-1</td>
-								<td>Colombia</td>
-								<td><span class="label gray">inactivo</span></td>
-								<td><img src="images/view.png" alt="" width="24" height="24" /></td>
-							</tr>
-							<tr>
-								<td>Al cuadrado</td>
-								<td>Hola@micorreo</td>
-								<td>NIT 80089461-1</td>
-								<td>Colombia</td>
-								<td><span class="label red">activo</span></td>
-								<td><img src="images/view.png" alt="" width="24" height="24" /></td>
-							</tr>
-						</table>
-					</div>
-				</div>
-		</div>
-		<!-- panel -->
-	
-
-			<div class="inner-footer change">
-						<div class="container">
-							<div class="row">
-								<div class="six columns centered">
-									<div class="pag">
-										<ul class="pagination">
-										  <li class="arrow unavailable"><a href="">&laquo;</a></li>
-										  <li class="current"><a href="">1</a></li>
-										  <li><a href="">2</a></li>
-										  <li><a href="">3</a></li>
-										  <li><a href="">4</a></li>
-										  <li class="arrow"><a href="">&raquo;</a></li>
-										</ul>
-									</div>
-								</div>
+			<div class="activar">
+				<div class="container">
+					<div class="row">
+						<div class="twelve columns">
+							<div class="gallery-name">
+								<strong>Desea activar a: Galería Juana de Aizpuru </strong>
+								<a href="#"><span><img src="images/smallcheck.png" alt="" width="18" height="17" /></span>ACTIVAR</a>
 							</div>
 						</div>
-					</div><!--/inner-footer-->
-				</div><!-- END Main: Panel -->
-				<div class="advisory">
-					<span>Recomendamos visualizar en: IE 9.0 - Firefox 10.0 - Safari 5.1 - Chrome 17.0
-					Optimizada 1024 x 768</span>
-					<span><a href="http://www.artboonline.com/documentos/2130_reglamento_participacion_2013.pdf" target="_blank">Términos y Condiciones</a> del sitio</span>
+					</div>
 				</div>
+			</div>
+
+		</div><!-- END Main: Panel -->
+		<div class="footer-menu">
+			<div class="row">
+				<div class="four columns">
+					<div class="left">
+						<a href="#"> < Now contemporary art</a>
+						<span class="right">ANTERIOR</span>
+					</div>
+				</div>
+				<div class="four columns">
+					<div class="middle text-center"> 
+						<a href="#"><span></span>volver al indice</a>
+					</div>
+				</div>
+				<div class="four columns">
+					<div class="right">
+						<a href="#">Galería al cuadrado ></a>
+						<span>SIGUIENTE</span>
+					</div>
+				</div>
+			</div>
 		</div>
 	<!-- 3. END Row main --> 
+	</div>
+	
+	<div id="SolLeWitt" class="reveal-modal artistr">
+		<div class="galleryfic">
+			<div class="handlers">
+				<a href="#"><img src="images/toleft.jpg" alt="" width="20" height="20" /></a><a class="right" href="#"><img src="images/toright.jpg" alt="" width="20" height="20" /></a>
+			</div>
+			<img src="images/artistimage.jpg" title="Model for Brick Structure, 2003, painted foam on board, 12 x 27 x 27" alt="" width="700" height="466" />
+		</div>
+		<div class="row">
+			<div class="four columns">
+				<h3>Sol LeWitt</h3>
+				<h6>FECHA DE NACIMIENTO</h6>
+				<span>10/03/1935</span>
+				<h6>LUGAR DE NACIMIENTO</h6>
+				<span>Estados Unidos</span>
+			</div>
+			<div class="eight columns">
+				<h5>RESEÑA DEL ARTISTA</h5>
+				<p>Se ha relacionado mucho a LeWitt con el minimalismo y se convertiría en uno de los pioneros del arte conceptual y uno de sus teóricos más destacados. Sus obras comprenden trabajos en dos y tres dimensiones, desde pinturas murales (más de 1200) a fotografías y centenares de dibujos y estructuras en forma de torres, pirámides, formas geométricas, y progresiones. De diferentes tamaños, desde maquetas a estructuras monumentales. Sol Lewitt utiliza frecuentemente estructuras abiertas y modulares originarias del cubo, una forma que lo influyó desde que se hizo artista. Sus esculturas incluyen las estructuras tempranas de la pared y tres proyectos seriales a partir de los años 60; cuatro cubos abiertos incompletos a partir de los años 70; numerosos pedazos de madera blancos pintados a partir de los años 80: El hexágono, forma derivada de un cubo, estructura con tres torres, entre otras así como maquetas para las estructuras de bloque concretas a partir de los últimos años 90.
+				El MoMA le dedicó su primera retrospectiva en el 1978-79. Ha expuesto además en los Países Bajos, Reino Unido, Alemania, Suiza, Francia y España, entre otros países.</p>
+			</div>
+		</div>
+		<a class="close-reveal-modal"><img src="images/smallclose.png" alt="" width="21" height="20" /></a>
+	</div>
 		
+
 <!-- 4. footer -->			
 <?php include_once('footer.php'); ?>
 <!-- 4. End footer -->
+ 
+
 

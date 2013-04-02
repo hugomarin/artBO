@@ -60,6 +60,12 @@
 	 $(document).ready(function() {
 	 	
 	 	
+	 	 $("#SolLeWitt").click(function(e) {
+	 	 	e.preventDefault();
+	    	console.log($(this)); 
+	      // $("#SolLeWitt11").reveal();
+	    });
+	 	
 	
 		$('a[title$="url"]').click(function (){
 			
@@ -212,8 +218,16 @@
 	 });
 	</script>
 	
-	
-		
+ 	<script type="text/javascript" charset="utf-8">
+	 	 $(document).ready(function() {
+	 	
+			 	 $("#lewitt").click(function(e) {
+			 	 	e.preventDefault();
+			    	console.log($(this)); 
+			        $("#SolLeWitt").reveal();
+			    });
+	 	});
+	 </script>
 
 </body>
 <!-- End Body -->

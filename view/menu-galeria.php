@@ -11,14 +11,14 @@
 <!-- 2. Navigation -->
 <div class="row breadcrumb">
 	<div class="six columns">
-		<a href="#"><span>A</span>INDICE DE GALERÍAS</a>
+		<a href="#" class="getback"><span><img src="images/smallarrow.png" alt="" width="17" height="16" /></span>INDICE DE GALERÍAS</a>
 	</div>
 	<div class="six columns">
 		<ul class="main-menu no-bullet">
-			<li><a href="#"><span>F</span>DOCUMENTOS</a></li>
-			<li><a href="#"><span>D</span>DESCARGAR</a></li>
-			<li><a href="#"><span>W</span>EDITAR</a></li>
-			<li><a href="#"><span>F</span>ACTIVAR</a></li>
+			<li><a href="#" class="activo"><span><img src="images/smalldoc.png" alt="" width="12" height="18" /></span>DOCUMENTOS</a></li>
+			<li><a href="#"><span><img src="images/smallfolder.png" alt="" width="17" height="16" /></span>DESCARGAR</a></li>
+			<li><a href="#"><span><img src="images/smalledit.png" alt="" width="17" height="19" /></span>EDITAR</a></li>
+			<li><a href="#" class="activate"><span><img src="images/smallcheck.png" alt="" width="18" height="17" /></span>ACTIVAR</a></li>
 		</ul>
 	</div>
 </div>

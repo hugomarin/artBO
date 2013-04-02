@@ -519,6 +519,37 @@ only screen and (min-device-pixel-ratio: 2) {
 	left: 0;
 }
 
+.reveal-modal.artistr{
+  display:block;
+  left:none;
+  width: 60%;
+  margin-left:auto;
+  padding: 10px;
+  .close-reveal-modal{
+    top: 12px;
+  }
+  h6{
+    color: #9A9A9A;
+    font-size: 12px;
+    margin-bottom: 0;
+    margin-top: 20px;
+  }
+  h3{
+    font-weight: normal;
+  }
+  h5{
+    color: #676767;
+    font-size: 15px;
+    font-weight: normal;
+  }
+  p{
+    height: 200px;
+    overflow: auto;
+    line-height: 1.7;
+    font-size:14px;
+  }
+}
+
 .qq-upload-button {
   width: 150px;
   background: white;
@@ -595,6 +626,14 @@ ul.qq-upload-list{
 
 .breadcrumb{
   letter-spacing:-1px;
+  a.getback{
+    color: #000;
+    img{
+      position: relative;
+      top: 2px;
+      margin-right: 5px;
+    }
+  }
 }
 
 .first-header{
@@ -690,17 +729,45 @@ ul.main-menu{
      float:left;
     a{
       text-transform:uppercase;
-     color:#B2B2B2; 
-     letter-spacing:-1px;
-     span{
-       margin-right:5px;
-     }
+      color:#B2B2B2; 
+      letter-spacing:-1px;
+      position:relative;
+      &.activate{
+        background-color: #B2B2B2;
+        padding:4px 20px;
+        @include border-radius(25px);
+        color: #fff;
+        &:hover{
+          background-color: #333;
+        }
+      }
+      &.activo{
+        &:after{
+          content: ' ';
+          position:absolute;
+          left:36%;
+          bottom:-19px;
+          width: 0; 
+          height: 0; 
+          border-left: 15px solid transparent;
+          border-right: 15px solid transparent;
+          border-bottom: 15px solid #333;
+        }
+      }
+       span{
+         margin-right:5px;
+         img{
+           position: relative;
+            top: 3px;
+         }
+       }
     }
   }
 }
 
 .documents-info{
   background-color:#333333;
+  position: relative; 
   color:white;
   h3{
     color:white;
@@ -712,11 +779,10 @@ ul.main-menu{
       display:inline-block;
       width:25%;
       float:left;
-      strong{
+      img{
         display:block;
-        margin:0 auto;
+        margin:10px auto;
         text-align:center;
-        font-size:40px;
         font-weight:normal;
       }
       span{
@@ -928,12 +994,108 @@ ul.main-menu{
   color:#fff;
   @include arrowcorner($color:#4B0615);
   .theproposal{
-    width:40%;
+    width:47%;
     display:inline-block;
+    .this{
+      height: 268px;
+      padding-right: 10px;
+      overflow:auto;
+    }
   }
   .theartists{
     width:50%;
     display:inline-block;
     float:right;
+   h6{
+    color: #D87084;
+    font-size: 12px;
   }
+  .another{
+    margin-top: 40px;
+    }
+  strong{
+    line-height: 2;
+  }
+  span{
+    color: #D87084;
+    margin-left: 10px;
+  }
+  a{
+    color: #fff;
+    margin-left: 5px;
+  }
+  p{
+    color: #fff;
+  }
+  }
+}
+
+.activar{
+  background-color: #333;
+  .gallery-name{
+   float: right; 
+  }
+  strong{
+    color: #fff;
+    font-weight: normal;
+    font-size: 16px;
+  }
+  a{
+    background-color: #B2B2B2;
+    margin-left: 30px;
+    @include border-radius(25px);
+    color: #fff;
+    display:inline-block;
+    padding:7px 40px;
+    &:hover{
+      background-color: #111;
+    }
+    span{
+      color: #fff;
+      margin-right:10px;
+      line-height: 1.6;
+      img{
+        position:relative;
+        top: 3px;
+      }
+    }
+  }
+}
+
+
+.footer-menu{
+  min-height: 60px;
+  a{
+    color:#000;
+    font-size: 16px;
+    display:block;
+  }
+  span{
+      display:block;
+      margin-top: 5px;
+      color: #7F7F7F;
+      font-size: 12px;
+    }
+}
+
+.galleryfic{
+  position:relative;
+  img{
+    width: 100%;
+  }
+  .handlers{
+    width: 100%;
+    position:absolute;
+    top: 45%;
+    img{
+      width: auto;
+    }
+  }
+
+}
+
+.bigclose{
+ position:absolute;
+ right: 10px;
+ top: 10px; 
 }
