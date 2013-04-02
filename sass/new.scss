@@ -688,6 +688,9 @@ ul.qq-upload-list{
             &:last-child{
               @include border-right-radius(6px); 
             }
+            img{
+              max-width: 30px;
+            }
             span{
               margin: 0 auto;
               padding:5px 5px 4px;
@@ -795,13 +798,15 @@ ul.main-menu{
 }
 
 .profile-resume{
+  @include nclearfix;
+  background-color:#BB0C35;
   img{
     float:left;
     width:60%;
+    @include nclearfix;
   }
   .resum{
     color:#fff;
-    background-color:#BB0C35;
     padding:20px;
     float:right;
     display:inline-block;
@@ -825,7 +830,7 @@ ul.main-menu{
       &.year{
         position:relative;
         right: 35px;
-        bottom: 35px;
+        bottom: 0;
         font-size:13px;
         float:right;
       }
@@ -846,6 +851,7 @@ ul.main-menu{
     border:5px solid white;
     width:80%;
     left: 25px;
+    @include nclearfix;
   }
   ul{
     margin-top:20px;
@@ -899,7 +905,9 @@ ul.main-menu{
   }
 }
 
-
+.lt-ie9 .exhibitandfairs .exhibits{
+  float: none;
+}
 .exhibitandfairs{
   display:block;
   position:relative;
@@ -908,11 +916,11 @@ ul.main-menu{
     @include arrowcorner($color:#808080); 
     display:inline-block;
     background-color:#A3A3A3;
-    float:left;
+    float: left;
+    @include box-sizing(border-box);
       h3{
         color:#fff;
         letter-spacing:-1px;
-        font-weight:normal;
       }
     .real-expos{
       ul{
@@ -920,9 +928,11 @@ ul.main-menu{
         height:225px;
         li{
           h6{
-            width:50%;
+            width:64%;
             color:#E3E3E3;
             font-size:11px;
+            display: inline-block;
+            text-align: right;
           }
           list-style-type:none;
           display:block;
@@ -949,19 +959,21 @@ ul.main-menu{
     width:50%;
     display:inline-block;
     background-color:#D4D4D4;
-    float:right;
+    float: right;
+    @include box-sizing(border-box);
     height:339px;
      @include arrowcorner();
      h3{
        &.mainh3{
          letter-spacing:-1px;
          color:#4D4D4D;
-         font-weight:normal;
        }
      }
     .real-fairs{
       ul{
         margin-top:40px;
+        overflow:auto;
+        height:225px;
         li{
           list-style-type:none;
           width: 50%;
@@ -994,8 +1006,9 @@ ul.main-menu{
   color:#fff;
   @include arrowcorner($color:#4B0615);
   .theproposal{
-    width:47%;
-    display:inline-block;
+    h3{
+      letter-spacing: -1px;
+    }
     .this{
       height: 268px;
       padding-right: 10px;
@@ -1003,9 +1016,9 @@ ul.main-menu{
     }
   }
   .theartists{
-    width:50%;
-    display:inline-block;
-    float:right;
+    h3{
+      letter-spacing: -1px;
+    }
    h6{
     color: #D87084;
     font-size: 12px;
@@ -1044,9 +1057,13 @@ ul.main-menu{
     background-color: #B2B2B2;
     margin-left: 30px;
     @include border-radius(25px);
-    color: #fff;
     display:inline-block;
-    padding:7px 40px;
+    padding:7px 30px;
+    text-transform:uppercase;
+    letter-spacing:-1px;
+    position:relative;
+    width:140px;
+    color: #fff;
     &:hover{
       background-color: #111;
     }

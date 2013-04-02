@@ -18,6 +18,9 @@
     <script src="<?php echo APPLICATION_URL?>javascripts/fileuploader/dnd.js"></script>
     <script src="<?php echo APPLICATION_URL?>javascripts/fileuploader/uploader.js"></script>
     <script src="<?php echo APPLICATION_URL?>javascripts/fileuploader/jquery-plugin.js"></script>
+    <script src="<?php echo APPLICATION_URL?>javascripts/jquery.mousewheel.min.js"></script>
+    <script src="<?php echo APPLICATION_URL?>javascripts/jquery.mCustomScrollbar.min.js"></script>
+    
 	<?php $name = explode("/", $path); ?>
 
 	<!-- Included JS Files -->
@@ -228,6 +231,19 @@
 			    });
 	 	});
 	 </script>
+	 
+	 <script>
+    (function($){
+        $(window).load(function(){
+            $(".resum, .real-expos ul, .real-fairs ul, .this, .artistr p").mCustomScrollbar({
+            	scrollInertia: 150, 
+            	advanced:{
+			        updateOnContentResize: true
+			    }
+            });
+        });
+    })(jQuery);
+	</script>
 
 </body>
 <!-- End Body -->

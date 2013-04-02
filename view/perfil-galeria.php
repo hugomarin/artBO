@@ -25,7 +25,7 @@
 			<div class="profile-resume">
 				<img src="images/galleryprofile.png" alt="" width="597" height="447" />
 				<div class="resum">
-					<h4>Galería Juana de Aizpuru</h4><span class="year">1970</span>
+					<h4>Galería Juana de Aizpuru<span class="year">1970</span></h4> 
 					<a href="#" target="_blank" class="website">www.juanadeaizpuru.com</a>
 					<h6>RESEÑA DE LA GALERÍA</h6>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nunc diam, eleifend eu varius semper, cursus nec ipsum. In at arcu eget massa cursus elementum. Suspendisse id tincidunt purus. Pellentesque vel ligula lorem, sit amet porttitor metus. Quisque sit amet nisl ac lorem molestie pellentesque. Etiam odio massa, iaculis at cursus vel, ultrices imperdiet augue. Cras mi lacus, faucibus quis dictum nec, aliquam vitae justo.Pellentesque ultricies lorem sed est pretium adipiscing. Proin tincidunt varius vehicula. Cras venenatis elementum lorem, id lobortis orci fermentum at. Pellentesque tortor sem, iaculis nec fermentum nec, rhoncus et neque. Nullam faucibus velit at diam iaculis in luctus felis dictum. Sed bibendum, felis vel tincidunt euismod, mauris purus fermentum lorem, a consequat lorem massa commodo ligula. Vivamus commodo tristique neque ullamcorper luctus. Phasellus dapibus venenatis mi vitae adipiscing. Morbi in scelerisque turpis. In semper accumsan velit, vitae laoreet nulla placerat et. Integer sagittis, magna et semper bibendum, mi turpis fermentum libero, a mollis quam sapien vel neque. Sed ullamcorper enim quis dolor eleifend vitae gravida enim sagittis.
@@ -167,10 +167,10 @@
 			
 			
 			<div class="proposal-artist">
-				<div class="theproposal">
-					<div class="container">
-						<div class="row">
-							<div class="twelve columns">
+				<div class="container">
+					<div class="row">
+						<div class="five columns">
+							<div class="theproposal">
 								<h3 class="whitetxt">Propuesta</h3>
 								<div class="this">
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nunc diam, eleifend eu varius semper, cursus nec ipsum. In at arcu eget massa cursus elementum. Suspendisse id tincidunt purus. Pellentesque vel ligula lorem, sit amet porttitor metus. Quisque sit amet nisl ac lorem molestie pellentesque. Etiam odio massa, iaculis at cursus vel, ultrices imperdiet augue. Cras mi lacus, faucibus quis dictum nec, aliquam vitae justo.</p>
@@ -178,12 +178,8 @@
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-				<div class="theartists">
-					<div class="container">
-						<div class="row">
-							<div class="twelve columns">
+						<div class="seven columns">
+							<div class="theartists">
 								<h3 class="whitetxt">Artistas</h3>
 								<h6>ARTISTAS A REPRESENTAR EN ARTBO 2013</h6>
 								<strong>Monserrat Soto/</strong><span>España</span><a href="#" data-name="Monserrat Soto"><img src="images/mas.png" alt="" width="15" height="14" /></a>
