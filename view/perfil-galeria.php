@@ -52,18 +52,12 @@
 		
 		<!-- columns 2/2 -->
 		<div class="eight columns lateralder ">
-			<div class="perfil-data second">
-				<div class="perfil left">
-				
-                   	<a href="datos-galeria-0300.html" class="imagenlogo"><img src="http://cambelt.co/icon/camera/36x26?color=b71632,fefefe"  height="36" width="36" alt="perfil"/></a>
+			<div class="perfil-data">
+				<div class="perfil second left">
+                   	<a href="datos-galeria-0300.html" class="imagenlogo"><img src="http://cambelt.co/icon/camera/40x40?color=b71632,fefefe"  height="36" width="36" alt="perfil"/></a>
                     <p class="right"><strong>nombre comercial de la galeria</strong><br />
 					<a href="#" title="Clic aquí para editar información de la galería">Editar perfil</a> | <a href="#" title="Salir">Salir</a></p>
-
-
                 </div>
-				<div class="idiomas left">
-					<p>Español | <a href="#" title="artBO English">English</a></p>
-				</div>
 			</div>
 		</div>
 		<!-- END columns 2/2 -->
