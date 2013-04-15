@@ -2,6 +2,7 @@
 *.espressostorage
 *.project
 .sass-cache
+.DS_Store
 
 # Compiled source #
 ###################
